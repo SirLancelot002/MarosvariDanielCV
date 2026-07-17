@@ -10,6 +10,15 @@ function App() {
 
   return (
     <>
+      <div className="lightning-bg">
+        <Lightning
+          hue={260}
+          xOffset={0}
+          speed={1}
+          intensity={1}
+          size={1}
+        />
+      </div>
       <main className="hero-section">
         <TextType
           as="h1"
@@ -22,14 +31,15 @@ function App() {
           variableSpeed={{ min: 60, max: 120 }}
           cursorBlinkDuration={0.5}
         /></main>
+
       <PillNav
         logo={logo}
         logoAlt="Company Logo"
         items={[
-          { label: 'Main', href: 'MarosvariDanielCV/' },
-          { label: 'Time Line', href: 'MarosvariDanielCV/timeline' },
-          { label: 'Studies', href: 'MarosvariDanielCV/studies' },
-          { label: 'Projects', href: 'MarosvariDanielCV/projects' }
+          { label: t("nav.main"), href: 'MarosvariDanielCV/' },
+          { label: t("nav.timeline"), href: 'MarosvariDanielCV/timeline' },
+          { label: t("nav.studies"), href: 'MarosvariDanielCV/studies' },
+          { label: t("nav.projects"), href: 'MarosvariDanielCV/projects' }
         ]}
         activeHref="/"
         className="custom-nav"
@@ -40,15 +50,6 @@ function App() {
         pillTextColor="#000000"
         initialLoadAnimation
       />
-      <div style={{ width: '100%', height: '650px', position: 'relative' }}>
-        <Lightning
-          hue={260}
-          xOffset={0}
-          speed={1}
-          intensity={1}
-          size={1}
-        />
-      </div>
     </>
   )
 }

@@ -183,6 +183,7 @@
   }
 }
 
+/*My Fixes come below*/
 
 .pill-nav-container {
   position: static;
@@ -193,4 +194,24 @@
 
 .hero-section {
   text-align: center;
+}
+
+.lightning-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-section {
+  position: relative;
+  z-index: 1;
+}
+
+.pill-nav-container {
+  position: relative;
+  z-index: 1;
 }

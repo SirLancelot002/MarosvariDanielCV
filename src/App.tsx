@@ -1,11 +1,18 @@
 import TextType from './modules/TextType';
+import { useTranslation } from 'react-i18next';
 import './App.css'
 
 function App() {
+  const { t } = useTranslation();
+
   return (
     <><h1>
       <TextType 
-        text={["Marosvári Dániel CV site", "Look around!", "Interactive and responsive"]}
+        text={[
+          t("hero.greeting"),
+          t("hero.look"),
+          t("hero.description")
+        ]}
         typingSpeed={75}
         pauseDuration={2500}
         showCursor

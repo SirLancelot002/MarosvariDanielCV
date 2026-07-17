@@ -182,3 +182,44 @@
     border-right-color: var(--border);
   }
 }
+
+/*My Fixes come below*/
+
+.pill-nav-container {
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+}
+
+.lightning-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hero-section {
+  position: relative;
+  z-index: 1;
+}
+
+.pill-nav-container {
+  position: relative;
+  z-index: 1;
+}
+
+.pill-nav {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border-radius: 9999px;
+  padding: 10px 14px;
+}

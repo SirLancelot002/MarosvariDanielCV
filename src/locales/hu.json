@@ -1,5 +1,9 @@
 {
   "hero.greeting": "Marosvári Dániel CV oldal",
   "hero.look": "Nézz körül!",
-  "hero.description": "Interaktív és reaktív"
+  "hero.description": "Interaktív és reaktív",
+  "nav.main": "Főoldal",
+  "nav.time": "Idővonal",
+  "nav.studies": "Tanulmányok",
+  "nav.projects": "Projektek"
 }

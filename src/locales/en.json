@@ -1,5 +1,9 @@
 {
   "hero.greeting": "Marosvári Dániel CV site",
   "hero.look": "Look around!",
-  "hero.description": "Interactive and responsive"
+  "hero.description": "Interactive and responsive",
+  "nav.main": "Main",
+  "nav.time": "Time Line",
+  "nav.studies": "Studies",
+  "nav.projects": "Projects"
 }

@@ -182,3 +182,17 @@
     border-right-color: var(--border);
   }
 }
+
+
+.pill-nav-container {
+  position: fixed;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+}
+
+.hero-section {
+  padding-top: 6rem;
+  text-align: center;
+}

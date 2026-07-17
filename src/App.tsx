@@ -8,11 +8,7 @@ function App() {
   return (
     <><h1>
       <TextType 
-        text={[
-          t("hero.greeting"),
-          t("hero.look"),
-          t("hero.description")
-        ]}
+        text={[t("hero.greeting"), t("hero.look"), t("hero.description")]}
         typingSpeed={75}
         pauseDuration={2500}
         showCursor

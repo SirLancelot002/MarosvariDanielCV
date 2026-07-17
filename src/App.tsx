@@ -2,6 +2,7 @@ import TextType from './modules/TextType';
 import PillNav from './modules/PillNav';
 import { useTranslation } from 'react-i18next';
 import logo from './assets/vscode.svg';
+import Lightning from './modules/Lightning';
 import './App.css'
 
 function App() {
@@ -10,17 +11,17 @@ function App() {
   return (
     <>
       <main className="hero-section">
-      <TextType
-        as="h1"
-        text={[t("hero.greeting"), t("hero.look"), t("hero.description")]}
-        typingSpeed={75}
-        pauseDuration={2500}
-        showCursor
-        cursorCharacter="_"
-        deletingSpeed={50}
-        variableSpeed={{ min: 60, max: 120 }}
-        cursorBlinkDuration={0.5}
-      /></main>
+        <TextType
+          as="h1"
+          text={[t("hero.greeting"), t("hero.look"), t("hero.description")]}
+          typingSpeed={75}
+          pauseDuration={2500}
+          showCursor
+          cursorCharacter="_"
+          deletingSpeed={50}
+          variableSpeed={{ min: 60, max: 120 }}
+          cursorBlinkDuration={0.5}
+        /></main>
       <PillNav
         logo={logo}
         logoAlt="Company Logo"
@@ -39,6 +40,15 @@ function App() {
         pillTextColor="#000000"
         initialLoadAnimation
       />
+      <div style={{ width: '100%', height: '650px', position: 'relative' }}>
+        <Lightning
+          hue={260}
+          xOffset={0}
+          speed={1}
+          intensity={1}
+          size={1}
+        />
+      </div>
     </>
   )
 }

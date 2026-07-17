@@ -185,14 +185,12 @@
 
 
 .pill-nav-container {
-  position: fixed;
-  top: 1em;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .hero-section {
-  padding-top: 6rem;
   text-align: center;
 }

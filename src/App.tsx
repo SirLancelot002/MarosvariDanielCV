@@ -37,7 +37,7 @@ function App() {
         logoAlt="Company Logo"
         items={[
           { label: t("nav.main"), href: 'MarosvariDanielCV/' },
-          { label: t("nav.timeline"), href: 'MarosvariDanielCV/timeline' },
+          { label: t("nav.time"), href: 'MarosvariDanielCV/timeline' },
           { label: t("nav.studies"), href: 'MarosvariDanielCV/studies' },
           { label: t("nav.projects"), href: 'MarosvariDanielCV/projects' }
         ]}

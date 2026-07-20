@@ -236,3 +236,11 @@
   background-color: var(--base);
   color: var(--hover-text, #fff);
 }
+
+.lang-flag {
+  height: 1em;
+  width: auto;
+  margin-left: 6px;
+  vertical-align: middle;
+  display: inline-block;
+}

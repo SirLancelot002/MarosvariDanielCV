@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import { useTranslation } from 'react-i18next';
 import './PillNav.css';
 
 export type PillNavItem = {
@@ -38,6 +39,7 @@ const PillNav: React.FC<PillNavProps> = ({
   onMobileMenuClick,
   initialLoadAnimation = true
 }) => {
+  const { i18n } = useTranslation();
   const resolvedPillTextColor = pillTextColor ?? baseColor;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
@@ -49,6 +51,15 @@ const PillNav: React.FC<PillNavProps> = ({
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const navItemsRef = useRef<HTMLDivElement | null>(null);
   const logoRef = useRef<HTMLAnchorElement | HTMLElement | null>(null);
+
+  // The language toggle is a constant extra "item" appended after the real nav items.
+  // Its index in circleRefs/tlRefs is always items.length.
+  const langToggleIndex = items.length;
+  const langLabel = i18n.language === 'en' ? 'HUN' : 'ENG';
+
+  const handleLangToggle = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'hu' : 'en');
+  };
 
   useEffect(() => {
     const layout = () => {
@@ -244,6 +255,7 @@ const PillNav: React.FC<PillNavProps> = ({
   } as React.CSSProperties;
 
   return (
+    <>
     <div className="pill-nav-container">
       <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
         {isRouterLink(items?.[0]?.href) ? (
@@ -326,6 +338,33 @@ const PillNav: React.FC<PillNavProps> = ({
                 )}
               </li>
             ))}
+
+            {/* Constant language toggle pill*/}
+            <li role="none">
+              <button
+                type="button"
+                role="menuitem"
+                onClick={handleLangToggle}
+                className="pill"
+                aria-label="Change language"
+                onMouseEnter={() => handleEnter(langToggleIndex)}
+                onMouseLeave={() => handleLeave(langToggleIndex)}
+              >
+                <span
+                  className="hover-circle"
+                  aria-hidden="true"
+                  ref={el => {
+                    circleRefs.current[langToggleIndex] = el;
+                  }}
+                />
+                <span className="label-stack">
+                  <span className="pill-label">{langLabel}</span>
+                  <span className="pill-label-hover" aria-hidden="true">
+                    {langLabel}
+                  </span>
+                </span>
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -363,9 +402,24 @@ const PillNav: React.FC<PillNavProps> = ({
               )}
             </li>
           ))}
+
+          {/* Constant language toggle — mobile version */}
+          <li>
+            <button
+              type="button"
+              onClick={() => {
+                handleLangToggle();
+                setIsMobileMenuOpen(false);
+              }}
+              className="mobile-menu-link"
+              style={{ width: '100%', border: 'none', textAlign: 'left', cursor: 'pointer' }}>
+              {langLabel}
+            </button>
+          </li>
         </ul>
       </div>
     </div>
+    </>
   );
 };
 

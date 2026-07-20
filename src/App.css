@@ -223,3 +223,8 @@
   border-radius: 9999px;
   padding: 10px 14px;
 }
+
+.pc-details h3 {
+  line-height: 1.3;
+  padding: 0.1em 0;
+}

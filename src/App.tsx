@@ -3,6 +3,9 @@ import PillNav from './modules/PillNav';
 import { useTranslation } from 'react-i18next';
 import logo from './assets/vscode.svg';
 import Lightning from './modules/Lightning';
+import ProfileCard from './modules/ProfileCard'
+import avatarImg from './assets/avatar.png';
+import iconPatternImg from './assets/iconpattern.png';
 import './App.css'
 
 function App() {
@@ -49,6 +52,23 @@ function App() {
         hoveredPillTextColor="#ffffff"
         pillTextColor="#000000"
         initialLoadAnimation
+      />
+
+      <ProfileCard
+        name="Marosvári Dániel"
+        title="Software Engineer"
+        handle="SirLancelot002"
+        status="Online"
+        contactText="Contact Me"
+        avatarUrl={avatarImg}
+        showUserInfo
+        enableTilt={true}
+        enableMobileTilt
+        onContactClick={() => console.log('Contact clicked')}
+        behindGlowColor="rgba(125, 190, 255, 0.67)"
+        iconUrl={iconPatternImg}
+        behindGlowEnabled
+        innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
       />
     </>
   )

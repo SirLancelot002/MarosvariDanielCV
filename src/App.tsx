@@ -54,22 +54,28 @@ function App() {
         initialLoadAnimation
       />
 
-      <ProfileCard
-        name="Marosvári Dániel"
-        title="Software Engineer"
-        handle="SirLancelot002"
-        status="Online"
-        contactText="Contact Me"
-        avatarUrl={avatarImg}
-        showUserInfo
-        enableTilt={true}
-        enableMobileTilt
-        onContactClick={() => console.log('Contact clicked')}
-        behindGlowColor="rgba(125, 190, 255, 0.67)"
-        iconUrl={iconPatternImg}
-        behindGlowEnabled
-        innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
-      />
+      <div className="profile-card-outer">
+        <div className="profile-card-inner">
+          <ProfileCard
+            name="Marosvári Dániel"
+            title="Software Engineer"
+            handle="SirLancelot002"
+            status="Online"
+            contactText={t("profileCard.contact")}
+            avatarUrl={avatarImg}
+            showUserInfo
+            enableTilt={true}
+            enableMobileTilt
+            onContactClick={() => {
+              window.location.href = 'mailto:marosvaridaniel7@gmail.com';
+            }}
+            behindGlowColor="rgba(125, 190, 255, 0.67)"
+            iconUrl={iconPatternImg}
+            behindGlowEnabled
+            innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+          />
+        </div>
+      </div>
     </>
   )
 }

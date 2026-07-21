@@ -7,6 +7,7 @@ import ProfileCard from './modules/ProfileCard'
 import avatarImg from './assets/avatar.png';
 import iconPatternImg from './assets/iconpattern.png';
 import ElectricBorder from './modules/ElectricBorder';
+import GradientText from './modules/GradientText'
 
 import './App.css'
 
@@ -97,7 +98,12 @@ function App() {
           style={{ borderRadius: 16 }}>
           <div className="row electric-panel-row">
             <div className="col-sm-12 col-md-6 personal-data-block">
-              <h3>{t("personalData.title")}</h3>
+              <h3><GradientText
+                colors={["#3300ff", "#ff77fb", "#97c0cf"]}
+                animationSpeed={8}
+                showBorder
+                className="custom-class"
+              >{t("personalData.title")}</GradientText></h3>
               <p>{t("personalData.location")}: {t("personalData.location.value")}</p>
               <p>{t("personalData.birthyear")}: 2003</p>
               <p>{t("personalData.age")}: {getAge()}</p>
@@ -105,7 +111,12 @@ function App() {
               <p>E-mail: marosvaridaniel7@gmail.com</p>
             </div>
             <div className="col-sm-12 col-md-6 personal-data-block">
-              <h3>{t("personalDescription.title")}</h3>
+              <h3><GradientText
+                colors={["#3300ff", "#ff77fb", "#97c0cf"]}
+                animationSpeed={8}
+                showBorder
+                className="custom-class"
+              >{t("personalDescription.title")}</GradientText></h3>
               <p>{t("personalDescription.description")}</p>
             </div>
           </div>

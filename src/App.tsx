@@ -6,6 +6,8 @@ import Lightning from './modules/Lightning';
 import ProfileCard from './modules/ProfileCard'
 import avatarImg from './assets/avatar.png';
 import iconPatternImg from './assets/iconpattern.png';
+import ElectricBorder from './modules/ElectricBorder';
+
 import './App.css'
 
 function App() {
@@ -58,9 +60,9 @@ function App() {
         <div className="profile-card-inner">
           <ProfileCard
             name="Marosvári Dániel"
-            title="Software Engineer"
+            title={t("profileCard.job")}
             handle="SirLancelot002"
-            status="Online"
+            status={t("profileCard.online")}
             contactText={t("profileCard.contact")}
             avatarUrl={avatarImg}
             showUserInfo
@@ -75,6 +77,20 @@ function App() {
             innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
           />
         </div>
+      </div>
+      <div className="container">
+        <ElectricBorder
+          color="#a67dff"
+          speed={1}
+          chaos={0.12}
+          borderRadius={16}
+          style={{ borderRadius: 16 }}>
+          <div>
+            <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
+              MyPersonal info
+            </p>
+          </div>
+        </ElectricBorder>
       </div>
     </>
   )

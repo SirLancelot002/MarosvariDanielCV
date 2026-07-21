@@ -2,8 +2,24 @@
   "hero.greeting": "Marosvári Dániel CV oldal",
   "hero.look": "Nézz körül!",
   "hero.description": "Interaktív és reaktív",
+
   "nav.main": "Főoldal",
   "nav.time": "Idővonal",
   "nav.studies": "Tanulmányok",
-  "nav.projects": "Projektek"
+  "nav.projects": "Projektek",
+
+  "profileCard.contact": "Írj nekem",
+  "profileCard.job": "Program fejlesztő",
+  "profileCard.online": "Elérhető",
+  
+  "personalData.location": "Lakhely",
+  "personalData.birthyear": "Születési év",
+  "personalData.age": "Kor",
+  "personalData.gender": "Nem",
+  "personalData.title": "Személyes adatok",
+  "personalData.location.value": "Budapest",
+  "personalData.gender.value": "Férfi",
+
+  "personalDescription.title": "Rólam",
+  "personalDescription.description": "Junior szoftverfejlesztőként erős alapokkal rendelkezem objektumorientált szoftverfejlesztés és letisztult szoftverarchitektúrák terén. Tapasztalattal rendelkezem C#, Python és TypeScript használatában, valamint algoritmusok, REST API-k és skálázható adatfeldolgozó rendszerek fejlesztésében. Magabiztosan dolgozom agilis csapatokban, vettem részt üzleti szoftverfejlesztésben, és szükség esetén fejlesztői vezetői szerepet is vállalok."
 }

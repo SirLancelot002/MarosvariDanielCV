@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import { useTranslation } from 'react-i18next';
+import engFlag from '../assets/EngFlag.png';
+import hunFlag from '../assets/HunFlag.png';
 import './PillNav.css';
 
 export type PillNavItem = {
@@ -38,6 +41,7 @@ const PillNav: React.FC<PillNavProps> = ({
   onMobileMenuClick,
   initialLoadAnimation = true
 }) => {
+  const { i18n } = useTranslation();
   const resolvedPillTextColor = pillTextColor ?? baseColor;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
@@ -49,6 +53,16 @@ const PillNav: React.FC<PillNavProps> = ({
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const navItemsRef = useRef<HTMLDivElement | null>(null);
   const logoRef = useRef<HTMLAnchorElement | HTMLElement | null>(null);
+
+  // The language toggle is a constant extra "item" appended after the real nav items.
+  // Its index in circleRefs/tlRefs is always items.length.
+  const langToggleIndex = items.length;
+  const langLabel = i18n.language === 'en' ? 'HUN' : 'ENG';
+  const langFlag = i18n.language === 'en' ? hunFlag : engFlag;
+
+  const handleLangToggle = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'hu' : 'en');
+  };
 
   useEffect(() => {
     const layout = () => {
@@ -106,7 +120,7 @@ const PillNav: React.FC<PillNavProps> = ({
     window.addEventListener('resize', onResize);
 
     if (document.fonts?.ready) {
-      document.fonts.ready.then(layout).catch(() => {});
+      document.fonts.ready.then(layout).catch(() => { });
     }
 
     const menu = mobileMenuRef.current;
@@ -244,128 +258,177 @@ const PillNav: React.FC<PillNavProps> = ({
   } as React.CSSProperties;
 
   return (
-    <div className="pill-nav-container">
-      <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
-        {isRouterLink(items?.[0]?.href) ? (
-          <Link
-            className="pill-logo"
-            to={items[0].href}
-            aria-label="Home"
-            onMouseEnter={handleLogoEnter}
-            role="menuitem"
-            ref={el => {
-              logoRef.current = el;
-            }}
-          >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} />
-          </Link>
-        ) : (
-          <a
-            className="pill-logo"
-            href={items?.[0]?.href || '#'}
-            aria-label="Home"
-            onMouseEnter={handleLogoEnter}
-            ref={el => {
-              logoRef.current = el;
-            }}
-          >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} />
-          </a>
-        )}
+    <>
+      <div className="pill-nav-container">
+        <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
+          {isRouterLink(items?.[0]?.href) ? (
+            <Link
+              className="pill-logo"
+              to={items[0].href}
+              aria-label="Home"
+              onMouseEnter={handleLogoEnter}
+              role="menuitem"
+              ref={el => {
+                logoRef.current = el;
+              }}
+            >
+              <img src={logo} alt={logoAlt} ref={logoImgRef} />
+            </Link>
+          ) : (
+            <a
+              className="pill-logo"
+              href={items?.[0]?.href || '#'}
+              aria-label="Home"
+              onMouseEnter={handleLogoEnter}
+              ref={el => {
+                logoRef.current = el;
+              }}
+            >
+              <img src={logo} alt={logoAlt} ref={logoImgRef} />
+            </a>
+          )}
 
-        <div className="pill-nav-items desktop-only" ref={navItemsRef}>
-          <ul className="pill-list" role="menubar">
-            {items.map((item, i) => (
-              <li key={item.href} role="none">
+          <div className="pill-nav-items desktop-only" ref={navItemsRef}>
+            <ul className="pill-list" role="menubar">
+              {items.map((item, i) => (
+                <li key={item.href} role="none">
+                  {isRouterLink(item.href) ? (
+                    <Link
+                      role="menuitem"
+                      to={item.href}
+                      className={`pill${activeHref === item.href ? ' is-active' : ''}`}
+                      aria-label={item.ariaLabel || item.label}
+                      onMouseEnter={() => handleEnter(i)}
+                      onMouseLeave={() => handleLeave(i)}
+                    >
+                      <span
+                        className="hover-circle"
+                        aria-hidden="true"
+                        ref={el => {
+                          circleRefs.current[i] = el;
+                        }}
+                      />
+                      <span className="label-stack">
+                        <span className="pill-label">{item.label}</span>
+                        <span className="pill-label-hover" aria-hidden="true">
+                          {item.label}
+                        </span>
+                      </span>
+                    </Link>
+                  ) : (
+                    <a
+                      role="menuitem"
+                      href={item.href}
+                      className={`pill${activeHref === item.href ? ' is-active' : ''}`}
+                      aria-label={item.ariaLabel || item.label}
+                      onMouseEnter={() => handleEnter(i)}
+                      onMouseLeave={() => handleLeave(i)}
+                    >
+                      <span
+                        className="hover-circle"
+                        aria-hidden="true"
+                        ref={el => {
+                          circleRefs.current[i] = el;
+                        }}
+                      />
+                      <span className="label-stack">
+                        <span className="pill-label">{item.label}</span>
+                        <span className="pill-label-hover" aria-hidden="true">
+                          {item.label}
+                        </span>
+                      </span>
+                    </a>
+                  )}
+                </li>
+              ))}
+
+              {/* Constant language toggle pill*/}
+              <li role="none">
+                <button
+                  type="button"
+                  role="menuitem"
+                  onClick={handleLangToggle}
+                  className="pill"
+                  aria-label="Change language"
+                  onMouseEnter={() => handleEnter(langToggleIndex)}
+                  onMouseLeave={() => handleLeave(langToggleIndex)}
+                >
+                  <span
+                    className="hover-circle"
+                    aria-hidden="true"
+                    ref={el => {
+                      circleRefs.current[langToggleIndex] = el;
+                    }}
+                  />
+                  <span className="label-stack">
+                    <span className="pill-label">
+                      {langLabel}
+                      <img src={langFlag} alt="" className="lang-flag" />
+                    </span>
+                    <span className="pill-label-hover" aria-hidden="true">
+                      {langLabel}
+                      <img src={langFlag} alt="" className="lang-flag" />
+                    </span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            className="mobile-menu-button mobile-only"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+            ref={hamburgerRef}
+          >
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+          </button>
+        </nav>
+
+        <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
+          <ul className="mobile-menu-list">
+            {items.map(item => (
+              <li key={item.href}>
                 {isRouterLink(item.href) ? (
                   <Link
-                    role="menuitem"
                     to={item.href}
-                    className={`pill${activeHref === item.href ? ' is-active' : ''}`}
-                    aria-label={item.ariaLabel || item.label}
-                    onMouseEnter={() => handleEnter(i)}
-                    onMouseLeave={() => handleLeave(i)}
+                    className={`mobile-menu-link${activeHref === item.href ? ' is-active' : ''}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span
-                      className="hover-circle"
-                      aria-hidden="true"
-                      ref={el => {
-                        circleRefs.current[i] = el;
-                      }}
-                    />
-                    <span className="label-stack">
-                      <span className="pill-label">{item.label}</span>
-                      <span className="pill-label-hover" aria-hidden="true">
-                        {item.label}
-                      </span>
-                    </span>
+                    {item.label}
                   </Link>
                 ) : (
                   <a
-                    role="menuitem"
                     href={item.href}
-                    className={`pill${activeHref === item.href ? ' is-active' : ''}`}
-                    aria-label={item.ariaLabel || item.label}
-                    onMouseEnter={() => handleEnter(i)}
-                    onMouseLeave={() => handleLeave(i)}
+                    className={`mobile-menu-link${activeHref === item.href ? ' is-active' : ''}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <span
-                      className="hover-circle"
-                      aria-hidden="true"
-                      ref={el => {
-                        circleRefs.current[i] = el;
-                      }}
-                    />
-                    <span className="label-stack">
-                      <span className="pill-label">{item.label}</span>
-                      <span className="pill-label-hover" aria-hidden="true">
-                        {item.label}
-                      </span>
-                    </span>
+                    {item.label}
                   </a>
                 )}
               </li>
             ))}
+
+            {/* Constant language toggle — mobile version */}
+            <li>
+              <button
+                type="button"
+                onClick={() => {
+                  handleLangToggle();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="mobile-menu-link"
+                style={{ width: '100%', border: 'none', textAlign: 'left', cursor: 'pointer' }}
+              >
+                {langLabel}
+                <img src={langFlag} alt="" className="lang-flag" />
+              </button>
+            </li>
           </ul>
         </div>
-
-        <button
-          className="mobile-menu-button mobile-only"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-          ref={hamburgerRef}
-        >
-          <span className="hamburger-line" />
-          <span className="hamburger-line" />
-        </button>
-      </nav>
-
-      <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
-        <ul className="mobile-menu-list">
-          {items.map(item => (
-            <li key={item.href}>
-              {isRouterLink(item.href) ? (
-                <Link
-                  to={item.href}
-                  className={`mobile-menu-link${activeHref === item.href ? ' is-active' : ''}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <a
-                  href={item.href}
-                  className={`mobile-menu-link${activeHref === item.href ? ' is-active' : ''}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
       </div>
-    </div>
+    </>
   );
 };
 

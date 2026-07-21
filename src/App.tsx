@@ -6,6 +6,11 @@ import Lightning from './modules/Lightning';
 import ProfileCard from './modules/ProfileCard'
 import avatarImg from './assets/avatar.png';
 import iconPatternImg from './assets/iconpattern.png';
+import cityLogoImg from './assets/citylogo.png';
+import calendarLogoImg from './assets/calendarlogo.png';
+import cakeLogoImg from './assets/cakelogo.png';
+import maleLogoImg from './assets/malelogo.png';
+import mailLogoImg from './assets/maillogo.png';
 import ElectricBorder from './modules/ElectricBorder';
 import GradientText from './modules/GradientText'
 
@@ -104,11 +109,26 @@ function App() {
                 showBorder
                 className="custom-class"
               >{t("personalData.title")}</GradientText></h3>
-              <p>{t("personalData.location")}: {t("personalData.location.value")}</p>
-              <p>{t("personalData.birthyear")}: 2003</p>
-              <p>{t("personalData.age")}: {getAge()}</p>
-              <p>{t("personalData.gender")}: {t("personalData.gender.value")}</p>
-              <p>E-mail: marosvaridaniel7@gmail.com</p>
+              <p className="personal-data-row">
+                <img src={cityLogoImg} alt="" className="personal-data-icon" />
+                <span>{t("personalData.location")}: {t("personalData.location.value")}</span>
+              </p>
+              <p className="personal-data-row">
+                <img src={calendarLogoImg} alt="" className="personal-data-icon" />
+                <span>{t("personalData.birthyear")}: 2003</span>
+              </p>
+              <p className="personal-data-row">
+                <img src={cakeLogoImg} alt="" className="personal-data-icon" />
+                <span>{t("personalData.age")}: {getAge()}</span>
+              </p>
+              <p className="personal-data-row">
+                <img src={maleLogoImg} alt="" className="personal-data-icon" />
+                <span>{t("personalData.gender")}: {t("personalData.gender.value")}</span>
+              </p>
+              <p className="personal-data-row">
+                <img src={mailLogoImg} alt="" className="personal-data-icon" />
+                <span>E-mail: marosvaridaniel7@gmail.com</span>
+              </p>
             </div>
             <div className="col-sm-12 col-md-6 personal-data-block">
               <h3><GradientText

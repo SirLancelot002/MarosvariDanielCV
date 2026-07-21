@@ -241,6 +241,34 @@
   justify-content: center;
 }
 
+.electric-panel-row {
+  border-radius: 16px;
+  background-color: #120F17;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+  padding: 0;
+}
+
+.personal-data-block {
+  text-align: left;
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.personal-data-block h3 {
+  margin-bottom: 1rem;
+}
+
+.personal-data-block p {
+  margin: 0.35rem 0;
+  line-height: 1.6;
+}
+
 @media (min-width: 1200px) {
   .profile-card-outer {
     justify-content: center;

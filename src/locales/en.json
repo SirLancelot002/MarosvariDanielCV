@@ -2,11 +2,24 @@
   "hero.greeting": "Marosvári Dániel CV site",
   "hero.look": "Look around!",
   "hero.description": "Interactive and responsive",
+
   "nav.main": "Main",
   "nav.time": "Time Line",
   "nav.studies": "Studies",
   "nav.projects": "Projects",
+
   "profileCard.contact": "Contact Me",
   "profileCard.job": "Software Engineer",
-  "profileCard.online": "Online"
+  "profileCard.online": "Online",
+
+  "personalData.location": "Location",
+  "personalData.birthyear": "Year of Birth",
+  "personalData.age": "Age",
+  "personalData.gender": "Gender",
+  "personalData.title": "Personal data",
+  "personalData.location.value": "Hungary, Budapest",
+  "personalData.gender.value": "Male",
+
+  "personalDescription.title": "About me",
+  "personalDescription.description": "Junior Software Engineer with a strong background in object-oriented software development and clean architecture. Experienced in C#, Python, and TypeScript, with projects ranging from algorithmic problem-solving and REST APIs to scalable data processing systems. Comfortable working in agile teams, contributing to commercial software, and leading development efforts when needed."
 }

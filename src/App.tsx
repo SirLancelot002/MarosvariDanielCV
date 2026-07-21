@@ -10,6 +10,14 @@ import ElectricBorder from './modules/ElectricBorder';
 
 import './App.css'
 
+const BIRTH_YEAR = 2003;
+
+function getAge(): string {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - BIRTH_YEAR;
+  return `${age - 1}-${age}`;
+}
+
 function App() {
   const { t } = useTranslation();
 
@@ -78,17 +86,26 @@ function App() {
           />
         </div>
       </div>
-      <div className="container">
+      <div className="container mt-5">
         <ElectricBorder
           color="#a67dff"
           speed={1}
           chaos={0.12}
           borderRadius={16}
           style={{ borderRadius: 16 }}>
-          <div>
-            <p style={{ margin: '6px 0 0', opacity: 0.8 }}>
-              MyPersonal info
-            </p>
+          <div className="row electric-panel-row">
+            <div className="col-sm-12 col-md-6 personal-data-block">
+              <h3>{t("personalData.title")}</h3>
+              <p>{t("personalData.location")}: {t("personalData.location.value")}</p>
+              <p>{t("personalData.birthyear")}: 2003</p>
+              <p>{t("personalData.age")}: {getAge()}</p>
+              <p>{t("personalData.gender")}: {t("personalData.gender.value")}</p>
+              <p>E-mail: marosvaridaniel7@gmail.com</p>
+            </div>
+            <div className="col-sm-12 col-md-6 personal-data-block">
+              <h3>{t("personalDescription.title")}</h3>
+              <p>{t("personalDescription.description")}</p>
+            </div>
           </div>
         </ElectricBorder>
       </div>

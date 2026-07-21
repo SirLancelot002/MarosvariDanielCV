@@ -214,10 +214,14 @@
 }
 
 .hero-section,
-.pill-nav-container,
 .profile-card-outer {
   position: relative;
   z-index: 1;
+}
+
+.pill-nav-container {
+  position: relative;
+  z-index: 20; /* higher than profile-card-outer, so its dropdown always wins */
 }
 
 .container {

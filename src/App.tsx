@@ -1,9 +1,17 @@
+import { useTranslation } from 'react-i18next';
+
 import TextType from './modules/TextType';
 import PillNav from './modules/PillNav';
-import { useTranslation } from 'react-i18next';
-import logo from './assets/vscode.svg';
 import Lightning from './modules/Lightning';
 import ProfileCard from './modules/ProfileCard'
+import ElectricBorder from './modules/ElectricBorder';
+import GradientText from './modules/GradientText'
+import Ballpit from './modules/Ballpit'
+import SpecularButton from './modules/SpecularButton';
+import LogoLoop from './modules/LogoLoop';
+import ShinyText from './modules/ShinyText';
+
+import logo from './assets/vscode.svg';
 import avatarImg from './assets/avatar.png';
 import iconPatternImg from './assets/iconpattern.png';
 import cityLogoImg from './assets/citylogo.png';
@@ -11,15 +19,37 @@ import calendarLogoImg from './assets/calendarlogo.png';
 import cakeLogoImg from './assets/cakelogo.png';
 import maleLogoImg from './assets/malelogo.png';
 import mailLogoImg from './assets/maillogo.png';
-import ElectricBorder from './modules/ElectricBorder';
-import GradientText from './modules/GradientText'
-import Ballpit from './modules/Ballpit'
-import SpecularButton from './modules/SpecularButton';
+import gitlogoImg from './assets/gitlogo.webp';
+import reactbitslogoImg from './assets/reactbitslogo.png';
+import visualstudiologo from './assets/visualstudiocodelogo.webp';
+import typescriptlogo from './assets/typescriptlogo.webp';
+import reactlogo from './assets/reactlogo.webp';
+import bmelogo from './assets/bmelogo.webp';
+import petriklogo from './assets/petriklogo.webp';
+import cslogo from './assets/cslogo.webp';
+import pythonlogo from './assets/pythonlogo.webp';
+import sqllogo from './assets/sqllogo.webp';
+import javalogo from './assets/javalogo.webp';
+import haskelllogo from './assets/haskelllogo.webp';
+
 
 import './App.css'
-import ShinyText from './modules/ShinyText';
 
 const BIRTH_YEAR = 2003;
+const imageLoopLogos = [
+  { src: gitlogoImg, alt: "My Github Profile", href: "https://github.com/SirLancelot002" },
+  { src: reactbitslogoImg, alt: "React Bits", href: "https://reactbits.dev" },
+  { src: visualstudiologo, alt: "Visual Studio Code", href: "https://code.visualstudio.com" },
+  { src: typescriptlogo, alt: "TypeScript", href: "https://www.typescriptlang.org" },
+  { src: reactlogo, alt: "React", href: "https://react.dev" },
+  { src: bmelogo, alt: "BME", href: "https://www.bme.hu" },
+  { src: petriklogo, alt: "Petrik Lajos Kéttanítás nyelvű szakgimnázium", href: "https://petrik.hu" },
+  { src: cslogo, alt: "C#", href: "https://dotnet.microsoft.com/en-us/languages/csharp" },
+  { src: pythonlogo, alt: "Python", href: "https://www.python.org" },
+  { src: sqllogo, alt: "SQL", href: "https://www.mysql.com" },
+  { src: javalogo, alt: "Java", href: "https://www.java.com" },
+  { src: haskelllogo, alt: "Haskell", href: "https://www.haskell.org" }
+];
 
 function getAge(): string {
   const currentYear = new Date().getFullYear();
@@ -121,7 +151,7 @@ function App() {
               </p>
               <p className="personal-data-row">
                 <img src={calendarLogoImg} alt="" className="personal-data-icon" />
-                <span>{t("personalData.birthyear")}: 2003</span>
+                <span>{t("personalData.birthyear")}: {BIRTH_YEAR}</span>
               </p>
               <p className="personal-data-row">
                 <img src={cakeLogoImg} alt="" className="personal-data-icon" />
@@ -213,6 +243,23 @@ function App() {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           {t("nav.backtoTheTop")}
         </SpecularButton>
+      </div>
+
+      <div className="logo-loop-rail">
+        <div className="logo-loop-rail__inner">
+          <LogoLoop
+            logos={imageLoopLogos}
+            speed={100}
+            direction="left"
+            logoHeight={60}
+            gap={60}
+            hoverSpeed={0}
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#000000"
+            ariaLabel={t("siteDescription.relevantLinks")}
+          />
+        </div>
       </div>
     </>
   )

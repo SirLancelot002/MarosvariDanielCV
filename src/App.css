@@ -319,6 +319,23 @@
   opacity: 0.95;
 }
 
+.logo-loop-rail {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 2rem;
+  background: #000000;
+  overflow: hidden;
+}
+
+.logo-loop-rail__inner {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
 .specular-button-shell {
   display: flex;
   justify-content: center;

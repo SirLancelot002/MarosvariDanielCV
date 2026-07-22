@@ -13,6 +13,7 @@ import maleLogoImg from './assets/malelogo.png';
 import mailLogoImg from './assets/maillogo.png';
 import ElectricBorder from './modules/ElectricBorder';
 import GradientText from './modules/GradientText'
+import Ballpit from './modules/Ballpit'
 
 import './App.css'
 
@@ -94,6 +95,9 @@ function App() {
           </div>
         </div>
       </div>
+
+
+
       <div className="container mt-5">
         <ElectricBorder
           color="#a67dff"
@@ -138,6 +142,37 @@ function App() {
                 className="custom-class"
               >{t("personalDescription.title")}</GradientText></h3>
               <p>{t("personalDescription.description")}</p>
+            </div>
+          </div>
+        </ElectricBorder>
+      </div>
+
+
+      <div style={{ position: 'relative', overflow: 'hidden', minHeight: '400px', maxHeight: '750px' }}>
+        <Ballpit
+          count={75}
+          gravity={0.3}
+          friction={0.9975}
+          wallBounce={0.95}
+          followCursor
+        />
+      </div>
+
+      <div className="container mt-5 ">
+        <ElectricBorder
+          color="#a67dff"
+          speed={1}
+          chaos={0.12}
+          borderRadius={16}
+          style={{ borderRadius: 16 }}>
+          <div className="row electric-panel-row">
+            <div className="col-sm-12 personal-data-block">
+              <h3><GradientText
+                colors={["#3300ff", "#ff77fb", "#97c0cf"]}
+                animationSpeed={8}
+                showBorder
+                className="custom-class"
+              >Website Description</GradientText></h3>
             </div>
           </div>
         </ElectricBorder>

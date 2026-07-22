@@ -16,6 +16,7 @@ import GradientText from './modules/GradientText'
 import Ballpit from './modules/Ballpit'
 
 import './App.css'
+import ShinyText from './modules/ShinyText';
 
 const BIRTH_YEAR = 2003;
 
@@ -148,7 +149,7 @@ function App() {
       </div>
 
 
-      <div style={{ position: 'relative', overflow: 'hidden', minHeight: '400px', maxHeight: '750px' }}>
+      <div id="ballpit-section">
         <Ballpit
           count={75}
           gravity={0.3}
@@ -158,7 +159,7 @@ function App() {
         />
       </div>
 
-      <div className="container mt-5 ">
+      <div id="website-description-section" className="container">
         <ElectricBorder
           color="#a67dff"
           speed={1}
@@ -172,7 +173,19 @@ function App() {
                 animationSpeed={8}
                 showBorder
                 className="custom-class"
-              >Website Description</GradientText></h3>
+              >{t("siteDescription.title")}</GradientText></h3>
+              <p><b><ShinyText
+                text={t("siteDescription.description")}
+                speed={2}
+                delay={0}
+                color="#b5b5b5"
+                shineColor="#ffffff"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              /></b></p>
             </div>
           </div>
         </ElectricBorder>

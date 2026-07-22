@@ -21,5 +21,8 @@
   "personalData.gender.value": "Male",
 
   "personalDescription.title": "About me",
-  "personalDescription.description": "Junior Software Engineer with a strong background in object-oriented software development and clean architecture. Experienced in C#, Python, and TypeScript, with projects ranging from algorithmic problem-solving and REST APIs to scalable data processing systems. Comfortable working in agile teams, contributing to commercial software, and leading development efforts when needed."
+  "personalDescription.description": "Junior Software Engineer with a strong background in object-oriented software development and clean architecture. Experienced in C#, Python, and TypeScript, with projects ranging from algorithmic problem-solving and REST APIs to scalable data processing systems. Comfortable working in agile teams, contributing to commercial software, and leading development efforts when needed.",
+
+  "siteDescription.title": "About this site",
+  "siteDescription.description": "This website is more than a digital CV—it's an interactive portfolio built to demonstrate my skills rather than simply list them. Every section is designed to answer the 'why' behind my experience, allowing you to explore the technologies, projects, and decisions that shaped my journey as a software engineer. Built with React, Vite, and TypeScript, the site features responsive design, multilingual support, interactive animations, and automated deployment through GitHub Actions. Instead of reading that I'm experienced with React, teamwork, or software architecture, you can see those skills in action. Feel free to explore the interactive elements, click on technologies or soft skills to discover related projects, and see how each experience contributed to my growth as a developer."
 }

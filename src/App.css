@@ -258,13 +258,32 @@
 
 .electric-panel-row {
   border-radius: 16px;
-  background-color: #120F17;
-  overflow: hidden;
+}
+
+#ballpit-section {
   position: relative;
-  isolation: isolate;
+  overflow: hidden;
+  min-height: 400px;
+  max-height: 750px;
   margin: 0;
   padding: 0;
-  z-index: 3;
+}
+
+#ballpit-section canvas {
+  display: block;
+}
+
+#ballpit-section {
+  margin-bottom: 0;
+}
+
+#website-description-section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#website-description-section .electric-panel-row {
+  margin-top: 0;
 }
 
 .personal-data-block {

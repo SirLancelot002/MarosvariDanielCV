@@ -319,6 +319,13 @@
   opacity: 0.95;
 }
 
+.specular-button-shell {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+  padding-bottom: 1rem;
+}
+
 @media (min-width: 1200px) {
   .profile-card-outer {
     justify-content: center;

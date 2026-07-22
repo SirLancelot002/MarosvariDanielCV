@@ -14,6 +14,7 @@ import mailLogoImg from './assets/maillogo.png';
 import ElectricBorder from './modules/ElectricBorder';
 import GradientText from './modules/GradientText'
 import Ballpit from './modules/Ballpit'
+import SpecularButton from './modules/SpecularButton';
 
 import './App.css'
 import ShinyText from './modules/ShinyText';
@@ -189,6 +190,29 @@ function App() {
             </div>
           </div>
         </ElectricBorder>
+      </div>
+
+      <div className="specular-button-shell">
+        <SpecularButton
+          size="md"
+          radius={18}
+          tint="#ffffff"
+          tintOpacity={0}
+          blur={24}
+          textColor="#f5f5f5"
+          lineColor="#cc00ff"
+          baseColor="#525252"
+          intensity={1}
+          shineSize={14}
+          shineFade={36}
+          thickness={1}
+          speed={0.35}
+          followMouse
+          proximity={250}
+          autoAnimate
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          {t("nav.backtoTheTop")}
+        </SpecularButton>
       </div>
     </>
   )

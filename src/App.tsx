@@ -241,7 +241,6 @@ function App() {
           speed={0.35}
           followMouse
           proximity={250}
-          autoAnimate
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           {t("nav.backtoTheTop")}
         </SpecularButton>

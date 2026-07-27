@@ -125,3 +125,10 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* My Fixes*/
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}

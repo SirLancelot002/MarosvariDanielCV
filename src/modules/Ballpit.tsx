@@ -574,11 +574,12 @@ function processPointerInteraction() {
 
 function onTouchStart(e: TouchEvent) {
   if (e.touches.length > 0) {
-    e.preventDefault();
     pointerPosition.set(e.touches[0].clientX, e.touches[0].clientY);
+    let overAnyElement = false;
     for (const [elem, data] of pointerMap) {
       const rect = elem.getBoundingClientRect();
       if (isInside(rect)) {
+        overAnyElement = true;
         data.touching = true;
         updatePointerData(data, rect);
         if (!data.hover) {
@@ -588,17 +589,19 @@ function onTouchStart(e: TouchEvent) {
         data.onMove(data);
       }
     }
+    if (overAnyElement) e.preventDefault();
   }
 }
 
 function onTouchMove(e: TouchEvent) {
   if (e.touches.length > 0) {
-    e.preventDefault();
     pointerPosition.set(e.touches[0].clientX, e.touches[0].clientY);
+    let overAnyElement = false;
     for (const [elem, data] of pointerMap) {
       const rect = elem.getBoundingClientRect();
       updatePointerData(data, rect);
       if (isInside(rect)) {
+        overAnyElement = true;
         if (!data.hover) {
           data.hover = true;
           data.touching = true;
@@ -609,6 +612,7 @@ function onTouchMove(e: TouchEvent) {
         data.onMove(data);
       }
     }
+    if (overAnyElement) e.preventDefault();
   }
 }
 

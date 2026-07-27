@@ -31,6 +31,7 @@ import pythonlogo from './assets/pythonlogo.webp';
 import sqllogo from './assets/sqllogo.webp';
 import javalogo from './assets/javalogo.webp';
 import haskelllogo from './assets/haskelllogo.webp';
+import jiralogo from './assets/jiralogo.webp';
 
 
 import './App.css'
@@ -48,7 +49,8 @@ const imageLoopLogos = [
   { src: pythonlogo, alt: "Python", href: "https://www.python.org" },
   { src: sqllogo, alt: "SQL", href: "https://www.mysql.com" },
   { src: javalogo, alt: "Java", href: "https://www.java.com" },
-  { src: haskelllogo, alt: "Haskell", href: "https://www.haskell.org" }
+  { src: haskelllogo, alt: "Haskell", href: "https://www.haskell.org" },
+  { src: jiralogo, alt: "Jira", href: "https://www.atlassian.com/software/jira" }
 ];
 
 function getAge(): string {

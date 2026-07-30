@@ -1,25 +1,32 @@
 import { useTranslation } from 'react-i18next';
-import ElectricBorder from '../modules/ElectricBorder';
-import GradientText from '../modules/GradientText';
+//import ElectricBorder from '../modules/ElectricBorder';
+//import GradientText from '../modules/GradientText';
+import NavBar from '../NavBar';
+import TextType from '../modules/TextType';
 
 function StudiesPage() {
   const { t } = useTranslation();
 
   return (
+    <>
+    <main className="hero-section">
+          <TextType
+            as="h1"
+            text={[t("studies.title1"), t("studies.title2"), t("studies.title3")]}
+            typingSpeed={75}
+            pauseDuration={2500}
+            showCursor
+            cursorCharacter="_"
+            deletingSpeed={50}
+            variableSpeed={{ min: 60, max: 120 }}
+            cursorBlinkDuration={0.5}
+          />
+        </main>
+    <NavBar />
     <div className="container mt-5">
-      <ElectricBorder color="#a67dff" speed={1} chaos={0.12} borderRadius={16} style={{ borderRadius: 16 }}>
-        <div className="row electric-panel-row">
-          <div className="col-sm-12 personal-data-block">
-            <h3>
-              <GradientText colors={["#3300ff", "#ff77fb", "#97c0cf"]} animationSpeed={8} showBorder className="custom-class">
-                {t("studies.title")}
-              </GradientText>
-            </h3>
-            <p>{t("studies.placeholder")}</p>
-          </div>
-        </div>
-      </ElectricBorder>
+      
     </div>
+    </>
   );
 }
 

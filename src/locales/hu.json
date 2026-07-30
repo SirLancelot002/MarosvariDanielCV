@@ -26,5 +26,9 @@
 
   "siteDescription.title": "Erről a weboldalról",
   "siteDescription.description": "Ez a weboldal több, mint egy egyszerű online önéletrajz – egy interaktív portfólió, amelynek célja, hogy ne csupán felsorolja a készségeimet, hanem be is mutassa azokat. Minden szekció arra szolgál, hogy megválaszolja az önéletrajzomban szereplő tapasztalatok mögötti miérteket, miközben lehetőséget ad a technológiák, projektek és döntések részletes felfedezésére, amelyek meghatározták eddigi utamat szoftverfejlesztőként. A React, Vite és TypeScript segítségével készült oldal reszponzív kialakítással, többnyelvű támogatással, interaktív animációkkal és GitHub Actions alapú automatikus publikálással rendelkezik. Ahelyett, hogy egyszerűen azt állítanám, hogy értek a Reacthez, a csapatmunkához vagy a szoftvertervezéshez, itt működés közben is megmutatom ezeket. Fedezze fel az interaktív elemeket, kattintson a technológiákra vagy készségekre, és nézze meg, mely projektekben alkalmaztam őket, illetve hogyan járultak hozzá a fejlődésemhez fejlesztőként.",
-  "siteDescription.relevantLinks": "Releváns hivatkozások"
+  "siteDescription.relevantLinks": "Releváns hivatkozások",
+
+  "studies.title1": "Középiskola, Egyetem, IT tanfolyamok",
+  "studies.title2": "Tekintse meg az oktatási hátteremet!",
+  "studies.title3": "8+ éve tanulok programozást"
 }

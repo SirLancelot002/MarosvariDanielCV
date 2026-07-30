@@ -9,6 +9,7 @@ import Ballpit from '../modules/Ballpit';
 import SpecularButton from '../modules/SpecularButton';
 import LogoLoop from '../modules/LogoLoop';
 import ShinyText from '../modules/ShinyText';
+import NavBar from '../NavBar';
 
 import avatarImg from '../assets/avatar.png';
 import iconPatternImg from '../assets/iconpattern.png';
@@ -74,6 +75,8 @@ function LandingPage() {
             cursorBlinkDuration={0.5}
           />
         </main>
+
+        <NavBar />
 
         <div className="profile-card-outer">
           <div className="profile-card-inner">
@@ -144,7 +147,7 @@ function LandingPage() {
           size="md" radius={18} tint="#ffffff" tintOpacity={0} blur={24}
           textColor="#f5f5f5" lineColor="#cc00ff" baseColor="#525252" intensity={1}
           shineSize={14} shineFade={36} thickness={1} speed={0.35}
-          followMouse proximity={250} autoAnimate
+          followMouse proximity={250}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           {t("nav.backtoTheTop")}
         </SpecularButton>

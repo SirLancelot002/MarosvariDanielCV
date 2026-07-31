@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
-//import ElectricBorder from '../modules/ElectricBorder';
-//import GradientText from '../modules/GradientText';
 import NavBar from '../NavBar';
 import TextType from '../modules/TextType';
 import LightPillar from '../modules/LightPillar';
+import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
 function StudiesPage() {
   const { t } = useTranslation();
+  const quality = useAdaptiveQuality();
 
   return (
     <>
@@ -23,7 +23,7 @@ function StudiesPage() {
           pillarRotation={25}
           interactive={false}
           mixBlendMode="screen"
-          quality="high"
+          quality={quality}
         />
       </div>
       <div className="studies-content-layer">
@@ -44,7 +44,6 @@ function StudiesPage() {
         <NavBar />
 
         <div className="container mt-5 studies-content-container">
-
         </div>
       </div>
     </>

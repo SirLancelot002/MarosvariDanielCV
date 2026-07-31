@@ -10,6 +10,7 @@ import SpecularButton from '../modules/SpecularButton';
 import LogoLoop from '../modules/LogoLoop';
 import ShinyText from '../modules/ShinyText';
 import NavBar from '../NavBar';
+import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
 import avatarImg from '../assets/avatar.png';
 import iconPatternImg from '../assets/iconpattern.png';
@@ -55,6 +56,21 @@ function getAge(): string {
 
 function LandingPage() {
   const { t } = useTranslation();
+  const quality = useAdaptiveQuality();
+  let ballCount = 50;
+
+  switch (quality) {
+    case 'low':
+      ballCount = 25;
+      break;
+    case 'medium':
+      ballCount = 50;
+      break;
+    case 'high':
+      ballCount = 75;
+      break;
+  }
+
 
   return (
     <>
@@ -122,7 +138,7 @@ function LandingPage() {
       </div>
 
       <div id="ballpit-section">
-        <Ballpit count={75} gravity={0.3} friction={0.9975} wallBounce={0.95} followCursor />
+        <Ballpit count={ballCount} gravity={0.3} friction={0.9975} wallBounce={0.95} followCursor />
       </div>
 
       <div id="website-description-section" className="container">

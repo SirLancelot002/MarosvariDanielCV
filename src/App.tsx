@@ -5,6 +5,8 @@ import './App.css';
 
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const StudiesPage = lazy(() => import('./pages/StudiesPage'));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
+const TimeLinePage = lazy(() => import('./pages/TimeLinePage'));
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/studies" element={<StudiesPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/timeline" element={<TimeLinePage />} />
         </Route>
       </Routes>
     </Suspense>

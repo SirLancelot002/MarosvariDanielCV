@@ -26,5 +26,10 @@
 
   "siteDescription.title": "About this site",
   "siteDescription.description": "This website is more than a digital CV—it's an interactive portfolio built to demonstrate my skills rather than simply list them. Every section is designed to answer the 'why' behind my experience, allowing you to explore the technologies, projects, and decisions that shaped my journey as a software engineer. Built with React, Vite, and TypeScript, the site features responsive design, multilingual support, interactive animations, and automated deployment through GitHub Actions. Instead of reading that I'm experienced with React, teamwork, or software architecture, you can see those skills in action. Feel free to explore the interactive elements, click on technologies or soft skills to discover related projects, and see how each experience contributed to my growth as a developer.",
-  "siteDescription.relevantLinks": "Relevant links"
+  "siteDescription.relevantLinks": "Relevant links",
+
+  "studies.title1": "High School, University, IT Courses",
+  "studies.title2": "Take a look at my educational background!",
+  "studies.title3": "I was studying programming for 8+ years",
+  "studies.placeholder": "University and coursework details coming soon."
 }

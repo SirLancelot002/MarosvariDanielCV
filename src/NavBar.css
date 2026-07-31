@@ -1,0 +1,27 @@
+.navbar-shell {
+  position: relative;
+  width: 100%;
+  min-height: 88px;
+  padding: 12px 16px 0;
+}
+
+.navbar-shell > .pill-nav-container {
+  position: relative;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .navbar-shell {
+    min-height: 72px;
+    padding: 10px 12px 0;
+  }
+
+  .navbar-shell > .pill-nav-container {
+    width: calc(100% - 24px);
+    left: 12px;
+    transform: none;
+  }
+}

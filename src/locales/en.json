@@ -31,5 +31,6 @@
   "studies.title1": "High School, University, IT Courses",
   "studies.title2": "Take a look at my educational background!",
   "studies.title3": "I was studying programming for 8+ years",
-  "studies.placeholder": "University and coursework details coming soon."
+  "studies.aboutPage": "What is this page about?",
+  "studies.aboutPage.description": "This page provides a detailed overview of my educational journey, highlighting the key milestones and experiences that have shaped my skills and knowledge in software development. From high school to university and specialized IT courses. Explore the timeline to see how my education has prepared me for real-world challenges in the tech industry."
 }

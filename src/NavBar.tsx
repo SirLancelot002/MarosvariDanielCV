@@ -26,7 +26,7 @@ function NavBar() {
         pillColor="#ffffff"
         hoveredPillTextColor="#ffffff"
         pillTextColor="#000000"
-        initialLoadAnimation
+        initialLoadAnimation={false}
       />
     </div>
   );

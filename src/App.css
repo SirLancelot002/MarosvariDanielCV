@@ -372,3 +372,18 @@
     transform: translateX(min(-4vw, -20rem));
   }
 }
+
+.site-description-section {
+  text-align: justify;
+  padding: 2rem 1.25rem;
+  padding-bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+h2.GradientText {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

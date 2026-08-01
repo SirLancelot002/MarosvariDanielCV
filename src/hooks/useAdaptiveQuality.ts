@@ -1,7 +1,14 @@
 import { useEffect, useState } from 'react';
 
 type Quality = 'low' | 'medium' | 'high';
+
 const STORAGE_KEY = 'cv-site-quality-pref';
+const EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // re-measure once a week
+
+interface StoredQuality {
+  value: Quality;
+  timestamp: number;
+}
 
 function getStaticHint(): Quality {
   const cores = navigator.hardwareConcurrency ?? 4;
@@ -12,29 +19,49 @@ function getStaticHint(): Quality {
   return 'high';
 }
 
+function readCached(): Quality | null {
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (!raw) return null;
+  try {
+    const parsed: StoredQuality = JSON.parse(raw);
+    if (Date.now() - parsed.timestamp > EXPIRY_MS) return null; // expired, re-measure
+    return parsed.value;
+  } catch {
+    return null;
+  }
+}
+
+function writeCached(value: Quality) {
+  const data: StoredQuality = { value, timestamp: Date.now() };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
 function useAdaptiveQuality(): Quality {
-  const [quality, setQuality] = useState<Quality>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY) as Quality | null;
-    return saved ?? getStaticHint();
-  });
+  const [quality, setQuality] = useState<Quality>(() => readCached() ?? getStaticHint());
 
   useEffect(() => {
-    if (localStorage.getItem(STORAGE_KEY)) return;
+    if (readCached()) return; // still valid, skip re-measuring
 
     let frameCount = 0;
     let rafId: number;
+    const warmupMs = 300; // ignore the first ~300ms (page-load jank, layout thrashing)
+    const sampleMs = 1000;
     const start = performance.now();
 
-    const tick = () => {
+    const tick = (now: number) => {
+      const elapsed = now - start;
+      if (elapsed < warmupMs) {
+        rafId = requestAnimationFrame(tick);
+        return;
+      }
       frameCount++;
-      const elapsed = performance.now() - start;
-      if (elapsed < 1000) {
+      if (elapsed < warmupMs + sampleMs) {
         rafId = requestAnimationFrame(tick);
       } else {
-        const fps = (frameCount / elapsed) * 1000;
+        const fps = (frameCount / sampleMs) * 1000;
         const measured: Quality = fps >= 50 ? 'high' : fps >= 30 ? 'medium' : 'low';
         setQuality(measured);
-        localStorage.setItem(STORAGE_KEY, measured);
+        writeCached(measured);
       }
     };
 
@@ -43,6 +70,14 @@ function useAdaptiveQuality(): Quality {
   }, []);
 
   return quality;
+}
+
+export function setManualQuality(value: Quality) {
+  writeCached(value);
+}
+
+export function clearQualityCache() {
+  localStorage.removeItem(STORAGE_KEY);
 }
 
 export default useAdaptiveQuality;

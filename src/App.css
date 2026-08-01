@@ -387,3 +387,7 @@ h2.GradientText {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+.studies-list__row-wrapper {
+  margin-bottom: 1.5rem;
+}

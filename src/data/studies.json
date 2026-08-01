@@ -1,0 +1,26 @@
+[
+  {
+    "id": "bme-cs-bsc",
+    "level": 4,
+    "translations": {
+      "en": {
+        "title": "BSc in Computer Science Engineering",
+        "shortDescription": "Budapest University of Technology and Economics",
+        "longDescription": [
+          { "type": "paragraph", "text": "Studying software engineering fundamentals, covering algorithms, databases, and distributed systems." },
+          { "type": "image", "src": "studies/bme-campus.jpg", "alt": "BME campus", "caption": "Main building of BME" },
+          { "type": "paragraph", "text": "Focused coursework on data access technologies, ORM patterns, and enterprise application design." }
+        ]
+      },
+      "hu": {
+        "title": "Mérnökinformatikus BSc",
+        "shortDescription": "Budapesti Műszaki és Gazdaságtudományi Egyetem",
+        "longDescription": [
+          { "type": "paragraph", "text": "Szoftverfejlesztési alapismeretek elsajátítása, algoritmusok, adatbázisok és elosztott rendszerek területén." },
+          { "type": "image", "src": "studies/bme-campus.jpg", "alt": "BME campus", "caption": "A BME főépülete" },
+          { "type": "paragraph", "text": "Az adathozzáférési technológiákra, ORM mintákra és vállalati alkalmazásfejlesztésre fókuszáló tárgyak." }
+        ]
+      }
+    }
+  }
+]

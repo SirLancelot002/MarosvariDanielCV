@@ -3,8 +3,15 @@ import NavBar from '../NavBar';
 import TextType from '../modules/TextType';
 import LightPillar from '../modules/LightPillar';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
-import BorderGlow from '../modules/BorderGlow';
-import GradientText from '../modules/GradientText';
+//import BorderGlow from '../modules/BorderGlow';
+//import GradientText from '../modules/GradientText';
+
+import StudyCard from '../modules/StudyCard';
+import RevealOnScroll from '../modules/RevealOnScroll';
+import studiesData from '../data/studies.json';
+import type { Study } from '../types/study';
+
+const studies = studiesData as Study[];
 
 function StudiesPage() {
   const { t } = useTranslation();
@@ -46,7 +53,32 @@ function StudiesPage() {
         <NavBar />
 
         <div className="container mt-5 studies-content-container">
-          
+          <div className="container mt-5 studies-list">
+            {studies.map((study, index) => {
+              const isOdd = index % 2 === 0; // 1st card (index 0) = "odd" = left side
+              return (
+                <RevealOnScroll key={study.id} className="studies-list__row-wrapper">
+                  <div className="row studies-list__row">
+                    {isOdd ? (
+                      <>
+                        <div className="col-12 col-xl-5">
+                          <StudyCard study={study} />
+                        </div>
+                        <div className="col-xl-7 d-none d-xl-block" />
+                      </>
+                    ) : (
+                      <>
+                        <div className="col-xl-7 d-none d-xl-block" />
+                        <div className="col-12 col-xl-5">
+                          <StudyCard study={study} />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </RevealOnScroll>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

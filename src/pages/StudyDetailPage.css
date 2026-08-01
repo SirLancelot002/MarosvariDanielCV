@@ -1,0 +1,48 @@
+.study-detail__back {
+  color: #a67dff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.study-detail__title {
+  margin-bottom: 0.5rem;
+}
+
+.study-detail__level {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 2rem;
+}
+
+.study-detail__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.study-detail__dot.is-filled {
+  background: #a67dff;
+}
+
+.study-detail__body p {
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.study-detail__figure {
+  margin: 2rem 0;
+}
+
+.study-detail__figure img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.study-detail__figure figcaption {
+  text-align: center;
+  color: var(--text, #9ca3af);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

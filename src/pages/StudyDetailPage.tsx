@@ -4,6 +4,7 @@ import NavBar from '../NavBar';
 import studiesData from '../data/studies.json';
 import type { Study } from '../types/study';
 import { publicAsset } from '../utils/asset';
+import { formatStudyPeriod } from '../utils/date';
 import './StudyDetailPage.css';
 
 const studies = studiesData as Study[];
@@ -30,6 +31,9 @@ function StudyDetailPage() {
         </Link>
 
         <h1 className="study-detail__title">{content.title}</h1>
+
+        {content.facility && <p className="study-detail__facility">{content.facility}</p>}
+        <p className="study-detail__period">{formatStudyPeriod(study.startDate, study.endDate, lang)}</p>
 
         <div className="study-detail__level" aria-label={`Level ${study.level} of 5`}>
           {Array.from({ length: 5 }, (_, i) => (

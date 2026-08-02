@@ -1,20 +1,24 @@
 export interface StudyContentBlock {
   type: 'paragraph' | 'image';
-  text?: string;      // used when type === 'paragraph'
-  src?: string;        // used when type === 'image', relative to public/
+  text?: string;
+  src?: string;
   alt?: string;
   caption?: string;
 }
 
 export interface StudyTranslation {
   title: string;
+  facility?: string;
   shortDescription: string;
   longDescription: StudyContentBlock[];
 }
 
 export interface Study {
-  id: string;          // used in the URL: /studies/:id
-  level: number;        // 1-5
+  id: string;
+  level: number;
+  headerSrc?: string;   // relative to public/, e.g. "studies/bme-header.jpg"
+  startDate: string;     // ISO date string, e.g. "2021-09-01"
+  endDate?: string;      // ISO date string, or omitted/undefined if still ongoing
   translations: {
     en: StudyTranslation;
     hu: StudyTranslation;

@@ -16,6 +16,7 @@ export interface StudyTranslation {
 export interface Study {
   id: string;
   level: number;
+  institutionSrc?: string;
   headerSrc?: string;   // relative to public/, e.g. "studies/bme-header.jpg"
   startDate: string;     // ISO date string, e.g. "2021-09-01"
   endDate?: string;      // ISO date string, or omitted/undefined if still ongoing

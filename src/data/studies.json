@@ -1,7 +1,8 @@
 [
   {
     "id": "bme-cs-bsc",
-    "level": 4,
+    "level": 6,
+    "institutionSrc": "https://www.bme.hu",
     "headerSrc": "studies/bme-header.png",
     "startDate": "2024-09-01",
     "endDate": "2027-06-30",
@@ -9,7 +10,7 @@
       "en": {
         "title": "BSc in Computer Science Engineering",
         "facility": "Budapest University of Technology and Economics",
-        "shortDescription": "(BSc/BProf) Industrial IT specialist. A 3 year undergraduate program specializing in software development. It was a cooperative program with the last year being spent at a partner company.",
+        "shortDescription": "(BSc/BProf) Industrial IT specialist. A 3 year bachelor program specializing in software development. It was a cooperative program with the last year being spent at a partner company.",
         "longDescription": [
           { "type": "paragraph", "text": "Studying software engineering fundamentals, covering algorithms, databases, and distributed systems." },
           { "type": "image", "src": "studies/bme-campus.jpg", "alt": "BME campus", "caption": "Main building of BME" },

@@ -46,26 +46,39 @@
 
 .study-card__title {
   margin: 0 0 0.25rem;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: var(--text-h, #fff);
+  padding-bottom: 0.5rem;
 }
 
 .study-card__facility {
   margin: 0 0 0.25rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #a67dff;
   font-weight: 600;
 }
 
 .study-card__period {
+  text-align: left;
   margin: 0 0 0.75rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text, #9ca3af);
 }
 
 .study-card__description {
   margin: 0;
+  text-align: justify;
   color: var(--text, #9ca3af);
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.study-card__level-label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.study-card__level-label a {
+  color: #a67dff;
+  text-decoration: none;
 }

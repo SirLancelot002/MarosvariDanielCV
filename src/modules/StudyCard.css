@@ -39,16 +39,7 @@
 }
 
 .study-card__level {
-  display: flex;
-  gap: 4px;
   margin-bottom: 0.75rem;
-}
-
-.study-card__level-icon {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-  opacity: 0.9;
 }
 
 .study-card__title {
@@ -78,14 +69,4 @@
   color: var(--text, #9ca3af);
   font-size: 0.95rem;
   line-height: 1.5;
-}
-
-.study-card__level-label {
-  font-weight: 600;
-  margin-right: 0.5rem;
-}
-
-.study-card__level-label a {
-  color: #a67dff;
-  text-decoration: none;
 }

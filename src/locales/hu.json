@@ -33,5 +33,7 @@
   "studies.title3": "8+ éve tanulok programozást",
   "studies.aboutPage": "Miről szól ez az oldal?",
   "studies.aboutPage.description": "Ez az oldal részletes áttekintést nyújt az oktatási utamról, kiemelve a főbb mérföldköveket és tapasztalatokat, amelyek alakították a szoftverfejlesztési készségeimet és tudásomat. A középiskolától az egyetemen át a speciális IT tanfolyamokig. Fedezze fel az idővonalat, hogy lássa, hogyan készített fel az oktatásom a valós világ kihívásaira a technológiai iparban.",
-  "studies.aboutPage.overview": "Röviden, a programozási utamat a középiskolában kezdtem (2019-2024), ahol először fedeztem fel a szenvedélyemet a kódolás iránt. Ezután a számítástechnika szakot választottam az egyetemen, ahol szilárd alapokat szereztem a szoftverfejlesztési gyakorlatokban. Útközben néhány IT tanfolyamot is elvégeztem, hogy tovább fejlesszem a készségeimet a legújabb technológiákkal."
+  "studies.aboutPage.overview": "Röviden, a programozási utamat a középiskolában kezdtem (2019-2024), ahol először fedeztem fel a szenvedélyemet a kódolás iránt. Ezután a számítástechnika szakot választottam az egyetemen, ahol szilárd alapokat szereztem a szoftverfejlesztési gyakorlatokban. Útközben néhány IT tanfolyamot is elvégeztem, hogy tovább fejlesszem a készségeimet a legújabb technológiákkal.",
+  "studies.backToList": "Vissza a tanulmányokhoz",
+  "studies.level": "szint"
 }

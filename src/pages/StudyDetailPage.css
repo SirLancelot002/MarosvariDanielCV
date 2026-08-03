@@ -86,36 +86,6 @@ a.study-detail__facility:hover {
   margin: 0 0 1.1rem;
 }
 
-.study-detail__level {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 0.45rem 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.study-detail__level-label {
-  color: #b896ff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-right: 0.15rem;
-}
-
-.study-detail__dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.study-detail__dot.is-filled {
-  background: #b896ff;
-  box-shadow: 0 0 10px rgba(184, 150, 255, 0.55);
-}
-
 .study-detail__body p {
   color: #d8dae8;
   line-height: 1.8;
@@ -154,10 +124,6 @@ a.study-detail__facility:hover {
   .study-detail__header {
     margin-bottom: 1.15rem;
     padding-bottom: 0.9rem;
-  }
-
-  .study-detail__level {
-    gap: 6px;
   }
 
   .study-detail__top-row {

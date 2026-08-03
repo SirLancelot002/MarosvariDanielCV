@@ -7,13 +7,12 @@ import { publicAsset } from '../utils/asset';
 import { formatStudyPeriod } from '../utils/date';
 import './StudyDetailPage.css';
 import Strands from '../modules/Strands';
+import EqfLevel from '../modules/EqfLevel';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
 import cityLogoImg from '../assets/citylogo.png';
 
 const studies = studiesData as Study[];
-const MAX_EQF_LEVEL = 8;
-
 function StudyDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { t, i18n } = useTranslation();
@@ -65,12 +64,7 @@ function StudyDetailPage() {
               </div>
               <div className="col-12 col-md-6">
                 <div className="study-detail__level-wrap">
-                  <div className="study-detail__level" aria-label={`Level ${study.level} of ${MAX_EQF_LEVEL}`}>
-                    <span className="study-detail__level-label">EQF {t("studies.level")}</span>
-                    {Array.from({ length: MAX_EQF_LEVEL }, (_, i) => (
-                      <span key={i} className={`study-detail__dot ${i < study.level ? 'is-filled' : ''}`} />
-                    ))}
-                  </div>
+                  <EqfLevel level={study.level} />
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@
         "shortDescription": "(BSc/BProf) Industrial IT specialist. A 3 year bachelor program specializing in software development. It was a cooperative program with the last year being spent at a partner company.",
         "longDescription": [
           { "type": "paragraph", "text": "Studying software engineering fundamentals, covering algorithms, databases, and distributed systems." },
-          { "type": "image", "src": "studies/bme-campus.jpg", "alt": "BME campus", "caption": "Main building of BME" },
+          { "type": "image", "src": "studies/bme-building.png", "alt": "BME campus", "caption": "Main building of BME" },
           { "type": "paragraph", "text": "Focused coursework on data access technologies, ORM patterns, and enterprise application design." }
         ]
       },

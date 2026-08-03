@@ -4,18 +4,17 @@ import type { Study } from '../types/study';
 import { publicAsset } from '../utils/asset';
 import { formatStudyPeriod } from '../utils/date';
 import GlareHover from '../modules/GlareHover';
+import EqfLevel from './EqfLevel';
 import './StudyCard.css';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
-import gradHatLogo from '../assets/gradhatlogo.webp';
-import xLogo from '../assets/xlogo.webp';
 
 interface StudyCardProps {
   study: Study;
 }
 
 function StudyCard({ study }: StudyCardProps) {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const content = study.translations[lang];
 
@@ -43,20 +42,8 @@ function StudyCard({ study }: StudyCardProps) {
         )}
 
         <div className="study-card__content">
-          <div className="study-card__level" aria-label={`Level ${study.level} of 5`}>
-            <p>
-              <span className="study-card__level-label">
-                <a href="https://europass.europa.eu/en/description-eight-eqf-levels">EQF {t("studies.level")}</a>:
-              </span>
-              {Array.from({ length: 8 }, (_, i) => (
-                <img
-                  key={i}
-                  src={i < study.level ? gradHatLogo : xLogo}
-                  alt=""
-                  className="study-card__level-icon"
-                />
-              ))}
-            </p>
+          <div className="study-card__level">
+            <EqfLevel level={study.level} />
           </div>
 
           <h3 className="study-card__title">{content.title}</h3>

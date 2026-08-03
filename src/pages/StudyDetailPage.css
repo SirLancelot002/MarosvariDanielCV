@@ -125,14 +125,14 @@ a.study-detail__facility:hover {
   margin: 0;
   padding: 0.45rem 0.7rem;
   border-radius: 10px;
-  background: rgba(120, 120, 120, 0.58);
+  background: rgba(34, 34, 34, 0.76);
   border: 1px solid rgba(255, 255, 255, 0.26);
   color: #f1f2f6;
   font-size: 0.9rem;
   line-height: 1.35;
   text-align: center;
   max-width: min(92%, 42ch);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 768px) {
@@ -160,4 +160,8 @@ a.study-detail__facility:hover {
   .study-detail__level-wrap {
     justify-content: flex-end;
   }
+}
+
+.study-detail__paragraph {
+  text-align: justify;
 }

@@ -93,7 +93,7 @@ function StudyDetailPage() {
                 if (block.type === 'paragraph') {
                   return (
                     <div key={i} className="col-12">
-                      <p>{block.text}</p>
+                      <p className="study-detail__paragraph">{block.text}</p>
                     </div>
                   );
                 }

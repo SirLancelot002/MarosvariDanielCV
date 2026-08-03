@@ -6,8 +6,11 @@ import type { Study } from '../types/study';
 import { publicAsset } from '../utils/asset';
 import { formatStudyPeriod } from '../utils/date';
 import './StudyDetailPage.css';
+import Strands from '../modules/Strands';
+
 
 const studies = studiesData as Study[];
+const MAX_EQF_LEVEL = 8;
 
 function StudyDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -24,38 +27,68 @@ function StudyDetailPage() {
 
   return (
     <>
-      <NavBar />
-      <div className="container mt-5 study-detail">
-        <Link to="/studies" className="study-detail__back">
-          &larr; {t("studies.backToList")}
-        </Link>
+      <div className="studies-bg-fixed study-detail-bg-fixed">
+        <Strands
+          colors={["#162ef9", "#7400ff", "#06B6D4"]}
+          count={3}
+          speed={0.5}
+          amplitude={1.9}
+          waviness={2}
+          thickness={0.7}
+          glow={2.3}
+          taper={3}
+          spread={1}
+          intensity={0.5}
+          saturation={2}
+          opacity={1}
+          scale={1.5}
+          glass
+          refraction={3}
+          dispersion={1}
+          glassSize={1}
+          hueShift={0}
+          className="study-detail-strands"
+        />
+      </div>
+      <div className="studies-content-layer study-detail-content-layer">
+        <NavBar />
 
-        <h1 className="study-detail__title">{content.title}</h1>
+        <div className="container mt-5 studies-content-container study-detail-container">
+          <article className="study-detail">
+            <Link to="/studies" className="study-detail__back">
+              &larr; {t("studies.backToList")}
+            </Link>
 
-        {content.facility && <p className="study-detail__facility">{content.facility}</p>}
-        <p className="study-detail__period">{formatStudyPeriod(study.startDate, study.endDate, lang)}</p>
+            <header className="study-detail__header">
+              <h1 className="study-detail__title">{content.title}</h1>
+              {content.facility && <p className="study-detail__facility">{content.facility}</p>}
+              <p className="study-detail__period">{formatStudyPeriod(study.startDate, study.endDate, lang)}</p>
 
-        <div className="study-detail__level" aria-label={`Level ${study.level} of 5`}>
-          {Array.from({ length: 5 }, (_, i) => (
-            <span key={i} className={`study-detail__dot ${i < study.level ? 'is-filled' : ''}`} />
-          ))}
-        </div>
+              <div className="study-detail__level" aria-label={`Level ${study.level} of ${MAX_EQF_LEVEL}`}>
+                <span className="study-detail__level-label">EQF {t("studies.level")}</span>
+                {Array.from({ length: MAX_EQF_LEVEL }, (_, i) => (
+                  <span key={i} className={`study-detail__dot ${i < study.level ? 'is-filled' : ''}`} />
+                ))}
+              </div>
+            </header>
 
-        <div className="study-detail__body">
-          {content.longDescription.map((block, i) => {
-            if (block.type === 'paragraph') {
-              return <p key={i}>{block.text}</p>;
-            }
-            if (block.type === 'image') {
-              return (
-                <figure key={i} className="study-detail__figure">
-                  <img src={publicAsset(block.src ?? '')} alt={block.alt ?? ''} loading="lazy" />
-                  {block.caption && <figcaption>{block.caption}</figcaption>}
-                </figure>
-              );
-            }
-            return null;
-          })}
+            <div className="study-detail__body">
+              {content.longDescription.map((block, i) => {
+                if (block.type === 'paragraph') {
+                  return <p key={i}>{block.text}</p>;
+                }
+                if (block.type === 'image') {
+                  return (
+                    <figure key={i} className="study-detail__figure">
+                      <img src={publicAsset(block.src ?? '')} alt={block.alt ?? ''} loading="lazy" />
+                      {block.caption && <figcaption>{block.caption}</figcaption>}
+                    </figure>
+                  );
+                }
+                return null;
+              })}
+            </div>
+          </article>
         </div>
       </div>
     </>

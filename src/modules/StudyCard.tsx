@@ -21,6 +21,7 @@ function StudyCard({ study }: StudyCardProps) {
 
   return (
     <GlareHover
+      className="study-card-shell"
       width="100%"
       height="auto"
       background="transparent"

@@ -20,10 +20,41 @@
       "hu": {
         "title": "Mérnökinformatikus BSc",
         "facility": "Budapesti Műszaki és Gazdaságtudományi Egyetem",
-        "shortDescription": "(BSc/BProf) Ipari informatikai szakirány. 3 éves alapképzés szoftverfejlesztői specializációval. Kooperatív program, az utolsó év egy partnercégnél töltve.",
+        "shortDescription": "(BSc/BProf) Üzemmérnök informatikus. 3 éves alapképzés szoftverfejlesztői specializációval. Kooperatív program, az utolsó év egy partnercégnél töltve.",
         "longDescription": [
           { "type": "paragraph", "text": "Szoftverfejlesztési alapismeretek elsajátítása, algoritmusok, adatbázisok és elosztott rendszerek területén." },
           { "type": "image", "src": "studies/bme-campus.jpg", "alt": "BME campus", "caption": "A BME főépülete" },
+          { "type": "paragraph", "text": "Az adathozzáférési technológiákra, ORM mintákra és vállalati alkalmazásfejlesztésre fókuszáló tárgyak." }
+        ]
+      }
+    }
+  },
+
+  {
+    "id": "elte-cs-bsc",
+    "level": 6,
+    "institutionSrc": "https://www.elte.hu",
+    "headerSrc": "studies/elte-header.jpg",
+    "startDate": "2023-09-01",
+    "endDate": "2024-06-30",
+    "translations": {
+      "en": {
+        "title": "BSc in Computer Science",
+        "facility": "Eötvös Loránd University",
+        "shortDescription": "(BSc) Programmer Mathematician. A 3 year bachelor program specializing in the mathematical side of software development. It was a highly theoretical program with a strong focus on mathematics (which lead me to switch to BME).",
+        "longDescription": [
+          { "type": "paragraph", "text": "Studying software engineering fundamentals, covering algorithms, databases, and distributed systems." },
+          { "type": "image", "src": "studies/elte-campus.jpg", "alt": "ELTE campus", "caption": "Main building of ELTE" },
+          { "type": "paragraph", "text": "Focused coursework on data access technologies, ORM patterns, and enterprise application design." }
+        ]
+      },
+      "hu": {
+        "title": "Programtervező matematikus BSc",
+        "facility": "Eötvös Loránd Tudományegyetem",
+        "shortDescription": "(BSc) Programtervező matematikus. 3 éves alapképzés a szoftverfejlesztés matematikai oldalára specializálódva. Nagyon elmélet orientált, erős matematikai fókuszú (ami miatt váltottam BME-re).",
+        "longDescription": [
+          { "type": "paragraph", "text": "Szoftverfejlesztési alapismeretek elsajátítása, algoritmusok, adatbázisok és elosztott rendszerek területén." },
+          { "type": "image", "src": "studies/elte-campus.jpg", "alt": "ELTE campus", "caption": "Az ELTE főépülete" },
           { "type": "paragraph", "text": "Az adathozzáférési technológiákra, ORM mintákra és vállalati alkalmazásfejlesztésre fókuszáló tárgyak." }
         ]
       }

@@ -391,3 +391,8 @@ h2.GradientText {
 .studies-list__row-wrapper {
   margin-bottom: 1.5rem;
 }
+
+.studies-list{
+  margin-top: 4rem;
+  padding-top: 0.5rem;
+}

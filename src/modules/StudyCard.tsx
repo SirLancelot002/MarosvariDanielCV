@@ -27,7 +27,7 @@ function StudyCard({ study }: StudyCardProps) {
       borderColor="transparent"
       borderRadius="20px"
       glareColor="#ffffff"
-      glareOpacity={0.3}
+      glareOpacity={0.6}
       glareAngle={-30}
       glareSize={300}
       transitionDuration={800}

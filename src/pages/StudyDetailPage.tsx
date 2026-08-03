@@ -8,6 +8,8 @@ import { formatStudyPeriod } from '../utils/date';
 import './StudyDetailPage.css';
 import Strands from '../modules/Strands';
 
+import calendarLogoImg from '../assets/calendarlogo.png';
+import cityLogoImg from '../assets/citylogo.png';
 
 const studies = studiesData as Study[];
 const MAX_EQF_LEVEL = 8;
@@ -55,21 +57,40 @@ function StudyDetailPage() {
 
         <div className="container mt-5 studies-content-container study-detail-container">
           <article className="study-detail">
-            <Link to="/studies" className="study-detail__back">
-              &larr; {t("studies.backToList")}
-            </Link>
+            <div className="row study-detail__top-row align-items-center">
+              <div className="col-12 col-md-6">
+                <Link to="/studies" className="study-detail__back">
+                  &larr; {t("studies.backToList")}
+                </Link>
+              </div>
+              <div className="col-12 col-md-6">
+                <div className="study-detail__level-wrap">
+                  <div className="study-detail__level" aria-label={`Level ${study.level} of ${MAX_EQF_LEVEL}`}>
+                    <span className="study-detail__level-label">EQF {t("studies.level")}</span>
+                    {Array.from({ length: MAX_EQF_LEVEL }, (_, i) => (
+                      <span key={i} className={`study-detail__dot ${i < study.level ? 'is-filled' : ''}`} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <header className="study-detail__header">
               <h1 className="study-detail__title">{content.title}</h1>
-              {content.facility && <p className="study-detail__facility">{content.facility}</p>}
-              <p className="study-detail__period">{formatStudyPeriod(study.startDate, study.endDate, lang)}</p>
-
-              <div className="study-detail__level" aria-label={`Level ${study.level} of ${MAX_EQF_LEVEL}`}>
-                <span className="study-detail__level-label">EQF {t("studies.level")}</span>
-                {Array.from({ length: MAX_EQF_LEVEL }, (_, i) => (
-                  <span key={i} className={`study-detail__dot ${i < study.level ? 'is-filled' : ''}`} />
-                ))}
-              </div>
+              <img src={cityLogoImg} alt="" className="personal-data-icon" /> 
+              {content.facility && study.institutionSrc ? (
+                <a
+                  href={study.institutionSrc}
+                  className="study-detail__facility"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {content.facility}
+                </a>
+              ) : (
+                content.facility && <p className="study-detail__facility">{content.facility}</p>
+              )}
+              <p className="study-detail__period"><img src={calendarLogoImg} alt="" className="personal-data-icon" /><span> {formatStudyPeriod(study.startDate, study.endDate, lang)}</span></p>
             </header>
 
             <div className="study-detail__body">

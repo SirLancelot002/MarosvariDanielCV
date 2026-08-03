@@ -8,6 +8,7 @@ import { formatStudyPeriod } from '../utils/date';
 import './StudyDetailPage.css';
 import Strands from '../modules/Strands';
 import EqfLevel from '../modules/EqfLevel';
+import TiltedCard from '../modules/TiltedCard';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
 import cityLogoImg from '../assets/citylogo.png';
@@ -71,7 +72,7 @@ function StudyDetailPage() {
 
             <header className="study-detail__header">
               <h1 className="study-detail__title">{content.title}</h1>
-              <img src={cityLogoImg} alt="" className="personal-data-icon" /> 
+              <img src={cityLogoImg} alt="" className="personal-data-icon" />
               {content.facility && study.institutionSrc ? (
                 <a
                   href={study.institutionSrc}
@@ -87,17 +88,43 @@ function StudyDetailPage() {
               <p className="study-detail__period"><img src={calendarLogoImg} alt="" className="personal-data-icon" /><span> {formatStudyPeriod(study.startDate, study.endDate, lang)}</span></p>
             </header>
 
-            <div className="study-detail__body">
+            <div className="row study-detail__body study-detail__body-grid g-4">
               {content.longDescription.map((block, i) => {
                 if (block.type === 'paragraph') {
-                  return <p key={i}>{block.text}</p>;
+                  return (
+                    <div key={i} className="col-12">
+                      <p>{block.text}</p>
+                    </div>
+                  );
                 }
                 if (block.type === 'image') {
                   return (
-                    <figure key={i} className="study-detail__figure">
-                      <img src={publicAsset(block.src ?? '')} alt={block.alt ?? ''} loading="lazy" />
-                      {block.caption && <figcaption>{block.caption}</figcaption>}
-                    </figure>
+                    <div key={i} className="col-12 col-xl-6">
+                      <figure className="study-detail__figure">
+                        <TiltedCard
+                          className="study-detail__tilted-card"
+                          imageSrc={publicAsset(block.src ?? '')}
+                          altText={block.alt ?? ''}
+                          captionText={block.caption ?? ''}
+                          containerHeight="auto"
+                          containerWidth="100%"
+                          imageHeight="auto"
+                          imageWidth="auto"
+                          rotateAmplitude={12}
+                          scaleOnHover={1.05}
+                          showMobileWarning={false}
+                          showTooltip={false}
+                          displayOverlayContent
+                          overlayContent={
+                            block.caption ? (
+                              <p className="tilted-card-demo-text">
+                                {block.caption}
+                              </p>
+                            ) : null
+                          }
+                        />
+                      </figure>
+                    </div>
                   );
                 }
                 return null;

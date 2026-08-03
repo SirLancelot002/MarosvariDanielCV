@@ -93,7 +93,9 @@ a.study-detail__facility:hover {
 }
 
 .study-detail__figure {
-  margin: 2rem 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .study-detail__figure img {
@@ -108,6 +110,29 @@ a.study-detail__facility:hover {
   color: #b6b7c6;
   font-size: 0.9rem;
   margin-top: 0.55rem;
+}
+
+.study-detail__tilted-card {
+  width: 100%;
+  justify-content: center;
+}
+
+.study-detail__tilted-card .tilted-card-inner {
+  max-width: 100%;
+}
+
+.tilted-card-demo-text {
+  margin: 0;
+  padding: 0.45rem 0.7rem;
+  border-radius: 10px;
+  background: rgba(120, 120, 120, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  color: #f1f2f6;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-align: center;
+  max-width: min(92%, 42ch);
+  backdrop-filter: blur(2px);
 }
 
 @media (max-width: 768px) {

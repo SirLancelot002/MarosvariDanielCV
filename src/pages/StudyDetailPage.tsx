@@ -9,6 +9,7 @@ import './StudyDetailPage.css';
 import Strands from '../modules/Strands';
 import EqfLevel from '../modules/EqfLevel';
 import TiltedCard from '../modules/TiltedCard';
+import GradientText from '../modules/GradientText';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
 import cityLogoImg from '../assets/citylogo.png';
@@ -71,7 +72,7 @@ function StudyDetailPage() {
             </div>
 
             <header className="study-detail__header">
-              <h1 className="study-detail__title">{content.title}</h1>
+              <h1 className="study-detail__title"><GradientText colors={["#3300ff", "#ff77fb", "#97c0cf"]} animationSpeed={8} showBorder={false} className="gradient-Title">{content.title}</GradientText></h1>
               <img src={cityLogoImg} alt="" className="personal-data-icon" />
               {content.facility && study.institutionSrc ? (
                 <a
@@ -92,14 +93,14 @@ function StudyDetailPage() {
               {content.longDescription.map((block, i) => {
                 if (block.type === 'paragraph') {
                   return (
-                    <div key={i} className="col-12">
+                    <div key={i} className="col-6 col-xs-12">
                       <p className="study-detail__paragraph">{block.text}</p>
                     </div>
                   );
                 }
                 if (block.type === 'image') {
                   return (
-                    <div key={i} className="col-12 col-xl-6">
+                    <div key={i} className="col-6 col-xs-12">
                       <figure className="study-detail__figure">
                         <TiltedCard
                           className="study-detail__tilted-card"

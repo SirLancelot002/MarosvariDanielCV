@@ -165,3 +165,10 @@ a.study-detail__facility:hover {
 .study-detail__paragraph {
   text-align: justify;
 }
+
+.gradient-Title {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}

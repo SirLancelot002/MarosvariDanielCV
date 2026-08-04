@@ -162,5 +162,113 @@
         ]
       }
     }
+  },
+  {
+    "id": "b2-language-cert",
+    "level": 4,
+    "institutionSrc": "https://www.languagecert.hu/vizsgaidopontok",
+    "headerSrc": "studies/languagecert-logo.jpeg",
+    "startDate": "2022-12-03",
+    "endDate": "2023-01-19",
+    "translations": {
+      "en": {
+        "title": "B2 English Language Certificate",
+        "facility": "LanguageCert",
+        "shortDescription": "I took the exam in December 2022 and received my certificate in January 2023. Ever since that (even before) I have been using and improving my English skills. I never had any issues with communication in English.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "I took the B2 English Language Certificate exam in December 2022 and received my certificate in January 2023. Ever since that (even before) I have been using and improving my English skills. Any time I watch anything online, I watch it in English. I usually \"default\" to English when I speak to AI or write comments in code. I have multiple foreign friends from university, and we communicate in English. My only shortcoming may be vocabulary compared to my C1 level friend."
+          },
+          {
+            "type": "image",
+            "src": "studies/eng-flag.svg",
+            "alt": "English flag",
+            "caption": "English flag"
+          }
+        ]
+      },
+      "hu": {
+        "title": "B2-es Angol Nyelvvizsga",
+        "facility": "LanguageCert",
+        "shortDescription": "2022 decemberében tettem le a vizsgát, és 2023 januárjában megkaptam a bizonyítványomat. Azóta (sőt már előtte is) folyamatosan használom és fejlesztem az angol nyelvtudásomat. Soha nem volt problémám az angol nyelvű kommunikációval.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "2022 decemberében tettem le a B2-es angol nyelvvizsgát, és 2023 januárjában megkaptam a bizonyítványomat. Azóta (sőt már előtte is) folyamatosan használom és fejlesztem az angol nyelvtudásomat. Bármikor, amikor online nézek valamit, angolul nézem. Általában angolul kommunikálok a mesterséges intelligenciával vagy írok kommenteket a kódban. Több külföldi barátom van az egyetemről, akikkel angolul kommunikálunk. Egyetlen hiányosságom talán a szókincs lehet a C1 szintű barátomhoz képest."
+          },
+          {
+            "type": "image",
+            "src": "studies/eng-flag.svg",
+            "alt": "Angol zászló",
+            "caption": "Angol zászló"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "petrik-hs",
+    "level": 4,
+    "institutionSrc": "https://petrik.hu",
+    "headerSrc": "studies/petrik-header.jpg",
+    "startDate": "2019-09-01",
+    "endDate": "2023-06-30",
+    "translations": {
+      "en": {
+        "title": "Vocational high school in IT",
+        "facility": "Petrik Lajos Technical School",
+        "shortDescription": "Vocational high school specializing in IT. 4 year program with a focus on programming and software development. The program was very practical and hands-on, which helped me start on the path of coding and gain a lot of experience in programming.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Petrik Lajos Technical School has multiple specializations, but I chose the IT specialization. This started me on the path of software development. I fellen in love with it in the 1st semester. I've spent my whole fall break coding my big project for the end of the semester. The program was very practical and hands-on, which helped me gain a lot of experience in programming. We learned about different programming languages (C#, SQL, JavaScript), and software development methodologies."
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-building.jpg",
+            "alt": "Petrik campus",
+            "caption": "Main building of Petrik Lajos"
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-labor.jpg",
+            "alt": "Petrik lab",
+            "caption": "CS Laboratory of Petrik Lajos"
+          },
+          {
+            "type": "paragraph",
+            "text": "Even in the first semester, I had ~12 hours of some kind of programming class per week. We even had Linux and IT Network classes. The pace was laid back, but that just allowed me to research my own interests (like Unreal Engine 5 in 2022). I also participated in National mathematics competitions and I got into the final round in the capital. This gave me the confidence to apply to ELTE, where I got accepted to the BSc in Computer Science program."
+          }
+        ]
+      },
+      "hu": {
+        "title": "IT specializációs szakgimnázium",
+        "facility": "Petrik Lajos Technikum",
+        "shortDescription": "IT specializációs szakgimnázium. 4 éves program programozás és szoftverfejlesztés fókuszával. A képzés nagyon gyakorlatorientált, ami segített elindulni a kódolás útján és sok tapasztalatot szerezni a programozásban.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "A Petrik Lajos Szakgimnáziumban több szakirány közül is választhattam, de én az informatika szakirányra esett a választásom. Ez indított el a szoftverfejlesztés útján, amibe már az első félévben beleszerettem. A teljes őszi szünetemet azzal töltöttem, hogy a félév végi nagy projektre kódoltam. A képzés nagyon gyakorlatias és kézzelfogható volt, ami rengeteg programozási tapasztalat megszerzésében segített. Különböző programozási nyelvekkel (C#, SQL, JavaScript) és szoftverfejlesztési módszertanokkal ismerkedtünk meg."
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-building.jpg",
+            "alt": "Petrik campus",
+            "caption": "A Petrik Lajos főépülete"
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-labor.jpg",
+            "alt": "Petrik lab",
+            "caption": "A Petrik Lajos számítástechnikai laborja"
+          },
+          {
+            "type": "paragraph",
+            "text": "Már az első félévben heti nagyjából 12 órám volt valamilyen programozáshoz kapcsolódó tárgyból, emellett Linux és informatikai hálózatok óráink is voltak. A tempó kényelmes volt, ami épp lehetőséget adott rá, hogy az egyéni érdeklődési területeimmel is foglalkozzam (például 2022-ben az Unreal Engine 5-tel). Részt vettem országos matematikaversenyeken is, és a fővárosi döntőbe is bejutottam. Ez a siker adta meg az önbizalmat ahhoz, hogy az ELTE-re jelentkezzek, ahová fel is vettek a Programtervező informatikus BSc szakra."
+          }
+        ]
+      }
+    }
   }
 ]

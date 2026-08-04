@@ -91,16 +91,20 @@ function StudyDetailPage() {
 
             <div className="row study-detail__body study-detail__body-grid g-4">
               {content.longDescription.map((block, i) => {
+                const isLastBlock = i === content.longDescription.length - 1;
+                const hasOddBlockCount = content.longDescription.length % 2 === 1;
+                const blockColumnClass = hasOddBlockCount && isLastBlock ? 'col-12' : 'col-12 col-lg-6';
+
                 if (block.type === 'paragraph') {
                   return (
-                    <div key={i} className="col-6 col-xs-12">
+                    <div key={i} className={blockColumnClass}>
                       <p className="study-detail__paragraph">{block.text}</p>
                     </div>
                   );
                 }
                 if (block.type === 'image') {
                   return (
-                    <div key={i} className="col-6 col-xs-12">
+                    <div key={i} className={blockColumnClass}>
                       <figure className="study-detail__figure">
                         <TiltedCard
                           className="study-detail__tilted-card"

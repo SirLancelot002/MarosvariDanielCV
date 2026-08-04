@@ -2,7 +2,7 @@
   {
     "id": "bme-cs-bsc",
     "level": 6,
-    "institutionSrc": "https://www.bme.hu",
+    "institutionSrc": "https://bprof.vik.bme.hu",
     "headerSrc": "studies/bme-header.png",
     "startDate": "2024-09-01",
     "endDate": "2027-06-30",
@@ -12,28 +12,81 @@
         "facility": "Budapest University of Technology and Economics",
         "shortDescription": "(BSc/BProf) Industrial IT specialist. A 3 year bachelor program specializing in software development. It was a cooperative program with the last year being spent at a partner company.",
         "longDescription": [
-          { "type": "paragraph", "text": "What is there to know about this program? First of all this is a BProf program. It is on the same level as a BSc program, but it focuses on the applied aspects of computer science instead of heavy mathematics. We started with the basics of coding (which I already had at this point), algorithms, and calculus. The first 2 semesters went easy for me thanks to my previous experience on ELTE. On the 3rd and 4th semesters we focused on more advanced software development topics like design patterns, testing, project management, SOLID principles, and data structures." },
-          { "type": "image", "src": "studies/bme-building.png", "alt": "BME campus", "caption": "Main building of BME" },
-          { "type": "paragraph", "text": "Focused coursework on data access technologies, ORM patterns, and enterprise application design." }
+          {
+            "type": "paragraph",
+            "text": "What is there to know about this program? First of all this is a BProf program. It is on the same level as a BSc program, but it focuses on the applied aspects of computer science instead of heavy mathematics. We started with the basics of coding (which I already had at this point), algorithms, and calculus. The first 2 semesters went easy for me thanks to my previous experience on ELTE. On the 3rd and 4th semesters we focused on more advanced software development topics like design patterns, testing, project management, SOLID principles, and data structures."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-building.png",
+            "alt": "BME campus",
+            "caption": "Main building of BME"
+          },
+          {
+            "type": "paragraph",
+            "text": "For our 4th semester, we had to choose our specialization. The 4 options were Software Development, Data Science, Network specialist, and Testing and Quality Assurance. I've chosen the Software Development track, but I was seriously considering Data Science as well. Here, we learned about ORM, React web development, Android application design, and cloud computing."
+          },
+          {
+            "type": "paragraph",
+            "text": "At the end of our 4th semester, we had to apply for internships at partner companies. I was lucky enough to get a position at NISZ (National Information Technology Service Company) for the \"Data-based decision support and the principle of one truth\" Thesis topic. I was really happy to earn this position, since it allowed me to gain practical experience both in Software development and Data Science."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-job-fair.jpg",
+            "alt": "BME job fair",
+            "caption": "BME job fair"
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-q-building.jpg",
+            "alt": "BME Q building",
+            "caption": "BME Q building"
+          }
         ]
       },
       "hu": {
-        "title": "Mérnökinformatikus BSc",
+        "title": "Üzemmérnök informatikus BProf",
         "facility": "Budapesti Műszaki és Gazdaságtudományi Egyetem",
         "shortDescription": "(BSc/BProf) Üzemmérnök informatikus. 3 éves alapképzés szoftverfejlesztői specializációval. Kooperatív program, az utolsó év egy partnercégnél töltve.",
         "longDescription": [
-          { "type": "paragraph", "text": "Szoftverfejlesztési alapismeretek elsajátítása, algoritmusok, adatbázisok és elosztott rendszerek területén." },
-          { "type": "image", "src": "studies/bme-campus.jpg", "alt": "BME campus", "caption": "A BME főépülete" },
-          { "type": "paragraph", "text": "Az adathozzáférési technológiákra, ORM mintákra és vállalati alkalmazásfejlesztésre fókuszáló tárgyak." }
+          {
+            "type": "paragraph",
+            "text": "Mit érdemes tudni erről a képzésről? Először is, ez egy BProf képzés. Ugyanazon a szinten van, mint egy BSc, azonban a hangsúlyt a számítástechnika gyakorlati alkalmazásaira helyezi a mélyebb matematikai háttér helyett. Az első félévekben a programozás alapjaival (amelyekkel ekkorra már rendelkeztem), algoritmusokkal és kalkulussal foglalkoztunk. Az első két szemeszter számomra könnyen ment az ELTE-n szerzett korábbi tapasztalataimnak köszönhetően. A 3. és 4. félévben már haladóbb szoftverfejlesztési témák kerültek előtérbe, például a tervezési minták, a szoftvertesztelés, a projektmenedzsment, a SOLID alapelvek és az adatstruktúrák."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-building.png",
+            "alt": "BME kampusz",
+            "caption": "A BME központi épülete"
+          },
+          {
+            "type": "paragraph",
+            "text": "A 4. félév végén szakirányt kellett választanunk. Négy lehetőség közül választhattunk: Szoftverfejlesztés, Adattudomány, Hálózati specialista, valamint Tesztelés és Minőségbiztosítás. Végül a Szoftverfejlesztés szakirányt választottam, bár az Adattudomány is komolyan érdekelt. Ezen a szakirányon olyan technológiákkal és témákkal ismerkedtünk meg, mint az ORM, a React-alapú webfejlesztés, az Android alkalmazásfejlesztés és a felhőalapú számítástechnika."
+          },
+          {
+            "type": "paragraph",
+            "text": "A 4. félév végén partnercégekhez kellett szakmai gyakorlatra jelentkeznünk. Szerencsére lehetőséget kaptam a NISZ-nél (Nemzeti Infokommunikációs Szolgáltató Zrt.), ahol a „Adatalapú döntéstámogatás és az egy igazság elve” szakdolgozati témán dolgozhatok. Nagyon örültem ennek a lehetőségnek, hiszen egyszerre szerezhetek gyakorlati tapasztalatot a szoftverfejlesztés és az adattudomány területén is."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-job-fair.jpg",
+            "alt": "BME állásbörze",
+            "caption": "BME állásbörze"
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-q-building.jpg",
+            "alt": "BME Q épület",
+            "caption": "A BME Q épülete"
+          }
         ]
       }
     }
   },
-
   {
     "id": "elte-cs-bsc",
     "level": 6,
-    "institutionSrc": "https://www.elte.hu",
+    "institutionSrc": "https://www.inf.elte.hu/programtervezo-informatikus-alapkepzesi-szak-bsc",
     "headerSrc": "studies/elte-header.jpg",
     "startDate": "2023-09-01",
     "endDate": "2024-06-30",
@@ -43,9 +96,34 @@
         "facility": "Eötvös Loránd University",
         "shortDescription": "(BSc) Programmer Mathematician. A 3 year bachelor program specializing in the mathematical side of software development. It was a highly theoretical program with a strong focus on mathematics (which lead me to switch to BME).",
         "longDescription": [
-          { "type": "paragraph", "text": "Studying software engineering fundamentals, covering algorithms, databases, and distributed systems." },
-          { "type": "image", "src": "studies/elte-campus.jpg", "alt": "ELTE campus", "caption": "Main building of ELTE" },
-          { "type": "paragraph", "text": "Focused coursework on data access technologies, ORM patterns, and enterprise application design." }
+          {
+            "type": "paragraph",
+            "text": "The first semester went really well. We had a \"basics of programming\" course, which despite the fact that I already had experience with, still taught me a lot of new practices and programming tricks. In addition we had functional programming and imperative programming courses, and \"Basics of Mathematics\". This despite its name, wasn't basic and it was hard, but I've succeeded with a 4 (out of 5) grade. I've ended the semester with a weighted average credit index of 4.7 ."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-building.jpg",
+            "alt": "ELTE campus",
+            "caption": "Main building of ELTE"
+          },
+          {
+            "type": "paragraph",
+            "text": "The challenges began in the second semester. I genuinely enjoyed the programming-related courses, such as Object-Oriented Programming, Web Development, and Algorithms. However, the mathematics courses became significantly more demanding than in the previous semester, while the level of support from the teaching staff was minimal. One of the exams required memorizing roughly 100 pages of formulas, with little emphasis on understanding or practical application."
+          },
+          {
+            "type": "paragraph",
+            "text": "Unfortunately, I also experienced organizational issues in several other courses. The most notable example was our Java course, where the final exam was only completed by the instructors a few hours before it was scheduled to take place. The exam turned out to be so problematic that the university had to organize an additional exam session after almost the entire class failed, despite previously stating that no second opportunity would be available."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-labor.jpg",
+            "alt": "ELTE lab",
+            "caption": "ELTE laboratory"
+          },
+          {
+            "type": "paragraph",
+            "text": "While I still enjoyed studying computer science, I realized that the learning environment no longer matched the way I wanted to develop as a software engineer. Rather than continuing in a program where much of my effort was spent preparing for theoretical exams, I decided to transfer to BME, whose practice-oriented BProf program aligned much better with my interests and career goals."
+          }
         ]
       },
       "hu": {
@@ -53,9 +131,34 @@
         "facility": "Eötvös Loránd Tudományegyetem",
         "shortDescription": "(BSc) Programtervező matematikus. 3 éves alapképzés a szoftverfejlesztés matematikai oldalára specializálódva. Nagyon elmélet orientált, erős matematikai fókuszú (ami miatt váltottam BME-re).",
         "longDescription": [
-          { "type": "paragraph", "text": "Szoftverfejlesztési alapismeretek elsajátítása, algoritmusok, adatbázisok és elosztott rendszerek területén." },
-          { "type": "image", "src": "studies/elte-campus.jpg", "alt": "ELTE campus", "caption": "Az ELTE főépülete" },
-          { "type": "paragraph", "text": "Az adathozzáférési technológiákra, ORM mintákra és vállalati alkalmazásfejlesztésre fókuszáló tárgyak." }
+          {
+            "type": "paragraph",
+            "text": "Az első szemeszter nagyon jól sikerült. Volt egy „Programozás alapjai” tantárgyunk, amely annak ellenére, hogy már rendelkeztem programozási tapasztalattal, számos új szemléletet és hasznos technikát tanított. Emellett funkcionális programozást, imperatív programozást és „Matematika alapjai” tantárgyat is tanultunk. Ez utóbbi a neve ellenére egyáltalán nem volt alapszintű, komoly kihívást jelentett, de végül 4-es osztályzattal sikerült teljesítenem. A szemesztert 4,7-es súlyozott tanulmányi átlaggal zártam."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-building.jpg",
+            "alt": "ELTE kampusz",
+            "caption": "Az ELTE központi épülete"
+          },
+          {
+            "type": "paragraph",
+            "text": "A kihívások a második szemeszterben kezdődtek. A programozáshoz kapcsolódó tantárgyakat – például az Objektumorientált Programozást, a Webfejlesztést és az Algoritmusokat – továbbra is nagyon élveztem. A matematikai tárgyak azonban jóval nehezebbé váltak, miközben az oktatóktól kapott támogatás minimális volt. Az egyik vizsga teljesítéséhez körülbelül 100 oldalnyi képletet kellett szó szerint megtanulni, miközben kevés hangsúly került a valódi megértésre vagy a gyakorlati alkalmazásra."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sajnos több tantárgynál is szervezési problémákkal találkoztam. A legemlékezetesebb példa a Java kurzus volt, ahol a záróvizsga feladatait az oktatók csak néhány órával a vizsga előtt fejezték be. A vizsga végül annyira problémásnak bizonyult, hogy az egyetemnek rendkívüli pótvizsgát kellett kiírnia, miután a hallgatók döntő többsége megbukott – annak ellenére, hogy korábban egyértelműen közölték, hogy nem lesz második vizsgaalkalom."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-labor.jpg",
+            "alt": "ELTE laboratórium",
+            "caption": "ELTE laboratórium"
+          },
+          {
+            "type": "paragraph",
+            "text": "Bár továbbra is élveztem az informatika tanulását, rájöttem, hogy a képzés szemlélete már nem illeszkedik ahhoz, ahogyan szoftverfejlesztőként fejlődni szeretnék. Ahelyett, hogy egy olyan programban folytattam volna a tanulmányaimat, ahol az időm jelentős részét elméleti vizsgákra való felkészülés töltötte ki, úgy döntöttem, hogy átiratkozom a BME gyakorlatközpontú BProf képzésére, amely sokkal jobban megfelelt az érdeklődésemnek és a hosszú távú szakmai céljaimnak."
+          }
         ]
       }
     }

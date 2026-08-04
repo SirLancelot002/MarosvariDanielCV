@@ -96,6 +96,8 @@ a.study-detail__facility:hover {
   margin: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .study-detail__figure img {

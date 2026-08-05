@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useLayoutEffect } from 'react';
 import NavBar from '../NavBar';
 import studiesData from '../data/studies.json';
 import type { Study } from '../types/study';
@@ -19,6 +20,10 @@ function StudyDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { t, i18n } = useTranslation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const study = studies.find(s => s.id === id);
 

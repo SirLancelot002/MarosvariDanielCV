@@ -84,6 +84,94 @@
     }
   },
   {
+    "id": "nau-advanced-owsd",
+    "level": 5,
+    "institutionSrc": "https://www.naui.org/learn/continuing-education/advanced-open-water-scuba-diver/",
+    "headerSrc": "studies/naui-advanced-header.jpg",
+    "startDate": "2025-08-18",
+    "endDate": "2025-08-25",
+    "translations": {
+      "en": {
+        "title": "Advanced Open Water Scuba Diver",
+        "facility": "NAUI",
+        "shortDescription": "{NOT IT RELEVANT} I took this course in August 2025. It's story is similar to the Open Water Scuba Diver course (that's visible down below). This is the next level of scuba diving certification, which allows the holder to dive deeper and in more challenging conditions.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "To be clear: THIS COURSE IS NOT RELEVANT TO IT. I took the theoretical part of the course online under 3 weeks, and then I took the practical part in the sea under a week. I've learned stricter rules about how to descend into the depths, better underwater navigation skills, search and rescue techniques, and how to handle more challenging situations. I've also learned about the different types of diving, such as night diving, deep diving, and wreck diving. The course was honestly pretty easy for me. The technical part was similar to the previous course, and the more advanced theoretical part was a breeze compared to University."
+          },
+          {
+            "type": "image",
+            "src": "studies/me-wreck-diving.jpg",
+            "alt": "Me, Wreck diving",
+            "caption": "Me, Wreck diving"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-in-cave.jpg",
+            "alt": "Scuba diving in a cave",
+            "caption": "Scuba diving in a cave"
+          },
+          {
+            "type": "paragraph",
+            "text": "I really loved the dives we had this year. We dived down to 40 meters deep. I've experienced oxygen narcosis first hand. It was a weird experience and by default dangerous, but my training of course kept me safe. I also saw lion fish among other species. The most interesting dive site was a cliff at below 40 meters, the bottom went down until about 60-70 meters, and the whole rocky wall was full with coral."
+          },
+          {
+            "type": "image",
+            "src": "studies/whale-shark.webp",
+            "alt": "Whale shark",
+            "caption": "Whale shark"
+          },
+          {
+            "type": "image",
+            "src": "studies/lionfish.webp",
+            "alt": "Lionfish",
+            "caption": "Lionfish"
+          }
+        ]
+      },
+      "hu": {
+        "title": "Haladó nyíltvízi búvár",
+        "facility": "NAUI",
+        "shortDescription": "{NEM INFORMATIKAI RELEVANCIÁJÚ} Ezt a tanfolyamot 2025 augusztusában végeztem el. Története hasonló a Nyíltvízi búvár tanfolyaméhoz (ami lentebb látható). Ez a búvártanfolyam következő szintje, ami nagyobb mélységbe és nehezebb körülmények közötti merülésre jogosít.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "A félreértések elkerülése végett: EZ A TANFOLYAM NEM RELEVÁNS AZ IT SZEMPONTJÁBÓL. A tanfolyam elméleti részét online végeztem el 3 hét alatt, a gyakorlati részt pedig kevesebb, mint egy hét alatt a tengerben. Szigorúbb szabályokat tanultam a mélybe ereszkedésről, jobb víz alatti navigációs készségeket, keresési és mentési technikákat, valamint azt, hogyan kezeljem a nehezebb helyzeteket. Emellett megismerkedtem a különböző merülési típusokkal is, mint az éjszakai merülés, a mélymerülés és a roncsmerülés. Őszintén szólva a tanfolyam elég könnyű volt számomra. A technikai rész hasonló volt az előző tanfolyamhoz, a haladóbb elméleti rész pedig szellőnek számított az egyetemhez képest."
+          },
+          {
+            "type": "image",
+            "src": "studies/me-wreck-diving.jpg",
+            "alt": "Én, roncsmerülés közben",
+            "caption": "Én, roncsmerülés közben"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-in-cave.jpg",
+            "alt": "Búvárkodás egy barlangban",
+            "caption": "Búvárkodás egy barlangban"
+          },
+          {
+            "type": "paragraph",
+            "text": "Igazán imádtam az idei merüléseinket. Lemerültünk 40 méter mélyre is. Saját bőrömön tapasztaltam meg a mélységi mámort. Furcsa élmény volt, és alapvetően veszélyes, de a képzésem természetesen biztonságban tartott. Többek között oroszlánhalat is láttam. A legérdekesebb merülőhely egy 40 méternél is mélyebben fekvő szirtfal volt, az alja körülbelül 60-70 méterre nyúlt le, és az egész sziklafalat korall borította."
+          },
+          {
+            "type": "image",
+            "src": "studies/whale-shark.webp",
+            "alt": "Cetcápa",
+            "caption": "Cetcápa"
+          },
+          {
+            "type": "image",
+            "src": "studies/lionfish.webp",
+            "alt": "Oroszlánhal",
+            "caption": "Oroszlánhal"
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": "elte-cs-bsc",
     "level": 6,
     "institutionSrc": "https://www.inf.elte.hu/programtervezo-informatikus-alapkepzesi-szak-bsc",
@@ -164,6 +252,70 @@
     }
   },
   {
+    "id": "office-it-specialist",
+    "level": 5,
+    "institutionSrc": "https://szakkepesites.hu/okj/tanfolyamok/irodai-informatikus",
+    "headerSrc": "studies/office-it-specialist-header.jpg",
+    "startDate": "2023-01-14",
+    "endDate": "2023-06-26",
+    "translations": {
+      "en": {
+        "title": "Office IT Specialist (OKJ)",
+        "facility": "Petrik Lajos Technical School",
+        "shortDescription": "This was a mandatory course for my high school program. It was a 6 month long course, which taught me the basics of Linux (without GUI), and the most advance Microsoft Office skills. I learned how to use Word, Excel, PowerPoint, and Access at a professional level. For example, macros in Excel.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "This was a mandatory course in my high school program. Based on previous years' experiences, many students tended to underestimate the exam, so our teachers dedicated a separate class entirely to its preparation. We first focused on Linux, working exclusively from the command line without a graphical interface. The training was comprehensive enough that I didn't need to learn any additional Linux fundamentals at university. We then moved on to Microsoft Office. While we were already familiar with Word, Excel, and the rest of the Office suite, the exam required a much deeper understanding. We explored the advanced features of each application and learned to use them at a professional level rather than just for everyday tasks."
+          },
+          {
+            "type": "image",
+            "src": "studies/linux-console.png",
+            "alt": "Linux console",
+            "caption": "Linux console"
+          },
+          {
+            "type": "paragraph",
+            "text": "While this certification isn't particularly prestigious, it proved to be a valuable addition during high school and gave me a solid foundation in several practical tools. Since then, I've continued using Linux whenever projects required it, and Microsoft Office has become part of my everyday workflow. I've regularly relied on applications such as Word, Excel, and PowerPoint to create professional reports, presentations, documentation, and other project-related materials throughout my studies and software development work."
+          },
+          {
+            "type": "image",
+            "src": "studies/excel.png",
+            "alt": "Excel",
+            "caption": "Excel"
+          }
+        ]
+      },
+      "hu": {
+        "title": "Irodai Informatikus (OKJ)",
+        "facility": "Petrik Lajos Technikum",
+        "shortDescription": "Ez egy kötelező tantárgy volt a középiskolai képzésem során. A hat hónapos kurzus során elsajátítottam a Linux alapjait (grafikus felület nélkül), valamint a Microsoft Office haladó szintű használatát. Megtanultam professzionális szinten használni a Wordöt, Excelt, PowerPointot és Accesst, beleértve az olyan fejlettebb funkciókat is, mint például az Excel makrók.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Ez egy kötelező tantárgy volt a középiskolai képzésem során. A korábbi évek tapasztalatai alapján sok diák alábecsülte a vizsgát, ezért tanáraink egy külön tantárgyat szenteltek a felkészítésére. Először a Linuxszal foglalkoztunk, kizárólag parancssori környezetben, grafikus felület használata nélkül. A képzés olyan alapos volt, hogy az egyetemen már nem volt szükségem új Linux-alapismeretek elsajátítására. Ezután a Microsoft Office következett. Bár a Word, az Excel és a többi Office-alkalmazás használatának alapjait már ismertük, a vizsga ennél jóval mélyebb tudást követelt meg. Megismertük az egyes programok haladó funkcióit, és megtanultuk őket professzionális szinten használni, nem csupán a mindennapi feladatok elvégzésére."
+          },
+          {
+            "type": "image",
+            "src": "studies/linux-console.png",
+            "alt": "Linux konzol",
+            "caption": "Linux konzol"
+          },
+          {
+            "type": "paragraph",
+            "text": "Bár ez a tanúsítvány önmagában nem számít különösebben rangosnak, középiskolásként értékes lehetőséget jelentett, és biztos alapokat adott számos gyakorlati eszköz használatához. Azóta is rendszeresen használok Linuxot, amikor egy projekt megköveteli, a Microsoft Office pedig a mindennapi munkafolyamataim részévé vált. Tanulmányaim és szoftverfejlesztői projektjeim során rendszeresen készítettem Word-, Excel- és PowerPoint-alapú dokumentációkat, jelentéseket, prezentációkat és egyéb szakmai anyagokat."
+          },
+          {
+            "type": "image",
+            "src": "studies/excel.png",
+            "alt": "Excel",
+            "caption": "Microsoft Excel"
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": "b2-language-cert",
     "level": 4,
     "institutionSrc": "https://www.languagecert.hu/vizsgaidopontok",
@@ -202,6 +354,94 @@
             "src": "studies/eng-flag.svg",
             "alt": "Angol zászló",
             "caption": "Angol zászló"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "nau-basic-owsd",
+    "level": 3,
+    "institutionSrc": "https://www.naui.org/learn/entry-level/open-water-scuba-diver-autonomousiso-level-2/",
+    "headerSrc": "studies/naui-basic-header.jpg",
+    "startDate": "2022-08-15",
+    "endDate": "2022-08-22",
+    "translations": {
+      "en": {
+        "title": "Open Water Scuba Diver",
+        "facility": "NAUI",
+        "shortDescription": "{NOT IT RELEVANT} I took this course in August 2022. I took it with recreational purposes. This is basically the certification that someone needs to be allowed to dive in Europe. I've listed this here, as it is technically a certification, even if not an IT relevant one.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "To be clear: THIS COURSE IS NOT RELEVANT TO IT. I wanted to go scuba Diving in 2022 and I needed this certification to be allowed to do that. I took the theoretical part of the course online under 2 weeks, and then I took the practical part in the sea under a week. I learned how to use scuba diving equipment, how to breathe underwater, and how to handle emergency situations. I also learned about the marine life and the importance of preserving it."
+          },
+          {
+            "type": "image",
+            "src": "studies/dive-with-tuna.jpg",
+            "alt": "Dive with tuna",
+            "caption": "Dive with tuna"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me.jpg",
+            "alt": "Me, Scuba diving",
+            "caption": "Me, Scuba diving"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me-2.jpg",
+            "alt": "Me, Scuba diving",
+            "caption": "Me, Scuba diving"
+          },
+          {
+            "type": "paragraph",
+            "text": "This certification allows the holder to dive up to 18 meters deep, and to dive with a buddy. It is a basic certification, but it is enough for recreational diving. I have been diving in the Mediterranean Sea, and I have seen many different species of fish, corals, and other marine life. I have also learned about the importance of preserving the marine environment, and I have become more aware of the impact of human activities on the ocean."
+          },
+          {
+            "type": "image",
+            "src": "studies/snorcel-dive-me.jpg",
+            "alt": "Me, Snorkel diving",
+            "caption": "Me, Snorkel diving"
+          }
+        ]
+      },
+      "hu": {
+        "title": "Nyílt vízi búvár",
+        "facility": "NAUI",
+        "shortDescription": "{NEM INFORMATIKAI RELEVANCIÁJÚ} Ezt a képzést 2022 augusztusában végeztem el, kizárólag szabadidős célból. Ez az az alapképesítés, amely Európa legtöbb búvárközpontjában szükséges a merülésekhez. Azért szerepel itt, mert hivatalos tanúsítvány, még ha nem is kapcsolódik az informatikához.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Fontos megjegyezni, hogy EZ A KÉPESÍTÉS NEM KAPCSOLÓDIK AZ INFORMATIKÁHOZ. 2022-ben szerettem volna elkezdeni búvárkodni, ehhez pedig szükségem volt erre a tanúsítványra. Az elméleti képzést körülbelül két hét alatt online teljesítettem, majd a gyakorlati oktatást egy hét alatt, tengeri környezetben végeztem el. Megtanultam a búvárfelszerelés biztonságos használatát, a víz alatti légzést, valamint a különböző vészhelyzetek kezelését. Emellett megismerkedtem a tengeri élővilággal és annak megóvásának fontosságával is."
+          },
+          {
+            "type": "image",
+            "src": "studies/dive-with-tuna.jpg",
+            "alt": "Merülés tonhalakkal",
+            "caption": "Merülés tonhalakkal"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me.jpg",
+            "alt": "Én búvárkodás közben",
+            "caption": "Én búvárkodás közben"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me-2.jpg",
+            "alt": "Én búvárkodás közben",
+            "caption": "Én búvárkodás közben"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ez a képesítés legfeljebb 18 méteres mélységig, merülőtárssal történő búvárkodásra jogosít fel. Bár alapfokú minősítésnek számít, szabadidős merülésekhez teljes mértékben elegendő. Azóta több alkalommal merültem a Földközi-tengerben, ahol számos különböző halfajt, korallokat és más tengeri élőlényeket láthattam. A képzésnek köszönhetően sokkal tudatosabban tekintek a tengeri környezet védelmére és az emberi tevékenységek óceánokra gyakorolt hatására."
+          },
+          {
+            "type": "image",
+            "src": "studies/snorcel-dive-me.jpg",
+            "alt": "Én sznorkelezés közben",
+            "caption": "Én sznorkelezés közben"
           }
         ]
       }

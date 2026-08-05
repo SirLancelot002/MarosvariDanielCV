@@ -64,7 +64,13 @@
   margin: 0 0 0.65rem;
   text-align: center;
   font-size: clamp(1.7rem, 2.7vw, 2.6rem);
-  line-height: 1.2;
+  line-height: 1.3;
+  overflow: visible;
+}
+
+.study-detail__title .animated-gradient-text,
+.study-detail__title .text-content {
+  overflow: visible;
 }
 
 .study-detail__facility {
@@ -83,12 +89,12 @@ a.study-detail__facility:hover {
 .study-detail__period {
   color: #b6b7c6;
   font-size: 0.98rem;
-  margin: 0 0 1.1rem;
+  margin: 0 0 0.9rem;
 }
 
 .study-detail__body p {
   color: #d8dae8;
-  line-height: 1.8;
+  line-height: 1.6;
   margin-bottom: 1.25rem;
 }
 
@@ -166,6 +172,7 @@ a.study-detail__facility:hover {
 
 .study-detail__paragraph {
   text-align: justify;
+  line-height: 1.1;
 }
 
 .gradient-Title {

@@ -1,0 +1,51 @@
+.eqf-level {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.eqf-level__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #b896ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-right: 0.15rem;
+  line-height: 1;
+}
+
+.eqf-level__icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.eqf-level__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.eqf-level__dot.is-filled {
+  background: #b896ff;
+  box-shadow: 0 0 10px rgba(184, 150, 255, 0.55);
+}
+
+@media (max-width: 768px) {
+  .eqf-level {
+    gap: 6px;
+  }
+}
+
+a {
+    color: #b896ff;
+    text-decoration: underline;
+}

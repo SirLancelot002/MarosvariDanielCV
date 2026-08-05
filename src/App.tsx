@@ -7,6 +7,7 @@ const LandingPage = lazy(() => import('./pages/LandingPage'));
 const StudiesPage = lazy(() => import('./pages/StudiesPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const TimeLinePage = lazy(() => import('./pages/TimeLinePage'));
+const StudyDetailPage = lazy(() => import('./pages/StudyDetailPage'));
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/studies" element={<StudiesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/timeline" element={<TimeLinePage />} />
+          <Route path="/studies/:id" element={<StudyDetailPage />} />
         </Route>
       </Routes>
     </Suspense>

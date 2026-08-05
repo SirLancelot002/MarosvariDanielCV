@@ -1,0 +1,514 @@
+[
+  {
+    "id": "bme-cs-bsc",
+    "level": 6,
+    "institutionSrc": "https://bprof.vik.bme.hu",
+    "headerSrc": "studies/bme-header.png",
+    "startDate": "2024-09-01",
+    "endDate": "2027-06-30",
+    "translations": {
+      "en": {
+        "title": "BSc in Computer Science Engineering",
+        "facility": "Budapest University of Technology and Economics",
+        "shortDescription": "(BSc/BProf) Industrial IT specialist. A 3 year bachelor program specializing in software development. It was a cooperative program with the last year being spent at a partner company.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "What is there to know about this program? First of all this is a BProf program. It is on the same level as a BSc program, but it focuses on the applied aspects of computer science instead of heavy mathematics. We started with the basics of coding (which I already had at this point), algorithms, and calculus. The first 2 semesters went easy for me thanks to my previous experience on ELTE. On the 3rd and 4th semesters we focused on more advanced software development topics like design patterns, testing, project management, SOLID principles, and data structures."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-building.png",
+            "alt": "BME campus",
+            "caption": "Main building of BME"
+          },
+          {
+            "type": "paragraph",
+            "text": "For our 4th semester, we had to choose our specialization. The 4 options were Software Development, Data Science, Network specialist, and Testing and Quality Assurance. I've chosen the Software Development track, but I was seriously considering Data Science as well. Here, we learned about ORM, React web development, Android application design, and cloud computing."
+          },
+          {
+            "type": "paragraph",
+            "text": "At the end of our 4th semester, we had to apply for internships at partner companies. I was lucky enough to get a position at NISZ (National Information Technology Service Company) for the \"Data-based decision support and the principle of one truth\" Thesis topic. I was really happy to earn this position, since it allowed me to gain practical experience both in Software development and Data Science."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-job-fair.jpg",
+            "alt": "BME job fair",
+            "caption": "BME job fair"
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-q-building.jpg",
+            "alt": "BME Q building",
+            "caption": "BME Q building"
+          }
+        ]
+      },
+      "hu": {
+        "title": "Üzemmérnök informatikus BProf",
+        "facility": "Budapesti Műszaki és Gazdaságtudományi Egyetem",
+        "shortDescription": "(BSc/BProf) Üzemmérnök informatikus. 3 éves alapképzés szoftverfejlesztői specializációval. Kooperatív program, az utolsó év egy partnercégnél töltve.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Mit érdemes tudni erről a képzésről? Először is, ez egy BProf képzés. Ugyanazon a szinten van, mint egy BSc, azonban a hangsúlyt a számítástechnika gyakorlati alkalmazásaira helyezi a mélyebb matematikai háttér helyett. Az első félévekben a programozás alapjaival (amelyekkel ekkorra már rendelkeztem), algoritmusokkal és kalkulussal foglalkoztunk. Az első két szemeszter számomra könnyen ment az ELTE-n szerzett korábbi tapasztalataimnak köszönhetően. A 3. és 4. félévben már haladóbb szoftverfejlesztési témák kerültek előtérbe, például a tervezési minták, a szoftvertesztelés, a projektmenedzsment, a SOLID alapelvek és az adatstruktúrák."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-building.png",
+            "alt": "BME kampusz",
+            "caption": "A BME központi épülete"
+          },
+          {
+            "type": "paragraph",
+            "text": "A 4. félév végén szakirányt kellett választanunk. Négy lehetőség közül választhattunk: Szoftverfejlesztés, Adattudomány, Hálózati specialista, valamint Tesztelés és Minőségbiztosítás. Végül a Szoftverfejlesztés szakirányt választottam, bár az Adattudomány is komolyan érdekelt. Ezen a szakirányon olyan technológiákkal és témákkal ismerkedtünk meg, mint az ORM, a React-alapú webfejlesztés, az Android alkalmazásfejlesztés és a felhőalapú számítástechnika."
+          },
+          {
+            "type": "paragraph",
+            "text": "A 4. félév végén partnercégekhez kellett szakmai gyakorlatra jelentkeznünk. Szerencsére lehetőséget kaptam a NISZ-nél (Nemzeti Infokommunikációs Szolgáltató Zrt.), ahol a „Adatalapú döntéstámogatás és az egy igazság elve” szakdolgozati témán dolgozhatok. Nagyon örültem ennek a lehetőségnek, hiszen egyszerre szerezhetek gyakorlati tapasztalatot a szoftverfejlesztés és az adattudomány területén is."
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-job-fair.jpg",
+            "alt": "BME állásbörze",
+            "caption": "BME állásbörze"
+          },
+          {
+            "type": "image",
+            "src": "studies/bme-q-building.jpg",
+            "alt": "BME Q épület",
+            "caption": "A BME Q épülete"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "nau-advanced-owsd",
+    "level": 5,
+    "institutionSrc": "https://www.naui.org/learn/continuing-education/advanced-open-water-scuba-diver/",
+    "headerSrc": "studies/naui-advanced-header.jpg",
+    "startDate": "2025-08-18",
+    "endDate": "2025-08-25",
+    "translations": {
+      "en": {
+        "title": "Advanced Open Water Scuba Diver",
+        "facility": "NAUI",
+        "shortDescription": "{NOT IT RELEVANT} I took this course in August 2025. It's story is similar to the Open Water Scuba Diver course (that's visible down below). This is the next level of scuba diving certification, which allows the holder to dive deeper and in more challenging conditions.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "To be clear: THIS COURSE IS NOT RELEVANT TO IT. I took the theoretical part of the course online under 3 weeks, and then I took the practical part in the sea under a week. I've learned stricter rules about how to descend into the depths, better underwater navigation skills, search and rescue techniques, and how to handle more challenging situations. I've also learned about the different types of diving, such as night diving, deep diving, and wreck diving. The course was honestly pretty easy for me. The technical part was similar to the previous course, and the more advanced theoretical part was a breeze compared to University."
+          },
+          {
+            "type": "image",
+            "src": "studies/me-wreck-diving.jpg",
+            "alt": "Me, Wreck diving",
+            "caption": "Me, Wreck diving"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-in-cave.jpg",
+            "alt": "Scuba diving in a cave",
+            "caption": "Scuba diving in a cave"
+          },
+          {
+            "type": "paragraph",
+            "text": "I really loved the dives we had this year. We dived down to 40 meters deep. I've experienced oxygen narcosis first hand. It was a weird experience and by default dangerous, but my training of course kept me safe. I also saw lion fish among other species. The most interesting dive site was a cliff at below 40 meters, the bottom went down until about 60-70 meters, and the whole rocky wall was full with coral."
+          },
+          {
+            "type": "image",
+            "src": "studies/whale-shark.webp",
+            "alt": "Whale shark",
+            "caption": "Whale shark"
+          },
+          {
+            "type": "image",
+            "src": "studies/lionfish.webp",
+            "alt": "Lionfish",
+            "caption": "Lionfish"
+          }
+        ]
+      },
+      "hu": {
+        "title": "Haladó nyíltvízi búvár",
+        "facility": "NAUI",
+        "shortDescription": "{NEM INFORMATIKAI RELEVANCIÁJÚ} Ezt a tanfolyamot 2025 augusztusában végeztem el. Története hasonló a Nyíltvízi búvár tanfolyaméhoz (ami lentebb látható). Ez a búvártanfolyam következő szintje, ami nagyobb mélységbe és nehezebb körülmények közötti merülésre jogosít.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "A félreértések elkerülése végett: EZ A TANFOLYAM NEM RELEVÁNS AZ IT SZEMPONTJÁBÓL. A tanfolyam elméleti részét online végeztem el 3 hét alatt, a gyakorlati részt pedig kevesebb, mint egy hét alatt a tengerben. Szigorúbb szabályokat tanultam a mélybe ereszkedésről, jobb víz alatti navigációs készségeket, keresési és mentési technikákat, valamint azt, hogyan kezeljem a nehezebb helyzeteket. Emellett megismerkedtem a különböző merülési típusokkal is, mint az éjszakai merülés, a mélymerülés és a roncsmerülés. Őszintén szólva a tanfolyam elég könnyű volt számomra. A technikai rész hasonló volt az előző tanfolyamhoz, a haladóbb elméleti rész pedig szellőnek számított az egyetemhez képest."
+          },
+          {
+            "type": "image",
+            "src": "studies/me-wreck-diving.jpg",
+            "alt": "Én, roncsmerülés közben",
+            "caption": "Én, roncsmerülés közben"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-in-cave.jpg",
+            "alt": "Búvárkodás egy barlangban",
+            "caption": "Búvárkodás egy barlangban"
+          },
+          {
+            "type": "paragraph",
+            "text": "Igazán imádtam az idei merüléseinket. Lemerültünk 40 méter mélyre is. Saját bőrömön tapasztaltam meg a mélységi mámort. Furcsa élmény volt, és alapvetően veszélyes, de a képzésem természetesen biztonságban tartott. Többek között oroszlánhalat is láttam. A legérdekesebb merülőhely egy 40 méternél is mélyebben fekvő szirtfal volt, az alja körülbelül 60-70 méterre nyúlt le, és az egész sziklafalat korall borította."
+          },
+          {
+            "type": "image",
+            "src": "studies/whale-shark.webp",
+            "alt": "Cetcápa",
+            "caption": "Cetcápa"
+          },
+          {
+            "type": "image",
+            "src": "studies/lionfish.webp",
+            "alt": "Tűzhal",
+            "caption": "Tűzhal"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "elte-cs-bsc",
+    "level": 6,
+    "institutionSrc": "https://www.inf.elte.hu/programtervezo-informatikus-alapkepzesi-szak-bsc",
+    "headerSrc": "studies/elte-header.jpg",
+    "startDate": "2023-09-01",
+    "endDate": "2024-06-30",
+    "translations": {
+      "en": {
+        "title": "BSc in Computer Science",
+        "facility": "Eötvös Loránd University",
+        "shortDescription": "(BSc) Programmer Mathematician. A 3 year bachelor program specializing in the mathematical side of software development. It was a highly theoretical program with a strong focus on mathematics (which lead me to switch to BME).",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "The first semester went really well. We had a \"basics of programming\" course, which despite the fact that I already had experience with, still taught me a lot of new practices and programming tricks. In addition we had functional programming and imperative programming courses, and \"Basics of Mathematics\". This despite its name, wasn't basic and it was hard, but I've succeeded with a 4 (out of 5) grade. I've ended the semester with a weighted average credit index of 4.7 ."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-building.jpg",
+            "alt": "ELTE campus",
+            "caption": "Main building of ELTE"
+          },
+          {
+            "type": "paragraph",
+            "text": "The challenges began in the second semester. I genuinely enjoyed the programming-related courses, such as Object-Oriented Programming, Web Development, and Algorithms. However, the mathematics courses became significantly more demanding than in the previous semester, while the level of support from the teaching staff was minimal. One of the exams required memorizing roughly 100 pages of formulas, with little emphasis on understanding or practical application."
+          },
+          {
+            "type": "paragraph",
+            "text": "Unfortunately, I also experienced organizational issues in several other courses. The most notable example was our Java course, where the final exam was only completed by the instructors a few hours before it was scheduled to take place. The exam turned out to be so problematic that the university had to organize an additional exam session after almost the entire class failed, despite previously stating that no second opportunity would be available."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-labor.jpg",
+            "alt": "ELTE lab",
+            "caption": "ELTE laboratory"
+          },
+          {
+            "type": "paragraph",
+            "text": "While I still enjoyed studying computer science, I realized that the learning environment no longer matched the way I wanted to develop as a software engineer. Rather than continuing in a program where much of my effort was spent preparing for theoretical exams, I decided to transfer to BME, whose practice-oriented BProf program aligned much better with my interests and career goals."
+          }
+        ]
+      },
+      "hu": {
+        "title": "Programtervező matematikus BSc",
+        "facility": "Eötvös Loránd Tudományegyetem",
+        "shortDescription": "(BSc) Programtervező matematikus. 3 éves alapképzés a szoftverfejlesztés matematikai oldalára specializálódva. Nagyon elmélet orientált, erős matematikai fókuszú (ami miatt váltottam BME-re).",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Az első szemeszter nagyon jól sikerült. Volt egy „Programozás alapjai” tantárgyunk, amely annak ellenére, hogy már rendelkeztem programozási tapasztalattal, számos új szemléletet és hasznos technikát tanított. Emellett funkcionális programozást, imperatív programozást és „Matematika alapjai” tantárgyat is tanultunk. Ez utóbbi a neve ellenére egyáltalán nem volt alapszintű, komoly kihívást jelentett, de végül 4-es osztályzattal sikerült teljesítenem. A szemesztert 4,7-es súlyozott tanulmányi átlaggal zártam."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-building.jpg",
+            "alt": "ELTE kampusz",
+            "caption": "Az ELTE központi épülete"
+          },
+          {
+            "type": "paragraph",
+            "text": "A kihívások a második szemeszterben kezdődtek. A programozáshoz kapcsolódó tantárgyakat – például az Objektumorientált Programozást, a Webfejlesztést és az Algoritmusokat – továbbra is nagyon élveztem. A matematikai tárgyak azonban jóval nehezebbé váltak, miközben az oktatóktól kapott támogatás minimális volt. Az egyik vizsga teljesítéséhez körülbelül 100 oldalnyi képletet kellett szó szerint megtanulni, miközben kevés hangsúly került a valódi megértésre vagy a gyakorlati alkalmazásra."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sajnos több tantárgynál is szervezési problémákkal találkoztam. A legemlékezetesebb példa a Java kurzus volt, ahol a záróvizsga feladatait az oktatók csak néhány órával a vizsga előtt fejezték be. A vizsga végül annyira problémásnak bizonyult, hogy az egyetemnek rendkívüli pótvizsgát kellett kiírnia, miután a hallgatók döntő többsége megbukott – annak ellenére, hogy korábban egyértelműen közölték, hogy nem lesz második vizsgaalkalom."
+          },
+          {
+            "type": "image",
+            "src": "studies/elte-labor.jpg",
+            "alt": "ELTE laboratórium",
+            "caption": "ELTE laboratórium"
+          },
+          {
+            "type": "paragraph",
+            "text": "Bár továbbra is élveztem az informatika tanulását, rájöttem, hogy a képzés szemlélete már nem illeszkedik ahhoz, ahogyan szoftverfejlesztőként fejlődni szeretnék. Ahelyett, hogy egy olyan programban folytattam volna a tanulmányaimat, ahol az időm jelentős részét elméleti vizsgákra való felkészülés töltötte ki, úgy döntöttem, hogy átiratkozom a BME gyakorlatközpontú BProf képzésére, amely sokkal jobban megfelelt az érdeklődésemnek és a hosszú távú szakmai céljaimnak."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "office-it-specialist",
+    "level": 5,
+    "institutionSrc": "https://szakkepesites.hu/okj/tanfolyamok/irodai-informatikus",
+    "headerSrc": "studies/office-it-specialist-header.jpg",
+    "startDate": "2023-01-14",
+    "endDate": "2023-06-26",
+    "translations": {
+      "en": {
+        "title": "Office IT Specialist (OKJ)",
+        "facility": "Petrik Lajos Technical School",
+        "shortDescription": "This was a mandatory course for my high school program. It was a 6 month long course, which taught me the basics of Linux (without GUI), and the most advance Microsoft Office skills. I learned how to use Word, Excel, PowerPoint, and Access at a professional level. For example, macros in Excel.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "This was a mandatory course in my high school program. Based on previous years' experiences, many students tended to underestimate the exam, so our teachers dedicated a separate class entirely to its preparation. We first focused on Linux, working exclusively from the command line without a graphical interface. The training was comprehensive enough that I didn't need to learn any additional Linux fundamentals at university. We then moved on to Microsoft Office. While we were already familiar with Word, Excel, and the rest of the Office suite, the exam required a much deeper understanding. We explored the advanced features of each application and learned to use them at a professional level rather than just for everyday tasks."
+          },
+          {
+            "type": "image",
+            "src": "studies/linux-console.png",
+            "alt": "Linux console",
+            "caption": "Linux console"
+          },
+          {
+            "type": "paragraph",
+            "text": "While this certification isn't particularly prestigious, it proved to be a valuable addition during high school and gave me a solid foundation in several practical tools. Since then, I've continued using Linux whenever projects required it, and Microsoft Office has become part of my everyday workflow. I've regularly relied on applications such as Word, Excel, and PowerPoint to create professional reports, presentations, documentation, and other project-related materials throughout my studies and software development work."
+          },
+          {
+            "type": "image",
+            "src": "studies/excel.png",
+            "alt": "Excel",
+            "caption": "Excel"
+          }
+        ]
+      },
+      "hu": {
+        "title": "Irodai Informatikus (OKJ)",
+        "facility": "Petrik Lajos Technikum",
+        "shortDescription": "Ez egy kötelező tantárgy volt a középiskolai képzésem során. A hat hónapos kurzus során elsajátítottam a Linux alapjait (grafikus felület nélkül), valamint a Microsoft Office haladó szintű használatát. Megtanultam professzionális szinten használni a Wordöt, Excelt, PowerPointot és Accesst, beleértve az olyan fejlettebb funkciókat is, mint például az Excel makrók.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Ez egy kötelező tantárgy volt a középiskolai képzésem során. A korábbi évek tapasztalatai alapján sok diák alábecsülte a vizsgát, ezért tanáraink egy külön tantárgyat szenteltek a felkészítésére. Először a Linuxszal foglalkoztunk, kizárólag parancssori környezetben, grafikus felület használata nélkül. A képzés olyan alapos volt, hogy az egyetemen már nem volt szükségem új Linux-alapismeretek elsajátítására. Ezután a Microsoft Office következett. Bár a Word, az Excel és a többi Office-alkalmazás használatának alapjait már ismertük, a vizsga ennél jóval mélyebb tudást követelt meg. Megismertük az egyes programok haladó funkcióit, és megtanultuk őket professzionális szinten használni, nem csupán a mindennapi feladatok elvégzésére."
+          },
+          {
+            "type": "image",
+            "src": "studies/linux-console.png",
+            "alt": "Linux konzol",
+            "caption": "Linux konzol"
+          },
+          {
+            "type": "paragraph",
+            "text": "Bár ez a tanúsítvány önmagában nem számít különösebben rangosnak, középiskolásként értékes lehetőséget jelentett, és biztos alapokat adott számos gyakorlati eszköz használatához. Azóta is rendszeresen használok Linuxot, amikor egy projekt megköveteli, a Microsoft Office pedig a mindennapi munkafolyamataim részévé vált. Tanulmányaim és szoftverfejlesztői projektjeim során rendszeresen készítettem Word-, Excel- és PowerPoint-alapú dokumentációkat, jelentéseket, prezentációkat és egyéb szakmai anyagokat."
+          },
+          {
+            "type": "image",
+            "src": "studies/excel.png",
+            "alt": "Excel",
+            "caption": "Microsoft Excel"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "b2-language-cert",
+    "level": 4,
+    "institutionSrc": "https://www.languagecert.hu/vizsgaidopontok",
+    "headerSrc": "studies/languagecert-logo.jpeg",
+    "startDate": "2022-12-03",
+    "endDate": "2023-01-19",
+    "translations": {
+      "en": {
+        "title": "B2 English Language Certificate",
+        "facility": "LanguageCert",
+        "shortDescription": "I took the exam in December 2022 and received my certificate in January 2023. Ever since that (even before) I have been using and improving my English skills. I never had any issues with communication in English.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "I took the B2 English Language Certificate exam in December 2022 and received my certificate in January 2023. Ever since that (even before) I have been using and improving my English skills. Any time I watch anything online, I watch it in English. I usually \"default\" to English when I speak to AI or write comments in code. I have multiple foreign friends from university, and we communicate in English. My only shortcoming may be vocabulary compared to my C1 level friend."
+          },
+          {
+            "type": "image",
+            "src": "studies/eng-flag.svg",
+            "alt": "English flag",
+            "caption": "English flag"
+          }
+        ]
+      },
+      "hu": {
+        "title": "B2-es Angol Nyelvvizsga",
+        "facility": "LanguageCert",
+        "shortDescription": "2022 decemberében tettem le a vizsgát, és 2023 januárjában megkaptam a bizonyítványomat. Azóta (sőt már előtte is) folyamatosan használom és fejlesztem az angol nyelvtudásomat. Soha nem volt problémám az angol nyelvű kommunikációval.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "2022 decemberében tettem le a B2-es angol nyelvvizsgát, és 2023 januárjában megkaptam a bizonyítványomat. Azóta (sőt már előtte is) folyamatosan használom és fejlesztem az angol nyelvtudásomat. Bármikor, amikor online nézek valamit, angolul nézem. Általában angolul kommunikálok a mesterséges intelligenciával vagy írok kommenteket a kódban. Több külföldi barátom van az egyetemről, akikkel angolul kommunikálunk. Egyetlen hiányosságom talán a szókincs lehet a C1 szintű barátomhoz képest."
+          },
+          {
+            "type": "image",
+            "src": "studies/eng-flag.svg",
+            "alt": "Angol zászló",
+            "caption": "Angol zászló"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "nau-basic-owsd",
+    "level": 3,
+    "institutionSrc": "https://www.naui.org/learn/entry-level/open-water-scuba-diver-autonomousiso-level-2/",
+    "headerSrc": "studies/naui-basic-header.jpg",
+    "startDate": "2022-08-15",
+    "endDate": "2022-08-22",
+    "translations": {
+      "en": {
+        "title": "Open Water Scuba Diver",
+        "facility": "NAUI",
+        "shortDescription": "{NOT IT RELEVANT} I took this course in August 2022. I took it with recreational purposes. This is basically the certification that someone needs to be allowed to dive in Europe. I've listed this here, as it is technically a certification, even if not an IT relevant one.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "To be clear: THIS COURSE IS NOT RELEVANT TO IT. I wanted to go scuba Diving in 2022 and I needed this certification to be allowed to do that. I took the theoretical part of the course online under 2 weeks, and then I took the practical part in the sea under a week. I learned how to use scuba diving equipment, how to breathe underwater, and how to handle emergency situations. I also learned about the marine life and the importance of preserving it."
+          },
+          {
+            "type": "image",
+            "src": "studies/dive-with-tuna.jpg",
+            "alt": "Dive with tuna",
+            "caption": "Dive with tuna"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me.jpg",
+            "alt": "Me, Scuba diving",
+            "caption": "Me, Scuba diving"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me-2.jpg",
+            "alt": "Me, Scuba diving",
+            "caption": "Me, Scuba diving"
+          },
+          {
+            "type": "paragraph",
+            "text": "This certification allows the holder to dive up to 18 meters deep, and to dive with a buddy. It is a basic certification, but it is enough for recreational diving. I have been diving in the Mediterranean Sea, and I have seen many different species of fish, corals, and other marine life. I have also learned about the importance of preserving the marine environment, and I have become more aware of the impact of human activities on the ocean."
+          },
+          {
+            "type": "image",
+            "src": "studies/snorcel-dive-me.jpg",
+            "alt": "Me, Snorkel diving",
+            "caption": "Me, Snorkel diving"
+          }
+        ]
+      },
+      "hu": {
+        "title": "Nyílt vízi búvár",
+        "facility": "NAUI",
+        "shortDescription": "{NEM INFORMATIKAI RELEVANCIÁJÚ} Ezt a képzést 2022 augusztusában végeztem el, kizárólag szabadidős célból. Ez az az alapképesítés, amely Európa legtöbb búvárközpontjában szükséges a merülésekhez. Azért szerepel itt, mert hivatalos tanúsítvány, még ha nem is kapcsolódik az informatikához.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Fontos megjegyezni, hogy EZ A KÉPESÍTÉS NEM KAPCSOLÓDIK AZ INFORMATIKÁHOZ. 2022-ben szerettem volna elkezdeni búvárkodni, ehhez pedig szükségem volt erre a tanúsítványra. Az elméleti képzést körülbelül két hét alatt online teljesítettem, majd a gyakorlati oktatást egy hét alatt, tengeri környezetben végeztem el. Megtanultam a búvárfelszerelés biztonságos használatát, a víz alatti légzést, valamint a különböző vészhelyzetek kezelését. Emellett megismerkedtem a tengeri élővilággal és annak megóvásának fontosságával is."
+          },
+          {
+            "type": "image",
+            "src": "studies/dive-with-tuna.jpg",
+            "alt": "Merülés tonhalakkal",
+            "caption": "Merülés tonhalakkal"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me.jpg",
+            "alt": "Én búvárkodás közben",
+            "caption": "Én búvárkodás közben"
+          },
+          {
+            "type": "image",
+            "src": "studies/scuba-dive-me-2.jpg",
+            "alt": "Én búvárkodás közben",
+            "caption": "Én búvárkodás közben"
+          },
+          {
+            "type": "paragraph",
+            "text": "Ez a képesítés legfeljebb 18 méteres mélységig, merülőtárssal történő búvárkodásra jogosít fel. Bár alapfokú minősítésnek számít, szabadidős merülésekhez teljes mértékben elegendő. Azóta több alkalommal merültem a Földközi-tengerben, ahol számos különböző halfajt, korallokat és más tengeri élőlényeket láthattam. A képzésnek köszönhetően sokkal tudatosabban tekintek a tengeri környezet védelmére és az emberi tevékenységek óceánokra gyakorolt hatására."
+          },
+          {
+            "type": "image",
+            "src": "studies/snorcel-dive-me.jpg",
+            "alt": "Én sznorkelezés közben",
+            "caption": "Én sznorkelezés közben"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "petrik-hs",
+    "level": 4,
+    "institutionSrc": "https://petrik.hu",
+    "headerSrc": "studies/petrik-header.jpg",
+    "startDate": "2019-09-01",
+    "endDate": "2023-06-30",
+    "translations": {
+      "en": {
+        "title": "Vocational high school in IT",
+        "facility": "Petrik Lajos Technical School",
+        "shortDescription": "Vocational high school specializing in IT. 4 year program with a focus on programming and software development. The program was very practical and hands-on, which helped me start on the path of coding and gain a lot of experience in programming.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "Petrik Lajos Technical School has multiple specializations, but I chose the IT specialization. This started me on the path of software development. I fellen in love with it in the 1st semester. I've spent my whole fall break coding my big project for the end of the semester. The program was very practical and hands-on, which helped me gain a lot of experience in programming. We learned about different programming languages (C#, SQL, JavaScript), and software development methodologies."
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-building.jpg",
+            "alt": "Petrik campus",
+            "caption": "Main building of Petrik Lajos"
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-labor.jpg",
+            "alt": "Petrik lab",
+            "caption": "CS Laboratory of Petrik Lajos"
+          },
+          {
+            "type": "paragraph",
+            "text": "Even in the first semester, I had ~12 hours of some kind of programming class per week. We even had Linux and IT Network classes. The pace was laid back, but that just allowed me to research my own interests (like Unreal Engine 5 in 2022). I also participated in National mathematics competitions and I got into the final round in the capital. This gave me the confidence to apply to ELTE, where I got accepted to the BSc in Computer Science program."
+          }
+        ]
+      },
+      "hu": {
+        "title": "IT specializációs szakgimnázium",
+        "facility": "Petrik Lajos Technikum",
+        "shortDescription": "IT specializációs szakgimnázium. 4 éves program programozás és szoftverfejlesztés fókuszával. A képzés nagyon gyakorlatorientált, ami segített elindulni a kódolás útján és sok tapasztalatot szerezni a programozásban.",
+        "longDescription": [
+          {
+            "type": "paragraph",
+            "text": "A Petrik Lajos Szakgimnáziumban több szakirány közül is választhattam, de én az informatika szakirányra esett a választásom. Ez indított el a szoftverfejlesztés útján, amibe már az első félévben beleszerettem. A teljes őszi szünetemet azzal töltöttem, hogy a félév végi nagy projektre kódoltam. A képzés nagyon gyakorlatias és kézzelfogható volt, ami rengeteg programozási tapasztalat megszerzésében segített. Különböző programozási nyelvekkel (C#, SQL, JavaScript) és szoftverfejlesztési módszertanokkal ismerkedtünk meg."
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-building.jpg",
+            "alt": "Petrik campus",
+            "caption": "A Petrik Lajos főépülete"
+          },
+          {
+            "type": "image",
+            "src": "studies/petrik-labor.jpg",
+            "alt": "Petrik lab",
+            "caption": "A Petrik Lajos számítástechnikai laborja"
+          },
+          {
+            "type": "paragraph",
+            "text": "Már az első félévben heti nagyjából 12 órám volt valamilyen programozáshoz kapcsolódó tárgyból, emellett Linux és informatikai hálózatok óráink is voltak. A tempó kényelmes volt, ami épp lehetőséget adott rá, hogy az egyéni érdeklődési területeimmel is foglalkozzam (például 2022-ben az Unreal Engine 5-tel). Részt vettem országos matematikaversenyeken is, és a fővárosi döntőbe is bejutottam. Ez a siker adta meg az önbizalmat ahhoz, hogy az ELTE-re jelentkezzek, ahová fel is vettek a Programtervező informatikus BSc szakra."
+          }
+        ]
+      }
+    }
+  }
+]

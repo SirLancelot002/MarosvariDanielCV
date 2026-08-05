@@ -18,6 +18,16 @@
   padding: 0.35rem 0.75rem;
 }
 
+.animated-gradient-text:not(.with-border) {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  overflow: visible;
+}
+
 .gradient-overlay {
   position: absolute;
   top: 0;

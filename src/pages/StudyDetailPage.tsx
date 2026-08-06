@@ -14,6 +14,7 @@ import GradientText from '../modules/GradientText';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
 import cityLogoImg from '../assets/citylogo.png';
+import SpecularButton from '../modules/SpecularButton';
 
 const studies = studiesData as Study[];
 function StudyDetailPage() {
@@ -142,6 +143,16 @@ function StudyDetailPage() {
             </div>
           </article>
         </div>
+        <div className="specular-button-shell">
+        <SpecularButton
+          size="md" radius={18} tint="#ffffff" tintOpacity={0} blur={26}
+          textColor="#f5f5f5" lineColor="#2600ff" baseColor="#313131" intensity={1}
+          shineSize={14} shineFade={36} thickness={1} speed={0.35}
+          followMouse proximity={250}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          {t("nav.backtoTheTop")}
+        </SpecularButton>
+      </div>
       </div>
     </>
   );

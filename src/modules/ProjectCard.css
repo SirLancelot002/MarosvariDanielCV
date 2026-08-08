@@ -1,17 +1,19 @@
+.project-card-border {
+  display: block;
+}
+
 .project-card {
   display: block;
   text-decoration: none;
   color: inherit;
   background: rgba(18, 15, 23, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(166, 125, 255, 0.5);
 }
 
 .project-card__header-image {

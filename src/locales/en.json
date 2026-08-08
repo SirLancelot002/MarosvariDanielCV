@@ -41,5 +41,6 @@
   "projects.title1": "My Projects",
   "projects.title2": "Take a look!",
   "projects.title3": "Built with care",
-  "projects.difficulty": "Difficulty"
+  "projects.difficulty": "Difficulty",
+  "projects.backToList": "Back to projects"
 }

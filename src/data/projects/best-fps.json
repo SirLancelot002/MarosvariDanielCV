@@ -1,6 +1,7 @@
 {
   "id": "best-fps",
   "level": 3,
+  "color": "#61dca3",
   "headerSrc": "projects/BestFPS-header.webp",
   "startDate": "2023-02-01",
   "endDate": "2023-06-15",
@@ -10,12 +11,56 @@
       "role": "Team lead & gameplay programmer",
       "shortDescription": "A collaborative first-person shooter project built with a small team.",
       "content": [
-        { "type": "heading", "text": "Overview", "level": 2 },
-        { "type": "paragraph", "text": "BestFPS was built as a team project exploring multiplayer networking and game feel." },
-        { "type": "image", "src": "projects/bestfps-gameplay.jpg", "alt": "Gameplay screenshot" },
-        { "type": "heading", "text": "My contributions", "level": 2 },
-        { "type": "paragraph", "text": "I led the team and implemented the core shooting and movement systems." },
-        { "type": "link", "url": "https://github.com/SirLancelot002/BestFPS", "text": "View the repository on GitHub" }
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Overview",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "BestFPS was built as a team project exploring multiplayer networking and game feel."
+            },
+            {
+              "type": "image",
+              "src": "projects/bestfps-gameplay.jpg",
+              "alt": "Gameplay screenshot"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "My contributions",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "projects/bestfps-code1.jpg",
+              "alt": "Code sample 1"
+            },
+            {
+              "type": "image",
+              "src": "projects/bestfps-code2.jpg",
+              "alt": "Code sample 2"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "paragraph",
+              "text": "I led the team and implemented the core shooting and movement systems."
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/SirLancelot002/BestFPS",
+              "text": "View the repository on GitHub"
+            }
+          ]
+        }
       ]
     },
     "hu": {
@@ -23,12 +68,56 @@
       "role": "Csapatvezető és gameplay programozó",
       "shortDescription": "Egy csapatban készített first-person shooter projekt.",
       "content": [
-        { "type": "heading", "text": "Áttekintés", "level": 2 },
-        { "type": "paragraph", "text": "A BestFPS egy csapatprojekt volt, amely a multiplayer hálózatiságot és a játékérzetet vizsgálta." },
-        { "type": "image", "src": "projects/bestfps-gameplay.jpg", "alt": "Játékmenet képernyőkép" },
-        { "type": "heading", "text": "Az én hozzájárulásom", "level": 2 },
-        { "type": "paragraph", "text": "Vezettem a csapatot és megvalósítottam a lövési és mozgási alaprendszereket." },
-        { "type": "link", "url": "https://github.com/SirLancelot002/BestFPS", "text": "Repository megtekintése GitHubon" }
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Áttekintés",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "A BestFPS egy csapatprojekt volt, amely a multiplayer hálózatiságot és a játékérzetet vizsgálta."
+            },
+            {
+              "type": "image",
+              "src": "projects/bestfps-gameplay.jpg",
+              "alt": "Játékmenet képernyőkép"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Az én hozzájárulásom",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "projects/bestfps-code1.jpg",
+              "alt": "Kódrészlet 1"
+            },
+            {
+              "type": "image",
+              "src": "projects/bestfps-code2.jpg",
+              "alt": "Kódrészlet 2"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "paragraph",
+              "text": "Vezettem a csapatot és megvalósítottam a lövési és mozgási alaprendszereket."
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/SirLancelot002/BestFPS",
+              "text": "Repository megtekintése GitHubon"
+            }
+          ]
+        }
       ]
     }
   }

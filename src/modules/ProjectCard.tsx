@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import type { Project } from '../types/project';
 import { publicAsset } from '../utils/asset';
 import { formatProjectDuration } from '../utils/date';
-import GlareHover from '../modules/GlareHover';
 import DifficultyLevel from './DifficultyLevel';
+import ElectricBorder from './ElectricBorder';
 import calendarLogoImg from '../assets/calendarlogo.png';
 import './ProjectCard.css';
 
@@ -18,19 +18,13 @@ function ProjectCard({ project }: ProjectCardProps) {
   const content = project.translations[lang];
 
   return (
-    <GlareHover
-      width="100%"
-      height="auto"
-      background="transparent"
-      borderColor="transparent"
-      borderRadius="20px"
-      glareColor="#ffffff"
-      glareOpacity={0.3}
-      glareAngle={-30}
-      glareSize={300}
-      transitionDuration={800}
-      playOnce={false}
-      style={{ placeItems: 'stretch' }}
+    <ElectricBorder
+      color={project.color}
+      speed={1}
+      chaos={0.12}
+      borderRadius={20}
+      className="project-card-border"
+      style={{ width: '100%', borderRadius: 20 }}
     >
       <Link to={`/projects/${project.id}`} className="project-card">
         {project.headerSrc && (
@@ -54,7 +48,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           <p className="project-card__description">{content.shortDescription}</p>
         </div>
       </Link>
-    </GlareHover>
+    </ElectricBorder>
   );
 }
 

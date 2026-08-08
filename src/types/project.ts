@@ -1,4 +1,4 @@
-export interface ProjectContentBlock {
+export interface ContentItem {
   type: 'heading' | 'paragraph' | 'image' | 'link';
   text?: string;      // heading, paragraph, link
   level?: 2 | 3 | 4;   // heading only
@@ -8,19 +8,24 @@ export interface ProjectContentBlock {
   url?: string;         // link only
 }
 
+export interface ContentSection {
+  items: ContentItem[];
+}
+
 export interface ProjectTranslation {
   title: string;
-  role?: string;              // nullable — solo projects omit this
+  role?: string;
   shortDescription: string;
-  content: ProjectContentBlock[];
+  content: ContentSection[];
 }
 
 export interface Project {
   id: string;
-  level: number;               // 1+, rendered with at least 5 dots
-  headerSrc?: string;           // nullable
-  startDate: string;             // ISO string, same reasoning as Study
-  endDate?: string;               // omit if ongoing
+  level: number;
+  color?: string;
+  headerSrc?: string;
+  startDate: string;
+  endDate?: string;
   translations: {
     en: ProjectTranslation;
     hu: ProjectTranslation;

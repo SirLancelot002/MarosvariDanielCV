@@ -81,6 +81,7 @@ function LandingPage() {
         <main className="hero-section">
           <TextType
             as="h1"
+            className="projects-text-type"
             text={[t("hero.greeting"), t("hero.look"), t("hero.description")]}
             typingSpeed={75}
             pauseDuration={2500}

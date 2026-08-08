@@ -42,6 +42,7 @@ function StudiesPage() {
         <main className="hero-section studies-hero-section">
           <TextType
             as="h1"
+            className="text-type--hero"
             text={[t("studies.title1"), t("studies.title2"), t("studies.title3")]}
             typingSpeed={75}
             pauseDuration={2500}

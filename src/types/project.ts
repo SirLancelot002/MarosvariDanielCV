@@ -17,7 +17,7 @@ export interface ProjectTranslation {
 
 export interface Project {
   id: string;
-  level: number;               // 1-5, same as Study
+  level: number;               // 1+, rendered with at least 5 dots
   headerSrc?: string;           // nullable
   startDate: string;             // ISO string, same reasoning as Study
   endDate?: string;               // omit if ongoing

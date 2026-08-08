@@ -5,6 +5,8 @@ import LetterGlitch from '../modules/LetterGlitch';
 import ProjectCard from '../modules/ProjectCard';
 import RevealOnScroll from '../modules/RevealOnScroll';
 import { projects } from '../data/loadProjects';
+import Magnet from '../modules/Magnet';
+import SpecularButton from '../modules/SpecularButton';
 
 function ProjectsPage() {
   const { t } = useTranslation();
@@ -24,6 +26,7 @@ function ProjectsPage() {
         <main className="hero-section studies-hero-section">
           <TextType
             as="h1"
+            className="projects-text-type"
             text={[t("projects.title1"), t("projects.title2"), t("projects.title3")]}
             typingSpeed={75}
             pauseDuration={2500}
@@ -62,6 +65,26 @@ function ProjectsPage() {
               </RevealOnScroll>
             );
           })}
+        </div>
+        <div className="magnet-button-container">
+          <Magnet
+            padding={{ left: 250, right: 250, top: 100, bottom: 40 }}
+            disabled={false}
+            magnetStrength={1}
+          >
+            <div className="specular-button-shell p-0">
+              <SpecularButton
+                size="md" radius={18} tint="#ffffff" tintOpacity={0} blur={24}
+                textColor="#f5f5f5" lineColor="#61dca3" baseColor="#4d4d4d" intensity={1}
+                shineSize={14} shineFade={36} thickness={1} speed={0.35}
+                followMouse proximity={250}
+                onClick={() => {
+                  window.location.href = 'mailto:marosvaridaniel7@gmail.com';
+                }}>
+                {t("impressed")}
+              </SpecularButton>
+            </div>
+          </Magnet>
         </div>
       </div>
     </>

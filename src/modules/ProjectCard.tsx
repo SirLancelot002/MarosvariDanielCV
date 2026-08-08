@@ -4,9 +4,8 @@ import type { Project } from '../types/project';
 import { publicAsset } from '../utils/asset';
 import { formatProjectDuration } from '../utils/date';
 import GlareHover from '../modules/GlareHover';
+import DifficultyLevel from './DifficultyLevel';
 import calendarLogoImg from '../assets/calendarlogo.png';
-import gradHatLogo from '../assets/gradhatlogo.webp';
-import xLogo from '../assets/xlogo.webp';
 import './ProjectCard.css';
 
 interface ProjectCardProps {
@@ -14,7 +13,7 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const content = project.translations[lang];
 
@@ -41,19 +40,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         )}
 
         <div className="project-card__content">
-          <div className="project-card__level" aria-label={`Level ${project.level} of 5`}>
-            <p>
-              <span className="project-card__level-label">{t("projects.difficulty")}:</span>
-              {Array.from({ length: 5 }, (_, i) => (
-                <img
-                  key={i}
-                  src={i < project.level ? gradHatLogo : xLogo}
-                  alt=""
-                  className="project-card__level-icon"
-                />
-              ))}
-            </p>
-          </div>
+          <DifficultyLevel level={project.level} className="project-card__level" />
 
           <h3 className="project-card__title">{content.title}</h3>
 

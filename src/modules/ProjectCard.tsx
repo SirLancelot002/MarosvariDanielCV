@@ -19,7 +19,7 @@ function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <ElectricBorder
-      color={project.color}
+      color={project.color ?? '#61dca3'}
       speed={1}
       chaos={0.12}
       borderRadius={20}

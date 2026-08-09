@@ -6,6 +6,10 @@ export function formatStudyPeriod(startDate: string, endDate: string | undefined
   }
 
   const endYear = new Date(endDate).getFullYear();
+  if (startYear === endYear) {
+    return `${startYear}`;
+  }
+
   return `${startYear} - ${endYear}`;
 }
 

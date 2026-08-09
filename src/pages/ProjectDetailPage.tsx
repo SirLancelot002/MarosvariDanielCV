@@ -49,7 +49,7 @@ function ProjectDetailPage() {
                     dither={0}
                     curvature={0.1}
                     tint="#A7EF9E"
-                    mouseReact
+                    mouseReact={true}
                     mouseStrength={0.5}
                     pageLoadAnimation
                     brightness={0.6}

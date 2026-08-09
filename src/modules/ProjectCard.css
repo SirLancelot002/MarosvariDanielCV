@@ -1,5 +1,10 @@
 .project-card-border {
   display: block;
+  transition: transform 0.25s ease;
+}
+
+.project-card-border:hover {
+  transform: translateY(-4px);
 }
 
 .project-card {
@@ -11,11 +16,6 @@
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-4px);
 }
 
 .project-card__header-image {

@@ -81,7 +81,7 @@ function ProjectDetailPage() {
 
                         <header className="project-detail__header">
                             <h1 className="project-detail__title">
-                                <GradientText colors={["#3300ff", "#ff77fb", "#97c0cf"]} animationSpeed={8} showBorder={false} className="gradient-Title">
+                                <GradientText colors={["#2b4539", "#61dca3", "#61b3dc"]} animationSpeed={8} showBorder={false} className="gradient-Title">
                                     {content.title}
                                 </GradientText>
                             </h1>

@@ -1,19 +1,36 @@
-.project-card-border {
+.project-card-shell {
+  position: relative;
   display: block;
+  padding: 20px;
   transition: transform 0.25s ease;
 }
 
-.project-card-border:hover {
+.project-card-shell:hover {
   transform: translateY(-4px);
+}
+
+.project-card-backplate {
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 64%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.project-card-border {
+  position: relative;
+  display: block;
+  z-index: 1;
 }
 
 .project-card {
   display: block;
   text-decoration: none;
   color: inherit;
-  background: rgba(0, 0, 0, 0.56);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(7px);
   border-radius: 20px;
   overflow: hidden;
 }

@@ -82,7 +82,7 @@ function ProjectDetailPage() {
 
                         <header className="project-detail__header">
                             <h1 className="project-detail__title">
-                                <GradientText colors={["#2b4539", "#61dca3", "#61b3dc"]} animationSpeed={8} showBorder={false} className="gradient-Title">
+                                <GradientText colors={["#2b4539", accentColor, "#61b3dc"]} animationSpeed={8} showBorder={false} className="gradient-Title">
                                     {content.title}
                                 </GradientText>
                             </h1>
@@ -93,79 +93,85 @@ function ProjectDetailPage() {
                             </p>
                         </header>
 
-                        <div className="project-detail__body">
-  {content.content.map((section, sectionIndex) => {
-    const colClasses = getBlockColumnClasses(section.items);
-    return (
-      <div className="row project-detail__section g-4" key={sectionIndex}>
-        {section.items.map((block, i) => {
-          const colClass = colClasses[i];
+                        {content.content.length > 0 && <hr className="project-detail__section-divider project-detail__section-divider--header" />}
 
-          switch (block.type) {
-            case 'heading': {
-              const Tag = `h${block.level ?? 3}` as 'h2' | 'h3' | 'h4';
-              return (
-                <div key={i} className={colClass}>
-                  <Tag className="project-detail__heading">{block.text}</Tag>
-                </div>
-              );
-            }
-            case 'paragraph':
-              return (
-                <div key={i} className={colClass}>
-                  <p className="project-detail__paragraph">{block.text}</p>
-                </div>
-              );
-            case 'image':
-              return (
-                <div key={i} className={colClass}>
-                  <figure className="project-detail__figure">
-                    <TiltedCard
-                      className="project-detail__tilted-card"
-                      imageSrc={publicAsset(block.src ?? '')}
-                      altText={block.alt ?? ''}
-                      captionText={block.caption ?? ''}
-                      containerHeight="auto"
-                      containerWidth="100%"
-                      imageHeight="auto"
-                      imageWidth="auto"
-                      rotateAmplitude={12}
-                      scaleOnHover={1.05}
-                      showMobileWarning={false}
-                      showTooltip={false}
-                      displayOverlayContent
-                      overlayContent={
-                        block.caption ? (
-                          <p className="tilted-card-demo-text">{block.caption}</p>
-                        ) : null
-                      }
-                    />
-                  </figure>
-                </div>
-              );
-            case 'link':
-              return (
-                <div key={i} className={colClass}>
-                  <a href={block.url} target="_blank" rel="noreferrer noopener" className="project-detail__link">
-                    {block.text}
-                  </a>
-                </div>
-              );
-            default:
-              return null;
-          }
-        })}
-      </div>
-    );
-  })}
-</div>
+                        <div className="project-detail__body">
+                            {content.content.map((section, sectionIndex) => {
+                                const colClasses = getBlockColumnClasses(section.items);
+                                const isLastSection = sectionIndex === content.content.length - 1;
+                                return (
+                                    <div key={sectionIndex}>
+                                        <div className="row project-detail__section g-4">
+                                            {section.items.map((block, i) => {
+                                                const colClass = colClasses[i];
+
+                                                switch (block.type) {
+                                                    case 'heading': {
+                                                        const Tag = `h${block.level ?? 3}` as 'h2' | 'h3' | 'h4';
+                                                        return (
+                                                            <div key={i} className={colClass}>
+                                                                <Tag className="project-detail__heading">{block.text}</Tag>
+                                                            </div>
+                                                        );
+                                                    }
+                                                    case 'paragraph':
+                                                        return (
+                                                            <div key={i} className={colClass}>
+                                                                <p className="project-detail__paragraph">{block.text}</p>
+                                                            </div>
+                                                        );
+                                                    case 'image':
+                                                        return (
+                                                            <div key={i} className={colClass}>
+                                                                <figure className="project-detail__figure">
+                                                                    <TiltedCard
+                                                                        className="project-detail__tilted-card"
+                                                                        imageSrc={publicAsset(block.src ?? '')}
+                                                                        altText={block.alt ?? ''}
+                                                                        captionText={block.caption ?? ''}
+                                                                        containerHeight="auto"
+                                                                        containerWidth="100%"
+                                                                        imageHeight="auto"
+                                                                        imageWidth="auto"
+                                                                        rotateAmplitude={12}
+                                                                        scaleOnHover={1.05}
+                                                                        showMobileWarning={false}
+                                                                        showTooltip={false}
+                                                                        displayOverlayContent
+                                                                        overlayContent={
+                                                                            block.caption ? (
+                                                                                <p className="tilted-card-demo-text">{block.caption}</p>
+                                                                            ) : null
+                                                                        }
+                                                                    />
+                                                                </figure>
+                                                            </div>
+                                                        );
+                                                    case 'link':
+                                                        return (
+                                                            <div key={i} className={colClass}>
+                                                                <a href={block.url} target="_blank" rel="noreferrer noopener" className="project-detail__link">
+                                                                    {block.text}
+                                                                </a>
+                                                            </div>
+                                                        );
+                                                    default:
+                                                        return null;
+                                                }
+                                            })}
+                                        </div>
+                                        {!isLastSection && <hr className="project-detail__section-divider" />}
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </article>
                 </div>
 
                 <div className="specular-button-shell">
                     <SpecularButton
                         size="md" radius={18} tint="#ffffff" tintOpacity={0} blur={26}
-                        textColor="#f5f5f5" lineColor="#2600ff" baseColor="#313131" intensity={1}
+                        textColor="#f5f5f5" lineColor={accentColor} baseColor="#313131" intensity={1}
                         shineSize={14} shineFade={36} thickness={1} speed={0.35}
                         followMouse proximity={250}
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

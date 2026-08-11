@@ -12,22 +12,135 @@
       "content": [
         {
           "items": [
-            { "type": "heading", "text": "Overview", "level": 2 },
-            { "type": "paragraph", "text": "Led a university team project to develop a first-person shooter in Unity and C#. While contributing to the development, I primarily acted as the team's coordinator, organizing tasks, keeping the team aligned, and overseeing the overall workflow. We followed an Agile-inspired development process using tickets, structured reviews before merging into the main branch, and clear project organization. The project also emphasized object-oriented programming and separation of responsibilities. The experience strengthened my skills in team coordination, collaborative development, Git-based workflows, and project organization." },
-            { "type": "image", "src": "projects/BestFPS-gameplay.webp", "alt": "Gameplay screenshot" }
+            {
+              "type": "heading",
+              "text": "Overview",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Led a university team project to develop a first-person shooter in Unity and C#. While contributing to the development, I primarily acted as the team's coordinator, organizing tasks, keeping the team aligned, and overseeing the overall workflow. We followed an Agile-inspired development process using tickets, structured reviews before merging into the main branch, and clear project organization. The project also emphasized object-oriented programming and separation of responsibilities. The experience strengthened my skills in team coordination, collaborative development, Git-based workflows, and project organization."
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-gameplay.webp",
+              "caption": "Gameplay screenshot",
+              "alt": "Gameplay screenshot"
+            }
           ]
         },
         {
           "items": [
-            { "type": "heading", "text": "My contributions", "level": 2 },
-            { "type": "image", "src": "projects/bestfps-code1.jpg", "alt": "Code sample 1", "weight": 6 },
-            { "type": "image", "src": "projects/bestfps-code2.jpg", "alt": "Code sample 2", "weight": 6 }
+            {
+              "type": "heading",
+              "text": "My contributions",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-code.webp",
+              "alt": "Code sample 1",
+              "caption": "Code sample",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "I was tasked with implementing the core item system. This involved creating the item database, defining item behaviors, and ensuring seamless integration with the gameplay mechanics. I designed them in the most Object Oriented and SOLID Principle way I could imagine. Each task was divided into a different class, and the later ones inhereted from their parent classes. This helped us to create different weapons with ease. Later I made the firing and reloading functions as well, making sure it works with all damageable objects.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-Class-diagram.webp",
+              "alt": "Class Diagram",
+              "caption": "Class Diagram",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-ak.webp",
+              "alt": "AK-47",
+              "caption": "Weapon data setting",
+              "weight": 6
+            },
+            {
+              "type": "heading",
+              "text": "Other then programming",
+              "level": 4
+            },
+            {
+              "type": "paragraph",
+              "text": "I've done a lot more for the success of this project than just code. I organized team meetings, coordinated tasks, and ensured effective communication among team members. I also created the Git Hub repo and set up the project structure. Added .gitignore, and other settings so the project could run smoothly from the start. I also managed the merges. One of the most memorable moment for me was, when I told one of my team mate that their merge failed, and they answered \"don't worry, the Github ''Merge Conflict'' probably doesn't mean anything\"... :D, he couldn't live that down.",
+              "weight": 12
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-Branches.webp",
+              "alt": "Branches",
+              "caption": "Github Branches",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-Git_Extends.webp",
+              "alt": "Git Extends",
+              "caption": "Git Extends",
+              "weight": 6
+            }
           ]
         },
         {
           "items": [
-            { "type": "paragraph", "text": "I led the team and implemented the core shooting and movement systems." },
-            { "type": "link", "url": "https://github.com/SirLancelot002/BestFPS", "text": "View the repository on GitHub" }
+            {
+              "type": "heading",
+              "text": "Other's contributions",
+              "level": 3
+            },
+            {
+              "type": "paragraph",
+              "text": "I had 3 more teammates (one joined a month after the start). I can't complain, they most kept up with deadlines. We had a UI designer who made the main menu, sounds for it, and the shops. We had a passionate game designer, who made the entities and movement mechanics. And we had our late arrival map designer, who made a procedural map generation system. I'd say that was the largest coding achievement in the project.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-header.webp",
+              "alt": "Wireframe map",
+              "caption": "Map Wireframe",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "The Presentation of the project",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "The end of the semester was crammed with exams and greater homeworks. This really took out a lot of time from the project. So at the end we had to go into full speed. It forced us to abandon some agile steps (like presenting our code to others at the end of the sprint). Despite this, we were able to finish in time, and everything planned for the 1.0 was working. This didn't mean that we were done, since we needed a presentation. I was the one who made that, and we got the maximum grade (5) 10 minutes into the presentation.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-ppt.webp",
+              "alt": "Power Point Presentation",
+              "caption": "Power Point",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "paragraph",
+              "text": "In case you would like to check out the game, it is available on GitHub:"
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/SirLancelot002/TemaLaborFPS",
+              "text": "View the repository on GitHub"
+            }
           ]
         }
       ]
@@ -35,26 +148,139 @@
     "hu": {
       "title": "BestFPS",
       "role": "Csapatvezető és gameplay programozó",
-      "shortDescription": "Egy csapatban készített first-person shooter projekt.",
+      "shortDescription": "Egy egyetemi csapatot vezettem és koordináltam egy Unity és C# alapú FPS fejlesztése során. A feladatok és a munkafolyamatok menedzselése mellett egy Agile-szemléletű fejlesztési folyamatot tartottunk fenn ticketekkel, kódellenőrzésekkel és szabályozott merge-ökkel. A tiszta objektumorientált struktúrára és a csapat szervezettségére helyezve a hangsúlyt értékes tapasztalatot szereztem az együttműködésen alapuló szoftverfejlesztés és a projektkoordináció terén.",
       "content": [
         {
           "items": [
-            { "type": "heading", "text": "Áttekintés", "level": 2 },
-            { "type": "paragraph", "text": "A BestFPS egy csapatprojekt volt, amely a multiplayer hálózatiságot és a játékérzetet vizsgálta." },
-            { "type": "image", "src": "projects/bestfps-gameplay.jpg", "alt": "Játékmenet képernyőkép" }
+            {
+              "type": "heading",
+              "text": "Áttekintés",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Egy egyetemi csapatprojektet vezettem, amelynek célja egy Unity és C# segítségével fejlesztett first-person shooter elkészítése volt. Bár én is részt vettem a fejlesztésben, elsődlegesen a csapat koordinátoraként dolgoztam: szerveztem a feladatokat, összehangoltam a csapat munkáját, és felügyeltem az általános munkafolyamatot. Egy Agile-szemléletű fejlesztési folyamatot követtünk, amely ticketek használatára, a main branch-be történő merge-ek előtti strukturált kódellenőrzésre és a projekt átlátható szervezésére épült. A projekt során nagy hangsúlyt kapott az objektumorientált programozás és a felelősségi körök megfelelő szétválasztása is. A projekt jelentősen fejlesztette a csapatkoordinációs, együttműködésen alapuló fejlesztési, Git-alapú munkafolyamatokkal és projektmenedzsmenttel kapcsolatos készségeimet."
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-gameplay.webp",
+              "caption": "Játékmenet",
+              "alt": "Játékmenet képernyőkép"
+            }
           ]
         },
         {
           "items": [
-            { "type": "heading", "text": "Az én hozzájárulásom", "level": 2 },
-            { "type": "image", "src": "projects/bestfps-code1.jpg", "alt": "Kódrészlet 1", "weight": 6 },
-            { "type": "image", "src": "projects/bestfps-code2.jpg", "alt": "Kódrészlet 2", "weight": 6 }
+            {
+              "type": "heading",
+              "text": "Hozzájárulásom",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-code.webp",
+              "alt": "Kódrészlet 1",
+              "caption": "Kódrészlet",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "Az alapvető item rendszer megvalósítását kaptam feladatul. Ez magában foglalta az item-adatbázis létrehozását, az itemek viselkedésének meghatározását, valamint a játékmeneti mechanikákkal való zökkenőmentes integráció biztosítását. A rendszert a lehető legobjektumorientáltabb módon, a SOLID alapelveket követve terveztem meg. Minden egyes feladat külön osztályba került, a későbbiek pedig a szülőosztályokból öröklődtek. Ez lehetővé tette számunkra, hogy könnyedén hozzunk létre különböző fegyvereket. Később a lövés és újratöltés funkcióit is elkészítettem, biztosítva, hogy azok minden sebzést elszenvedni képes objektummal megfelelően működjenek.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-Class-diagram.webp",
+              "alt": "Osztálydiagram",
+              "caption": "Osztálydiagram",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-ak.webp",
+              "alt": "AK-47",
+              "caption": "Fegyveradatok beállítása",
+              "weight": 6
+            },
+            {
+              "type": "heading",
+              "text": "A programozáson túl",
+              "level": 4
+            },
+            {
+              "type": "paragraph",
+              "text": "A projekt sikeréhez jóval többel járultam hozzá, mint pusztán a kódolással. Megszerveztem a csapattalálkozókat, koordináltam a feladatokat, és igyekeztem biztosítani a hatékony kommunikációt a csapattagok között. Én hoztam létre a GitHub repositoryt és állítottam össze a projekt struktúráját is. Beállítottam a .gitignore fájlt és számos egyéb konfigurációt, hogy a projekt már a kezdetektől zökkenőmentesen működjön. A merge-eket is én kezeltem. Az egyik legemlékezetesebb pillanat számomra az volt, amikor szóltam az egyik csapattársamnak, hogy sikertelen volt a merge-e, mire azt válaszolta: „Ne aggódj, a GitHub-féle ‚Merge Conflict’ valószínűleg nem jelent semmit...” :D Ezt azóta sem hagytuk elfelejteni neki.",
+              "weight": 12
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-Branches.webp",
+              "alt": "Branch-ek",
+              "caption": "GitHub Branch-ek",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-Git_Extends.webp",
+              "alt": "Git Extensions",
+              "caption": "Git Extensions",
+              "weight": 6
+            }
           ]
         },
         {
           "items": [
-            { "type": "paragraph", "text": "Vezettem a csapatot és megvalósítottam a lövési és mozgási alaprendszereket." },
-            { "type": "link", "url": "https://github.com/SirLancelot002/BestFPS", "text": "Repository megtekintése GitHubon" }
+            {
+              "type": "heading",
+              "text": "A többiek hozzájárulása",
+              "level": 3
+            },
+            {
+              "type": "paragraph",
+              "text": "Három további csapattársam volt, akik közül az egyik egy hónappal a projekt kezdete után csatlakozott. Összességében nem panaszkodhatok rájuk, többnyire tartották a határidőket. Volt egy UI designerünk, aki elkészítette a főmenüt, annak hangjait és a boltok felületét. Egy lelkes game designerünk a játékon belüli entitásokat és a mozgásmechanikákat készítette el. A később csatlakozó pályatervezőnk pedig egy procedurális pályageneráló rendszert valósított meg. Véleményem szerint ez volt a projekt legnagyobb programozási teljesítménye.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-header.webp",
+              "alt": "Drótvázas pályaterv",
+              "caption": "Pálya drótvázas terve",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "A projekt bemutatása",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "A szemeszter vége tele volt vizsgákkal és nagyobb beadandókkal, ami jelentősen csökkentette a projektre fordítható időnket. Emiatt a végén teljes sebességre kellett kapcsolnunk. Ez arra kényszerített minket, hogy néhány Agile-lépést elhagyjunk, például azt, hogy minden sprint végén bemutassuk egymásnak az elkészült kódot. Ennek ellenére sikerült időben befejeznünk a projektet, és a 1.0-s verzióhoz tervezett összes funkció működött. Ezzel azonban még nem ért véget a munka, mivel egy prezentációt is kellett készítenünk. Ezt én készítettem el, és a bemutató tizedik percében megkaptuk a maximális, 5-ös értékelést.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/BestFPS-ppt.webp",
+              "alt": "PowerPoint prezentáció",
+              "caption": "PowerPoint",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "paragraph",
+              "text": "Ha szeretnéd megnézni a játékot, elérhető a GitHubon:"
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/SirLancelot002/TemaLaborFPS",
+              "text": "Repository megtekintése a GitHubon"
+            }
           ]
         }
       ]

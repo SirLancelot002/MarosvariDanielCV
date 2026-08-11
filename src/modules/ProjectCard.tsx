@@ -20,6 +20,7 @@ function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="project-card-shell">
       <div className="project-card-backplate" aria-hidden="true" />
+      <div className="project-card-center-vignette" aria-hidden="true" />
 
       <ElectricBorder
         color={project.color ?? '#61dca3'}

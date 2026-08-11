@@ -16,7 +16,7 @@ function ProjectsPage() {
       <div className="studies-bg-fixed">
         <LetterGlitch
           glitchSpeed={1}
-          centerVignette={true}
+          centerVignette={false}
           outerVignette={false}
           smooth
           glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}

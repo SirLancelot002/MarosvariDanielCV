@@ -18,17 +18,26 @@
   z-index: 0;
 }
 
+.project-card-center-vignette {
+  position: absolute;
+  inset: -38%;
+  border-radius: 999px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.55) 36%, rgba(0, 0, 0, 0) 72%);
+  z-index: 1;
+}
+
 .project-card-border {
   position: relative;
   display: block;
-  z-index: 1;
+  z-index: 2;
 }
 
 .project-card {
   display: block;
   text-decoration: none;
   color: inherit;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 20px;

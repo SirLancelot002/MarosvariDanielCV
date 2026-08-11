@@ -16,6 +16,7 @@ function ProjectCard({ project }: ProjectCardProps) {
   const { i18n } = useTranslation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const content = project.translations[lang];
+  const accentColor = project.color ?? '#61dca3';
 
   return (
     <div className="project-card-shell">
@@ -23,7 +24,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       <div className="project-card-center-vignette" aria-hidden="true" />
 
       <ElectricBorder
-        color={project.color ?? '#61dca3'}
+        color={accentColor}
         speed={1}
         chaos={0.12}
         borderRadius={20}
@@ -38,11 +39,13 @@ function ProjectCard({ project }: ProjectCardProps) {
           )}
 
           <div className="project-card__content">
-            <DifficultyLevel level={project.level} className="project-card__level" />
+            <div className="project-card__level-wrap">
+              <DifficultyLevel level={project.level} className="project-card__level" />
+            </div>
 
-            <h3 className="project-card__title">{content.title}</h3>
+            <h2 className="project-card__title">{content.title}</h2>
 
-            {content.role && <p className="project-card__role">{content.role}</p>}
+            {content.role && <p className="project-card__role" style={{ color: accentColor }}>{content.role}</p>}
 
             <p className="project-card__period">
               <img src={calendarLogoImg} alt="" className="personal-data-icon" />{' '}

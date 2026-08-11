@@ -2,7 +2,6 @@
   "id": "best-fps",
   "level": 3,
   "color": "#61dca3",
-  "headerSrc": "projects/BestFPS-header.webp",
   "startDate": "2026-03-11",
   "endDate": "2026-06-17",
   "translations": {
@@ -13,52 +12,22 @@
       "content": [
         {
           "items": [
-            {
-              "type": "heading",
-              "text": "Overview",
-              "level": 2
-            },
-            {
-              "type": "paragraph",
-              "text": "Led a university team project to develop a first-person shooter in Unity and C#. While contributing to the development, I primarily acted as the team’s coordinator, organizing tasks, keeping the team aligned, and overseeing the overall workflow. We followed an Agile-inspired development process using tickets, structured reviews before merging into the main branch, and clear project organization. The project also emphasized object-oriented programming and separation of responsibilities. The experience strengthened my skills in team coordination, collaborative development, Git-based workflows, and project organization."
-            },
-            {
-              "type": "image",
-              "src": "projects/BestFPS-gameplay.webp",
-              "alt": "Gameplay screenshot"
-            }
+            { "type": "heading", "text": "Overview", "level": 2 },
+            { "type": "paragraph", "text": "Led a university team project to develop a first-person shooter in Unity and C#. While contributing to the development, I primarily acted as the team's coordinator, organizing tasks, keeping the team aligned, and overseeing the overall workflow. We followed an Agile-inspired development process using tickets, structured reviews before merging into the main branch, and clear project organization. The project also emphasized object-oriented programming and separation of responsibilities. The experience strengthened my skills in team coordination, collaborative development, Git-based workflows, and project organization." },
+            { "type": "image", "src": "projects/BestFPS-gameplay.webp", "alt": "Gameplay screenshot" }
           ]
         },
         {
           "items": [
-            {
-              "type": "heading",
-              "text": "My contributions",
-              "level": 2
-            },
-            {
-              "type": "image",
-              "src": "projects/bestfps-code1.jpg",
-              "alt": "Code sample 1"
-            },
-            {
-              "type": "image",
-              "src": "projects/bestfps-code2.jpg",
-              "alt": "Code sample 2"
-            }
+            { "type": "heading", "text": "My contributions", "level": 2 },
+            { "type": "image", "src": "projects/bestfps-code1.jpg", "alt": "Code sample 1", "weight": 6 },
+            { "type": "image", "src": "projects/bestfps-code2.jpg", "alt": "Code sample 2", "weight": 6 }
           ]
         },
         {
           "items": [
-            {
-              "type": "paragraph",
-              "text": "I led the team and implemented the core shooting and movement systems."
-            },
-            {
-              "type": "link",
-              "url": "https://github.com/SirLancelot002/BestFPS",
-              "text": "View the repository on GitHub"
-            }
+            { "type": "paragraph", "text": "I led the team and implemented the core shooting and movement systems." },
+            { "type": "link", "url": "https://github.com/SirLancelot002/BestFPS", "text": "View the repository on GitHub" }
           ]
         }
       ]
@@ -70,52 +39,22 @@
       "content": [
         {
           "items": [
-            {
-              "type": "heading",
-              "text": "Áttekintés",
-              "level": 2
-            },
-            {
-              "type": "paragraph",
-              "text": "A BestFPS egy csapatprojekt volt, amely a multiplayer hálózatiságot és a játékérzetet vizsgálta."
-            },
-            {
-              "type": "image",
-              "src": "projects/bestfps-gameplay.jpg",
-              "alt": "Játékmenet képernyőkép"
-            }
+            { "type": "heading", "text": "Áttekintés", "level": 2 },
+            { "type": "paragraph", "text": "A BestFPS egy csapatprojekt volt, amely a multiplayer hálózatiságot és a játékérzetet vizsgálta." },
+            { "type": "image", "src": "projects/bestfps-gameplay.jpg", "alt": "Játékmenet képernyőkép" }
           ]
         },
         {
           "items": [
-            {
-              "type": "heading",
-              "text": "Az én hozzájárulásom",
-              "level": 2
-            },
-            {
-              "type": "image",
-              "src": "projects/bestfps-code1.jpg",
-              "alt": "Kódrészlet 1"
-            },
-            {
-              "type": "image",
-              "src": "projects/bestfps-code2.jpg",
-              "alt": "Kódrészlet 2"
-            }
+            { "type": "heading", "text": "Az én hozzájárulásom", "level": 2 },
+            { "type": "image", "src": "projects/bestfps-code1.jpg", "alt": "Kódrészlet 1", "weight": 6 },
+            { "type": "image", "src": "projects/bestfps-code2.jpg", "alt": "Kódrészlet 2", "weight": 6 }
           ]
         },
         {
           "items": [
-            {
-              "type": "paragraph",
-              "text": "Vezettem a csapatot és megvalósítottam a lövési és mozgási alaprendszereket."
-            },
-            {
-              "type": "link",
-              "url": "https://github.com/SirLancelot002/BestFPS",
-              "text": "Repository megtekintése GitHubon"
-            }
+            { "type": "paragraph", "text": "Vezettem a csapatot és megvalósítottam a lövési és mozgási alaprendszereket." },
+            { "type": "link", "url": "https://github.com/SirLancelot002/BestFPS", "text": "Repository megtekintése GitHubon" }
           ]
         }
       ]

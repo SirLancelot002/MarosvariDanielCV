@@ -6,6 +6,7 @@ export interface ContentItem {
   alt?: string;         // image only
   caption?: string;     // image only
   url?: string;         // link only
+  weight?: number;   // Bootstrap column weight, 1-12. Defaults to 12 (full width) if omitted.
 }
 
 export interface ContentSection {

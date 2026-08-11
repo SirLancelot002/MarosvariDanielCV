@@ -37,7 +37,7 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  background: rgba(0, 0, 0, 0.28);
+  background: transparent;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 20px;
@@ -61,6 +61,12 @@
   padding: 1.5rem 1.75rem;
 }
 
+.project-card__level-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.75rem;
+}
+
 .project-card__level {
   display: inline-flex;
   width: fit-content;
@@ -81,13 +87,14 @@
 
 .project-card__title {
   margin: 0 0 0.25rem;
-  font-size: 1.35rem;
+  font-size: 2rem;
   color: var(--text-h, #fff);
   padding-bottom: 0.5rem;
 }
 
 .project-card__role {
   margin: 0 0 0.25rem;
+  text-align: left;
   font-size: 0.8rem;
   color: #61dca3;
   font-weight: 600;
@@ -106,4 +113,10 @@
   color: var(--text, #9ca3af);
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .project-card__level-wrap {
+    justify-content: flex-end;
+  }
 }

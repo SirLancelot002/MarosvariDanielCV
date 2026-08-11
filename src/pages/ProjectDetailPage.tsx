@@ -11,6 +11,7 @@ import DifficultyLevel from '../modules/DifficultyLevel';
 import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
+import { getBlockColumnClasses } from '../utils/blockLayout';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
 
@@ -93,78 +94,71 @@ function ProjectDetailPage() {
                         </header>
 
                         <div className="project-detail__body">
-                            {content.content.map((section, sectionIndex) => (
-                                <div className="row project-detail__section g-4" key={sectionIndex}>
-                                    {section.items.map((block, i) => {
-                                        const isTextBlock = block.type === 'heading' || block.type === 'paragraph' || block.type === 'link';
-                                        const colClass = isTextBlock
-                                            ? 'col-12'
-                                            : section.items.filter(it => it.type === 'image').length > 1
-                                                ? 'col-12 col-md-6'
-                                                : 'col-12';
+  {content.content.map((section, sectionIndex) => {
+    const colClasses = getBlockColumnClasses(section.items);
+    return (
+      <div className="row project-detail__section g-4" key={sectionIndex}>
+        {section.items.map((block, i) => {
+          const colClass = colClasses[i];
 
-                                        switch (block.type) {
-                                            case 'heading': {
-                                                const Tag = `h${block.level ?? 3}` as 'h2' | 'h3' | 'h4';
-                                                return (
-                                                    <div key={i} className={colClass}>
-                                                        <Tag className="project-detail__heading">{block.text}</Tag>
-                                                    </div>
-                                                );
-                                            }
-                                            case 'paragraph':
-                                                return (
-                                                    <div key={i} className={colClass}>
-                                                        <p className="project-detail__paragraph">{block.text}</p>
-                                                    </div>
-                                                );
-                                            case 'image':
-                                                return (
-                                                    <div key={i} className={colClass}>
-                                                        <figure className="project-detail__figure">
-                                                            <TiltedCard
-                                                                className="project-detail__tilted-card"
-                                                                imageSrc={publicAsset(block.src ?? '')}
-                                                                altText={block.alt ?? ''}
-                                                                captionText={block.caption ?? ''}
-                                                                containerHeight="auto"
-                                                                containerWidth="100%"
-                                                                imageHeight="auto"
-                                                                imageWidth="auto"
-                                                                rotateAmplitude={12}
-                                                                scaleOnHover={1.05}
-                                                                showMobileWarning={false}
-                                                                showTooltip={false}
-                                                                displayOverlayContent
-                                                                overlayContent={
-                                                                    block.caption ? (
-                                                                        <p className="tilted-card-demo-text">{block.caption}</p>
-                                                                    ) : null
-                                                                }
-                                                            />
-                                                        </figure>
-                                                    </div>
-                                                );
-                                            case 'link':
-                                                return (
-                                                    <div key={i} className={colClass}>
-                                                        <a
-                                                            href={block.url}
-                                                            target="_blank"
-                                                            rel="noreferrer noopener"
-                                                            className="project-detail__link"
-                                                        >
-                                                            {block.text}
-                                                        </a>
-                                                    </div>
-                                                );
-                                            default:
-                                                return null;
-                                        }
-                                    })}
-                                </div>
-                            ))}
-                        </div>
+          switch (block.type) {
+            case 'heading': {
+              const Tag = `h${block.level ?? 3}` as 'h2' | 'h3' | 'h4';
+              return (
+                <div key={i} className={colClass}>
+                  <Tag className="project-detail__heading">{block.text}</Tag>
+                </div>
+              );
+            }
+            case 'paragraph':
+              return (
+                <div key={i} className={colClass}>
+                  <p className="project-detail__paragraph">{block.text}</p>
+                </div>
+              );
+            case 'image':
+              return (
+                <div key={i} className={colClass}>
+                  <figure className="project-detail__figure">
+                    <TiltedCard
+                      className="project-detail__tilted-card"
+                      imageSrc={publicAsset(block.src ?? '')}
+                      altText={block.alt ?? ''}
+                      captionText={block.caption ?? ''}
+                      containerHeight="auto"
+                      containerWidth="100%"
+                      imageHeight="auto"
+                      imageWidth="auto"
+                      rotateAmplitude={12}
+                      scaleOnHover={1.05}
+                      showMobileWarning={false}
+                      showTooltip={false}
+                      displayOverlayContent
+                      overlayContent={
+                        block.caption ? (
+                          <p className="tilted-card-demo-text">{block.caption}</p>
+                        ) : null
+                      }
+                    />
+                  </figure>
+                </div>
+              );
+            case 'link':
+              return (
+                <div key={i} className={colClass}>
+                  <a href={block.url} target="_blank" rel="noreferrer noopener" className="project-detail__link">
+                    {block.text}
+                  </a>
+                </div>
+              );
+            default:
+              return null;
+          }
+        })}
+      </div>
+    );
+  })}
+</div>
                     </article>
                 </div>
 

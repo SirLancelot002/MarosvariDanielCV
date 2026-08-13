@@ -7,20 +7,33 @@ import RevealOnScroll from '../modules/RevealOnScroll';
 import { projects } from '../data/loadProjects';
 import Magnet from '../modules/Magnet';
 import SpecularButton from '../modules/SpecularButton';
+import './ProjectsPage.css';
 
 function ProjectsPage() {
   const { t } = useTranslation();
 
   return (
     <>
-      <div className="studies-bg-fixed">
-        <LetterGlitch
-          glitchSpeed={1}
-          centerVignette={false}
-          outerVignette={false}
-          smooth
-          glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
-        />
+      <div className="studies-bg-fixed projects-page-bg">
+        <div style={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'stretch',
+          background: '#000000'
+        }}>
+          <div className="projects-glitch-stage">
+            <LetterGlitch
+              glitchSpeed={1}
+              centerVignette={false}
+              outerVignette={false}
+              smooth
+              glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
+            />
+          </div>
+        </div>
       </div>
       <div className="studies-content-layer">
         <main className="hero-section studies-hero-section">

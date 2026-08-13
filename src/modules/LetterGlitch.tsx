@@ -7,7 +7,7 @@ type LetterGlitchProps = {
   outerVignette?: boolean;
   smooth?: boolean;
   characters?: string;
-  targetCharacters?: number;
+  letterSizeRem?: number;
 };
 
 const LetterGlitch = ({
@@ -17,7 +17,7 @@ const LetterGlitch = ({
   outerVignette = true,
   smooth = true,
   characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789',
-  targetCharacters
+  letterSizeRem = 1
 }: LetterGlitchProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
@@ -36,10 +36,8 @@ const LetterGlitch = ({
 
   const lettersAndSymbols = Array.from(characters);
 
-  // Original defaults: a 10x20 cell (1:2 width:height ratio) with a 16px font.
-  const defaultCharWidth = 10;
-  const defaultCharHeight = 20;
-  const defaultFontSize = 16;
+  // Original 1:2 width:height cell ratio, font at 1.6x the cell width.
+  const cellWidthPerFontSize = 10 / 16;
 
   const getRandomChar = () => {
     return lettersAndSymbols[Math.floor(Math.random() * lettersAndSymbols.length)];
@@ -79,20 +77,10 @@ const LetterGlitch = ({
   };
 
   const calculateGrid = (width: number, height: number) => {
-    let { charWidth, charHeight, fontSize } = {
-      charWidth: defaultCharWidth,
-      charHeight: defaultCharHeight,
-      fontSize: defaultFontSize
-    };
-
-    if (targetCharacters && targetCharacters > 0) {
-      // Keep the original 1:2 width:height cell ratio, just scale it so
-      // columns * rows lands near targetCharacters for the given area.
-      const scale = Math.sqrt((width * height) / (2 * targetCharacters));
-      charWidth = scale;
-      charHeight = scale * 2;
-      fontSize = scale * (defaultFontSize / defaultCharWidth);
-    }
+    const rootFontSizePx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    const fontSize = letterSizeRem * rootFontSizePx;
+    const charWidth = fontSize * cellWidthPerFontSize;
+    const charHeight = charWidth * 2;
 
     cellSize.current = { charWidth, charHeight, fontSize };
 

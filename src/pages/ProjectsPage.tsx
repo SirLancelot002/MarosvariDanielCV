@@ -14,17 +14,18 @@ function ProjectsPage() {
   const { t } = useTranslation();
   const quality = useAdaptiveQuality();
 
-  let letterCount = 8500; // Default letter count
+  // Larger letters mean fewer of them on screen, which is cheaper to render.
+  let letterSizeRem = 1;
 
   switch (quality) {
     case 'low':
-      letterCount = 1600;
+      letterSizeRem = 1.7;
       break;
     case 'medium':
-      letterCount = 4000;
+      letterSizeRem = 1.3;
       break;
     case 'high':
-      letterCount = 8500;
+      letterSizeRem = 1;
       break;
   }
 
@@ -46,7 +47,7 @@ function ProjectsPage() {
               centerVignette={false}
               outerVignette={false}
               smooth
-              targetCharacters={letterCount}
+              letterSizeRem={letterSizeRem}
               glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
             />
           </div>

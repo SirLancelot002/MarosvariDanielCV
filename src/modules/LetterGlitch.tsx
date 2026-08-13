@@ -7,6 +7,7 @@ type LetterGlitchProps = {
   outerVignette?: boolean;
   smooth?: boolean;
   characters?: string;
+  targetCharacters?: number;
 };
 
 const LetterGlitch = ({
@@ -15,7 +16,8 @@ const LetterGlitch = ({
   centerVignette = false,
   outerVignette = true,
   smooth = true,
-  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789'
+  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789',
+  targetCharacters
 }: LetterGlitchProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
@@ -28,14 +30,16 @@ const LetterGlitch = ({
     }[]
   >([]);
   const grid = useRef({ columns: 0, rows: 0 });
+  const cellSize = useRef({ charWidth: 10, charHeight: 20, fontSize: 16 });
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const lastGlitchTime = useRef(Date.now());
 
   const lettersAndSymbols = Array.from(characters);
 
-  const fontSize = 16;
-  const charWidth = 10;
-  const charHeight = 20;
+  // Original defaults: a 10x20 cell (1:2 width:height ratio) with a 16px font.
+  const defaultCharWidth = 10;
+  const defaultCharHeight = 20;
+  const defaultFontSize = 16;
 
   const getRandomChar = () => {
     return lettersAndSymbols[Math.floor(Math.random() * lettersAndSymbols.length)];
@@ -75,6 +79,23 @@ const LetterGlitch = ({
   };
 
   const calculateGrid = (width: number, height: number) => {
+    let { charWidth, charHeight, fontSize } = {
+      charWidth: defaultCharWidth,
+      charHeight: defaultCharHeight,
+      fontSize: defaultFontSize
+    };
+
+    if (targetCharacters && targetCharacters > 0) {
+      // Keep the original 1:2 width:height cell ratio, just scale it so
+      // columns * rows lands near targetCharacters for the given area.
+      const scale = Math.sqrt((width * height) / (2 * targetCharacters));
+      charWidth = scale;
+      charHeight = scale * 2;
+      fontSize = scale * (defaultFontSize / defaultCharWidth);
+    }
+
+    cellSize.current = { charWidth, charHeight, fontSize };
+
     const columns = Math.ceil(width / charWidth);
     const rows = Math.ceil(height / charHeight);
     return { columns, rows };
@@ -119,6 +140,7 @@ const LetterGlitch = ({
     if (!context.current || letters.current.length === 0) return;
     const ctx = context.current;
     const { width, height } = canvasRef.current!.getBoundingClientRect();
+    const { charWidth, charHeight, fontSize } = cellSize.current;
     ctx.clearRect(0, 0, width, height);
     ctx.font = `${fontSize}px monospace`;
     ctx.textBaseline = 'top';

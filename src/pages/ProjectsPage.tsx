@@ -8,9 +8,25 @@ import { projects } from '../data/loadProjects';
 import Magnet from '../modules/Magnet';
 import SpecularButton from '../modules/SpecularButton';
 import './ProjectsPage.css';
+import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
 function ProjectsPage() {
   const { t } = useTranslation();
+  const quality = useAdaptiveQuality();
+
+  let letterCount = 8500; // Default letter count
+
+  switch (quality) {
+    case 'low':
+      letterCount = 1600;
+      break;
+    case 'medium':
+      letterCount = 4000;
+      break;
+    case 'high':
+      letterCount = 8500;
+      break;
+  }
 
   return (
     <>
@@ -30,6 +46,7 @@ function ProjectsPage() {
               centerVignette={false}
               outerVignette={false}
               smooth
+              targetCharacters={letterCount}
               glitchColors={["#2b4539", "#61dca3", "#61b3dc"]}
             />
           </div>

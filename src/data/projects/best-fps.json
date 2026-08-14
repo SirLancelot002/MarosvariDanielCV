@@ -9,6 +9,7 @@
       "title": "BestFPS",
       "role": "Team lead & gameplay programmer",
       "shortDescription": "Led and coordinated a university team developing a first-person shooter in Unity and C#. Managed tasks and workflow while maintaining an Agile-inspired development process with tickets, reviews, and controlled merges. Focused on clean OOP structure and team organization, gaining valuable experience in collaborative software development and project coordination.",
+      "tags": ["Unity", "C#", "Git", "OOP", "Team lead"],
       "content": [
         {
           "items": [
@@ -149,6 +150,7 @@
       "title": "BestFPS",
       "role": "Csapatvezető és gameplay programozó",
       "shortDescription": "Egy egyetemi csapatot vezettem és koordináltam egy Unity és C# alapú FPS fejlesztése során. A feladatok és a munkafolyamatok menedzselése mellett egy Agile-szemléletű fejlesztési folyamatot tartottunk fenn ticketekkel, kódellenőrzésekkel és szabályozott merge-ökkel. A tiszta objektumorientált struktúrára és a csapat szervezettségére helyezve a hangsúlyt értékes tapasztalatot szereztem az együttműködésen alapuló szoftverfejlesztés és a projektkoordináció terén.",
+      "tags": ["Unity", "C#", "Git", "OOP", "Csapatvezető"],
       "content": [
         {
           "items": [

@@ -52,6 +52,14 @@ function ProjectCard({ project }: ProjectCardProps) {
               {formatStudyPeriod(project.startDate, project.endDate, lang)}, {formatProjectDuration(project.startDate, project.endDate, lang)}
             </p>
 
+            {content.tags && content.tags.length > 0 && (
+              <ul className="project-card__tags">
+                {content.tags.map((tag) => (
+                  <li key={tag} className="project-card__tag">{tag}</li>
+                ))}
+              </ul>
+            )}
+
             <p className="project-card__description">{content.shortDescription}</p>
           </div>
         </Link>

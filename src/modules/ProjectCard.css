@@ -115,6 +115,26 @@
   line-height: 1.5;
 }
 
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+.project-card__tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text, #d1d5db);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 @media (min-width: 768px) {
   .project-card__level-wrap {
     justify-content: flex-end;

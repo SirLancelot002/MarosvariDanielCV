@@ -17,6 +17,7 @@ export interface ProjectTranslation {
   title: string;
   role?: string;
   shortDescription: string;
+  tags?: string[];
   content: ContentSection[];
 }
 

@@ -5,11 +5,14 @@ import LightPillar from '../modules/LightPillar';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 //import BorderGlow from '../modules/BorderGlow';
 //import GradientText from '../modules/GradientText';
+import '../App.css';
 
 import StudyCard from '../modules/StudyCard';
 import RevealOnScroll from '../modules/RevealOnScroll';
 import studiesData from '../data/studies.json';
 import type { Study } from '../types/study';
+import Magnet from '../modules/Magnet';
+import SpecularButton from '../modules/SpecularButton';
 
 const studies = studiesData as Study[];
 
@@ -39,6 +42,7 @@ function StudiesPage() {
         <main className="hero-section studies-hero-section">
           <TextType
             as="h1"
+            className="text-type--hero"
             text={[t("studies.title1"), t("studies.title2"), t("studies.title3")]}
             typingSpeed={75}
             pauseDuration={2500}
@@ -79,6 +83,26 @@ function StudiesPage() {
               );
             })}
           </div>
+        </div>
+        <div className="magnet-button-container">
+          <Magnet
+            padding={{ left: 250, right: 250, top: 100, bottom: 40 }}
+            disabled={false}
+            magnetStrength={1}
+          >
+            <div className="specular-button-shell p-0">
+              <SpecularButton
+                size="md" radius={18} tint="#ffffff" tintOpacity={0} blur={24}
+                textColor="#f5f5f5" lineColor="#cc00ff" baseColor="#4d4d4d" intensity={1}
+                shineSize={14} shineFade={36} thickness={1} speed={0.35}
+                followMouse proximity={250}
+                onClick={() => {
+                window.location.href = 'mailto:marosvaridaniel7@gmail.com';
+              }}>
+                {t("impressed")}
+              </SpecularButton>
+            </div>
+          </Magnet>
         </div>
       </div>
     </>

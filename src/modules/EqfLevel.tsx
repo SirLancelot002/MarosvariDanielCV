@@ -15,7 +15,7 @@ function EqfLevel({ level, maxLevel = 8, className = '' }: EqfLevelProps) {
   return (
     <div className={`eqf-level ${className}`.trim()} aria-label={`Level ${safeLevel} of ${maxLevel}`}>
       <span className="eqf-level__label">
-        <img src={gradHatLogo} alt="" className="eqf-level__icon" /> <a href="https://europass.europa.eu/en/description-eight-eqf-levels" target="_blank">EQF</a> {t('studies.level')}
+        <img src={gradHatLogo} alt="" className="eqf-level__icon" /> <a href="https://europass.europa.eu/en/description-eight-eqf-levels" target="_blank" className="eqf-link">EQF</a> {t('studies.level')}
       </span>
       {Array.from({ length: maxLevel }, (_, i) => (
         <span key={i} className={`eqf-level__dot ${i < safeLevel ? 'is-filled' : ''}`} />

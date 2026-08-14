@@ -45,7 +45,15 @@
   }
 }
 
-a {
-    color: #b896ff;
-    text-decoration: underline;
+.eqf-link,
+.eqf-link:link,
+.eqf-link:visited {
+  color: #b896ff !important;
+  text-decoration: none !important;
+}
+
+.eqf-link:hover,
+.eqf-link:focus-visible {
+  color: #c6adfd !important;
+  text-decoration: underline !important;
 }

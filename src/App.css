@@ -396,3 +396,8 @@ h2.GradientText {
   margin-top: 4rem;
   padding-top: 0.5rem;
 }
+
+.magnet-button-container {
+  padding-top: 120px;
+  padding-bottom: 70px;
+}

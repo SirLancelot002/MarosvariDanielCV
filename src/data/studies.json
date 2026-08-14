@@ -5,7 +5,7 @@
     "institutionSrc": "https://bprof.vik.bme.hu",
     "headerSrc": "studies/bme-header.png",
     "startDate": "2024-09-01",
-    "endDate": "2027-06-30",
+    "endDate": "",
     "translations": {
       "en": {
         "title": "BSc in Computer Science Engineering",
@@ -85,7 +85,7 @@
   },
   {
     "id": "nau-advanced-owsd",
-    "level": 5,
+    "level": 4,
     "institutionSrc": "https://www.naui.org/learn/continuing-education/advanced-open-water-scuba-diver/",
     "headerSrc": "studies/naui-advanced-header.jpg",
     "startDate": "2025-08-18",

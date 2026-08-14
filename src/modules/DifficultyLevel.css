@@ -1,0 +1,57 @@
+.difficulty-level {
+  --difficulty-accent: #61dca3;
+  --difficulty-border: rgba(97, 220, 163, 0.22);
+  --difficulty-background: rgba(97, 220, 163, 0.05);
+  --difficulty-glow: rgba(97, 220, 163, 0.55);
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--difficulty-border);
+  border-radius: 999px;
+  background: var(--difficulty-background);
+}
+
+.difficulty-level--high {
+  --difficulty-accent: #f2c14e;
+  --difficulty-border: rgba(255, 215, 96, 0.22);
+  --difficulty-background: rgba(255, 215, 96, 0.05);
+  --difficulty-glow: rgba(242, 193, 78, 0.55);
+}
+
+.difficulty-level__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--difficulty-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-right: 0.15rem;
+  line-height: 1;
+}
+
+.difficulty-level__icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.difficulty-level__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.difficulty-level__dot.is-filled {
+  background: var(--difficulty-accent);
+  box-shadow: 0 0 10px var(--difficulty-glow);
+}
+
+@media (max-width: 768px) {
+  .difficulty-level {
+    gap: 6px;
+  }
+}

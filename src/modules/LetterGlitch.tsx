@@ -7,6 +7,7 @@ type LetterGlitchProps = {
   outerVignette?: boolean;
   smooth?: boolean;
   characters?: string;
+  letterSizeRem?: number;
 };
 
 const LetterGlitch = ({
@@ -15,7 +16,8 @@ const LetterGlitch = ({
   centerVignette = false,
   outerVignette = true,
   smooth = true,
-  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789'
+  characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$&*()-_+=/[]{};:<>.,0123456789',
+  letterSizeRem = 1
 }: LetterGlitchProps) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationRef = useRef<number | null>(null);
@@ -28,14 +30,14 @@ const LetterGlitch = ({
     }[]
   >([]);
   const grid = useRef({ columns: 0, rows: 0 });
+  const cellSize = useRef({ charWidth: 10, charHeight: 20, fontSize: 16 });
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const lastGlitchTime = useRef(Date.now());
 
   const lettersAndSymbols = Array.from(characters);
 
-  const fontSize = 16;
-  const charWidth = 10;
-  const charHeight = 20;
+  // Original 1:2 width:height cell ratio, font at 1.6x the cell width.
+  const cellWidthPerFontSize = 10 / 16;
 
   const getRandomChar = () => {
     return lettersAndSymbols[Math.floor(Math.random() * lettersAndSymbols.length)];
@@ -75,6 +77,13 @@ const LetterGlitch = ({
   };
 
   const calculateGrid = (width: number, height: number) => {
+    const rootFontSizePx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    const fontSize = letterSizeRem * rootFontSizePx;
+    const charWidth = fontSize * cellWidthPerFontSize;
+    const charHeight = charWidth * 2;
+
+    cellSize.current = { charWidth, charHeight, fontSize };
+
     const columns = Math.ceil(width / charWidth);
     const rows = Math.ceil(height / charHeight);
     return { columns, rows };
@@ -119,6 +128,7 @@ const LetterGlitch = ({
     if (!context.current || letters.current.length === 0) return;
     const ctx = context.current;
     const { width, height } = canvasRef.current!.getBoundingClientRect();
+    const { charWidth, charHeight, fontSize } = cellSize.current;
     ctx.clearRect(0, 0, width, height);
     ctx.font = `${fontSize}px monospace`;
     ctx.textBaseline = 'top';

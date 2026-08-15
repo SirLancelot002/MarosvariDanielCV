@@ -2,8 +2,8 @@
   "id": "meteorology",
   "level": 4,
   "color": "#61dca3",
-  "startDate": "2025-08-26",
-  "endDate": "2025-09-10",
+  "startDate": "2025-11-26",
+  "endDate": "2025-12-10",
   "translations": {
     "en": {
       "title": "Meteorology",

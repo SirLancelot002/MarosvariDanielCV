@@ -99,6 +99,7 @@ function ProjectsPage() {
         </div>
         <div className="magnet-button-container">
           <Magnet
+            wrapperClassName="projects-magnet-vignette"
             padding={{ left: 250, right: 250, top: 100, bottom: 40 }}
             disabled={false}
             magnetStrength={1}

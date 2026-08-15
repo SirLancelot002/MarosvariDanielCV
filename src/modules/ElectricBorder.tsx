@@ -10,6 +10,8 @@ interface ElectricBorderProps {
   borderRadius?: number;
   className?: string;
   style?: CSSProperties;
+  // Set to false to pause the canvas animation, e.g. when scrolled off screen.
+  active?: boolean;
 }
 
 const ElectricBorder: React.FC<ElectricBorderProps> = ({
@@ -19,7 +21,8 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
   chaos = 0.12,
   borderRadius = 24,
   className,
-  style
+  style,
+  active = true
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -161,7 +164,7 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
   useEffect(() => {
     const canvas = canvasRef.current;
     const container = containerRef.current;
-    if (!canvas || !container) return;
+    if (!canvas || !container || !active) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -289,7 +292,7 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
       }
       resizeObserver.disconnect();
     };
-  }, [color, speed, chaos, borderRadius, octavedNoise, getRoundedRectPoint]);
+  }, [color, speed, chaos, borderRadius, active, octavedNoise, getRoundedRectPoint]);
 
   const vars = {
     '--electric-border-color': color,

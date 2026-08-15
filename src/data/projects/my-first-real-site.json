@@ -1,19 +1,19 @@
 {
-  "id": "meteorology",
-  "level": 4,
+  "id": "my-first-real-site",
+  "level": 2,
   "color": "#61dca3",
-  "startDate": "2025-11-26",
-  "endDate": "2025-12-10",
+  "startDate": "2024-03-09",
+  "endDate": "2024-05-27",
   "translations": {
     "en": {
-      "title": "Meteorology",
-      "role": "University grand project",
-      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used High level programming, and OOP programming.",
+      "title": "My first (public) website",
+      "role": "Web developer",
+      "shortDescription": "This was our grand assignment at the end of the 2nd semester in ELTE. We had to make a static website (meaning only CSS and HTML), that had to fulfill all web design rules (color schemes, printable, and so on)... Honestly this CV site overperformed it in every way.",
       "tags": [
-        "C#",
-        "OOP",
-        "NoSQL",
-        "Large Data"
+        "HTML",
+        "CSS",
+        "Git",
+        "Responsive design"
       ],
       "content": [
         {

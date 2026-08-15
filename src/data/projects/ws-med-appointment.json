@@ -1,19 +1,23 @@
 {
-  "id": "meteorology",
-  "level": 4,
-  "color": "#61dca3",
-  "startDate": "2025-11-26",
-  "endDate": "2025-12-10",
+  "id": "ws-med-appointment-system",
+  "level": 7,
+  "color": "#f2c14e",
+  "startDate": "2026-07-12",
   "translations": {
     "en": {
-      "title": "Meteorology",
-      "role": "University grand project",
-      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used High level programming, and OOP programming.",
+      "title": "WS Med doctor appointment booking system",
+      "role": "Customer Success Engineer",
+      "shortDescription": "I was approached by the owner of WS Med (medical franchise) to help him develop a doctor appointment booking system for his franchise. I was given the opportunity to build the team. I chose 7 other IT specialists from my University circles. We divided the roles amongst ourselves, as such I've become CSE (Customer Success Engineer). I had great influance over the programm design, the technologies used on the frontend and I made the base classes for the Backend.",
       "tags": [
-        "C#",
+        "ORM",
+        "Team managment",
+        "CSE",
         "OOP",
-        "NoSQL",
-        "Large Data"
+        "C#",
+        "React",
+        "CI/CD",
+        "Git",
+        "Business Product"
       ],
       "content": [
         {

@@ -1,19 +1,19 @@
 {
-  "id": "meteorology",
-  "level": 4,
-  "color": "#61dca3",
-  "startDate": "2025-11-26",
-  "endDate": "2025-12-10",
+  "id": "tank-gaming",
+  "level": 1,
+  "color": "#F8A717",
+  "startDate": "2019-09-21",
+  "endDate": "2020-01-10",
+  "headerSrc": "projects/scratch-logo.webp",
   "translations": {
     "en": {
-      "title": "Meteorology",
-      "role": "University grand project",
-      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used High level programming, and OOP programming.",
+      "title": "Tank Gaming",
+      "role": "My first experience with programming",
+      "shortDescription": "Scratch is a visual programming language that allows you to create games and animations (Made by MIT). This was my first programming experience and we had to make a game by the middle of the school year in high school. I fell in love with coding instantly and I've spent almost all my time creating this game. It can be played even to this day.",
       "tags": [
-        "C#",
-        "OOP",
-        "NoSQL",
-        "Large Data"
+        "Basic",
+        "Scratch",
+        "Game development"
       ],
       "content": [
         {

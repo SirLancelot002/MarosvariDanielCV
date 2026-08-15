@@ -1,19 +1,17 @@
 {
-  "id": "meteorology",
-  "level": 4,
+  "id": "wizard-games",
+  "level": 3,
   "color": "#61dca3",
-  "startDate": "2025-11-26",
-  "endDate": "2025-12-10",
+  "startDate": "2023-11-20",
+  "endDate": "2023-12-19",
   "translations": {
     "en": {
-      "title": "Meteorology",
-      "role": "University grand project",
-      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used High level programming, and OOP programming.",
+      "title": "\"Wizard Games\"",
+      "role": "University assignment",
+      "shortDescription": "This was our grand assignment at the end of the 1st semester in ELTE. We had to make a \"game\" in Haskell, which really just meant programming exercises desquiesed as games. I've learned a LOT of tricks on how to do things in functional programming, like how to make semi loops of ifs even when the function's header is fixed and cannot be changed.",
       "tags": [
-        "C#",
-        "OOP",
-        "NoSQL",
-        "Large Data"
+        "Haskell",
+        "Functional programming"
       ],
       "content": [
         {

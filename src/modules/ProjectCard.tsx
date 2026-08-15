@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { Project } from '../types/project';
@@ -18,8 +19,24 @@ function ProjectCard({ project }: ProjectCardProps) {
   const content = project.translations[lang];
   const accentColor = project.color ?? '#61dca3';
 
+  const shellRef = useRef<HTMLDivElement>(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+
+  useEffect(() => {
+    const node = shellRef.current;
+    if (!node) return;
+
+    // Pause the electric border animation while the card is far off screen.
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsNearViewport(entry.isIntersecting),
+      { rootMargin: '200px 0px' }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="project-card-shell">
+    <div className="project-card-shell" ref={shellRef}>
       <div className="project-card-backplate" aria-hidden="true" />
       <div className="project-card-center-vignette" aria-hidden="true" />
 
@@ -30,6 +47,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         borderRadius={20}
         className="project-card-border"
         style={{ width: '100%', borderRadius: 20 }}
+        active={isNearViewport}
       >
         <Link to={`/projects/${project.id}`} className="project-card">
           {project.headerSrc && (

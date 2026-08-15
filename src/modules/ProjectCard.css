@@ -38,8 +38,8 @@
   text-decoration: none;
   color: inherit;
   background: transparent;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(7px);
   border-radius: 20px;
   overflow: hidden;
 }

@@ -74,12 +74,6 @@ function ProjectDetailPage() {
                             </div>
                         </div>
 
-                        {project.headerSrc && (
-                            <div className="project-detail__header-image">
-                                <img src={publicAsset(project.headerSrc)} alt="" />
-                            </div>
-                        )}
-
                         <header className="project-detail__header">
                             <h1 className="project-detail__title">
                                 <GradientText colors={["#2b4539", accentColor, "#61b3dc"]} animationSpeed={8} showBorder={false} className="gradient-Title">

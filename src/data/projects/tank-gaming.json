@@ -20,65 +20,168 @@
           "items": [
             {
               "type": "heading",
-              "text": "Site is under construction.",
+              "text": "Basics of Scratch",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "This page is not yet finished."
+              "text": "Scratch is an easy and fun way to get the younger generations into programming. I was intreduced to it in 9th grade. I fell in love with it and coding the first time we used it. The base concept is that the basic programming blocks you use in real coding are present here as visual blocks you can connect for your code to run, instead of writging the text code. Things like loops, ifs, events, variables, lists, and so on. I'd say it's similar to Unreal Engine 5's Blueprint system. Beside this you can also draw your actors, and record your own sounds.",
+              "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Gameplay screenshot",
-              "alt": "Gameplay screenshot"
+              "src": "projects/scratch-base-code.webp",
+              "caption": "Baseic code",
+              "alt": "Baseic code",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Tank Gaming",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "We only used Scratch in the first half of the school year, and we had to make a game by the end of it. I had so many ideas, and excited me so much that I spent almost all my time making my game: Tank Gaming. The player can see the map from above, drive their tank around, and shoot where the cursor is. There were multiple tanks you could buy, upgrades for them, consumable items, 16 maps (4 of which were unique boss fights). I drew everything and made most of the sounds as well. Later I even wanted to expend it to multiplayer, I had some ideas to how, but it was not passible. (I didn't knew it at the time, but Scratch has a Rest API that only calls when you load the game, doesn't refresh mid game).",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-menu.webp",
+              "caption": "Tank Gaming menu",
+              "alt": "Tank Gaming menu",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-gameplay.webp",
+              "caption": "Gameplay",
+              "alt": "Gameplay",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-boss-fight.webp",
+              "caption": "Boss fight",
+              "alt": "Boss fight",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-advanced-code.webp",
+              "caption": "My Code",
+              "alt": "My Code",
+              "weight": 12
             },
             {
               "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "Site is under construction."
+              "url": "https://scratch.mit.edu/projects/337519592/fullscreen/",
+              "text": "The game is still avielable, in case you would like to check it out."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "After the project",
+              "level": 3
+            },
+            {
+              "type": "paragraph",
+              "text": "After I have finished making my game we had to present it to the teachers. They were so impressed that, they couldn't decide what to give me, since a 5 (max grade) wouldn't have covered it, so I get grade 5 for the entire class for that year. Later I had some more ideas for better games. I have learend a lot from the first and I would do 70+% of the code in different/more efficent ways. But at the end I never had that much drive again to make a game to rival it. I mean Scratch is good, but it's not like anyone works in it. But I went back to my elementary school and made a coding school club for students in 4th-6th grade.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-2nd-game.webp",
+              "caption": "My 2nd game",
+              "alt": "My 2nd game",
+              "weight": 6
             }
           ]
         }
       ]
     },
     "hu": {
-      "title": ">Farmer Was Replaced()_",
-      "role": "Globális ranglista elérése programozási versenyben",
-      "shortDescription": ">Farmer Was Replaced()_ egy programozást tanító játék. Versenyszerűen játszottam, és felkerültem a globális ranglistára. Őszintén szólva a játék nem tanított nekem sok újat, mivel ekkor már több éves programozási tapasztalattal rendelkeztem, de a kihívás és a szórakozás miatt játszottam vele. Különösen büszke vagyok az útkereső algoritmusomra, amellyel a körülbelül 271,1 ezer játékos közül a 40. helyet értem el világszerte.",
+      "title": "Tank Gaming",
+      "role": "Az első programozási tapasztalatom",
+      "shortDescription": "A Scratch egy vizuális programozási nyelv, amely játékok és animációk készítését teszi lehetővé (az MIT fejlesztésében). Ez volt az első programozási élményem, és középiskolában a tanév közepére kellett egy játékot készítenünk. Azonnal beleszerettem a programozásba, és szinte minden szabadidőmet ennek a játéknak a fejlesztésével töltöttem. A játék a mai napig játszható.",
       "tags": [
-        "Python",
-        "Útvonal-keresés",
-        "Rendezés",
-        "Aszinkron programozás",
-        "Verseny"
+        "Alapok",
+        "Scratch",
+        "Játékfejlesztés"
       ],
       "content": [
         {
           "items": [
             {
               "type": "heading",
-              "text": "A játék bemutatása a Steam-en:",
+              "text": "A Scratch alapjai",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "Programozz és optimalizálj egy drónt, hogy automatizáld vele a farmot, majd nézd, ahogy elvégzi helyetted a munkát. Gyűjts nyersanyagokat, hogy fejlettebb technológiákat oldj fel, és válj a világ leghatékonyabb gazdájává. Fejleszd problémamegoldó és programozási készségeidet."
-            },
-            {
-              "type": "paragraph",
-              "text": "Egy egyszerű, Pythonhoz hasonló nyelv segítségével programozhatsz egy drónt, amely teljesen automatizálja a különböző, egyébként meglehetősen monoton mezőgazdasági feladatokat. Nagyon kielégítő érzés egyszerűen megnyomni a „végrehajtás” gombot, majd nézni, ahogy a drón elvégzi helyetted a nehéz munkát. A legtöbb programozós játékkal ellentétben a játék nem különálló, teljesítendő pályákra van felosztva, hanem folyamatos fejlődést kínál. A gazdálkodás során nyersanyagokat szerzel, amelyeket új technológiák feloldására használhatsz. A programozás egy Pythonhoz hasonló, egyszerű nyelven történik. A játék eleje úgy lett kialakítva, hogy fokozatosan, egyesével vezesse be az összes alapvető programozási fogalmat, amelyre szükséged lesz. Bár minden releváns alapot bemutat, a különböző feladatok megoldásánál már nem fogja a kezed. A megoldásokat neked kell kitalálnod, ami meglehetősen nagy kihívást jelenthet, ha még soha nem programoztál. Tapasztalt programozóként viszont a játék korai szakaszán nagyon gyorsan végig lehet jutni, majd következnek a későbbi, összetettebb feladatok, amelyek továbbra is érdekes kihívásokat kínálnak. Bár a programozási nyelv nem pontosan Python, eléggé hasonlít hozzá ahhoz, hogy a Python IntelliSense megfelelően működjön vele. A kód .py fájlokban tárolódik, és igény szerint külső kódszerkesztőkkel, például a VS Code-dal is szerkeszthető. A „File Watcher” beállítás engedélyezésével a játék automatikusan észleli a külső módosításokat."
+              "text": "A Scratch egy egyszerű és szórakoztató módja annak, hogy a fiatalabb generációkat megismertessük a programozással. Én 9. osztályban találkoztam vele először. Már az első alkalommal beleszerettem a programozásba és a kódolásba. Az alapötlet az, hogy a valódi programozásban használt alapvető programozási elemek itt vizuális blokkokként jelennek meg, amelyeket egymáshoz lehet kapcsolni, így szöveges kód írása helyett ezekből épül fel a program. Ilyenek például a ciklusok, az if feltételek, az események, a változók, a listák és még sok más. A rendszert leginkább az Unreal Engine 5 Blueprint rendszeréhez tudnám hasonlítani. Emellett saját szereplőket is rajzolhatsz, illetve saját hangokat is rögzíthetsz.",
+              "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
+              "src": "projects/scratch-base-code.webp",
+              "caption": "Alapvető kód",
+              "alt": "Alapvető kód",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Tank Gaming",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "A tanév első felében csak Scratchet használtunk, és a félév végére egy játékot kellett készítenünk. Rengeteg ötletem volt, és annyira lelkesített a lehetőség, hogy szinte minden szabadidőmet a Tank Gaming fejlesztésével töltöttem. A játékban a játékos felülnézetből látja a pályát, irányíthatja a tankját, és a kurzor irányába lőhet. Többféle megvásárolható tank, fejlesztések, fogyasztható tárgyak és 16 pálya volt benne, amelyek közül 4 egyedi bossfightként működött. Mindent én rajzoltam, és a hangok nagy részét is én készítettem. Később még többjátékos módot is szerettem volna hozzáadni. Volt néhány ötletem arra, hogyan lehetne megvalósítani, de végül ez nem volt kivitelezhető. (Akkor még nem tudtam, de a Scratch rendelkezik egy REST API-val, amely csak a játék betöltésekor hívható meg, játék közben pedig nem frissül.)",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-menu.webp",
+              "caption": "Tank Gaming menü",
+              "alt": "Tank Gaming menü",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-gameplay.webp",
               "caption": "Játékmenet",
-              "alt": "Játékmenet képernyőkép"
+              "alt": "Játékmenet",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-boss-fight.webp",
+              "caption": "Bossfight",
+              "alt": "Bossfight",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/scratch-advanced-code.webp",
+              "caption": "A kódom",
+              "alt": "A kódom",
+              "weight": 12
             },
             {
               "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "A játék megtekintése a Steam-en"
+              "url": "https://scratch.mit.edu/projects/337519592/fullscreen/",
+              "text": "A játék a mai napig elérhető, ha szeretnéd kipróbálni."
             }
           ]
         },
@@ -86,90 +189,20 @@
           "items": [
             {
               "type": "heading",
-              "text": "Az útkereső algoritmusom",
-              "level": 2
+              "text": "A projekt után",
+              "level": 3
             },
             {
               "type": "paragraph",
-              "text": "A játék labirintusos kihívásának megoldásához útkeresést alkalmaztam. Az alapvető probléma az volt, hogy a drónnal létrehozunk egy labirintust, amelyben a drón nagyjából középen helyezkedik el. A drón ismeri a saját és a kincs koordinátáit. A kincs begyűjtése helyett lehetőség van annak áthelyezésére egy véletlenszerű helyre, miközben ugyanaz a labirintus marad meg, csak további lyukak keletkeznek a falakon.",
+              "text": "Miután befejeztem a játékot, be kellett mutatnunk a tanároknak. Annyira lenyűgözte őket, hogy nem tudták eldönteni, milyen osztályzatot adjanak, mivel az 5-ös (a legmagasabb osztályzat) sem tükrözte volna megfelelően a munkát, ezért az egész tanévre 5-ös osztályzatot kaptam a tantárgyból. Később még volt néhány ötletem további, még jobb játékokra. Sokat tanultam az első projektből, és ma már a kód több mint 70%-át teljesen másképp vagy hatékonyabban írnám meg. Végül azonban soha többé nem volt ugyanekkora motivációm egy hasonlóan nagy játék elkészítésére. A Scratch ugyan jó eszköz, de azért valljuk be, kevesen dolgoznak vele professzionálisan. Ettől függetlenül visszatértem az általános iskolámba, ahol programozó szakkört indítottam 4–6. osztályos diákok számára.",
               "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-small-maze.webp",
-              "caption": "A labirintus felfedezése",
-              "alt": "A labirintus felfedezése",
+              "src": "projects/scratch-2nd-game.webp",
+              "caption": "A második játékom",
+              "alt": "A második játékom",
               "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-code.webp",
-              "caption": "Útvonal-kereső kód",
-              "alt": "Útvonal-kereső kód",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A problémára adott megoldásom az volt, hogy feltérképeztem a labirintust, majd egy útkereső algoritmussal eljutottam a kincshez. Mivel a már feltérképezett labirintus újrahasználata sokkal hatékonyabb, mint minden alkalommal egy új labirintus felfedezése, először magát a labirintust kellett feltérképeznem. Úgy alakítottam ki a rendszert, hogy a drón a felfedezés során folyamatosan próbáljon közelebb kerülni a kincshez. Így előbb-utóbb egy zsákutcába (vagy magához a kincshez) jut. Ekkor útkeresést indít a már látott, de még fel nem fedezett, a kincshez legközelebb eső cellához. Ezután folytatja a felfedezést. Ha megtalálta a kincset, áthelyezi azt, majd ismét útkereséssel próbál eljutni hozzá. Az útvonalak megtalálásához egy módosított A* algoritmust használok, amely képes megtalálni a kincshez vezető legrövidebb utat.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A munkám meghozta az eredményét: a körülbelül 271,1 ezer játékos közül világszerte a 40. helyet értem el. Nagyon büszke vagyok erre az eredményre. Fontos azonban hozzátenni, hogy ez az egyetlen drón kategóriában elért helyezésem, ahol egyszerre csak egy drónt lehetett használni. A többdrónos kategóriában akár 32 drón is használható volt. Ott is megpróbáltam versenyezni, de csak a 200. hely után végeztem. A legjobb játékosok valamilyen trükköt alkalmaztak, amelyre nem sikerült rájönnöm. A labirintusoknak négyzet alakúaknak kellett lenniük, miközben a pálya 32×32 cellából állt. Egy 32×32-es területet azonban nem lehet egyszerűen 32 négyzetre felosztani, ezért én csak 16 drónt használtam.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-leaderboard.webp",
-              "caption": "Ranglista képernyőkép",
-              "alt": "Ranglista képernyőkép",
-              "weight": 6
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "heading",
-              "text": "A másik két eredményem",
-              "level": 2
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-cactus.webp",
-              "alt": "Kaktusz ranglista",
-              "caption": "Kaktusz ranglista",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A kaktuszos ranglistára is sikerült felkerülnöm. A kaktusz kihívása az, hogy csak akkor lehet betakarítani, ha tőle északra vagy keletre nincs nála nagyobb kaktusz. Ez azt jelenti, hogy a kaktuszokat egy mátrixban kell megfelelő sorrendbe rendezni. Ezt több drón használatával oldottam meg, vagyis a feladat aszinkron változatát készítettem el. Először minden drón a saját sorát rendezte, majd a következő drónhullám az oszlopokat rendezte.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A következő kihívásom a napraforgók voltak. Itt az jelentette a nehézséget, hogy a mezőn csak a legnagyobb napraforgókat lehetett betakarítani. Ehhez egy hatékony feltérképező algoritmust kellett készítenem. Ezután a vezérdrón betakarító drónok hullámait indította útnak, amelyek az adott szinten található összes legnagyobb napraforgót begyűjtötték, majd következett a következő hullám.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-sunflower.webp",
-              "alt": "Napraforgó ranglista",
-              "caption": "Napraforgó ranglista",
-              "weight": 6
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "paragraph",
-              "text": "Készítettem egy útmutatót is a játékhoz, és az összes fájlomat feltöltöttem GitHubra."
-            },
-            {
-              "type": "link",
-              "url": "https://github.com/SirLancelot002/TheFarmerWasReplaced",
-              "text": "Repository megtekintése a GitHubon"
             }
           ]
         }

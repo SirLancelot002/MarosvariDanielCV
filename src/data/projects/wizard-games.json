@@ -18,109 +18,72 @@
           "items": [
             {
               "type": "heading",
-              "text": "Site is under construction.",
+              "text": "Basics of Haskell",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "This page is not yet finished."
+              "text": "Haskell is a purly functional programming languge. It was one of the most interesting class I had at ELTE. In particular, it is a polymorphic statically-typed functional programming language with non-strict semantics, quite different from most other programming languages. The language is named for Haskell Brooks Curry, whose work in mathematical logic serves as a foundation for functional languages. Haskell is based on the lambda calculus, hence the lambda we use as a logo. C, Java, Pascal, Ada, and so on, are all imperative languages. They are \"imperative\" in the sense that they consist of a sequence of commands, which are executed strictly one after the other. Haskell is a functional language. A functional program is a single expression, which is executed by evaluating the expression.",
+              "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Gameplay screenshot",
-              "alt": "Gameplay screenshot"
+              "src": "projects/haskell-vars.webp",
+              "caption": "Haskell structure",
+              "alt": "Haskell structure",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "The Wizard Games",
+              "level": 2
             },
             {
-              "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "Site is under construction."
+              "type": "image",
+              "src": "projects/haskell-code.webp",
+              "caption": "My Haskell code",
+              "alt": "My Haskell code",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "Based on popular opinion, this was one of the hardest class of the semseter. It was a new experiance for me as well, since it wasn't like any other programming language I have seen. Despite it, I mostly enjoyed it while we were doing class work, or homework. But then came the grand project work, the \"Wizard Games\". That burned me out at first, it was really hard. But after multiple hours I have grown to like the language. I got one of the best score at the end of the semester.",
+              "weight": 6
             }
           ]
         }
       ]
     },
     "hu": {
-      "title": ">Farmer Was Replaced()_",
-      "role": "Globális ranglista elérése programozási versenyben",
-      "shortDescription": ">Farmer Was Replaced()_ egy programozást tanító játék. Versenyszerűen játszottam, és felkerültem a globális ranglistára. Őszintén szólva a játék nem tanított nekem sok újat, mivel ekkor már több éves programozási tapasztalattal rendelkeztem, de a kihívás és a szórakozás miatt játszottam vele. Különösen büszke vagyok az útkereső algoritmusomra, amellyel a körülbelül 271,1 ezer játékos közül a 40. helyet értem el világszerte.",
+      "title": "\"Wizard Games\"",
+      "role": "Egyetemi beadandó",
+      "shortDescription": "Ez volt az ELTE-n töltött első félévem végén kapott nagy beadandónk. Haskellben kellett egy „játékot” készítenünk, ami valójában inkább programozási feladatok játékos köntösbe bújtatva. Rengeteget tanultam a funkcionális programozás különböző trükkjeiről, például arról, hogyan lehet if feltételek segítségével kvázi ciklusokat létrehozni akkor is, ha a függvény fejléce rögzített, és nem módosítható.",
       "tags": [
-        "Python",
-        "Útvonal-keresés",
-        "Rendezés",
-        "Aszinkron programozás",
-        "Verseny"
+        "Haskell",
+        "Funkcionális programozás"
       ],
       "content": [
         {
           "items": [
             {
               "type": "heading",
-              "text": "A játék bemutatása a Steam-en:",
+              "text": "A Haskell alapjai",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "Programozz és optimalizálj egy drónt, hogy automatizáld vele a farmot, majd nézd, ahogy elvégzi helyetted a munkát. Gyűjts nyersanyagokat, hogy fejlettebb technológiákat oldj fel, és válj a világ leghatékonyabb gazdájává. Fejleszd problémamegoldó és programozási készségeidet."
-            },
-            {
-              "type": "paragraph",
-              "text": "Egy egyszerű, Pythonhoz hasonló nyelv segítségével programozhatsz egy drónt, amely teljesen automatizálja a különböző, egyébként meglehetősen monoton mezőgazdasági feladatokat. Nagyon kielégítő érzés egyszerűen megnyomni a „végrehajtás” gombot, majd nézni, ahogy a drón elvégzi helyetted a nehéz munkát. A legtöbb programozós játékkal ellentétben a játék nem különálló, teljesítendő pályákra van felosztva, hanem folyamatos fejlődést kínál. A gazdálkodás során nyersanyagokat szerzel, amelyeket új technológiák feloldására használhatsz. A programozás egy Pythonhoz hasonló, egyszerű nyelven történik. A játék eleje úgy lett kialakítva, hogy fokozatosan, egyesével vezesse be az összes alapvető programozási fogalmat, amelyre szükséged lesz. Bár minden releváns alapot bemutat, a különböző feladatok megoldásánál már nem fogja a kezed. A megoldásokat neked kell kitalálnod, ami meglehetősen nagy kihívást jelenthet, ha még soha nem programoztál. Tapasztalt programozóként viszont a játék korai szakaszán nagyon gyorsan végig lehet jutni, majd következnek a későbbi, összetettebb feladatok, amelyek továbbra is érdekes kihívásokat kínálnak. Bár a programozási nyelv nem pontosan Python, eléggé hasonlít hozzá ahhoz, hogy a Python IntelliSense megfelelően működjön vele. A kód .py fájlokban tárolódik, és igény szerint külső kódszerkesztőkkel, például a VS Code-dal is szerkeszthető. A „File Watcher” beállítás engedélyezésével a játék automatikusan észleli a külső módosításokat."
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Játékmenet",
-              "alt": "Játékmenet képernyőkép"
-            },
-            {
-              "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "A játék megtekintése a Steam-en"
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "heading",
-              "text": "Az útkereső algoritmusom",
-              "level": 2
-            },
-            {
-              "type": "paragraph",
-              "text": "A játék labirintusos kihívásának megoldásához útkeresést alkalmaztam. Az alapvető probléma az volt, hogy a drónnal létrehozunk egy labirintust, amelyben a drón nagyjából középen helyezkedik el. A drón ismeri a saját és a kincs koordinátáit. A kincs begyűjtése helyett lehetőség van annak áthelyezésére egy véletlenszerű helyre, miközben ugyanaz a labirintus marad meg, csak további lyukak keletkeznek a falakon.",
+              "text": "A Haskell egy tisztán funkcionális programozási nyelv. Az ELTE-n ez volt az egyik legérdekesebb tantárgyam. Különösen érdekes, hogy polimorf, statikusan típusos funkcionális programozási nyelv, nem szigorú kiértékeléssel, így jelentősen eltér a legtöbb más programozási nyelvtől. A nyelv Haskell Brooks Curry matematikai logikában végzett munkásságáról kapta a nevét, amely a funkcionális programozási nyelvek egyik alapját képezi. A Haskell a lambda-kalkuluson alapul, innen származik a logóként használt lambda szimbólum is. A C, Java, Pascal, Ada és számos más nyelv imperatív programozási nyelv. Az „imperatív” azt jelenti, hogy a program utasítások sorozatából áll, amelyeket egymás után, meghatározott sorrendben hajtunk végre. A Haskell ezzel szemben funkcionális nyelv. Egy funkcionális program lényegében egyetlen kifejezés, amelynek kiértékelésével hajtódik végre a program.",
               "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-small-maze.webp",
-              "caption": "A labirintus felfedezése",
-              "alt": "A labirintus felfedezése",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-code.webp",
-              "caption": "Útvonal-kereső kód",
-              "alt": "Útvonal-kereső kód",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A problémára adott megoldásom az volt, hogy feltérképeztem a labirintust, majd egy útkereső algoritmussal eljutottam a kincshez. Mivel a már feltérképezett labirintus újrahasználata sokkal hatékonyabb, mint minden alkalommal egy új labirintus felfedezése, először magát a labirintust kellett feltérképeznem. Úgy alakítottam ki a rendszert, hogy a drón a felfedezés során folyamatosan próbáljon közelebb kerülni a kincshez. Így előbb-utóbb egy zsákutcába (vagy magához a kincshez) jut. Ekkor útkeresést indít a már látott, de még fel nem fedezett, a kincshez legközelebb eső cellához. Ezután folytatja a felfedezést. Ha megtalálta a kincset, áthelyezi azt, majd ismét útkereséssel próbál eljutni hozzá. Az útvonalak megtalálásához egy módosított A* algoritmust használok, amely képes megtalálni a kincshez vezető legrövidebb utat.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A munkám meghozta az eredményét: a körülbelül 271,1 ezer játékos közül világszerte a 40. helyet értem el. Nagyon büszke vagyok erre az eredményre. Fontos azonban hozzátenni, hogy ez az egyetlen drón kategóriában elért helyezésem, ahol egyszerre csak egy drónt lehetett használni. A többdrónos kategóriában akár 32 drón is használható volt. Ott is megpróbáltam versenyezni, de csak a 200. hely után végeztem. A legjobb játékosok valamilyen trükköt alkalmaztak, amelyre nem sikerült rájönnöm. A labirintusoknak négyzet alakúaknak kellett lenniük, miközben a pálya 32×32 cellából állt. Egy 32×32-es területet azonban nem lehet egyszerűen 32 négyzetre felosztani, ezért én csak 16 drónt használtam.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-leaderboard.webp",
-              "caption": "Ranglista képernyőkép",
-              "alt": "Ranglista képernyőkép",
+              "src": "projects/haskell-vars.webp",
+              "caption": "Haskell struktúra",
+              "alt": "Haskell struktúra",
               "weight": 6
             }
           ]
@@ -129,45 +92,20 @@
           "items": [
             {
               "type": "heading",
-              "text": "A másik két eredményem",
+              "text": "A Wizard Games",
               "level": 2
             },
             {
               "type": "image",
-              "src": "projects/fwr-cactus.webp",
-              "alt": "Kaktusz ranglista",
-              "caption": "Kaktusz ranglista",
+              "src": "projects/haskell-code.webp",
+              "caption": "A Haskell kódom",
+              "alt": "A Haskell kódom",
               "weight": 6
             },
             {
               "type": "paragraph",
-              "text": "A kaktuszos ranglistára is sikerült felkerülnöm. A kaktusz kihívása az, hogy csak akkor lehet betakarítani, ha tőle északra vagy keletre nincs nála nagyobb kaktusz. Ez azt jelenti, hogy a kaktuszokat egy mátrixban kell megfelelő sorrendbe rendezni. Ezt több drón használatával oldottam meg, vagyis a feladat aszinkron változatát készítettem el. Először minden drón a saját sorát rendezte, majd a következő drónhullám az oszlopokat rendezte.",
+              "text": "A hallgatók általános véleménye alapján ez volt a félév egyik legnehezebb tantárgya. Számomra is teljesen új élményt jelentett, mivel a Haskell jelentősen eltért minden korábban megismert programozási nyelvtől. Ennek ellenére az órai feladatok és a házi feladatok megoldását többnyire élveztem. Aztán következett a nagy projekt, a „Wizard Games”. Ez eleinte teljesen kiégetett, annyira nehéznek bizonyult. Több órányi küzdelem után azonban egyre jobban megkedveltem a nyelvet. A félév végén az egyik legjobb eredményt értem el a csoportban.",
               "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A következő kihívásom a napraforgók voltak. Itt az jelentette a nehézséget, hogy a mezőn csak a legnagyobb napraforgókat lehetett betakarítani. Ehhez egy hatékony feltérképező algoritmust kellett készítenem. Ezután a vezérdrón betakarító drónok hullámait indította útnak, amelyek az adott szinten található összes legnagyobb napraforgót begyűjtötték, majd következett a következő hullám.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-sunflower.webp",
-              "alt": "Napraforgó ranglista",
-              "caption": "Napraforgó ranglista",
-              "weight": 6
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "paragraph",
-              "text": "Készítettem egy útmutatót is a játékhoz, és az összes fájlomat feltöltöttem GitHubra."
-            },
-            {
-              "type": "link",
-              "url": "https://github.com/SirLancelot002/TheFarmerWasReplaced",
-              "text": "Repository megtekintése a GitHubon"
             }
           ]
         }

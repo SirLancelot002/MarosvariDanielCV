@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import PillNav from './modules/PillNav';
-import logo from './assets/vscode.svg';
+import logo from './assets/coglogo.webp';
 import './NavBar.css';
 
 function NavBar() {

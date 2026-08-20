@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { useTranslation } from 'react-i18next';
 import engFlag from '../assets/EngFlag.png';
 import hunFlag from '../assets/HunFlag.png';
+import QualityMenu from './QualityMenu';
 import './PillNav.css';
 
 export type PillNavItem = {
@@ -41,9 +42,11 @@ const PillNav: React.FC<PillNavProps> = ({
   onMobileMenuClick,
   initialLoadAnimation = true
 }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const resolvedPillTextColor = pillTextColor ?? baseColor;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isQualityMenuOpen, setIsQualityMenuOpen] = useState(false);
+  const [qualityMenuPos, setQualityMenuPos] = useState({ top: 0, left: 0 });
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
   const tlRefs = useRef<Array<gsap.core.Timeline | null>>([]);
   const activeTweenRefs = useRef<Array<gsap.core.Tween | null>>([]);
@@ -53,6 +56,7 @@ const PillNav: React.FC<PillNavProps> = ({
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const navItemsRef = useRef<HTMLDivElement | null>(null);
   const logoRef = useRef<HTMLAnchorElement | HTMLElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   // The language toggle is a constant extra "item" appended after the real nav items.
   // Its index in circleRefs/tlRefs is always items.length.
@@ -189,6 +193,33 @@ const PillNav: React.FC<PillNavProps> = ({
     });
   };
 
+  const toggleQualityMenu = () => {
+    setIsQualityMenuOpen(prev => !prev);
+  };
+
+  // Track the logo's real rendered position so the menu stays anchored under it
+  // regardless of the nav's own centering/layout (it renders outside the nav's
+  // backdrop-filter box so its blur isn't clipped by the parent's own blur).
+  useEffect(() => {
+    if (!isQualityMenuOpen) return;
+
+    const updatePosition = () => {
+      const logoEl = logoRef.current;
+      const containerEl = containerRef.current;
+      if (!logoEl || !containerEl) return;
+      const logoRect = logoEl.getBoundingClientRect();
+      const containerRect = containerEl.getBoundingClientRect();
+      setQualityMenuPos({
+        top: logoRect.bottom - containerRect.top + 10,
+        left: logoRect.left - containerRect.left
+      });
+    };
+
+    updatePosition();
+    window.addEventListener('resize', updatePosition);
+    return () => window.removeEventListener('resize', updatePosition);
+  }, [isQualityMenuOpen]);
+
   const toggleMobileMenu = () => {
     const newState = !isMobileMenuOpen;
     setIsMobileMenuOpen(newState);
@@ -259,34 +290,22 @@ const PillNav: React.FC<PillNavProps> = ({
 
   return (
     <>
-      <div className="pill-nav-container">
+      <div className="pill-nav-container" ref={containerRef}>
         <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
-          {isRouterLink(items?.[0]?.href) ? (
-            <Link
-              className="pill-logo"
-              to={items[0].href}
-              aria-label="Home"
-              onMouseEnter={handleLogoEnter}
-              role="menuitem"
-              ref={el => {
-                logoRef.current = el;
-              }}
-            >
-              <img src={logo} alt={logoAlt} ref={logoImgRef} />
-            </Link>
-          ) : (
-            <a
-              className="pill-logo"
-              href={items?.[0]?.href || '#'}
-              aria-label="Home"
-              onMouseEnter={handleLogoEnter}
-              ref={el => {
-                logoRef.current = el;
-              }}
-            >
-              <img src={logo} alt={logoAlt} ref={logoImgRef} />
-            </a>
-          )}
+          <button
+            type="button"
+            className="pill-logo"
+            aria-label={t('quality.toggleLabel')}
+            aria-haspopup="true"
+            aria-expanded={isQualityMenuOpen}
+            onMouseEnter={handleLogoEnter}
+            onClick={toggleQualityMenu}
+            ref={el => {
+              logoRef.current = el;
+            }}
+          >
+            <img src={logo} alt={logoAlt} ref={logoImgRef} />
+          </button>
 
           <div className="pill-nav-items desktop-only" ref={navItemsRef}>
             <ul className="pill-list" role="menubar">
@@ -385,6 +404,8 @@ const PillNav: React.FC<PillNavProps> = ({
             <span className="hamburger-line" />
           </button>
         </nav>
+
+        <QualityMenu isOpen={isQualityMenuOpen} style={{ top: qualityMenuPos.top, left: qualityMenuPos.left }} />
 
         <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
           <ul className="mobile-menu-list">

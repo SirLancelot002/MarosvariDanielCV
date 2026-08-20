@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 
-type Quality = 'low' | 'medium' | 'high';
+export type Quality = 'low' | 'medium' | 'high';
 
 const STORAGE_KEY = 'cv-site-quality-pref';
 const EXPIRY_MS = 7 * 24 * 60 * 60 * 1000; // re-measure once a week
+const QUALITY_CHANGE_EVENT = 'cv-site-quality-change';
 
 interface StoredQuality {
   value: Quality;
@@ -69,11 +70,22 @@ function useAdaptiveQuality(): Quality {
     return () => cancelAnimationFrame(rafId);
   }, []);
 
+  // Pick up manual quality changes made elsewhere (e.g. the quality menu) without a reload
+  useEffect(() => {
+    const onManualChange = (e: Event) => {
+      const detail = (e as CustomEvent<Quality>).detail;
+      if (detail) setQuality(detail);
+    };
+    window.addEventListener(QUALITY_CHANGE_EVENT, onManualChange);
+    return () => window.removeEventListener(QUALITY_CHANGE_EVENT, onManualChange);
+  }, []);
+
   return quality;
 }
 
 export function setManualQuality(value: Quality) {
   writeCached(value);
+  window.dispatchEvent(new CustomEvent<Quality>(QUALITY_CHANGE_EVENT, { detail: value }));
 }
 
 export function clearQualityCache() {

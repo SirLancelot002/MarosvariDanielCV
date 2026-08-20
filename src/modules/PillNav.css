@@ -56,11 +56,13 @@
   height: var(--nav-h);
   border-radius: 50%;
   background: transparent;
+  border: none;
   padding: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .pill-logo img {

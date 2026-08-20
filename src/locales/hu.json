@@ -9,6 +9,14 @@
   "nav.projects": "Projektek",
   "nav.backtoTheTop": "Vissza az oldal tetejére",
 
+  "quality.title": "Grafikai minőség",
+  "quality.heading": "Grafika",
+  "quality.low": "Alacsony",
+  "quality.medium": "Közepes",
+  "quality.high": "Magas",
+  "quality.toggleLabel": "Grafikai minőség menü megnyitása",
+  "quality.hint" : "Lehet F5 lenyomás kell az aktiváláshoz",
+
   "profileCard.contact": "Írj nekem",
   "profileCard.job": "Program fejlesztő",
   "profileCard.online": "Elérhető",

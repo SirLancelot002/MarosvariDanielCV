@@ -50,6 +50,7 @@ const PillNav: React.FC<PillNavProps> = ({
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
   const tlRefs = useRef<Array<gsap.core.Timeline | null>>([]);
   const activeTweenRefs = useRef<Array<gsap.core.Tween | null>>([]);
+  const isHoveredRef = useRef<Array<boolean>>([]);
   const logoImgRef = useRef<HTMLImageElement | null>(null);
   const logoTweenRef = useRef<gsap.core.Tween | null>(null);
   const hamburgerRef = useRef<HTMLButtonElement | null>(null);
@@ -161,17 +162,29 @@ const PillNav: React.FC<PillNavProps> = ({
   const handleEnter = (i: number) => {
     const tl = tlRefs.current[i];
     if (!tl) return;
+    isHoveredRef.current[i] = true;
     activeTweenRefs.current[i]?.kill();
     activeTweenRefs.current[i] = tl.tweenTo(tl.duration(), {
       duration: 0.3,
       ease,
-      overwrite: 'auto'
+      overwrite: 'auto',
+      onComplete: () => {
+        // Once the circle fully covers the pill, match the pill's own background to it
+        // so the anti-aliased edge of the circle can no longer reveal the base color underneath.
+        if (!isHoveredRef.current[i]) return;
+        const pill = circleRefs.current[i]?.parentElement as HTMLElement | null;
+        if (pill) pill.style.backgroundColor = 'var(--base)';
+      }
     });
   };
 
   const handleLeave = (i: number) => {
     const tl = tlRefs.current[i];
     if (!tl) return;
+    isHoveredRef.current[i] = false;
+    // Snap the pill background back before the circle starts shrinking away.
+    const pill = circleRefs.current[i]?.parentElement as HTMLElement | null;
+    if (pill) pill.style.backgroundColor = '';
     activeTweenRefs.current[i]?.kill();
     activeTweenRefs.current[i] = tl.tweenTo(0, {
       duration: 0.2,

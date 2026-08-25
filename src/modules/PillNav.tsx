@@ -58,6 +58,7 @@ const PillNav: React.FC<PillNavProps> = ({
   const navItemsRef = useRef<HTMLDivElement | null>(null);
   const logoRef = useRef<HTMLAnchorElement | HTMLElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const qualityMenuRef = useRef<HTMLDivElement | null>(null);
 
   // The language toggle is a constant extra "item" appended after the real nav items.
   // Its index in circleRefs/tlRefs is always items.length.
@@ -231,6 +232,36 @@ const PillNav: React.FC<PillNavProps> = ({
     updatePosition();
     window.addEventListener('resize', updatePosition);
     return () => window.removeEventListener('resize', updatePosition);
+  }, [isQualityMenuOpen]);
+
+  // Close the menu once the cursor wanders far enough away from it, so users
+  // don't have to click the logo again to dismiss it.
+  useEffect(() => {
+    if (!isQualityMenuOpen) return;
+
+    const CLOSE_DISTANCE = 90;
+
+    const handlePointerMove = (event: PointerEvent) => {
+      const logoEl = logoRef.current;
+      if (!logoEl) return;
+      const logoRect = logoEl.getBoundingClientRect();
+      const menuRect = qualityMenuRef.current?.getBoundingClientRect();
+
+      const left = Math.min(logoRect.left, menuRect?.left ?? logoRect.left);
+      const right = Math.max(logoRect.right, menuRect?.right ?? logoRect.right);
+      const top = Math.min(logoRect.top, menuRect?.top ?? logoRect.top);
+      const bottom = Math.max(logoRect.bottom, menuRect?.bottom ?? logoRect.bottom);
+
+      const dx = Math.max(left - event.clientX, 0, event.clientX - right);
+      const dy = Math.max(top - event.clientY, 0, event.clientY - bottom);
+
+      if (Math.sqrt(dx * dx + dy * dy) > CLOSE_DISTANCE) {
+        setIsQualityMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('pointermove', handlePointerMove);
+    return () => document.removeEventListener('pointermove', handlePointerMove);
   }, [isQualityMenuOpen]);
 
   const toggleMobileMenu = () => {
@@ -418,7 +449,11 @@ const PillNav: React.FC<PillNavProps> = ({
           </button>
         </nav>
 
-        <QualityMenu isOpen={isQualityMenuOpen} style={{ top: qualityMenuPos.top, left: qualityMenuPos.left }} />
+        <QualityMenu
+          ref={qualityMenuRef}
+          isOpen={isQualityMenuOpen}
+          style={{ top: qualityMenuPos.top, left: qualityMenuPos.left }}
+        />
 
         <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
           <ul className="mobile-menu-list">

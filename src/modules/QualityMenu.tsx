@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import { forwardRef, type CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 import useAdaptiveQuality, { setManualQuality, type Quality } from '../hooks/useAdaptiveQuality';
 import './QualityMenu.css';
@@ -11,12 +11,16 @@ export interface QualityMenuProps {
 
 const QUALITIES: Quality[] = ['low', 'medium', 'high'];
 
-function QualityMenu({ isOpen, className = '', style }: QualityMenuProps) {
+const QualityMenu = forwardRef<HTMLDivElement, QualityMenuProps>(function QualityMenu(
+  { isOpen, className = '', style },
+  ref
+) {
   const { t } = useTranslation();
   const quality = useAdaptiveQuality();
 
   return (
     <div
+      ref={ref}
       className={`quality-menu${isOpen ? ' is-open' : ''}${className ? ` ${className}` : ''}`}
       style={style}
       role="menu"
@@ -42,6 +46,6 @@ function QualityMenu({ isOpen, className = '', style }: QualityMenuProps) {
       <span className="quality-menu-hint">{t('quality.hint')}</span>
     </div>
   );
-}
+});
 
 export default QualityMenu;

@@ -172,7 +172,10 @@ const PillNav: React.FC<PillNavProps> = ({
     activeTweenRefs.current[i]?.kill();
     activeTweenRefs.current[i] = tl.tweenTo(tl.duration(), {
       duration: 0.3,
-      ease,
+      // The inner timeline tweens already carry `ease`; scrubbing the playhead with the
+      // same ease double-applies it, so the motion visually settles before this tween
+      // (and its onComplete) actually finishes.
+      ease: 'none',
       overwrite: 'auto',
       onComplete: () => {
         // Once the circle fully covers the pill, match the pill's own background to it
@@ -194,7 +197,7 @@ const PillNav: React.FC<PillNavProps> = ({
     activeTweenRefs.current[i]?.kill();
     activeTweenRefs.current[i] = tl.tweenTo(0, {
       duration: 0.2,
-      ease,
+      ease: 'none',
       overwrite: 'auto'
     });
   };

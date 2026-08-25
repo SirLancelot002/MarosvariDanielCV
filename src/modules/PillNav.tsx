@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useTranslation } from 'react-i18next';
-import engFlag from '../assets/EngFlag.png';
-import hunFlag from '../assets/HunFlag.png';
 import QualityMenu from './QualityMenu';
+import LanguageMenu from './LanguageMenu';
+import { LANGUAGES } from '../data/languages';
 import './PillNav.css';
 
 export type PillNavItem = {
@@ -47,6 +47,8 @@ const PillNav: React.FC<PillNavProps> = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isQualityMenuOpen, setIsQualityMenuOpen] = useState(false);
   const [qualityMenuPos, setQualityMenuPos] = useState({ top: 0, left: 0 });
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  const [languageMenuPos, setLanguageMenuPos] = useState({ top: 0, left: 0 });
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
   const tlRefs = useRef<Array<gsap.core.Timeline | null>>([]);
   const activeTweenRefs = useRef<Array<gsap.core.Tween | null>>([]);
@@ -59,15 +61,18 @@ const PillNav: React.FC<PillNavProps> = ({
   const logoRef = useRef<HTMLAnchorElement | HTMLElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const qualityMenuRef = useRef<HTMLDivElement | null>(null);
+  const langButtonRef = useRef<HTMLButtonElement | null>(null);
+  const languageMenuRef = useRef<HTMLDivElement | null>(null);
 
   // The language toggle is a constant extra "item" appended after the real nav items.
   // Its index in circleRefs/tlRefs is always items.length.
   const langToggleIndex = items.length;
-  const langLabel = i18n.language === 'en' ? 'HUN' : 'ENG';
-  const langFlag = i18n.language === 'en' ? hunFlag : engFlag;
+  const activeLanguage = LANGUAGES.find(language => language.code === i18n.language) ?? LANGUAGES[0];
+  const langLabel = activeLanguage.label;
+  const langFlag = activeLanguage.flag;
 
-  const handleLangToggle = () => {
-    i18n.changeLanguage(i18n.language === 'en' ? 'hu' : 'en');
+  const toggleLanguageMenu = () => {
+    setIsLanguageMenuOpen(prev => !prev);
   };
 
   useEffect(() => {
@@ -264,6 +269,56 @@ const PillNav: React.FC<PillNavProps> = ({
     return () => document.removeEventListener('pointermove', handlePointerMove);
   }, [isQualityMenuOpen]);
 
+  // Anchor the language menu under its trigger pill, mirroring the quality menu's positioning.
+  useEffect(() => {
+    if (!isLanguageMenuOpen) return;
+
+    const updatePosition = () => {
+      const buttonEl = langButtonRef.current;
+      const containerEl = containerRef.current;
+      if (!buttonEl || !containerEl) return;
+      const buttonRect = buttonEl.getBoundingClientRect();
+      const containerRect = containerEl.getBoundingClientRect();
+      setLanguageMenuPos({
+        top: buttonRect.bottom - containerRect.top + 10,
+        left: buttonRect.left - containerRect.left
+      });
+    };
+
+    updatePosition();
+    window.addEventListener('resize', updatePosition);
+    return () => window.removeEventListener('resize', updatePosition);
+  }, [isLanguageMenuOpen]);
+
+  // Close the language menu once the cursor wanders far enough away from it.
+  useEffect(() => {
+    if (!isLanguageMenuOpen) return;
+
+    const CLOSE_DISTANCE = 90;
+
+    const handlePointerMove = (event: PointerEvent) => {
+      const buttonEl = langButtonRef.current;
+      if (!buttonEl) return;
+      const buttonRect = buttonEl.getBoundingClientRect();
+      const menuRect = languageMenuRef.current?.getBoundingClientRect();
+
+      const left = Math.min(buttonRect.left, menuRect?.left ?? buttonRect.left);
+      const right = Math.max(buttonRect.right, menuRect?.right ?? buttonRect.right);
+      const top = Math.min(buttonRect.top, menuRect?.top ?? buttonRect.top);
+      const bottom = Math.max(buttonRect.bottom, menuRect?.bottom ?? buttonRect.bottom);
+
+      const dx = Math.max(left - event.clientX, 0, event.clientX - right);
+      const dy = Math.max(top - event.clientY, 0, event.clientY - bottom);
+
+      if (Math.sqrt(dx * dx + dy * dy) > CLOSE_DISTANCE) {
+        setIsLanguageMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('pointermove', handlePointerMove);
+    return () => document.removeEventListener('pointermove', handlePointerMove);
+  }, [isLanguageMenuOpen]);
+
   const toggleMobileMenu = () => {
     const newState = !isMobileMenuOpen;
     setIsMobileMenuOpen(newState);
@@ -410,11 +465,14 @@ const PillNav: React.FC<PillNavProps> = ({
                 <button
                   type="button"
                   role="menuitem"
-                  onClick={handleLangToggle}
+                  onClick={toggleLanguageMenu}
                   className="pill"
-                  aria-label="Change language"
+                  aria-label={t('language.toggleLabel')}
+                  aria-haspopup="true"
+                  aria-expanded={isLanguageMenuOpen}
                   onMouseEnter={() => handleEnter(langToggleIndex)}
                   onMouseLeave={() => handleLeave(langToggleIndex)}
+                  ref={langButtonRef}
                 >
                   <span
                     className="hover-circle"
@@ -455,6 +513,12 @@ const PillNav: React.FC<PillNavProps> = ({
           style={{ top: qualityMenuPos.top, left: qualityMenuPos.left }}
         />
 
+        <LanguageMenu
+          ref={languageMenuRef}
+          isOpen={isLanguageMenuOpen}
+          style={{ top: languageMenuPos.top, left: languageMenuPos.left }}
+        />
+
         <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
           <ul className="mobile-menu-list">
             {items.map(item => (
@@ -479,21 +543,23 @@ const PillNav: React.FC<PillNavProps> = ({
               </li>
             ))}
 
-            {/* Constant language toggle — mobile version */}
-            <li>
-              <button
-                type="button"
-                onClick={() => {
-                  handleLangToggle();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="mobile-menu-link"
-                style={{ width: '100%', border: 'none', textAlign: 'left', cursor: 'pointer' }}
-              >
-                {langLabel}
-                <img src={langFlag} alt="" className="lang-flag" />
-              </button>
-            </li>
+            {/* Constant language options — mobile version */}
+            {LANGUAGES.map(language => (
+              <li key={language.code}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    i18n.changeLanguage(language.code);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`mobile-menu-link${i18n.language === language.code ? ' is-active' : ''}`}
+                  style={{ width: '100%', border: 'none', textAlign: 'left', cursor: 'pointer' }}
+                >
+                  {language.label}
+                  <img src={language.flag} alt="" className="lang-flag" />
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -17,6 +17,10 @@
   "quality.toggleLabel": "Grafikai minőség menü megnyitása",
   "quality.hint" : "Lehet F5 lenyomás kell az aktiváláshoz",
 
+  "language.title": "Nyelv",
+  "language.heading": "Nyelv",
+  "language.toggleLabel": "Nyelv váltása",
+
   "profileCard.contact": "Írj nekem",
   "profileCard.job": "Program fejlesztő",
   "profileCard.online": "Elérhető",

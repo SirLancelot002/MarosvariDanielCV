@@ -17,6 +17,10 @@
   "quality.toggleLabel": "Toggle graphics quality menu",
   "quality.hint" : "You may need to press F5 to take effect",
 
+  "language.title": "Language",
+  "language.heading": "Language",
+  "language.toggleLabel": "Change language",
+
   "profileCard.contact": "Contact Me",
   "profileCard.job": "Software Engineer",
   "profileCard.online": "Online",

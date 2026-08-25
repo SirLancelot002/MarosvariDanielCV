@@ -6,11 +6,11 @@
   "endDate": "2025-08-28",
   "translations": {
     "en": {
-      "title": "The Algorithim (Crypto Trade Bot)",
-      "role": "API designer and developer",
-      "shortDescription": "A few friends from university were creating a crypto trading bot. They had 2 developers and a business strategist, but none of them knew how to make an API and they didn't have time to learn it. I gave them some tips on how to make some things in the code before, so I was called in to make the API. I had no prior knowlade at all on APIs before, but I learned it while working on it. I was done with my part under 2 months...",
+      "title": "The Algorithm (Crypto Trading Bot)",
+      "role": "API Developer & Integration Engineer",
+      "shortDescription": "A university team was developing a cryptocurrency trading bot using Binance, but nobody on the team had experience integrating with its API. I took responsibility for building the trading interface from scratch, learning the API while developing it. The project started in Python and was later migrated to C#, requiring me to recreate and adapt the entire integration.",
       "tags": [
-        "Rest API",
+        "REST API",
         "Git",
         "C#",
         "Python",
@@ -21,109 +21,170 @@
           "items": [
             {
               "type": "heading",
-              "text": "Site is under construction.",
+              "text": "How I got involved",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "This page is not yet finished."
+              "text": "The project started as a university side project between a few friends who wanted to build a cryptocurrency trading bot. The team already had developers working on the trading logic and someone handling the business side, but nobody had experience with Binance's API, and there wasn't enough time to learn it alongside the rest of the project. I had previously helped the team with some programming-related problems, so I was asked to take responsibility for the API integration.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "The interesting part was that I had never worked with an external trading API before. Rather than treating that as a blocker, I learned what I needed while building the integration. I researched Binance's documentation and API behavior, worked out how authenticated requests had to be constructed, and gradually built a reusable interface that the rest of the trading bot could work with without having to deal with the underlying HTTP requests themselves.",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Building the Python integration",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "The first version was written in Python. My goal was not simply to make one successful request, but to create a collection of functions that could cover the operations the trading bot needed. This included retrieving margin-account information, checking balances, obtaining current prices, determining minimum trade amounts, converting between currencies, and placing trades."
+            },
+            {
+              "type": "paragraph",
+              "text": "The trading functionality included both BUY and SELL operations, as well as the additional steps required for margin shorting. Opening a short position required borrowing the asset, while closing one involved buying back the required amount, repaying the borrowed asset, and handling any remaining balance. I also created simplified functions for the Discord bot to make these operations easier to call from elsewhere in the project."
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Gameplay screenshot",
-              "alt": "Gameplay screenshot"
+              "src": "projects/crypto-convert-function.webp",
+              "caption": "Python Converter function",
+              "alt": "Python Converter function",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/crypto-sell-function.webp",
+              "caption": "Python Sell function",
+              "alt": "Python Sell function",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Authentication and request signing",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "One of the more interesting parts of the integration was handling Binance's authenticated requests. Private trading endpoints required the request parameters to be combined into a query string and signed using HMAC-SHA256 with the API secret. I implemented this as a reusable helper function so that every trading operation could construct and sign its requests consistently."
+            },
+            {
+              "type": "paragraph",
+              "text": "I also had to deal with details that are easy to overlook when working directly with an exchange API. Requests needed timestamps, API-key headers, correctly formatted trading symbols, and quantities that respected Binance's exchange filters. I therefore added helper functions for things such as minimum trade amounts and rounding values to the required precision.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/crypto-security-function.webp",
+              "caption": "Request signing",
+              "alt": "Request signing code",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "From Python to C#",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Later in the project, the team decided to move the trading bot to C#. This meant that the integration I had built in Python also had to be recreated. Rather than simply translating the syntax line by line, I had to adapt the implementation to C# and its ecosystem, using HttpClient for requests, asynchronous methods for network operations, and JSON deserialization for Binance's responses.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/crypto-Csharp-function.webp",
+              "caption": "C# Binance API integration",
+              "alt": "C# Binance API integration",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "The migration also exposed a few differences between the two implementations that needed to be fixed. Some of the original Python logic had to be adjusted to account for how values were handled and how requests were constructed in the C# version. In the end, the C# implementation provided the same functionality as the original Python integration while fitting naturally into the new codebase."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "What I learned",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "This project was my first serious experience working with an external API, and I learned almost everything about the integration while building it. More importantly, it taught me how to approach an unfamiliar technology independently: understand the documentation, experiment with requests, investigate errors, and turn the working solution into reusable code for the rest of the team."
+            },
+            {
+              "type": "paragraph",
+              "text": "The project also gave me practical experience with authenticated HTTP requests, HMAC signatures, JSON data, asynchronous network communication, API constraints, cryptocurrency trading concepts, and maintaining equivalent functionality across two different programming languages."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "The code",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "I am publishing both versions of the integration here. The code is not presented as a production-ready trading system, but as a practical example of how I approached integrating with Binance's API and building a reusable interface around it. I originally had a hard time finding useful explanations and examples when I started this project, so I wanted to make the work available for anyone else who runs into the same problem."
+            },
+            {
+              "type": "paragraph",
+              "text": "Both the original Python implementation and the later C# version are available below."
             },
             {
               "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "Site is under construction."
+              "url": "https://github.com/SirLancelot002/BinanceConnectionAPI",
+              "text": "View the project on GitHub"
             }
           ]
         }
       ]
     },
     "hu": {
-      "title": ">Farmer Was Replaced()_",
-      "role": "Globális ranglista elérése programozási versenyben",
-      "shortDescription": ">Farmer Was Replaced()_ egy programozást tanító játék. Versenyszerűen játszottam, és felkerültem a globális ranglistára. Őszintén szólva a játék nem tanított nekem sok újat, mivel ekkor már több éves programozási tapasztalattal rendelkeztem, de a kihívás és a szórakozás miatt játszottam vele. Különösen büszke vagyok az útkereső algoritmusomra, amellyel a körülbelül 271,1 ezer játékos közül a 40. helyet értem el világszerte.",
+      "title": "The Algorithm (Kriptovaluta-kereskedési bot)",
+      "role": "API fejlesztő és integrációs mérnök",
+      "shortDescription": "Egy egyetemi csapat Binance használatával kriptovaluta-kereskedési botot fejlesztett, azonban senkinek nem volt tapasztalata az API integrációjával. Én vállaltam a kereskedési interfész nulláról történő elkészítését, miközben a fejlesztés során megtanultam az API használatát. A projekt Pythonban indult, majd később C#-ra váltott, így a teljes integrációt újra kellett készítenem és adaptálnom.",
       "tags": [
+        "REST API",
+        "Git",
+        "C#",
         "Python",
-        "Útvonal-keresés",
-        "Rendezés",
-        "Aszinkron programozás",
-        "Verseny"
+        "Binance"
       ],
       "content": [
         {
           "items": [
             {
               "type": "heading",
-              "text": "A játék bemutatása a Steam-en:",
+              "text": "Hogyan kerültem a projektbe",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "Programozz és optimalizálj egy drónt, hogy automatizáld vele a farmot, majd nézd, ahogy elvégzi helyetted a munkát. Gyűjts nyersanyagokat, hogy fejlettebb technológiákat oldj fel, és válj a világ leghatékonyabb gazdájává. Fejleszd problémamegoldó és programozási készségeidet."
-            },
-            {
-              "type": "paragraph",
-              "text": "Egy egyszerű, Pythonhoz hasonló nyelv segítségével programozhatsz egy drónt, amely teljesen automatizálja a különböző, egyébként meglehetősen monoton mezőgazdasági feladatokat. Nagyon kielégítő érzés egyszerűen megnyomni a „végrehajtás” gombot, majd nézni, ahogy a drón elvégzi helyetted a nehéz munkát. A legtöbb programozós játékkal ellentétben a játék nem különálló, teljesítendő pályákra van felosztva, hanem folyamatos fejlődést kínál. A gazdálkodás során nyersanyagokat szerzel, amelyeket új technológiák feloldására használhatsz. A programozás egy Pythonhoz hasonló, egyszerű nyelven történik. A játék eleje úgy lett kialakítva, hogy fokozatosan, egyesével vezesse be az összes alapvető programozási fogalmat, amelyre szükséged lesz. Bár minden releváns alapot bemutat, a különböző feladatok megoldásánál már nem fogja a kezed. A megoldásokat neked kell kitalálnod, ami meglehetősen nagy kihívást jelenthet, ha még soha nem programoztál. Tapasztalt programozóként viszont a játék korai szakaszán nagyon gyorsan végig lehet jutni, majd következnek a későbbi, összetettebb feladatok, amelyek továbbra is érdekes kihívásokat kínálnak. Bár a programozási nyelv nem pontosan Python, eléggé hasonlít hozzá ahhoz, hogy a Python IntelliSense megfelelően működjön vele. A kód .py fájlokban tárolódik, és igény szerint külső kódszerkesztőkkel, például a VS Code-dal is szerkeszthető. A „File Watcher” beállítás engedélyezésével a játék automatikusan észleli a külső módosításokat."
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Játékmenet",
-              "alt": "Játékmenet képernyőkép"
-            },
-            {
-              "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "A játék megtekintése a Steam-en"
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "heading",
-              "text": "Az útkereső algoritmusom",
-              "level": 2
-            },
-            {
-              "type": "paragraph",
-              "text": "A játék labirintusos kihívásának megoldásához útkeresést alkalmaztam. Az alapvető probléma az volt, hogy a drónnal létrehozunk egy labirintust, amelyben a drón nagyjából középen helyezkedik el. A drón ismeri a saját és a kincs koordinátáit. A kincs begyűjtése helyett lehetőség van annak áthelyezésére egy véletlenszerű helyre, miközben ugyanaz a labirintus marad meg, csak további lyukak keletkeznek a falakon.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-small-maze.webp",
-              "caption": "A labirintus felfedezése",
-              "alt": "A labirintus felfedezése",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-code.webp",
-              "caption": "Útvonal-kereső kód",
-              "alt": "Útvonal-kereső kód",
+              "text": "A projekt egy egyetemi mellékprojektként indult néhány barát között, akik egy kriptovaluta-kereskedési botot szerettek volna készíteni. A csapatban már voltak fejlesztők, akik a kereskedési logikán dolgoztak, illetve valaki az üzleti oldalt kezelte, de senkinek nem volt tapasztalata a Binance API-jával, és nem volt elég idő arra, hogy a projekt többi része mellett ezt is megtanulják. Korábban már segítettem a csapatnak néhány programozással kapcsolatos problémában, ezért engem kértek meg, hogy vállaljam az API-integráció elkészítését.",
               "weight": 6
             },
             {
               "type": "paragraph",
-              "text": "A problémára adott megoldásom az volt, hogy feltérképeztem a labirintust, majd egy útkereső algoritmussal eljutottam a kincshez. Mivel a már feltérképezett labirintus újrahasználata sokkal hatékonyabb, mint minden alkalommal egy új labirintus felfedezése, először magát a labirintust kellett feltérképeznem. Úgy alakítottam ki a rendszert, hogy a drón a felfedezés során folyamatosan próbáljon közelebb kerülni a kincshez. Így előbb-utóbb egy zsákutcába (vagy magához a kincshez) jut. Ekkor útkeresést indít a már látott, de még fel nem fedezett, a kincshez legközelebb eső cellához. Ezután folytatja a felfedezést. Ha megtalálta a kincset, áthelyezi azt, majd ismét útkereséssel próbál eljutni hozzá. Az útvonalak megtalálásához egy módosított A* algoritmust használok, amely képes megtalálni a kincshez vezető legrövidebb utat.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A munkám meghozta az eredményét: a körülbelül 271,1 ezer játékos közül világszerte a 40. helyet értem el. Nagyon büszke vagyok erre az eredményre. Fontos azonban hozzátenni, hogy ez az egyetlen drón kategóriában elért helyezésem, ahol egyszerre csak egy drónt lehetett használni. A többdrónos kategóriában akár 32 drón is használható volt. Ott is megpróbáltam versenyezni, de csak a 200. hely után végeztem. A legjobb játékosok valamilyen trükköt alkalmaztak, amelyre nem sikerült rájönnöm. A labirintusoknak négyzet alakúaknak kellett lenniük, miközben a pálya 32×32 cellából állt. Egy 32×32-es területet azonban nem lehet egyszerűen 32 négyzetre felosztani, ezért én csak 16 drónt használtam.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-leaderboard.webp",
-              "caption": "Ranglista képernyőkép",
-              "alt": "Ranglista képernyőkép",
+              "text": "Az volt benne az igazán érdekes, hogy korábban még soha nem dolgoztam külső kereskedési API-val. Ahelyett, hogy ezt akadálynak tekintettem volna, a fejlesztés közben tanultam meg mindazt, amire szükségem volt. Tanulmányoztam a Binance dokumentációját és az API működését, megértettem, hogyan kell felépíteni a hitelesített kéréseket, majd fokozatosan egy újrahasználható interfészt építettem, amelyen keresztül a kereskedési bot többi része anélkül tudott dolgozni, hogy közvetlenül az alapul szolgáló HTTP kérésekkel kellett volna foglalkoznia.",
               "weight": 6
             }
           ]
@@ -132,31 +193,29 @@
           "items": [
             {
               "type": "heading",
-              "text": "A másik két eredményem",
+              "text": "A Python integráció elkészítése",
               "level": 2
             },
             {
+              "type": "paragraph",
+              "text": "Az első verzió Pythonban készült. Nem az volt a célom, hogy mindössze egyetlen sikeres kérést tudjak elküldeni, hanem hogy olyan függvényekből álló rendszert készítsek, amely lefedi a kereskedési bot által igényelt műveleteket. Ezek közé tartozott a margin számla adatainak lekérése, az egyenlegek ellenőrzése, az aktuális árfolyamok lekérése, a minimális kereskedési mennyiségek meghatározása, a valuták közötti átváltás és a megbízások leadása."
+            },
+            {
+              "type": "paragraph",
+              "text": "A kereskedési funkciók tartalmazták a BUY és SELL műveleteket, valamint a margin shortoláshoz szükséges további lépéseket is. Egy short pozíció megnyitásához először kölcsön kellett venni az eszközt, míg a lezárásához vissza kellett vásárolni a szükséges mennyiséget, vissza kellett fizetni a kölcsönt, és kezelni kellett az esetlegesen fennmaradó egyenleget. Emellett egyszerűsített függvényeket is készítettem a Discord bot számára, hogy ezeket a műveleteket a projekt más részeiből is könnyen lehessen meghívni."
+            },
+            {
               "type": "image",
-              "src": "projects/fwr-cactus.webp",
-              "alt": "Kaktusz ranglista",
-              "caption": "Kaktusz ranglista",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A kaktuszos ranglistára is sikerült felkerülnöm. A kaktusz kihívása az, hogy csak akkor lehet betakarítani, ha tőle északra vagy keletre nincs nála nagyobb kaktusz. Ez azt jelenti, hogy a kaktuszokat egy mátrixban kell megfelelő sorrendbe rendezni. Ezt több drón használatával oldottam meg, vagyis a feladat aszinkron változatát készítettem el. Először minden drón a saját sorát rendezte, majd a következő drónhullám az oszlopokat rendezte.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A következő kihívásom a napraforgók voltak. Itt az jelentette a nehézséget, hogy a mezőn csak a legnagyobb napraforgókat lehetett betakarítani. Ehhez egy hatékony feltérképező algoritmust kellett készítenem. Ezután a vezérdrón betakarító drónok hullámait indította útnak, amelyek az adott szinten található összes legnagyobb napraforgót begyűjtötték, majd következett a következő hullám.",
+              "src": "projects/crypto-convert-function.webp",
+              "caption": "Python Converter függvény",
+              "alt": "Python Converter függvény",
               "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-sunflower.webp",
-              "alt": "Napraforgó ranglista",
-              "caption": "Napraforgó ranglista",
+              "src": "projects/crypto-sell-function.webp",
+              "caption": "Python Sell függvény",
+              "alt": "Python Sell függvény",
               "weight": 6
             }
           ]
@@ -164,13 +223,89 @@
         {
           "items": [
             {
+              "type": "heading",
+              "text": "Hitelesítés és kérések aláírása",
+              "level": 2
+            },
+            {
               "type": "paragraph",
-              "text": "Készítettem egy útmutatót is a játékhoz, és az összes fájlomat feltöltöttem GitHubra."
+              "text": "Az integráció egyik érdekesebb része a Binance hitelesített kéréseinek kezelése volt. A privát kereskedési végpontokhoz a kérés paramétereit egy query stringbe kellett összeállítani, majd az API titkos kulcsával HMAC-SHA256 segítségével alá kellett írni. Ezt egy újrahasználható segédfüggvényként valósítottam meg, így minden kereskedési művelet egységes módon tudta létrehozni és aláírni a kéréseit."
+            },
+            {
+              "type": "paragraph",
+              "text": "Közvetlenül egy tőzsdei API-val dolgozva olyan részletekkel is foglalkoznom kellett, amelyek könnyen elkerülhetik a figyelmet. A kérésekhez időbélyegre, API-kulcsot tartalmazó fejlécre, megfelelően formázott kereskedési szimbólumokra és a Binance tőzsdei szűrőinek megfelelő mennyiségekre volt szükség. Ezért olyan segédfüggvényeket is készítettem, amelyek többek között a minimális kereskedési mennyiségeket kezelték, illetve a számértékeket a szükséges pontosságra kerekítették.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/crypto-security-function.webp",
+              "caption": "Kérés aláírása",
+              "alt": "Kérés aláírását végző kód",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Pythontól a C#-ig",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "A projekt későbbi szakaszában a csapat úgy döntött, hogy a kereskedési botot C#-ra váltja. Ez azt jelentette, hogy a Pythonban elkészített integrációmat is újra kellett készítenem. Ahelyett, hogy egyszerűen sorról sorra lefordítottam volna a kódot, a megoldást a C#-hoz és annak környezetéhez kellett igazítanom. Ehhez a kérésekhez HttpClientet, a hálózati műveletekhez aszinkron metódusokat, a Binance válaszainak feldolgozásához pedig JSON deszerializálást használtam.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/crypto-Csharp-function.webp",
+              "caption": "C# Binance API integráció",
+              "alt": "C# Binance API integráció",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "A migráció során néhány olyan különbség is előjött a két megvalósítás között, amelyeket javítani kellett. Az eredeti Python logika egyes részeit módosítani kellett annak megfelelően, ahogyan a C# kezelte az értékeket és a kérések felépítését. Végül a C#-os megvalósítás ugyanazt a funkcionalitást biztosította, mint az eredeti Python integráció, miközben természetesen illeszkedett az új kódbázisba."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Amit tanultam",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Ez a projekt volt az első komolyabb tapasztalatom külső API-val való munkában, és az integrációval kapcsolatos ismereteim nagy részét a fejlesztés közben sajátítottam el. Ennél is fontosabb, hogy megtanított egy ismeretlen technológiához önállóan hozzáállni: megérteni a dokumentációt, kísérletezni a kérésekkel, kivizsgálni a hibákat, majd a működő megoldást a csapat többi része számára is újrahasználható kóddá alakítani."
+            },
+            {
+              "type": "paragraph",
+              "text": "A projekt gyakorlati tapasztalatot adott hitelesített HTTP kérések, HMAC-aláírások, JSON adatok, aszinkron hálózati kommunikáció, API-korlátok és kriptovaluta-kereskedési alapfogalmak terén, valamint abban is, hogyan lehet ugyanazt a funkcionalitást két különböző programozási nyelven fenntartani."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "A kód",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Az integráció mindkét verzióját közzéteszem itt. A kódot nem kész, éles környezetre szánt kereskedési rendszerként mutatom be, hanem gyakorlati példaként arra, hogyan közelítettem meg a Binance API-jával való integrációt, és hogyan építettem köré egy újrahasználható interfészt. Amikor elkezdtem a projektet, nehezen találtam hasznos magyarázatokat és példákat, ezért szeretném elérhetővé tenni a munkámat azok számára is, akik hasonló problémába ütköznek."
+            },
+            {
+              "type": "paragraph",
+              "text": "Az eredeti Python megvalósítás és a későbbi C# verzió is elérhető az alábbi linken."
             },
             {
               "type": "link",
-              "url": "https://github.com/SirLancelot002/TheFarmerWasReplaced",
-              "text": "Repository megtekintése a GitHubon"
+              "url": "https://github.com/SirLancelot002/BinanceConnectionAPI",
+              "text": "Projekt megtekintése a GitHubon"
             }
           ]
         }

@@ -8,7 +8,7 @@
     "en": {
       "title": "Meteorology",
       "role": "University grand project",
-      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used High level programming, and OOP programming.",
+      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used Higher-Order programming, and OOP programming.",
       "tags": [
         "C#",
         "OOP",

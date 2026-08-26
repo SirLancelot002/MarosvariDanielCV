@@ -13,30 +13,137 @@
         "Git",
         "React",
         "TypeScript",
-        "Tailwind CSS"
+        "Bootstrap"
       ],
       "content": [
         {
           "items": [
             {
               "type": "heading",
-              "text": "Site is under construction.",
+              "text": "Overview",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "This page is not yet finished."
+              "text": "This site is the page you are looking at right now. I built it from scratch with React 19, TypeScript and Vite, using react-router-dom for client-side navigation and Bootstrap's grid system for responsive layouts. Rather than hard-coding pages, most of the content you see - this very project, its sections, images and links - is driven by structured JSON, so the whole site behaves more like a small content-management system than a static page."
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Gameplay screenshot",
-              "alt": "Gameplay screenshot"
+              "src": "projects/cv-website-landingpage.webp",
+              "caption": "Landing page with the animated background and profile card",
+              "alt": "Landing page of the CV website"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Multilingual with i18next",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "The entire interface, including every project and study page, is available in English and Hungarian. I used i18next and react-i18next to manage translations, with all UI strings kept in dedicated locale JSON files and all long-form content (like this description) kept side-by-side as \"en\" and \"hu\" fields on each data entry. Switching languages is instant, does not reload the page, and is exposed through a dedicated language menu in the navigation bar.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-website-langchange.webp",
+              "caption": "Language switcher with flag icons",
+              "alt": "Language menu showing English and Hungarian options",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Animated navigation",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Navigation is handled by a custom pill-shaped nav bar that highlights the active route and slides a floating indicator between links as you move between pages, with a mobile hamburger variant that expands into a full menu. The same bar hosts the language and graphics-quality menus, both of which animate open and closed and close automatically when you click outside of them.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-navbar.webp",
+              "caption": "Pill navigation bar with the active-route indicator",
+              "alt": "Animated pill navigation bar",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Adaptive graphics quality",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "The landing page uses WebGL/Three.js backgrounds and several GSAP/Motion-driven effects, which can be heavy on lower-end devices. To keep the experience smooth for everyone, a custom hook estimates a sensible quality level from the device's CPU core count, memory and the user's reduced-motion preference, then briefly measures actual frame rate on first load to confirm or adjust it. The result is cached in local storage for a week, and can be overridden at any time through a quality menu, with the choice applied live across every animated component on the page."
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-quality-menu.webp",
+              "caption": "Quality menu with low, medium and high presets",
+              "alt": "Graphics quality selection menu"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Data-driven and easy to extend",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Every project and study on this site is a single JSON file describing its metadata (dates, tags, colour, level) and its content as a list of sections, where each section is a list of items - headings, paragraphs, images or links. Vite's import.meta.glob loads every file under data/projects at build time and sorts them by end date automatically, so adding a new project to the site is as simple as dropping in a new JSON file; no component code needs to change.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "The same content model also drives the layout: each item can carry an optional Bootstrap column weight, so two items placed next to each other with a weight of 6 will render side by side, while an item left without a weight simply takes the full row. This lets me mix full-width text with image/text pairs, or several images in a row, purely by editing data.",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Interactivity and animation",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Almost every element on the site reacts to the user in some way. Cards tilt and glow as the mouse moves over them, buttons have shiny hover sweeps and electric borders, text animates in with type-writer and glitch effects, and page sections reveal themselves as you scroll. These are all built as small, reusable modules on top of GSAP, Motion and OGL/Three.js, so the same effect (say, a tilt card or a glowing border) can be reused across the profile card, project cards and study cards without duplicating logic."
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-project-card.webp",
+              "caption": "Interactive project card with tilt and glow effects",
+              "alt": "Project card with hover animation"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "paragraph",
+              "text": "The site is continuously deployed straight from the repository, so every change I push is automatically built and published. All of the source code is available on GitHub."
             },
             {
               "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "Site is under construction."
+              "url": "https://github.com/SirLancelot002/MarosvariDanielCV",
+              "text": "View the repository on GitHub"
             }
           ]
         }

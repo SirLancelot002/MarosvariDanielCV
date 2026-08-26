@@ -146,18 +146,25 @@
   will-change: transform, opacity;
 }
 
+.pill-list > li {
+  position: relative;
+}
+
+/* Sits inside the pill (not below it) since .pill clips with overflow:hidden
+   for the hover-fill effect; --base is guaranteed to contrast against --pill-bg.
+   z-index stays under .label-stack so the incoming hover label paints over it. */
 .pill.is-active::after {
   content: '';
-  display: none;
   position: absolute;
-  bottom: -6px;
+  bottom: -0.2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   background: var(--base, #000);
-  border-radius: 50px;
-  z-index: 4;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .desktop-only {

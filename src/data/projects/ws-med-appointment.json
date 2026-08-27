@@ -24,23 +24,134 @@
           "items": [
             {
               "type": "heading",
-              "text": "Site is under construction.",
+              "text": "The Start of the Project",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "This page is not yet finished."
+              "text": "Zoltan Pataki is the owner of WS Med, a medical franchise. He approached me to help him develop a doctor appointment booking system for his franchise. They were using a third-party system, (MyMedio) which had a high subscription fee and would have grown even greater if they opened more clinics. I was happy to take up him on his offer, and I started putting my team together as soon as I could. I have invited 7 of my University friends to join the project. each of them had a special skillset we needed for the project. We divided the roles accordingly."
             },
             {
-              "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Gameplay screenshot",
-              "alt": "Gameplay screenshot"
+              "type": "heading",
+              "text": "The basic problem",
+              "level": 4
+            },
+            {
+              "type": "paragraph",
+              "text": "We had to make an appointment booking system that would be able to handle multiple clinics, handle multiple edits at the same time, rework their websites (since they had one per clinic, and they needed it unified), and all this for a company that technically has an IT department, but has minimal software development experience and very limited hosting experience.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "These were by far not easy requirements, but we got full creative control over the program planning. This alone was an amazing opportunity for our team (mostly University students). The main idea for the backend was to use Object Relation Mapping (ORM). Most of it was straight forward, but how would we store the passible appointments?",
+              "weight": 6
+            },
+            {
+              "type": "heading",
+              "text": "Our Solution",
+              "level": 4
+            },
+            {
+              "type": "paragraph",
+              "text": "We can't just store every possible appointment, since that would be a lot of unnecessary data for the company. We (the development team) all come up with ideas on how to solve this, but I'm proud to say that my idea was the winner. We basically divide the doctor's time. Each doctor can have any number of week plans, and these can be ordered like \"A week\"-\"B week\"-\"C week\"-\"A week\". Each week can have 7 day plans, and any number of weekly overwrites (for example the doctor is always busy on Mondays 14:30). The day plans can have treatment windows, and daily overwrites. The treatment window stores what kind of treatment it is, how long a single treatment lasts, and how long the break after it has to be. When someone wants to get an appointment, the system will generate the possible appointment times by looking at the treatment windows of that day, and subtracting any time that is already taken. This way, the database only has to store the active appointments and what are the plans of the doctor in general. This also supports a doctor having multiple treatment windows at the same time, and gives full customization to the doctor on how he wants to handle his time."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Meet the Team",
+              "level": 2
             },
             {
               "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "Site is under construction."
+              "url": "mailto:haradarichard@gmail.com",
+              "text": "Richárd Harada - Project Manager",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/SirLancelot002",
+              "text": "Dániel Marosvári - Customer Success Engineer",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/garaibence",
+              "text": "Bence Garai - DevOps Engineer",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/rUseLieFX",
+              "text": "Félix Horváth - Technical Lead",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "mailto:sandor.kolos@gmail.com",
+              "text": "Kolos Sándor - Frontend, UI/UX Designer",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/DejaBusz",
+              "text": "Dániel Gatyás - Test Engineer",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "mailto:vadaszdani04@gmail.com",
+              "text": "Dániel Vadász - Backend Developer",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/FarkasKBence",
+              "text": "Bence Farkas - Frontend Developer",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/ws-med-team-VDani-tpbg.webp",
+              "caption": "Dániel Vadász",
+              "alt": "Dániel Vadász",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/ws-med-team-GDani-tpbg.webp",
+              "caption": "Dániel Gatyás",
+              "alt": "Dániel Gatyás",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/ws-med-team-Kolos-tpbg.webp",
+              "caption": "Kolos Sándor",
+              "alt": "Kolos Sándor",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "./src/assets/avatar.png",
+              "caption": "Dániel Marosvári",
+              "alt": "Dániel Marosvári",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "The First Direction change",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "We were developing the system in agile, we had weekly sprints, and then meetings. After about 1.5 months we were about half way done (there were some challenges in figuring out how to comply with EU data protection laws) I had a meeting in person with the client team. Sadly MyMedio deployed a big update and new financing system, which led the client team to decide to stick with them at least until the end of the year. Despite this, the team and development remained, since we still had to unify their websites, and develop new features (like user login, and subscriptions). And on a more positive note: they showed me how MyMedio works, and it was basically the same system we figured out and were implementing."
             }
           ]
         }
@@ -59,123 +170,7 @@
       ],
       "content": [
         {
-          "items": [
-            {
-              "type": "heading",
-              "text": "A játék bemutatása a Steam-en:",
-              "level": 2
-            },
-            {
-              "type": "paragraph",
-              "text": "Programozz és optimalizálj egy drónt, hogy automatizáld vele a farmot, majd nézd, ahogy elvégzi helyetted a munkát. Gyűjts nyersanyagokat, hogy fejlettebb technológiákat oldj fel, és válj a világ leghatékonyabb gazdájává. Fejleszd problémamegoldó és programozási készségeidet."
-            },
-            {
-              "type": "paragraph",
-              "text": "Egy egyszerű, Pythonhoz hasonló nyelv segítségével programozhatsz egy drónt, amely teljesen automatizálja a különböző, egyébként meglehetősen monoton mezőgazdasági feladatokat. Nagyon kielégítő érzés egyszerűen megnyomni a „végrehajtás” gombot, majd nézni, ahogy a drón elvégzi helyetted a nehéz munkát. A legtöbb programozós játékkal ellentétben a játék nem különálló, teljesítendő pályákra van felosztva, hanem folyamatos fejlődést kínál. A gazdálkodás során nyersanyagokat szerzel, amelyeket új technológiák feloldására használhatsz. A programozás egy Pythonhoz hasonló, egyszerű nyelven történik. A játék eleje úgy lett kialakítva, hogy fokozatosan, egyesével vezesse be az összes alapvető programozási fogalmat, amelyre szükséged lesz. Bár minden releváns alapot bemutat, a különböző feladatok megoldásánál már nem fogja a kezed. A megoldásokat neked kell kitalálnod, ami meglehetősen nagy kihívást jelenthet, ha még soha nem programoztál. Tapasztalt programozóként viszont a játék korai szakaszán nagyon gyorsan végig lehet jutni, majd következnek a későbbi, összetettebb feladatok, amelyek továbbra is érdekes kihívásokat kínálnak. Bár a programozási nyelv nem pontosan Python, eléggé hasonlít hozzá ahhoz, hogy a Python IntelliSense megfelelően működjön vele. A kód .py fájlokban tárolódik, és igény szerint külső kódszerkesztőkkel, például a VS Code-dal is szerkeszthető. A „File Watcher” beállítás engedélyezésével a játék automatikusan észleli a külső módosításokat."
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Játékmenet",
-              "alt": "Játékmenet képernyőkép"
-            },
-            {
-              "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "A játék megtekintése a Steam-en"
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "heading",
-              "text": "Az útkereső algoritmusom",
-              "level": 2
-            },
-            {
-              "type": "paragraph",
-              "text": "A játék labirintusos kihívásának megoldásához útkeresést alkalmaztam. Az alapvető probléma az volt, hogy a drónnal létrehozunk egy labirintust, amelyben a drón nagyjából középen helyezkedik el. A drón ismeri a saját és a kincs koordinátáit. A kincs begyűjtése helyett lehetőség van annak áthelyezésére egy véletlenszerű helyre, miközben ugyanaz a labirintus marad meg, csak további lyukak keletkeznek a falakon.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-small-maze.webp",
-              "caption": "A labirintus felfedezése",
-              "alt": "A labirintus felfedezése",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-code.webp",
-              "caption": "Útvonal-kereső kód",
-              "alt": "Útvonal-kereső kód",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A problémára adott megoldásom az volt, hogy feltérképeztem a labirintust, majd egy útkereső algoritmussal eljutottam a kincshez. Mivel a már feltérképezett labirintus újrahasználata sokkal hatékonyabb, mint minden alkalommal egy új labirintus felfedezése, először magát a labirintust kellett feltérképeznem. Úgy alakítottam ki a rendszert, hogy a drón a felfedezés során folyamatosan próbáljon közelebb kerülni a kincshez. Így előbb-utóbb egy zsákutcába (vagy magához a kincshez) jut. Ekkor útkeresést indít a már látott, de még fel nem fedezett, a kincshez legközelebb eső cellához. Ezután folytatja a felfedezést. Ha megtalálta a kincset, áthelyezi azt, majd ismét útkereséssel próbál eljutni hozzá. Az útvonalak megtalálásához egy módosított A* algoritmust használok, amely képes megtalálni a kincshez vezető legrövidebb utat.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A munkám meghozta az eredményét: a körülbelül 271,1 ezer játékos közül világszerte a 40. helyet értem el. Nagyon büszke vagyok erre az eredményre. Fontos azonban hozzátenni, hogy ez az egyetlen drón kategóriában elért helyezésem, ahol egyszerre csak egy drónt lehetett használni. A többdrónos kategóriában akár 32 drón is használható volt. Ott is megpróbáltam versenyezni, de csak a 200. hely után végeztem. A legjobb játékosok valamilyen trükköt alkalmaztak, amelyre nem sikerült rájönnöm. A labirintusoknak négyzet alakúaknak kellett lenniük, miközben a pálya 32×32 cellából állt. Egy 32×32-es területet azonban nem lehet egyszerűen 32 négyzetre felosztani, ezért én csak 16 drónt használtam.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-leaderboard.webp",
-              "caption": "Ranglista képernyőkép",
-              "alt": "Ranglista képernyőkép",
-              "weight": 6
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "heading",
-              "text": "A másik két eredményem",
-              "level": 2
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-cactus.webp",
-              "alt": "Kaktusz ranglista",
-              "caption": "Kaktusz ranglista",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A kaktuszos ranglistára is sikerült felkerülnöm. A kaktusz kihívása az, hogy csak akkor lehet betakarítani, ha tőle északra vagy keletre nincs nála nagyobb kaktusz. Ez azt jelenti, hogy a kaktuszokat egy mátrixban kell megfelelő sorrendbe rendezni. Ezt több drón használatával oldottam meg, vagyis a feladat aszinkron változatát készítettem el. Először minden drón a saját sorát rendezte, majd a következő drónhullám az oszlopokat rendezte.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A következő kihívásom a napraforgók voltak. Itt az jelentette a nehézséget, hogy a mezőn csak a legnagyobb napraforgókat lehetett betakarítani. Ehhez egy hatékony feltérképező algoritmust kellett készítenem. Ezután a vezérdrón betakarító drónok hullámait indította útnak, amelyek az adott szinten található összes legnagyobb napraforgót begyűjtötték, majd következett a következő hullám.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-sunflower.webp",
-              "alt": "Napraforgó ranglista",
-              "caption": "Napraforgó ranglista",
-              "weight": 6
-            }
-          ]
-        },
-        {
-          "items": [
-            {
-              "type": "paragraph",
-              "text": "Készítettem egy útmutatót is a játékhoz, és az összes fájlomat feltöltöttem GitHubra."
-            },
-            {
-              "type": "link",
-              "url": "https://github.com/SirLancelot002/TheFarmerWasReplaced",
-              "text": "Repository megtekintése a GitHubon"
-            }
-          ]
+          
         }
       ]
     }

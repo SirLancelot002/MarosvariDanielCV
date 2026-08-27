@@ -115,7 +115,8 @@
 
 .project-detail__heading {
   color: #f1f2f6;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
+  padding-bottom: 0rem;
 }
 
 h2.project-detail__heading {

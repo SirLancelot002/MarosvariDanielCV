@@ -17,7 +17,7 @@
         "React",
         "CI/CD",
         "Git",
-        "Business Product"
+        "Microservice architecture"
       ],
       "content": [
         {
@@ -84,7 +84,7 @@
             },
             {
               "type": "link",
-              "url": "https://github.com/rUseLieFX",
+              "url": "mailto:horvath.felix@h4it.net",
               "text": "Félix Horváth - Technical Lead",
               "weight": 6
             },
@@ -135,9 +135,9 @@
             },
             {
               "type": "image",
-              "src": "./src/assets/avatar.png",
-              "caption": "Dániel Marosvári",
-              "alt": "Dániel Marosvári",
+              "src": "projects/ws-med-team-FBence-tpbg.webp",
+              "caption": "Bence Farkas",
+              "alt": "Bence Farkas",
               "weight": 6
             }
           ]
@@ -151,7 +151,7 @@
             },
             {
               "type": "paragraph",
-              "text": "We were developing the system in agile, we had weekly sprints, and then meetings. After about 1.5 months we were about half way done (there were some challenges in figuring out how to comply with EU data protection laws) I had a meeting in person with the client team. Sadly MyMedio deployed a big update and new financing system, which led the client team to decide to stick with them at least until the end of the year. Despite this, the team and development remained, since we still had to unify their websites, and develop new features (like user login, and subscriptions). And on a more positive note: they showed me how MyMedio works, and it was basically the same system we figured out and were implementing."
+              "text": "We were developing the system in agile, we had weekly sprints, and then meetings. After about 1.5 months we were about half way done (there were some challenges in figuring out how to comply with EU data protection laws) I had a meeting in person with the client team. Sadly MyMedio deployed a big update and new financing system, which led the client team to decide to stick with them at least until the end of the year. Despite this, the team and development remained, since we still had to unify their websites, and develop new features (like user login, and subscriptions). And on a more positive note: they showed me how MyMedio works, and it was basically the same system we figured out and were implementing. In addition, since we were developing with the microservice architecture, we could easily switch to a new backend as they now decided to change their mind."
             },
             {
               "type": "paragraph",
@@ -162,19 +162,159 @@
       ]
     },
     "hu": {
-      "title": ">Farmer Was Replaced()_",
-      "role": "Globális ranglista elérése programozási versenyben",
-      "shortDescription": ">Farmer Was Replaced()_ egy programozást tanító játék. Versenyszerűen játszottam, és felkerültem a globális ranglistára. Őszintén szólva a játék nem tanított nekem sok újat, mivel ekkor már több éves programozási tapasztalattal rendelkeztem, de a kihívás és a szórakozás miatt játszottam vele. Különösen büszke vagyok az útkereső algoritmusomra, amellyel a körülbelül 271,1 ezer játékos közül a 40. helyet értem el világszerte.",
+      "title": "WS Med orvosi időpontfoglaló rendszer",
+      "role": "Customer Success Engineer",
+      "shortDescription": "A WS Med (egészségügyi franchise) tulajdonosa keresett meg, hogy segítsek egy orvosi időpontfoglaló rendszer fejlesztésében. Lehetőséget kaptam a csapat felépítésére, ezért 7 további informatikus hallgatót választottam az egyetemi ismeretségi körömből. A szerepek felosztása után Customer Success Engineer lettem. Jelentős szerepem volt a program megtervezésében, a frontend technológiák kiválasztásában, valamint elkészítettem a backend alapját képező osztályokat.",
       "tags": [
-        "Python",
-        "Útvonal-keresés",
-        "Rendezés",
-        "Aszinkron programozás",
-        "Verseny"
+        "ORM",
+        "Csapatmenedzsment",
+        "CSE",
+        "OOP",
+        "C#",
+        "React",
+        "CI/CD",
+        "Git",
+        "Mikroszerviz-architektúra"
       ],
       "content": [
         {
-          
+          "items": [
+            {
+              "type": "heading",
+              "text": "A projekt kezdete",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Pataki Zoltán, a WS Med egészségügyi franchise tulajdonosa keresett meg, hogy segítsek egy, a franchise számára készülő orvosi időpontfoglaló rendszer fejlesztésében. Korábban egy külső rendszert (MyMedio) használtak, amelynek magas előfizetési díja volt, és újabb klinikák megnyitásával ez a költség tovább növekedett volna. Örömmel vállaltam a feladatot, és amint lehetett, elkezdtem összeállítani a csapatot. 7 egyetemi ismerősömet hívtam meg a projektbe, akik mind rendelkeztek a fejlesztéshez szükséges különböző szaktudással. Ezek alapján osztottuk fel egymás között a szerepeket."
+            },
+            {
+              "type": "heading",
+              "text": "Az alapvető probléma",
+              "level": 4
+            },
+            {
+              "type": "paragraph",
+              "text": "Egy olyan időpontfoglaló rendszert kellett készítenünk, amely képes több klinikát kezelni, egyszerre több módosítást támogatni, valamint újratervezni és egységesíteni a weboldalaikat, hiszen minden klinikának külön oldala volt. Mindezt egy olyan vállalat számára, amely ugyan rendelkezik informatikai részleggel, de korlátozott szoftverfejlesztési és tárhelyüzemeltetési tapasztalattal.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "Ezek egyáltalán nem voltak egyszerű követelmények, viszont a program megtervezésében teljes kreatív szabadságot kaptunk. Ez önmagában is nagyszerű lehetőség volt a nagyrészt egyetemistákból álló csapatunk számára. A backend fő koncepciójaként az Object-Relational Mappinget (ORM) választottuk. A legtöbb része egyértelmű volt, azonban felmerült egy fontos kérdés: hogyan tároljuk a lehetséges időpontokat?",
+              "weight": 6
+            },
+            {
+              "type": "heading",
+              "text": "A megoldásunk",
+              "level": 4
+            },
+            {
+              "type": "paragraph",
+              "text": "Nem tárolhattuk egyszerűen az összes lehetséges időpontot, hiszen ez rengeteg felesleges adatot jelentett volna a vállalat számára. A fejlesztőcsapat minden tagja előállt különböző megoldási ötletekkel, és büszke vagyok rá, hogy végül az én elképzelésem bizonyult a legjobbnak. Az orvosok idejét alapvetően heti tervekre osztottuk. Minden orvoshoz tetszőleges számú heti terv tartozhat, amelyek sorrendbe rendezhetők, például „A hét” – „B hét” – „C hét” – „A hét”. Minden héthez 7 napi terv tartozhat, valamint tetszőleges számú heti felülírás, például ha az orvos minden hétfőn 14:30-kor elfoglalt. A napi tervek kezelési idősávokat és napi felülírásokat is tartalmazhatnak. A kezelési idősáv meghatározza a kezelés típusát, egy kezelés időtartamát, valamint az azt követő kötelező szünet hosszát. Amikor valaki időpontot szeretne foglalni, a rendszer az adott nap kezelési idősávjai alapján generálja a lehetséges időpontokat, majd eltávolítja azokat, amelyek már foglaltak. Így az adatbázisnak csak az aktuálisan lefoglalt időpontokat és az orvos általános időbeosztását kell tárolnia. A megoldás azt is támogatja, hogy egy orvosnak egyszerre több kezelési idősávja legyen, miközben teljes szabadságot biztosít számára az időbeosztás kialakításában."
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "A csapat",
+              "level": 2
+            },
+            {
+              "type": "link",
+              "url": "mailto:haradarichard@gmail.com",
+              "text": "Harada Richárd - Projektmenedzser",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/SirLancelot002",
+              "text": "Marosvári Dániel - Customer Success Engineer",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/garaibence",
+              "text": "Garai Bence - DevOps mérnök",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "mailto:horvath.felix@h4it.net",
+              "text": "Horváth Félix - Technikai vezető",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "mailto:sandor.kolos@gmail.com",
+              "text": "Sándor Kolos Barnabás - Frontend, UI/UX Designer",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/DejaBusz",
+              "text": "Gatyás Dániel - Tesztmérnök",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "mailto:vadaszdani04@gmail.com",
+              "text": "Vadász Dániel - Backend fejlesztő",
+              "weight": 6
+            },
+            {
+              "type": "link",
+              "url": "https://github.com/FarkasKBence",
+              "text": "Farkas Bence - Frontend fejlesztő",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/ws-med-team-VDani-tpbg.webp",
+              "caption": "Vadász Dániel - Backend fejlesztő",
+              "alt": "Vadász Dániel",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/ws-med-team-GDani-tpbg.webp",
+              "caption": "Gatyás Dániel - Tesztmérnök",
+              "alt": "Gatyás Dániel",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/ws-med-team-Kolos-tpbg.webp",
+              "caption": "Sándor Kolos Barnabás - Frontend, UI/UX Designer",
+              "alt": "Sándor Kolos",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/ws-med-team-FBence-tpbg.webp",
+              "caption": "Farkas Bence - Frontend fejlesztő",
+              "alt": "Farkas Bence",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Az első irányváltás",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "A rendszert agilis módszertan szerint fejlesztettük, heti sprintekkel és azokat követő megbeszélésekkel. Körülbelül másfél hónap után nagyjából félúton jártunk a fejlesztésben. Eközben több kihívással is szembesültünk, például azzal, hogyan feleljünk meg az Európai Unió adatvédelmi előírásainak. Ekkor személyesen is találkoztam az ügyfél csapatával. Sajnos a MyMedio időközben kiadott egy nagyobb frissítést és új finanszírozási rendszert vezetett be, ami miatt az ügyfél úgy döntött, hogy legalább az év végéig továbbra is velük marad. Ennek ellenére a csapat és a fejlesztés is folytatódott, mivel továbbra is szükségük volt a weboldalaik egységesítésére és új funkciók, például felhasználói bejelentkezés és előfizetések fejlesztésére. Pozitívumként pedig megmutatták, hogyan működik a MyMedio rendszere, és kiderült, hogy lényegében ugyanazt a megoldást terveztük meg és kezdtük el megvalósítani. Ráadásul a mikroszerviz-architektúrának köszönhetően könnyedén lehetőségünk van egy másik backendhez váltani, ha az ügyfél a jövőben ismét megváltoztatná az elképzeléseit."
+            },
+            {
+              "type": "paragraph",
+              "text": "A fejlesztés jelenleg is folyamatban van (2026.08.27.). Mivel ez egy üzleti célú termék, a forráskódot nem tehetem közzé GitHubon."
+            }
+          ]
         }
       ]
     }

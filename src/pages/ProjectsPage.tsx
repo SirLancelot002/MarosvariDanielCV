@@ -19,13 +19,13 @@ function ProjectsPage() {
 
   switch (quality) {
     case 'low':
-      letterSizeRem = 1.7;
+      letterSizeRem = 2;
       break;
     case 'medium':
-      letterSizeRem = 1.3;
+      letterSizeRem = 1.5;
       break;
     case 'high':
-      letterSizeRem = 1;
+      letterSizeRem = 1.2;
       break;
   }
 

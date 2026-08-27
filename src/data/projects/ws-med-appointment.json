@@ -152,6 +152,10 @@
             {
               "type": "paragraph",
               "text": "We were developing the system in agile, we had weekly sprints, and then meetings. After about 1.5 months we were about half way done (there were some challenges in figuring out how to comply with EU data protection laws) I had a meeting in person with the client team. Sadly MyMedio deployed a big update and new financing system, which led the client team to decide to stick with them at least until the end of the year. Despite this, the team and development remained, since we still had to unify their websites, and develop new features (like user login, and subscriptions). And on a more positive note: they showed me how MyMedio works, and it was basically the same system we figured out and were implementing."
+            },
+            {
+              "type": "paragraph",
+              "text": "These developments are still ongoing as of now (2026-08.27). As this is a business product, I can't show the code on GitHub."
             }
           ]
         }

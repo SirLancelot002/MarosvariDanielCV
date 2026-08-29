@@ -12,6 +12,7 @@ import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
 import { getBlockColumnClasses } from '../utils/blockLayout';
+import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
 
@@ -19,10 +20,30 @@ function ProjectDetailPage() {
     const { id } = useParams<{ id: string }>();
     const { t, i18n } = useTranslation();
     const lang = i18n.language === 'hu' ? 'hu' : 'en';
+    const quality = useAdaptiveQuality();
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, [id]);
+
+    // Fewer, larger grid cells (bigger on/off squares) and a lower render resolution are cheaper to shade.
+    let gridMul: [number, number] = [2, 1];
+    let terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    switch (quality) {
+        case 'low':
+            gridMul = [0.5, 0.25];
+            terminalDpr = 1;
+            break;
+        case 'medium':
+            gridMul = [1, 0.5];
+            terminalDpr = Math.min(window.devicePixelRatio || 1, 1.5);
+            break;
+        case 'high':
+            gridMul = [2, 1];
+            terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
+            break;
+    }
 
     const project = projects.find(p => p.id === id);
 
@@ -38,8 +59,9 @@ function ProjectDetailPage() {
             <div className="studies-bg-fixed project-detail-bg-fixed">
                 <FaultyTerminal
                     scale={1.5}
-                    gridMul={[2, 1]}
+                    gridMul={gridMul}
                     digitSize={1.2}
+                    dpr={terminalDpr}
                     timeScale={0.5}
                     pause={false}
                     scanlineIntensity={0.5}

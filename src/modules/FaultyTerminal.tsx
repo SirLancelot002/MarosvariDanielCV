@@ -2,11 +2,10 @@ import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
 import React, { useEffect, useRef, useMemo, useCallback } from 'react';
 import './FaultyTerminal.css';
 
-type Vec2 = [number, number];
-
 export interface FaultyTerminalProps extends React.HTMLAttributes<HTMLDivElement> {
   scale?: number;
-  gridMul?: Vec2;
+  /** Physical size of a grid square, in rem, kept constant and aspect-correct across viewport sizes. */
+  squareSizeRem?: number;
   digitSize?: number;
   timeScale?: number;
   pause?: boolean;
@@ -244,7 +243,7 @@ function hexToRgb(hex: string): [number, number, number] {
 
 export default function FaultyTerminal({
   scale = 1,
-  gridMul = [2, 1],
+  squareSizeRem = 1.75,
   digitSize = 1.5,
   timeScale = 0.3,
   pause = false,
@@ -309,7 +308,7 @@ export default function FaultyTerminal({
         },
         uScale: { value: scale },
 
-        uGridMul: { value: new Float32Array(gridMul) },
+        uGridMul: { value: new Float32Array([1, 1]) },
         uDigitSize: { value: digitSize },
         uScanlineIntensity: { value: scanlineIntensity },
         uGlitchAmount: { value: glitchAmount },
@@ -341,6 +340,14 @@ export default function FaultyTerminal({
         gl.canvas.height,
         gl.canvas.width / gl.canvas.height
       );
+
+      // Derive the grid density from the container's actual pixel size so each
+      // square is `squareSizeRem` wide/tall regardless of viewport aspect or size.
+      const rootFontSizePx = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      const squarePx = squareSizeRem * rootFontSizePx;
+      const gridUniform = program.uniforms.uGridMul.value as Float32Array;
+      gridUniform[0] = ctn.offsetWidth / (15 * scale * squarePx);
+      gridUniform[1] = ctn.offsetHeight / (15 * scale * squarePx);
     }
 
     const resizeObserver = new ResizeObserver(() => resize());
@@ -402,7 +409,7 @@ export default function FaultyTerminal({
     pause,
     timeScale,
     scale,
-    gridMul,
+    squareSizeRem,
     digitSize,
     scanlineIntensity,
     glitchAmount,

@@ -26,21 +26,21 @@ function ProjectDetailPage() {
         window.scrollTo(0, 0);
     }, [id]);
 
-    // Fewer, larger grid cells (bigger on/off squares) and a lower render resolution are cheaper to shade.
-    let gridMul: [number, number] = [2, 1];
+    // Bigger squares (in rem, so they stay square and consistent across screens) and a lower render resolution are cheaper to shade.
+    let squareSizeRem = 1.75;
     let terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
 
     switch (quality) {
         case 'low':
-            gridMul = [0.5, 0.25];
+            squareSizeRem = 6;
             terminalDpr = 1;
             break;
         case 'medium':
-            gridMul = [1, 0.5];
+            squareSizeRem = 4;
             terminalDpr = Math.min(window.devicePixelRatio || 1, 1.5);
             break;
         case 'high':
-            gridMul = [2, 1];
+            squareSizeRem = 2.25;
             terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
             break;
     }
@@ -59,7 +59,7 @@ function ProjectDetailPage() {
             <div className="studies-bg-fixed project-detail-bg-fixed">
                 <FaultyTerminal
                     scale={1.5}
-                    gridMul={gridMul}
+                    squareSizeRem={squareSizeRem}
                     digitSize={1.2}
                     dpr={terminalDpr}
                     timeScale={0.5}

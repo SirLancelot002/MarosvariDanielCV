@@ -9,6 +9,18 @@
   "nav.projects": "Projects",
   "nav.backtoTheTop": "Back to the top",
 
+  "quality.title": "Graphics quality",
+  "quality.heading": "Graphics",
+  "quality.low": "Low",
+  "quality.medium": "Medium",
+  "quality.high": "High",
+  "quality.toggleLabel": "Toggle graphics quality menu",
+  "quality.hint" : "You may need to press F5 to take effect",
+
+  "language.title": "Language",
+  "language.heading": "Language",
+  "language.toggleLabel": "Change language",
+
   "profileCard.contact": "Contact Me",
   "profileCard.job": "Software Engineer",
   "profileCard.online": "Online",

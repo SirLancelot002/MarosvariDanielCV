@@ -13,72 +13,172 @@
         "Git",
         "React",
         "TypeScript",
-        "Tailwind CSS"
+        "Bootstrap"
       ],
       "content": [
         {
           "items": [
             {
               "type": "heading",
-              "text": "Site is under construction.",
+              "text": "Overview",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "This page is not yet finished."
+              "text": "This site is the page you are looking at right now. I built it from scratch with React 19, TypeScript and Vite, using react-router-dom for client-side navigation and Bootstrap's grid system for responsive layouts. Rather than hard-coding pages, most of the content you see - this very project, its sections, images and links - is driven by structured JSON, so the whole site behaves more like a small content-management system than a static page."
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Gameplay screenshot",
-              "alt": "Gameplay screenshot"
+              "src": "projects/cv-website-landingpage.webp",
+              "caption": "Landing page with the animated background and profile card",
+              "alt": "Landing page of the CV website"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Multilingual with i18next",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "The entire interface, including every project and study page, is available in English and Hungarian. I used i18next and react-i18next to manage translations, with all UI strings kept in dedicated locale JSON files and all long-form content (like this description) kept side-by-side as \"en\" and \"hu\" fields on each data entry. Switching languages is instant, does not reload the page, and is exposed through a dedicated language menu in the navigation bar.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-website-langchange.webp",
+              "caption": "Language switcher with flag icons",
+              "alt": "Language menu showing English and Hungarian options",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Animated navigation",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Navigation is handled by a custom pill-shaped nav bar that highlights the active route and slides a floating indicator between links as you move between pages, with a mobile hamburger variant that expands into a full menu. The same bar hosts the language and graphics-quality menus, both of which animate open and closed and close automatically when you click outside of them.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-website-navbar.webp",
+              "caption": "Pill navigation bar with the active-route indicator",
+              "alt": "Animated pill navigation bar",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Adaptive graphics quality",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "The landing page uses WebGL/Three.js backgrounds and several GSAP/Motion-driven effects, which can be heavy on lower-end devices. To keep the experience smooth for everyone, a custom hook estimates a sensible quality level from the device's CPU core count, memory and the user's reduced-motion preference, then briefly measures actual frame rate on first load to confirm or adjust it. The result is cached in local storage for a week, and can be overridden at any time through a quality menu, with the choice applied live across every animated component on the page."
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-website-qualitychanger.webp",
+              "caption": "Quality menu with low, medium and high presets",
+              "alt": "Graphics quality selection menu"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Data-driven and easy to extend",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Every project and study on this site is a single JSON file describing its metadata (dates, tags, colour, level) and its content as a list of sections, where each section is a list of items - headings, paragraphs, images or links. Vite's import.meta.glob loads every file under data/projects at build time and sorts them by end date automatically, so adding a new project to the site is as simple as dropping in a new JSON file; no component code needs to change.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "The same content model also drives the layout: each item can carry an optional Bootstrap column weight, so two items placed next to each other with a weight of 6 will render side by side, while an item left without a weight simply takes the full row. This lets me mix full-width text with image/text pairs, or several images in a row, purely by editing data.",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Interactivity and animation",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Almost every element on the site reacts to the user in some way. Cards tilt and glow as the mouse moves over them, buttons have shiny hover sweeps and electric borders, text animates in with type-writer and glitch effects, and page sections reveal themselves as you scroll. These are all built as small, reusable modules on top of GSAP, Motion and OGL/Three.js, so the same effect (say, a tilt card or a glowing border) can be reused across the profile card, project cards and study cards without duplicating logic.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-website-studycard.webp",
+              "caption": "Interactive study card with tilt and glow effects",
+              "alt": "Study card with hover animation",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "paragraph",
+              "text": "The site is continuously deployed straight from the repository, so every change I push is automatically built and published. All of the source code is available on GitHub."
             },
             {
               "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "Site is under construction."
+              "url": "https://github.com/SirLancelot002/MarosvariDanielCV",
+              "text": "View the repository on GitHub"
             }
           ]
         }
       ]
     },
     "hu": {
-      "title": ">Farmer Was Replaced()_",
-      "role": "Globális ranglista elérése programozási versenyben",
-      "shortDescription": ">Farmer Was Replaced()_ egy programozást tanító játék. Versenyszerűen játszottam, és felkerültem a globális ranglistára. Őszintén szólva a játék nem tanított nekem sok újat, mivel ekkor már több éves programozási tapasztalattal rendelkeztem, de a kihívás és a szórakozás miatt játszottam vele. Különösen büszke vagyok az útkereső algoritmusomra, amellyel a körülbelül 271,1 ezer játékos közül a 40. helyet értem el világszerte.",
+      "title": "CV Weboldal",
+      "role": "Személyes projekt, a képességeim bemutatása",
+      "shortDescription": "Ez a személyes CV-weboldalam. Azért terveztem és készítettem, hogy bemutassam a képességeimet és projektjeimet. A weboldal modern webes technológiákat használ, és követi a korszerű webfejlesztési gyakorlatokat.",
       "tags": [
-        "Python",
-        "Útvonal-keresés",
-        "Rendezés",
-        "Aszinkron programozás",
-        "Verseny"
+        "CI/CD",
+        "Git",
+        "React",
+        "TypeScript",
+        "Bootstrap"
       ],
       "content": [
         {
           "items": [
             {
               "type": "heading",
-              "text": "A játék bemutatása a Steam-en:",
+              "text": "Áttekintés",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "Programozz és optimalizálj egy drónt, hogy automatizáld vele a farmot, majd nézd, ahogy elvégzi helyetted a munkát. Gyűjts nyersanyagokat, hogy fejlettebb technológiákat oldj fel, és válj a világ leghatékonyabb gazdájává. Fejleszd problémamegoldó és programozási készségeidet."
-            },
-            {
-              "type": "paragraph",
-              "text": "Egy egyszerű, Pythonhoz hasonló nyelv segítségével programozhatsz egy drónt, amely teljesen automatizálja a különböző, egyébként meglehetősen monoton mezőgazdasági feladatokat. Nagyon kielégítő érzés egyszerűen megnyomni a „végrehajtás” gombot, majd nézni, ahogy a drón elvégzi helyetted a nehéz munkát. A legtöbb programozós játékkal ellentétben a játék nem különálló, teljesítendő pályákra van felosztva, hanem folyamatos fejlődést kínál. A gazdálkodás során nyersanyagokat szerzel, amelyeket új technológiák feloldására használhatsz. A programozás egy Pythonhoz hasonló, egyszerű nyelven történik. A játék eleje úgy lett kialakítva, hogy fokozatosan, egyesével vezesse be az összes alapvető programozási fogalmat, amelyre szükséged lesz. Bár minden releváns alapot bemutat, a különböző feladatok megoldásánál már nem fogja a kezed. A megoldásokat neked kell kitalálnod, ami meglehetősen nagy kihívást jelenthet, ha még soha nem programoztál. Tapasztalt programozóként viszont a játék korai szakaszán nagyon gyorsan végig lehet jutni, majd következnek a későbbi, összetettebb feladatok, amelyek továbbra is érdekes kihívásokat kínálnak. Bár a programozási nyelv nem pontosan Python, eléggé hasonlít hozzá ahhoz, hogy a Python IntelliSense megfelelően működjön vele. A kód .py fájlokban tárolódik, és igény szerint külső kódszerkesztőkkel, például a VS Code-dal is szerkeszthető. A „File Watcher” beállítás engedélyezésével a játék automatikusan észleli a külső módosításokat."
+              "text": "Ez az az oldal, amit éppen most nézel. A weboldalt teljesen az alapoktól építettem fel React 19, TypeScript és Vite használatával, a kliensoldali navigációhoz pedig a react-router-domot, a reszponzív elrendezésekhez pedig a Bootstrap grid rendszerét használtam. Ahelyett, hogy az oldalakat egyenként, statikusan kódoltam volna, a látható tartalom nagy része – maga ez a projekt, annak szekciói, képei és hivatkozásai – strukturált JSON-adatokból épül fel. Emiatt az oldal inkább egy kisebb tartalomkezelő rendszerként működik, mint egy egyszerű statikus weboldalként."
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Játékmenet",
-              "alt": "Játékmenet képernyőkép"
-            },
-            {
-              "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "A játék megtekintése a Steam-en"
+              "src": "projects/cv-website-landingpage.webp",
+              "caption": "Kezdőlap animált háttérrel és profilkártyával",
+              "alt": "A CV weboldal kezdőlapja"
             }
           ]
         },
@@ -86,43 +186,19 @@
           "items": [
             {
               "type": "heading",
-              "text": "Az útkereső algoritmusom",
+              "text": "Többnyelvűség i18next segítségével",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "A játék labirintusos kihívásának megoldásához útkeresést alkalmaztam. Az alapvető probléma az volt, hogy a drónnal létrehozunk egy labirintust, amelyben a drón nagyjából középen helyezkedik el. A drón ismeri a saját és a kincs koordinátáit. A kincs begyűjtése helyett lehetőség van annak áthelyezésére egy véletlenszerű helyre, miközben ugyanaz a labirintus marad meg, csak további lyukak keletkeznek a falakon.",
+              "text": "A teljes felület, beleértve az összes projekt- és tanulmányoldalt is, angol és magyar nyelven is elérhető. A fordítások kezeléséhez az i18next és a react-i18next könyvtárakat használtam. A felület szövegei külön locale JSON-fájlokban találhatók, míg a hosszabb tartalmak (például ez a leírás) minden egyes adatelemen belül egymás mellett, \"en\" és \"hu\" mezőkben szerepelnek. A nyelvváltás azonnal megtörténik az oldal újratöltése nélkül, és a navigációs sávban található külön nyelvi menüből érhető el.",
               "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-small-maze.webp",
-              "caption": "A labirintus felfedezése",
-              "alt": "A labirintus felfedezése",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-code.webp",
-              "caption": "Útvonal-kereső kód",
-              "alt": "Útvonal-kereső kód",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A problémára adott megoldásom az volt, hogy feltérképeztem a labirintust, majd egy útkereső algoritmussal eljutottam a kincshez. Mivel a már feltérképezett labirintus újrahasználata sokkal hatékonyabb, mint minden alkalommal egy új labirintus felfedezése, először magát a labirintust kellett feltérképeznem. Úgy alakítottam ki a rendszert, hogy a drón a felfedezés során folyamatosan próbáljon közelebb kerülni a kincshez. Így előbb-utóbb egy zsákutcába (vagy magához a kincshez) jut. Ekkor útkeresést indít a már látott, de még fel nem fedezett, a kincshez legközelebb eső cellához. Ezután folytatja a felfedezést. Ha megtalálta a kincset, áthelyezi azt, majd ismét útkereséssel próbál eljutni hozzá. Az útvonalak megtalálásához egy módosított A* algoritmust használok, amely képes megtalálni a kincshez vezető legrövidebb utat.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A munkám meghozta az eredményét: a körülbelül 271,1 ezer játékos közül világszerte a 40. helyet értem el. Nagyon büszke vagyok erre az eredményre. Fontos azonban hozzátenni, hogy ez az egyetlen drón kategóriában elért helyezésem, ahol egyszerre csak egy drónt lehetett használni. A többdrónos kategóriában akár 32 drón is használható volt. Ott is megpróbáltam versenyezni, de csak a 200. hely után végeztem. A legjobb játékosok valamilyen trükköt alkalmaztak, amelyre nem sikerült rájönnöm. A labirintusoknak négyzet alakúaknak kellett lenniük, miközben a pálya 32×32 cellából állt. Egy 32×32-es területet azonban nem lehet egyszerűen 32 négyzetre felosztani, ezért én csak 16 drónt használtam.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-leaderboard.webp",
-              "caption": "Ranglista képernyőkép",
-              "alt": "Ranglista képernyőkép",
+              "src": "projects/cv-website-langchange.webp",
+              "caption": "Nyelvváltó zászlóikonokkal",
+              "alt": "Angol és magyar lehetőségeket megjelenítő nyelvi menü",
               "weight": 6
             }
           ]
@@ -131,31 +207,78 @@
           "items": [
             {
               "type": "heading",
-              "text": "A másik két eredményem",
+              "text": "Animált navigáció",
               "level": 2
             },
             {
-              "type": "image",
-              "src": "projects/fwr-cactus.webp",
-              "alt": "Kaktusz ranglista",
-              "caption": "Kaktusz ranglista",
-              "weight": 6
-            },
-            {
               "type": "paragraph",
-              "text": "A kaktuszos ranglistára is sikerült felkerülnöm. A kaktusz kihívása az, hogy csak akkor lehet betakarítani, ha tőle északra vagy keletre nincs nála nagyobb kaktusz. Ez azt jelenti, hogy a kaktuszokat egy mátrixban kell megfelelő sorrendbe rendezni. Ezt több drón használatával oldottam meg, vagyis a feladat aszinkron változatát készítettem el. Először minden drón a saját sorát rendezte, majd a következő drónhullám az oszlopokat rendezte.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A következő kihívásom a napraforgók voltak. Itt az jelentette a nehézséget, hogy a mezőn csak a legnagyobb napraforgókat lehetett betakarítani. Ehhez egy hatékony feltérképező algoritmust kellett készítenem. Ezután a vezérdrón betakarító drónok hullámait indította útnak, amelyek az adott szinten található összes legnagyobb napraforgót begyűjtötték, majd következett a következő hullám.",
+              "text": "A navigációt egy egyedi, kapszula alakú navigációs sáv kezeli, amely kiemeli az aktuális oldalt, és egy lebegő jelzőt csúsztat a hivatkozások között, amikor egyik oldalról a másikra navigálsz. Mobilon ugyanez egy hamburger menü formájában jelenik meg, amely teljes menüvé nyílik ki. Ugyanebben a sávban található a nyelv- és grafikai minőség menüje is. Mindkettő animáltan nyílik ki és záródik be, illetve automatikusan bezárul, ha a felhasználó rajtuk kívülre kattint.",
               "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-sunflower.webp",
-              "alt": "Napraforgó ranglista",
-              "caption": "Napraforgó ranglista",
+              "src": "projects/cv-website-navbar.webp",
+              "caption": "Kapszula alakú navigációs sáv az aktív oldal jelzőjével",
+              "alt": "Animált kapszula alakú navigációs sáv",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Adaptív grafikai minőség",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "A kezdőoldal WebGL/Three.js háttereket és több, GSAP/Motion segítségével létrehozott effektet használ, amelyek gyengébb eszközökön megterhelőek lehetnek. Annak érdekében, hogy az élmény mindenki számára gördülékeny maradjon, egy egyedi hook a processzormagok száma, a memória és a felhasználó csökkentett mozgásra vonatkozó beállítása alapján megbecsüli a megfelelő minőségi szintet. Az első betöltéskor röviden a tényleges képkockasebességet is megméri, hogy megerősítse vagy szükség esetén módosítsa ezt az értéket. Az eredményt egy hétig local storage-ban tárolja, és a felhasználó bármikor felülírhatja a grafikai minőség menüjében. A választás az oldalon található összes animált komponensre azonnal érvényesül."
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-website-qualitychanger.webp",
+              "caption": "Grafikai minőség menü alacsony, közepes és magas beállításokkal",
+              "alt": "Grafikai minőség kiválasztására szolgáló menü"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Adatalapú és könnyen bővíthető",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Az oldalon található minden projekt és tanulmány egyetlen JSON-fájl, amely leírja a hozzá tartozó metaadatokat (dátumok, címkék, szín, szint), valamint a tartalmat szekciók listájaként. Minden szekció elemekből – címekből, bekezdésekből, képekből vagy hivatkozásokból – áll. A Vite import.meta.glob funkciója build időben betölti a data/projects alatt található összes fájlt, majd automatikusan a befejezési dátumuk szerint rendezi őket. Így egy új projekt hozzáadása mindössze egy új JSON-fájl létrehozását igényli; a komponensek kódját egyáltalán nem kell módosítani.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "Ugyanez az adatszerkezet határozza meg az elrendezést is: minden elemhez opcionálisan megadható egy Bootstrap oszlopszélesség. Így két, egymás mellé helyezett, 6-os súlyú elem egymás mellett jelenik meg, míg egy súly nélkül hagyott elem a teljes sort elfoglalja. Ennek köszönhetően teljes szélességű szövegeket, kép-szöveg párokat vagy akár több egymás melletti képet is létrehozhatok pusztán az adatok módosításával.",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Interaktivitás és animáció",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Az oldalon szinte minden elem reagál valamilyen módon a felhasználóra. A kártyák a kurzor mozgására elfordulnak és felizzanak, a gombokon fényes hover-effektek és elektromos hatású keretek jelennek meg, a szövegek írógép- és glitch-effektekkel animálódnak, az oldal egyes részei pedig görgetés közben jelennek meg. Ezek mind kisebb, újrafelhasználható modulokként készültek GSAP, Motion és OGL/Three.js segítségével, így ugyanaz az effekt – például egy dönthető kártya vagy egy világító keret – több helyen is felhasználható anélkül, hogy a hozzá tartozó logikát újra kellene írni.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/cv-website-studycard.webp",
+              "caption": "Interaktív tanulmánykártya fényhatásokkal",
+              "alt": "Hover animációval ellátott tanulmánykártya",
               "weight": 6
             }
           ]
@@ -164,12 +287,12 @@
           "items": [
             {
               "type": "paragraph",
-              "text": "Készítettem egy útmutatót is a játékhoz, és az összes fájlomat feltöltöttem GitHubra."
+              "text": "Az oldal közvetlenül a repositoryból kerül folyamatosan deployolásra, így minden feltöltött módosítás automatikusan buildelődik és publikálódik. A teljes forráskód elérhető a GitHubon."
             },
             {
               "type": "link",
-              "url": "https://github.com/SirLancelot002/TheFarmerWasReplaced",
-              "text": "Repository megtekintése a GitHubon"
+              "url": "https://github.com/SirLancelot002/MarosvariDanielCV",
+              "text": "A repository megtekintése a GitHubon"
             }
           ]
         }

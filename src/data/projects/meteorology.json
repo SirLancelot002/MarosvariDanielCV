@@ -1,6 +1,6 @@
 {
   "id": "meteorology",
-  "level": 4,
+  "level": 5,
   "color": "#61dca3",
   "startDate": "2025-11-26",
   "endDate": "2025-12-10",
@@ -8,7 +8,7 @@
     "en": {
       "title": "Meteorology",
       "role": "University grand project",
-      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used High level programming, and OOP programming.",
+      "shortDescription": "This was a grand team project at the end of the semester. We had to form 4 person teams. I only got a 2 person team, and my team mate was more on the network an maintanance side, so I had to work three times as hard. The task required us to be very flexible with the json we had to read the data from. We used Higher-Order programming, and OOP programming.",
       "tags": [
         "C#",
         "OOP",
@@ -20,65 +20,152 @@
           "items": [
             {
               "type": "heading",
-              "text": "Site is under construction.",
+              "text": "Overview",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "This page is not yet finished."
+              "text": "Meteorology is a console-based C# application for ingesting, storing, and analyzing timestamped environmental measurements — temperature, humidity, wind speed, and air pressure. It supports importing data from external files, generating synthetic time series, browsing and filtering the dataset, running statistical analyses, and exporting everything back out."
+            },
+            {
+              "type": "heading",
+              "text": "Architecture",
+              "level": 3
+            },
+            {
+              "type": "paragraph",
+              "text": "The core is an abstract DataNode class, with each measurement type (TemperatureNode, Humidity, WindSpeed, Pressure) supplying its own unit-conversion table. A DataNodeFactory uses reflection to inspect these tables at runtime and instantiate the correct subclass for any recognized unit, so new measurement types slot in without touching the factory or the parser.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "All active data is held in memory by a MeasurementSystem, which keeps a separate time-ordered linked list per data type. New entries are inserted from whichever end of the list is closer in time, keeping insertion cheap even as the dataset grows into the tens of thousands.",
+              "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Gameplay screenshot",
-              "alt": "Gameplay screenshot"
+              "src": "projects/meterology-classes.webp",
+              "caption": "UML class diagram — DataNode hierarchy, MeasurementSystem, and DataNodeFactory",
+              "alt": "Class diagram of the Meteorology project"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Higher-Order Programming",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "Unit conversion is built entirely on functions as data: each measurement type stores a dictionary of unit names mapped to a pair of Func<double,double> delegates (ToBase and FromBase). Converting a value is just looking up and invoking the right function pair, instead of branching through a switch statement for every supported unit.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "The menu system works the same way: User holds its available actions as a List<Action>, populated with method references (LoadData, ShowData, Analyse, etc.). Admin inherits that list and appends two more delegates, so logging in and out of Admin just swaps which functions are in the list — the menu-rendering code never needs to know what it's calling.",
+              "weight": 6
+            },
+            {
+              "type": "heading",
+              "text": "Key Features",
+              "level": 3
+            },
+            {
+              "type": "paragraph",
+              "text": "Data can be imported through a deliberately fault-tolerant custom parser that skips malformed rows instead of halting, or generated synthetically within configurable value and time ranges. Users can browse and filter the dataset by measurement type, value range, or date range, and request overall or day-by-day statistics (min, max, average, count). The Admin role adds the ability to wipe the dataset entirely or change the default display unit per measurement type."
+            },
+            {
+              "type": "image",
+              "src": "projects/meterology-gigaload.webp",
+              "caption": "Console session — importing data, filtering, and viewing statistics",
+              "alt": "Console screenshot showing the Meteorology CLI menu"
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Testing & Performance",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "text": "The data-storage layer (unit conversion and the measurement system) is covered by 24 unit tests, while the console-driven user flows were verified manually. Since the spec required handling several thousand data points without slowdown, I profiled the system against files with 35,000+ generated entries.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/meterology-ram-diagnostics.webp",
+              "caption": "Diagnostics session — Memory usage while processing 35,000+ data points",
+              "alt": "Performance profiler screenshot",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "CPU usage stayed low throughout the full profiling run — importing, generating, exporting, and walking every menu option — confirming the linked-list-per-type design scales comfortably past the required data volume.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/meterology-cpu-diagnostics.webp",
+              "caption": "Diagnostics session — CPU usage while processing 35,000+ data points",
+              "alt": "Performance profiler screenshot",
+              "weight": 6
             },
             {
               "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "Site is under construction."
+              "url": "https://github.com/SirLancelot002/meteorology",
+              "text": "View source and detailed documentation on GitHub"
             }
           ]
         }
       ]
     },
     "hu": {
-      "title": ">Farmer Was Replaced()_",
-      "role": "Globális ranglista elérése programozási versenyben",
-      "shortDescription": ">Farmer Was Replaced()_ egy programozást tanító játék. Versenyszerűen játszottam, és felkerültem a globális ranglistára. Őszintén szólva a játék nem tanított nekem sok újat, mivel ekkor már több éves programozási tapasztalattal rendelkeztem, de a kihívás és a szórakozás miatt játszottam vele. Különösen büszke vagyok az útkereső algoritmusomra, amellyel a körülbelül 271,1 ezer játékos közül a 40. helyet értem el világszerte.",
+      "title": "Meteorológia",
+      "role": "Egyetemi nagyprojekt",
+      "shortDescription": "Ez egy nagyobb csapatprojekt volt a félév végén. Négyfős csapatokat kellett alkotnunk, de nekem csak egy kétszemélyes csapat jutott, ráadásul a csapattársam inkább a hálózati és karbantartási feladatokkal foglalkozott, így nekem körülbelül háromszor annyi fejlesztési munkát kellett elvégeznem. A feladat megkövetelte, hogy nagyon rugalmasan kezeljük a beolvasott JSON adatstruktúráját. Magas szintű programozást és objektumorientált programozást alkalmaztunk.",
       "tags": [
-        "Python",
-        "Útvonal-keresés",
-        "Rendezés",
-        "Aszinkron programozás",
-        "Verseny"
+        "C#",
+        "OOP",
+        "NoSQL",
+        "Nagy adatmennyiség"
       ],
       "content": [
         {
           "items": [
             {
               "type": "heading",
-              "text": "A játék bemutatása a Steam-en:",
+              "text": "Áttekintés",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "Programozz és optimalizálj egy drónt, hogy automatizáld vele a farmot, majd nézd, ahogy elvégzi helyetted a munkát. Gyűjts nyersanyagokat, hogy fejlettebb technológiákat oldj fel, és válj a világ leghatékonyabb gazdájává. Fejleszd problémamegoldó és programozási készségeidet."
+              "text": "A Meteorology egy konzolalapú C# alkalmazás időbélyeggel ellátott környezeti mérések — hőmérséklet, páratartalom, szélsebesség és légnyomás — beolvasására, tárolására és elemzésére. Támogatja külső fájlokból származó adatok importálását, szintetikus idősorok generálását, az adathalmaz böngészését és szűrését, statisztikai elemzések futtatását, valamint az adatok exportálását."
+            },
+            {
+              "type": "heading",
+              "text": "Architektúra",
+              "level": 3
             },
             {
               "type": "paragraph",
-              "text": "Egy egyszerű, Pythonhoz hasonló nyelv segítségével programozhatsz egy drónt, amely teljesen automatizálja a különböző, egyébként meglehetősen monoton mezőgazdasági feladatokat. Nagyon kielégítő érzés egyszerűen megnyomni a „végrehajtás” gombot, majd nézni, ahogy a drón elvégzi helyetted a nehéz munkát. A legtöbb programozós játékkal ellentétben a játék nem különálló, teljesítendő pályákra van felosztva, hanem folyamatos fejlődést kínál. A gazdálkodás során nyersanyagokat szerzel, amelyeket új technológiák feloldására használhatsz. A programozás egy Pythonhoz hasonló, egyszerű nyelven történik. A játék eleje úgy lett kialakítva, hogy fokozatosan, egyesével vezesse be az összes alapvető programozási fogalmat, amelyre szükséged lesz. Bár minden releváns alapot bemutat, a különböző feladatok megoldásánál már nem fogja a kezed. A megoldásokat neked kell kitalálnod, ami meglehetősen nagy kihívást jelenthet, ha még soha nem programoztál. Tapasztalt programozóként viszont a játék korai szakaszán nagyon gyorsan végig lehet jutni, majd következnek a későbbi, összetettebb feladatok, amelyek továbbra is érdekes kihívásokat kínálnak. Bár a programozási nyelv nem pontosan Python, eléggé hasonlít hozzá ahhoz, hogy a Python IntelliSense megfelelően működjön vele. A kód .py fájlokban tárolódik, és igény szerint külső kódszerkesztőkkel, például a VS Code-dal is szerkeszthető. A „File Watcher” beállítás engedélyezésével a játék automatikusan észleli a külső módosításokat."
+              "text": "A rendszer magját egy absztrakt DataNode osztály alkotja, amelynél minden mérési típus (TemperatureNode, HumidityNode, WindSpeed, Pressure) saját mértékegység-átváltási táblázattal rendelkezik. A DataNodeFactory reflection segítségével futásidőben megvizsgálja ezeket a táblázatokat, és a felismert mértékegységhez létrehozza a megfelelő leszármazott osztály példányát. Ennek köszönhetően új mérési típusok is könnyen hozzáadhatók anélkül, hogy módosítani kellene a factoryt vagy a parsert.",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "Az összes aktív adatot egy MeasurementSystem tárolja memóriában, amely minden adattípushoz külön, időrendbe rendezett láncolt listát tart fenn. Az új elemek mindig a lista azon végéhez kerülnek, amelyik időben közelebb van az új méréshez, így a beszúrás hatékony marad akkor is, amikor az adathalmaz több tízezer elemre nő.",
+              "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-gameplay.webp",
-              "caption": "Játékmenet",
-              "alt": "Játékmenet képernyőkép"
-            },
-            {
-              "type": "link",
-              "url": "https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/",
-              "text": "A játék megtekintése a Steam-en"
+              "src": "projects/meterology-classes.webp",
+              "caption": "UML osztálydiagram — DataNode hierarchia, MeasurementSystem és DataNodeFactory",
+              "alt": "A Meteorology projekt osztálydiagramja"
             }
           ]
         },
@@ -86,44 +173,33 @@
           "items": [
             {
               "type": "heading",
-              "text": "Az útkereső algoritmusom",
+              "text": "Magasabb rendű programozás",
               "level": 2
             },
             {
               "type": "paragraph",
-              "text": "A játék labirintusos kihívásának megoldásához útkeresést alkalmaztam. Az alapvető probléma az volt, hogy a drónnal létrehozunk egy labirintust, amelyben a drón nagyjából középen helyezkedik el. A drón ismeri a saját és a kincs koordinátáit. A kincs begyűjtése helyett lehetőség van annak áthelyezésére egy véletlenszerű helyre, miközben ugyanaz a labirintus marad meg, csak további lyukak keletkeznek a falakon.",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-small-maze.webp",
-              "caption": "A labirintus felfedezése",
-              "alt": "A labirintus felfedezése",
-              "weight": 6
-            },
-            {
-              "type": "image",
-              "src": "projects/fwr-maze-code.webp",
-              "caption": "Útvonal-kereső kód",
-              "alt": "Útvonal-kereső kód",
+              "text": "A mértékegység-átváltás teljes egészében a függvények adatként való kezelésére épül: minden mérési típus egy szótárban tárolja a mértékegységek neveit, amelyekhez egy-egy Func<double,double> delegáltpár (ToBase és FromBase) tartozik. Egy érték átváltása így egyszerűen a megfelelő függvénypár kikeresését és meghívását jelenti, ahelyett hogy minden támogatott mértékegységhez külön switch ágat kellene írni.",
               "weight": 6
             },
             {
               "type": "paragraph",
-              "text": "A problémára adott megoldásom az volt, hogy feltérképeztem a labirintust, majd egy útkereső algoritmussal eljutottam a kincshez. Mivel a már feltérképezett labirintus újrahasználata sokkal hatékonyabb, mint minden alkalommal egy új labirintus felfedezése, először magát a labirintust kellett feltérképeznem. Úgy alakítottam ki a rendszert, hogy a drón a felfedezés során folyamatosan próbáljon közelebb kerülni a kincshez. Így előbb-utóbb egy zsákutcába (vagy magához a kincshez) jut. Ekkor útkeresést indít a már látott, de még fel nem fedezett, a kincshez legközelebb eső cellához. Ezután folytatja a felfedezést. Ha megtalálta a kincset, áthelyezi azt, majd ismét útkereséssel próbál eljutni hozzá. Az útvonalak megtalálásához egy módosított A* algoritmust használok, amely képes megtalálni a kincshez vezető legrövidebb utat.",
+              "text": "A menürendszer ugyanilyen elven működik: a User az elérhető műveleteit egy List<Action> listában tárolja, amely metódusreferenciákkal (LoadData, ShowData, Analyse stb.) van feltöltve. Az Admin ebből a listából örököl, majd két további delegáltat ad hozzá. Így az Admin be- és kijelentkezése egyszerűen azt határozza meg, hogy mely függvények szerepelnek a listában — a menü megjelenítéséért felelős kódnak nem kell tudnia, hogy pontosan milyen műveleteket hív meg.",
               "weight": 6
+            },
+            {
+              "type": "heading",
+              "text": "Főbb funkciók",
+              "level": 3
             },
             {
               "type": "paragraph",
-              "text": "A munkám meghozta az eredményét: a körülbelül 271,1 ezer játékos közül világszerte a 40. helyet értem el. Nagyon büszke vagyok erre az eredményre. Fontos azonban hozzátenni, hogy ez az egyetlen drón kategóriában elért helyezésem, ahol egyszerre csak egy drónt lehetett használni. A többdrónos kategóriában akár 32 drón is használható volt. Ott is megpróbáltam versenyezni, de csak a 200. hely után végeztem. A legjobb játékosok valamilyen trükköt alkalmaztak, amelyre nem sikerült rájönnöm. A labirintusoknak négyzet alakúaknak kellett lenniük, miközben a pálya 32×32 cellából állt. Egy 32×32-es területet azonban nem lehet egyszerűen 32 négyzetre felosztani, ezért én csak 16 drónt használtam.",
-              "weight": 6
+              "text": "Az adatok egy szándékosan hibatűrő egyedi parseren keresztül importálhatók, amely hibás sorok esetén folytatja a feldolgozást ahelyett, hogy leállna. Emellett konfigurálható érték- és időtartományok alapján szintetikus adatok is generálhatók. A felhasználók mérési típus, értéktartomány vagy dátumtartomány alapján böngészhetik és szűrhetik az adathalmazt, valamint általános vagy napi bontású statisztikákat (minimum, maximum, átlag, darabszám) kérhetnek. Az Admin szerepkör lehetővé teszi a teljes adathalmaz törlését, illetve az egyes mérési típusok alapértelmezett megjelenítési mértékegységének módosítását."
             },
             {
               "type": "image",
-              "src": "projects/fwr-maze-leaderboard.webp",
-              "caption": "Ranglista képernyőkép",
-              "alt": "Ranglista képernyőkép",
-              "weight": 6
+              "src": "projects/meterology-gigaload.webp",
+              "caption": "Konzolos munkamenet — adatok importálása, szűrése és statisztikák megtekintése",
+              "alt": "A Meteorology CLI menüjét megjelenítő konzol képernyőképe"
             }
           ]
         },
@@ -131,45 +207,37 @@
           "items": [
             {
               "type": "heading",
-              "text": "A másik két eredményem",
+              "text": "Tesztelés és teljesítmény",
               "level": 2
             },
             {
-              "type": "image",
-              "src": "projects/fwr-cactus.webp",
-              "alt": "Kaktusz ranglista",
-              "caption": "Kaktusz ranglista",
-              "weight": 6
-            },
-            {
               "type": "paragraph",
-              "text": "A kaktuszos ranglistára is sikerült felkerülnöm. A kaktusz kihívása az, hogy csak akkor lehet betakarítani, ha tőle északra vagy keletre nincs nála nagyobb kaktusz. Ez azt jelenti, hogy a kaktuszokat egy mátrixban kell megfelelő sorrendbe rendezni. Ezt több drón használatával oldottam meg, vagyis a feladat aszinkron változatát készítettem el. Először minden drón a saját sorát rendezte, majd a következő drónhullám az oszlopokat rendezte.",
-              "weight": 6
-            },
-            {
-              "type": "paragraph",
-              "text": "A következő kihívásom a napraforgók voltak. Itt az jelentette a nehézséget, hogy a mezőn csak a legnagyobb napraforgókat lehetett betakarítani. Ehhez egy hatékony feltérképező algoritmust kellett készítenem. Ezután a vezérdrón betakarító drónok hullámait indította útnak, amelyek az adott szinten található összes legnagyobb napraforgót begyűjtötték, majd következett a következő hullám.",
+              "text": "Az adattárolási réteget (a mértékegység-átváltást és a mérési rendszert) 24 unit teszt fedi le, míg a konzolalapú felhasználói folyamatokat manuálisan ellenőriztem. Mivel a specifikáció több ezer adatelem lassulás nélküli kezelését követelte meg, a rendszert 35 000-nél is több generált bejegyzést tartalmazó fájlokkal is profilozam.",
               "weight": 6
             },
             {
               "type": "image",
-              "src": "projects/fwr-sunflower.webp",
-              "alt": "Napraforgó ranglista",
-              "caption": "Napraforgó ranglista",
+              "src": "projects/meterology-ram-diagnostics.webp",
+              "caption": "Diagnosztikai munkamenet — memóriahasználat 35 000+ adatelem feldolgozása közben",
+              "alt": "Teljesítményprofilozó képernyőképe",
               "weight": 6
-            }
-          ]
-        },
-        {
-          "items": [
+            },
             {
               "type": "paragraph",
-              "text": "Készítettem egy útmutatót is a játékhoz, és az összes fájlomat feltöltöttem GitHubra."
+              "text": "A CPU-használat a teljes profilozás során alacsony maradt — az importálás, generálás, exportálás és az összes menüpont végigjárása közben is — ami megerősítette, hogy az adattípusonként külön láncolt listát használó megoldás a szükséges adatmennyiségen jóval túl is képes hatékonyan működni.",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "projects/meterology-cpu-diagnostics.webp",
+              "caption": "Diagnosztikai munkamenet — CPU-használat 35 000+ adatelem feldolgozása közben",
+              "alt": "Teljesítményprofilozó képernyőképe",
+              "weight": 6
             },
             {
               "type": "link",
-              "url": "https://github.com/SirLancelot002/TheFarmerWasReplaced",
-              "text": "Repository megtekintése a GitHubon"
+              "url": "https://github.com/SirLancelot002/meteorology",
+              "text": "Forráskód és részletes dokumentáció megtekintése a GitHubon"
             }
           ]
         }

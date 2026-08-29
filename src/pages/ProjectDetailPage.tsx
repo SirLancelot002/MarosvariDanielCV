@@ -12,6 +12,7 @@ import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
 import { getBlockColumnClasses } from '../utils/blockLayout';
+import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
 
@@ -19,10 +20,30 @@ function ProjectDetailPage() {
     const { id } = useParams<{ id: string }>();
     const { t, i18n } = useTranslation();
     const lang = i18n.language === 'hu' ? 'hu' : 'en';
+    const quality = useAdaptiveQuality();
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, [id]);
+
+    // Bigger squares (in rem, so they stay square and consistent across screens) and a lower render resolution are cheaper to shade.
+    let squareSizeRem = 1.75;
+    let terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    switch (quality) {
+        case 'low':
+            squareSizeRem = 6;
+            terminalDpr = 1;
+            break;
+        case 'medium':
+            squareSizeRem = 4;
+            terminalDpr = Math.min(window.devicePixelRatio || 1, 1.5);
+            break;
+        case 'high':
+            squareSizeRem = 2.25;
+            terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
+            break;
+    }
 
     const project = projects.find(p => p.id === id);
 
@@ -38,8 +59,9 @@ function ProjectDetailPage() {
             <div className="studies-bg-fixed project-detail-bg-fixed">
                 <FaultyTerminal
                     scale={1.5}
-                    gridMul={[2, 1]}
+                    squareSizeRem={squareSizeRem}
                     digitSize={1.2}
+                    dpr={terminalDpr}
                     timeScale={0.5}
                     pause={false}
                     scanlineIntensity={0.5}
@@ -73,12 +95,6 @@ function ProjectDetailPage() {
                                 </div>
                             </div>
                         </div>
-
-                        {project.headerSrc && (
-                            <div className="project-detail__header-image">
-                                <img src={publicAsset(project.headerSrc)} alt="" />
-                            </div>
-                        )}
 
                         <header className="project-detail__header">
                             <h1 className="project-detail__title">

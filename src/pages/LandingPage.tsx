@@ -61,10 +61,10 @@ function LandingPage() {
 
   switch (quality) {
     case 'low':
-      ballCount = 25;
+      ballCount = 10;
       break;
     case 'medium':
-      ballCount = 50;
+      ballCount = 35;
       break;
     case 'high':
       ballCount = 75;

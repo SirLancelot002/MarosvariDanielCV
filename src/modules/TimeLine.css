@@ -8,7 +8,7 @@
   --label-gap: 16px;
   --label-width: 200px;
   --preview-gap: 20px;
-  --preview-width: 340px;
+  --preview-width: 440px;
 }
 
 .timeline__line {
@@ -53,6 +53,54 @@
   position: absolute;
   left: 0;
   right: 0;
+  /* Lane 0 hugs the line; each lane further out reserves a full label's width so titles from
+     overlapping events never collide, on any screen size. */
+  --ribbon-extra: calc(var(--lane, 0) * 40px);
+  --label-offset: calc(var(--lane, 0) * (var(--label-width) + var(--label-gap)));
+  --span-offset: calc(var(--lane, 0) * 7px);
+}
+
+/* Marks the event's real start/end directly on the spine (offset per lane so overlapping events'
+   marks don't merge), with tick caps at both ends. Sized/positioned off the true (un-stretched) start/end
+   even when the parent box was padded up to a minimum height for label spacing. */
+.timeline-event__span {
+  position: absolute;
+  top: var(--spine-top, 0);
+  height: var(--spine-height, 100%);
+  width: 2px;
+  background: var(--event-color);
+  opacity: 0.85;
+  transition: filter 0.2s ease;
+}
+
+.timeline-event__span::before,
+.timeline-event__span::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  background: var(--event-color);
+  transform: translateX(-50%);
+}
+
+.timeline-event__span::before {
+  top: 0;
+}
+
+.timeline-event__span::after {
+  bottom: 0;
+}
+
+/* Ties the spine mark to this event's dot/label, so it's obvious which title belongs to which mark. */
+.timeline-event__connector {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: var(--event-color);
+  opacity: 0.6;
+  transform: translateY(-50%);
+  transition: filter 0.2s ease;
 }
 
 .timeline-event__dot {
@@ -62,35 +110,30 @@
   height: 13px;
   border-radius: 50%;
   background: var(--event-color);
-  box-shadow: 0 0 10px var(--event-color), 0 0 2px rgba(255, 255, 255, 0.6);
   transition: filter 0.2s ease;
   z-index: 2;
-}
-
-.timeline-event__ribbon {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: var(--ribbon-width);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 14%, black 86%, transparent);
-  mask-image: linear-gradient(to bottom, transparent, black 14%, black 86%, transparent);
-  transition: filter 0.2s ease;
 }
 
 .timeline-event__label {
   position: absolute;
   top: 50%;
   width: var(--label-width);
+  box-sizing: border-box;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  background: none;
+  background: rgba(12, 9, 18, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   border: none;
-  padding: 0;
+  border-radius: 10px;
+  padding: 0.4rem 0.7rem;
   cursor: pointer;
   color: #f5f5f5;
   font: inherit;
+  /* Must sit above the dot/ribbon/span/connector lines, which can otherwise poke over the text. */
+  z-index: 3;
 }
 
 .timeline-event__label:focus-visible {
@@ -112,7 +155,7 @@
 
 .timeline-event__preview {
   position: absolute;
-  top: 50%;
+  top: var(--preview-top, 50%);
   width: var(--preview-width);
   transform: translateY(-50%) scale(0.95);
   opacity: 0;
@@ -122,20 +165,17 @@
   z-index: 5;
 }
 
-.timeline-event:hover,
-.timeline-event.is-open {
+.timeline-event:has(.timeline-event__label:hover) {
   z-index: 20;
 }
 
-.timeline-event:hover .timeline-event__dot,
-.timeline-event.is-open .timeline-event__dot,
-.timeline-event:hover .timeline-event__ribbon,
-.timeline-event.is-open .timeline-event__ribbon {
+.timeline-event:has(.timeline-event__label:hover) .timeline-event__dot,
+.timeline-event:has(.timeline-event__label:hover) .timeline-event__span,
+.timeline-event:has(.timeline-event__label:hover) .timeline-event__connector {
   filter: brightness(1.35);
 }
 
-.timeline-event:hover .timeline-event__preview,
-.timeline-event.is-open .timeline-event__preview,
+.timeline-event__label:hover ~ .timeline-event__preview,
 .timeline-event__label:focus-visible ~ .timeline-event__preview {
   opacity: 1;
   visibility: visible;
@@ -144,53 +184,86 @@
 }
 
 /* Right side (projects, and studies/jobs on mobile): everything grows outward to the right of the line. */
+.timeline-event--right .timeline-event__span {
+  left: calc(var(--line-pos) + var(--span-offset));
+}
+
+.timeline-event--right .timeline-event__connector {
+  left: calc(var(--line-pos) + var(--span-offset));
+  width: calc(var(--ribbon-width) + var(--label-offset) - var(--span-offset));
+}
+
 .timeline-event--right .timeline-event__dot {
-  left: var(--line-pos);
+  left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset));
   transform: translate(-50%, -50%);
 }
 
-.timeline-event--right .timeline-event__ribbon {
-  left: var(--line-pos);
-  background: linear-gradient(to right, var(--event-color), transparent);
-}
-
 .timeline-event--right .timeline-event__label {
-  left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap));
+  left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset) + var(--label-gap));
   text-align: left;
 }
 
 .timeline-event--right .timeline-event__preview {
-  left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap) + var(--label-width) + var(--preview-gap));
-  transform-origin: left center;
+  right: calc(
+    100% - var(--line-pos) - var(--ribbon-width) - var(--label-offset) - var(--label-gap) + var(--preview-gap)
+  );
+  transform-origin: right center;
 }
 
 /* Left side (studies, future jobs): everything grows outward to the left of the line. */
+.timeline-event--left .timeline-event__span {
+  right: calc(var(--line-pos) + var(--span-offset));
+}
+
+.timeline-event--left .timeline-event__connector {
+  right: calc(var(--line-pos) + var(--span-offset));
+  width: calc(var(--ribbon-width) + var(--label-offset) - var(--span-offset));
+}
+
 .timeline-event--left .timeline-event__dot {
-  right: var(--line-pos);
+  right: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset));
   transform: translate(50%, -50%);
 }
 
-.timeline-event--left .timeline-event__ribbon {
-  right: var(--line-pos);
-  background: linear-gradient(to left, var(--event-color), transparent);
-}
-
 .timeline-event--left .timeline-event__label {
-  right: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap));
+  right: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset) + var(--label-gap));
   text-align: right;
   align-items: flex-end;
 }
 
 .timeline-event--left .timeline-event__preview {
-  right: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap) + var(--label-width) + var(--preview-gap));
-  transform-origin: right center;
+  left: calc(
+    var(--line-pos) - var(--ribbon-width) - var(--label-offset) - var(--label-gap) + var(--preview-gap)
+  );
+  transform-origin: left center;
+}
+
+/* Project cards render inside a fairly tight popup here, so their normal glow/vignette backplate (tuned for
+   the wider grid layout on the Projects page) is dropped instead of dimming the preview. */
+.timeline-event__preview .project-card-shell {
+  padding: 0;
+}
+
+.timeline-event__preview .eb-canvas-container {
+  z-index: 4;
+}
+
+.timeline-event__preview .project-card-backplate,
+.timeline-event__preview .project-card-center-vignette {
+  display: none;
+}
+
+/* The backplate/vignette provided the only darkening behind the card content, so restore it directly
+   on the card itself (no glow bleeding past the rounded corners this time). */
+.timeline-event__preview .project-card {
+  background: rgba(0, 0, 0, 0.55);
 }
 
 @media (max-width: 1400px) {
   .timeline {
     --ribbon-width: 52px;
     --label-width: 170px;
-    --preview-width: 300px;
+    --preview-width: 360px;
   }
 }
 
@@ -201,7 +274,7 @@
     --label-gap: 10px;
     --label-width: calc(100vw - 150px);
     --preview-gap: 10px;
-    --preview-width: min(320px, calc(100vw - 60px));
+    --preview-width: min(340px, calc(100vw - 60px));
   }
 
   .timeline__legend {
@@ -209,28 +282,35 @@
   }
 
   /* On narrow screens both sides collapse into a single column right of the line. */
+  .timeline-event--left .timeline-event__span {
+    left: calc(var(--line-pos) + var(--span-offset));
+    right: auto;
+  }
+
+  .timeline-event--left .timeline-event__connector {
+    left: calc(var(--line-pos) + var(--span-offset));
+    right: auto;
+    width: calc(var(--ribbon-width) + var(--label-offset) - var(--span-offset));
+  }
+
   .timeline-event--left .timeline-event__dot {
-    left: var(--line-pos);
+    left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset));
     right: auto;
     transform: translate(-50%, -50%);
   }
 
-  .timeline-event--left .timeline-event__ribbon {
-    left: var(--line-pos);
-    right: auto;
-    background: linear-gradient(to right, var(--event-color), transparent);
-  }
-
   .timeline-event--left .timeline-event__label {
-    left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap));
+    left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset) + var(--label-gap));
     right: auto;
     text-align: left;
     align-items: flex-start;
   }
 
   .timeline-event--left .timeline-event__preview {
-    left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap) + var(--label-width) + var(--preview-gap));
-    right: auto;
-    transform-origin: left center;
+    left: auto;
+    right: calc(
+      100% - var(--line-pos) - var(--ribbon-width) - var(--label-offset) - var(--label-gap) + var(--preview-gap)
+    );
+    transform-origin: right center;
   }
 }

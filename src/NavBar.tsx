@@ -15,9 +15,9 @@ function NavBar() {
         logoAlt="Company Logo"
         items={[
           { label: t("nav.main"), href: '/' },
-          { label: t("nav.time"), href: '/timeline' },
           { label: t("nav.studies"), href: '/studies' },
-          { label: t("nav.projects"), href: '/projects' }
+          { label: t("nav.projects"), href: '/projects' },
+          { label: t("nav.time"), href: '/timeline' }
         ]}
         activeHref={location.pathname}
         className="custom-nav"

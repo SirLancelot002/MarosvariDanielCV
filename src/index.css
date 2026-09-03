@@ -128,7 +128,10 @@ code {
 
 /* My Fixes*/
 
-html, body {
+/* Only html should clip/scroll horizontally: adding overflow-x here too would force
+   its overflow-y to auto as well (per spec), turning body into a second, nested
+   scroll container and causing a duplicate scrollbar. */
+html {
   overflow-x: hidden;
   max-width: 100%;
 }

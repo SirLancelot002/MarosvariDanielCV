@@ -128,10 +128,24 @@ code {
 
 /* My Fixes*/
 
-/* Only html should clip/scroll horizontally: adding overflow-x here too would force
-   its overflow-y to auto as well (per spec), turning body into a second, nested
-   scroll container and causing a duplicate scrollbar. */
+/* html stays the only real scroll container (see below). It also needs to actually
+   clip horizontal overflow, but decorative elements (e.g. project card glow/vignette)
+   are allowed to bleed past their own box and can push body's content past the
+   viewport edge on narrow screens. body must clip that too, using `clip` instead of
+   `hidden` so its overflow-y stays `visible` instead of being forced to `auto`
+   (per spec, an axis set to hidden/scroll forces the other off `visible` unless it's
+   `clip`) -- otherwise body becomes a second, nested scroll container with its own
+   scrollbar. overscroll-behavior stops mobile's rubber-band bounce from dragging the
+   viewport past the real document edges, which used to reveal blank space beyond the
+   fixed background layers.
+*/
 html {
   overflow-x: hidden;
+  max-width: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  overflow-x: clip;
   max-width: 100%;
 }

@@ -88,7 +88,7 @@
     "level": 4,
     "institutionSrc": "https://www.naui.org/learn/continuing-education/advanced-open-water-scuba-diver/",
     "headerSrc": "studies/naui-advanced-header.jpg",
-    "startDate": "2025-08-18",
+    "startDate": "2025-07-18",
     "endDate": "2025-08-25",
     "translations": {
       "en": {
@@ -253,10 +253,10 @@
   },
   {
     "id": "office-it-specialist",
-    "level": 5,
+    "level": 4,
     "institutionSrc": "https://szakkepesites.hu/okj/tanfolyamok/irodai-informatikus",
     "headerSrc": "studies/office-it-specialist-header.jpg",
-    "startDate": "2023-01-14",
+    "startDate": "2023-01-21",
     "endDate": "2023-06-26",
     "translations": {
       "en": {
@@ -283,6 +283,18 @@
             "src": "studies/excel.png",
             "alt": "Excel",
             "caption": "Excel"
+          },
+          {
+            "type": "image",
+            "src": "studies/ITSpec-exam-1st-page.webp",
+            "alt": "First page of the certificate",
+            "caption": "First page of the certificate"
+          },
+          {
+            "type": "image",
+            "src": "studies/ITSpec-exam-2nd-page.webp",
+            "alt": "Second page of the certificate",
+            "caption": "Second page of the certificate"
           }
         ]
       },
@@ -310,6 +322,18 @@
             "src": "studies/excel.png",
             "alt": "Excel",
             "caption": "Microsoft Excel"
+          },
+          {
+            "type": "image",
+            "src": "studies/ITSpec-exam-1st-page.webp",
+            "alt": "A bizonyítvány első oldala",
+            "caption": "A bizonyítvány első oldala"
+          },
+          {
+            "type": "image",
+            "src": "studies/ITSpec-exam-2nd-page.webp",
+            "alt": "A bizonyítvány második oldala",
+            "caption": "A bizonyítvány második oldala"
           }
         ]
       }
@@ -337,6 +361,18 @@
             "src": "studies/eng-flag.svg",
             "alt": "English flag",
             "caption": "English flag"
+          },
+          {
+            "type": "image",
+            "src": "studies/Lang-exam-2nd-page.webp",
+            "alt": "First page of the English language exam",
+            "caption": "First page of the English language exam"
+          },
+          {
+            "type": "image",
+            "src": "studies/Lang-exam-1st-page.webp",
+            "alt": "Second page of the English language exam",
+            "caption": "Second page of the English language exam"
           }
         ]
       },
@@ -354,6 +390,18 @@
             "src": "studies/eng-flag.svg",
             "alt": "Angol zászló",
             "caption": "Angol zászló"
+          },
+          {
+            "type": "image",
+            "src": "studies/Lang-exam-2nd-page.webp",
+            "alt": "A bizonyítvány első oldala",
+            "caption": "A bizonyítvány első oldala"
+          },
+          {
+            "type": "image",
+            "src": "studies/Lang-exam-1st-page.webp",
+            "alt": "A bizonyítvány második oldala",
+            "caption": "A bizonyítvány második oldala"
           }
         ]
       }
@@ -364,7 +412,7 @@
     "level": 3,
     "institutionSrc": "https://www.naui.org/learn/entry-level/open-water-scuba-diver-autonomousiso-level-2/",
     "headerSrc": "studies/naui-basic-header.jpg",
-    "startDate": "2022-08-15",
+    "startDate": "2022-07-15",
     "endDate": "2022-08-22",
     "translations": {
       "en": {
@@ -449,7 +497,7 @@
   },
   {
     "id": "petrik-hs",
-    "level": 4,
+    "level": 5,
     "institutionSrc": "https://petrik.hu",
     "headerSrc": "studies/petrik-header.jpg",
     "startDate": "2019-09-01",
@@ -479,6 +527,18 @@
           {
             "type": "paragraph",
             "text": "Even in the first semester, I had ~12 hours of some kind of programming class per week. We even had Linux and IT Network classes. The pace was laid back, but that just allowed me to research my own interests (like Unreal Engine 5 in 2022). I also participated in National mathematics competitions and I got into the final round in the capital. This gave me the confidence to apply to ELTE, where I got accepted to the BSc in Computer Science program."
+          },
+          {
+            "type": "image",
+            "src": "studies/Final-exam-1st-page.webp",
+            "alt": "First page of the certificate",
+            "caption": "First page of the certificate"
+          },
+          {
+            "type": "image",
+            "src": "studies/Final-exam-2nd-page.webp",
+            "alt": "Second page of the certificate",
+            "caption": "Second page of the certificate"
           }
         ]
       },
@@ -506,6 +566,18 @@
           {
             "type": "paragraph",
             "text": "Már az első félévben heti nagyjából 12 órám volt valamilyen programozáshoz kapcsolódó tárgyból, emellett Linux és informatikai hálózatok óráink is voltak. A tempó kényelmes volt, ami épp lehetőséget adott rá, hogy az egyéni érdeklődési területeimmel is foglalkozzam (például 2022-ben az Unreal Engine 5-tel). Részt vettem országos matematikaversenyeken is, és a fővárosi döntőbe is bejutottam. Ez a siker adta meg az önbizalmat ahhoz, hogy az ELTE-re jelentkezzek, ahová fel is vettek a Programtervező informatikus BSc szakra."
+          },
+          {
+            "type": "image",
+            "src": "studies/Final-exam-1st-page.webp",
+            "alt": "A bizonyítvány első oldala",
+            "caption": "A bizonyítvány első oldala"
+          },
+          {
+            "type": "image",
+            "src": "studies/Final-exam-2nd-page.webp",
+            "alt": "A bizonyítvány második oldala",
+            "caption": "A bizonyítvány második oldala"
           }
         ]
       }

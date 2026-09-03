@@ -53,5 +53,12 @@
   "projects.title3": "Gondosan elkészítve",
   "projects.difficulty": "Nehézség",
   "projects.backToList": "Vissza a projektekhez",
-  "impressed" : "Nagyon lenyűgözött, szeretnélek felvenni, Dani!"
+  "impressed" : "Nagyon lenyűgözött, szeretnélek felvenni, Dani!",
+
+  "timeline.title1": "Az eddigi utam",
+  "timeline.title2": "Tanulmányok és projektek, egymás mellett",
+  "timeline.title3": "Legfelül a legújabb, legalul a legrégebbi",
+  "timeline.studies": "Tanulmányok",
+  "timeline.projects": "Projektek",
+  "timeline.ongoing": "Folyamatban"
 }

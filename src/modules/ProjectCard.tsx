@@ -11,9 +11,10 @@ import './ProjectCard.css';
 
 interface ProjectCardProps {
   project: Project;
+  electricBorderActive?: boolean;
 }
 
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project, electricBorderActive }: ProjectCardProps) {
   const { i18n } = useTranslation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const content = project.translations[lang];
@@ -47,7 +48,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         borderRadius={20}
         className="project-card-border"
         style={{ width: '100%', borderRadius: 20 }}
-        active={isNearViewport}
+        active={electricBorderActive ?? isNearViewport}
       >
         <Link to={`/projects/${project.id}`} className="project-card">
           {project.headerSrc && (

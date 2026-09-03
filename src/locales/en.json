@@ -54,5 +54,12 @@
   "projects.title2": "Take a look!",
   "projects.title3": "Built with care",
   "projects.difficulty": "Difficulty",
-  "projects.backToList": "Back to projects"
+  "projects.backToList": "Back to projects",
+
+  "timeline.title1": "My Journey So Far",
+  "timeline.title2": "Studies and Projects, Side by Side",
+  "timeline.title3": "Newest at the top, oldest at the bottom",
+  "timeline.studies": "Studies",
+  "timeline.projects": "Projects",
+  "timeline.ongoing": "Ongoing"
 }

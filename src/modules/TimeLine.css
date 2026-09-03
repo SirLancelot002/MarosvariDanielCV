@@ -1,0 +1,316 @@
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto 0;
+
+  --line-pos: 50%;
+  --ribbon-width: 64px;
+  --label-gap: 16px;
+  --label-width: 200px;
+  --preview-gap: 20px;
+  --preview-width: 440px;
+}
+
+.timeline__line {
+  position: absolute;
+  left: var(--line-pos);
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 4%,
+    rgba(255, 255, 255, 0.35) 96%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.timeline__legend {
+  position: absolute;
+  top: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.timeline__legend--left {
+  right: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap));
+  text-align: right;
+}
+
+.timeline__legend--right {
+  left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-gap));
+  text-align: left;
+}
+
+.timeline-event {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* Lane 0 hugs the line; each lane further out reserves a full label's width so titles from
+     overlapping events never collide, on any screen size. */
+  --ribbon-extra: calc(var(--lane, 0) * 40px);
+  --label-offset: calc(var(--lane, 0) * (var(--label-width) + var(--label-gap)));
+  --span-offset: calc(var(--lane, 0) * 7px);
+}
+
+/* Marks the event's real start/end directly on the spine (offset per lane so overlapping events'
+   marks don't merge), with tick caps at both ends. Sized/positioned off the true (un-stretched) start/end
+   even when the parent box was padded up to a minimum height for label spacing. */
+.timeline-event__span {
+  position: absolute;
+  top: var(--spine-top, 0);
+  height: var(--spine-height, 100%);
+  width: 2px;
+  background: var(--event-color);
+  opacity: 0.85;
+  transition: filter 0.2s ease;
+}
+
+.timeline-event__span::before,
+.timeline-event__span::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  background: var(--event-color);
+  transform: translateX(-50%);
+}
+
+.timeline-event__span::before {
+  top: 0;
+}
+
+.timeline-event__span::after {
+  bottom: 0;
+}
+
+/* Ties the spine mark to this event's dot/label, so it's obvious which title belongs to which mark. */
+.timeline-event__connector {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: var(--event-color);
+  opacity: 0.6;
+  transform: translateY(-50%);
+  transition: filter 0.2s ease;
+}
+
+.timeline-event__dot {
+  position: absolute;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--event-color);
+  transition: filter 0.2s ease;
+  z-index: 2;
+}
+
+.timeline-event__label {
+  position: absolute;
+  top: 50%;
+  width: var(--label-width);
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: rgba(12, 9, 18, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  color: #f5f5f5;
+  font: inherit;
+  /* Must sit above the dot/ribbon/span/connector lines, which can otherwise poke over the text. */
+  z-index: 3;
+}
+
+.timeline-event__label:focus-visible {
+  outline: 2px solid var(--event-color);
+  outline-offset: 4px;
+}
+
+.timeline-event__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.timeline-event__period {
+  font-size: 0.75rem;
+  color: var(--event-color);
+  opacity: 0.9;
+}
+
+.timeline-event__preview {
+  position: absolute;
+  top: var(--preview-top, 50%);
+  width: var(--preview-width);
+  transform: translateY(-50%) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 5;
+}
+
+.timeline-event:has(.timeline-event__label:hover) {
+  z-index: 20;
+}
+
+.timeline-event:has(.timeline-event__label:hover) .timeline-event__dot,
+.timeline-event:has(.timeline-event__label:hover) .timeline-event__span,
+.timeline-event:has(.timeline-event__label:hover) .timeline-event__connector {
+  filter: brightness(1.35);
+}
+
+.timeline-event__label:hover ~ .timeline-event__preview,
+.timeline-event__label:focus-visible ~ .timeline-event__preview {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1);
+}
+
+/* Right side (projects, and studies/jobs on mobile): everything grows outward to the right of the line. */
+.timeline-event--right .timeline-event__span {
+  left: calc(var(--line-pos) + var(--span-offset));
+}
+
+.timeline-event--right .timeline-event__connector {
+  left: calc(var(--line-pos) + var(--span-offset));
+  width: calc(var(--ribbon-width) + var(--label-offset) - var(--span-offset));
+}
+
+.timeline-event--right .timeline-event__dot {
+  left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset));
+  transform: translate(-50%, -50%);
+}
+
+.timeline-event--right .timeline-event__label {
+  left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset) + var(--label-gap));
+  text-align: left;
+}
+
+.timeline-event--right .timeline-event__preview {
+  right: calc(
+    100% - var(--line-pos) - var(--ribbon-width) - var(--label-offset) - var(--label-gap) + var(--preview-gap)
+  );
+  transform-origin: right center;
+}
+
+/* Left side (studies, future jobs): everything grows outward to the left of the line. */
+.timeline-event--left .timeline-event__span {
+  right: calc(var(--line-pos) + var(--span-offset));
+}
+
+.timeline-event--left .timeline-event__connector {
+  right: calc(var(--line-pos) + var(--span-offset));
+  width: calc(var(--ribbon-width) + var(--label-offset) - var(--span-offset));
+}
+
+.timeline-event--left .timeline-event__dot {
+  right: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset));
+  transform: translate(50%, -50%);
+}
+
+.timeline-event--left .timeline-event__label {
+  right: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset) + var(--label-gap));
+  text-align: right;
+  align-items: flex-end;
+}
+
+.timeline-event--left .timeline-event__preview {
+  left: calc(
+    var(--line-pos) - var(--ribbon-width) - var(--label-offset) - var(--label-gap) + var(--preview-gap)
+  );
+  transform-origin: left center;
+}
+
+/* Project cards render inside a fairly tight popup here, so their normal glow/vignette backplate (tuned for
+   the wider grid layout on the Projects page) is dropped instead of dimming the preview. */
+.timeline-event__preview .project-card-shell {
+  padding: 0;
+}
+
+.timeline-event__preview .eb-canvas-container {
+  z-index: 4;
+}
+
+.timeline-event__preview .project-card-backplate,
+.timeline-event__preview .project-card-center-vignette {
+  display: none;
+}
+
+/* The backplate/vignette provided the only darkening behind the card content, so restore it directly
+   on the card itself (no glow bleeding past the rounded corners this time). */
+.timeline-event__preview .project-card {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 1400px) {
+  .timeline {
+    --ribbon-width: 52px;
+    --label-width: 170px;
+    --preview-width: 360px;
+  }
+}
+
+@media (max-width: 900px) {
+  .timeline {
+    --line-pos: 22px;
+    --ribbon-width: 30px;
+    --label-gap: 10px;
+    --label-width: calc(100vw - 150px);
+    --preview-gap: 10px;
+    --preview-width: min(340px, calc(100vw - 60px));
+  }
+
+  .timeline__legend {
+    display: none;
+  }
+
+  /* On narrow screens both sides collapse into a single column right of the line. */
+  .timeline-event--left .timeline-event__span {
+    left: calc(var(--line-pos) + var(--span-offset));
+    right: auto;
+  }
+
+  .timeline-event--left .timeline-event__connector {
+    left: calc(var(--line-pos) + var(--span-offset));
+    right: auto;
+    width: calc(var(--ribbon-width) + var(--label-offset) - var(--span-offset));
+  }
+
+  .timeline-event--left .timeline-event__dot {
+    left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset));
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-event--left .timeline-event__label {
+    left: calc(var(--line-pos) + var(--ribbon-width) + var(--label-offset) + var(--label-gap));
+    right: auto;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .timeline-event--left .timeline-event__preview {
+    left: auto;
+    right: calc(
+      100% - var(--line-pos) - var(--ribbon-width) - var(--label-offset) - var(--label-gap) + var(--preview-gap)
+    );
+    transform-origin: right center;
+  }
+}

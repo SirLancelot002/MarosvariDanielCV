@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import StudyCard from './StudyCard';
@@ -14,6 +14,38 @@ function TimeLine() {
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [previewTopById, setPreviewTopById] = useState<Map<string, number>>(new Map());
+
+  // Let the border run for a couple of frames, briefly pause it, then restart it:
+  // the restart is what actually snaps the canvas into its correct position.
+  const [borderActive, setBorderActive] = useState(false);
+
+  useEffect(() => {
+    if (hoveredId === null) {
+      setBorderActive(false);
+      return;
+    }
+
+    setBorderActive(true);
+
+    const framesBeforePause = 6;
+    let frame = 0;
+    let rafId = 0;
+
+    const tick = () => {
+      frame += 1;
+      if (frame < framesBeforePause) {
+        rafId = requestAnimationFrame(tick);
+        return;
+      }
+      setBorderActive(false);
+      rafId = requestAnimationFrame(() => {
+        rafId = requestAnimationFrame(() => setBorderActive(true));
+      });
+    };
+
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
+  }, [hoveredId]);
 
   const layout = useMemo(
     () =>
@@ -107,7 +139,7 @@ function TimeLine() {
               {event.kind === 'study' ? (
                 <StudyCard study={event.study!} />
               ) : (
-                <ProjectCard project={event.project!} electricBorderActive={hoveredId === event.id} />
+                <ProjectCard project={event.project!} electricBorderActive={hoveredId === event.id && borderActive} />
               )}
             </div>
           </div>

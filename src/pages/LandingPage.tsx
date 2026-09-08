@@ -11,6 +11,7 @@ import LogoLoop from '../modules/LogoLoop';
 import ShinyText from '../modules/ShinyText';
 import NavBar from '../NavBar';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
+import Lanyard from '../modules/Lanyard';
 
 import avatarImg from '../assets/avatar.png';
 import iconPatternImg from '../assets/iconpattern.png';
@@ -33,6 +34,7 @@ import javalogo from '../assets/javalogo.webp';
 import haskelllogo from '../assets/haskelllogo.webp';
 
 const BIRTH_YEAR = 2003;
+const jobsAsset = (filename: string) => `${import.meta.env.BASE_URL}jobs/${filename}`;
 const imageLoopLogos = [
   { src: gitlogoImg, alt: "My Github Profile", href: "https://github.com/SirLancelot002" },
   { src: reactbitslogoImg, alt: "React Bits", href: "https://reactbits.dev" },
@@ -77,7 +79,7 @@ function LandingPage() {
       <div className="page-upper">
         <div className="lightning-bg">
           <Lightning hue={260} xOffset={0} speed={1} intensity={1} size={1} />
-        </div>
+        </div>        
         <main className="hero-section">
           <TextType
             as="h1"
@@ -94,7 +96,6 @@ function LandingPage() {
         </main>
 
         <NavBar />
-
         <div className="profile-card-outer">
           <div className="profile-card-inner">
             <ProfileCard
@@ -178,6 +179,18 @@ function LandingPage() {
             ariaLabel={t("siteDescription.relevantLinks")}
           />
         </div>
+      </div>
+
+       <div className="landing-lanyard-rest">
+        
+        <Lanyard
+          frontImage={jobsAsset('NISZ_Card_Front.png')}
+          backImage={jobsAsset('NISZ_Card_Back.png')}
+          lanyardImage={jobsAsset('NISZ_Card_Band.png')}
+          position={[0, 0, 30]}
+          gravity={[0, -40, 0]}
+          lanyardWidth={1.15}
+        />
       </div>
     </>
   )

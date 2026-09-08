@@ -30,13 +30,35 @@ interface LanyardProps {
 
 export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], fov = 20, transparent = true, frontImage = null, backImage = null, imageFit = 'cover', lanyardImage = null, lanyardWidth = 1 }: LanyardProps) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
+  const [rendererKey, setRendererKey] = useState(0);
+  const [canvasReady, setCanvasReady] = useState(false);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+  useEffect(() => {
+    const frameId = requestAnimationFrame(() => setCanvasReady(true));
+    return () => cancelAnimationFrame(frameId);
+  }, []);
   return <div className="lanyard-wrapper">
-    <Canvas camera={{ position, fov }} dpr={[1, isMobile ? 1.5 : 2]} gl={{ alpha: transparent }} onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}>
+    {canvasReady && <Canvas
+      key={rendererKey}
+      camera={{ position, fov }}
+      dpr={isMobile ? 1 : 1.25}
+      gl={{ alpha: transparent, antialias: false, powerPreference: 'low-power' }}
+      onCreated={({ gl, invalidate }) => {
+        gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1);
+        gl.domElement.addEventListener('webglcontextlost', event => {
+          event.preventDefault();
+          window.setTimeout(() => setRendererKey(key => key + 1), 250);
+        }, false);
+        gl.domElement.addEventListener('webglcontextrestored', () => {
+          gl.resetState();
+          invalidate();
+        }, false);
+      }}
+    >
       <ambientLight intensity={Math.PI} />
       <Physics gravity={gravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
         <Band isMobile={isMobile} frontImage={frontImage} backImage={backImage} imageFit={imageFit} lanyardImage={lanyardImage} lanyardWidth={lanyardWidth} />
@@ -47,7 +69,7 @@ export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], 
         <Lightformer intensity={3} color="white" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
         <Lightformer intensity={10} color="white" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
       </Environment>
-    </Canvas>
+    </Canvas>}
   </div>;
 }
 

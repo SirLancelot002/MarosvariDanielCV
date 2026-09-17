@@ -187,7 +187,7 @@ function LandingPage() {
           frontImage={jobsAsset('NISZ_Card_Front.png')}
           backImage={jobsAsset('NISZ_Card_Back.png')}
           lanyardImage={jobsAsset('NISZ_Card_Band.png')}
-          position={[0, 0, 30]}
+          position={[0, 0, 15]}
           gravity={[0, -40, 0]}
           lanyardWidth={1.15}
         />

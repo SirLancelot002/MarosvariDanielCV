@@ -5,9 +5,9 @@
   "headerSrc": "jobs/nisz-header.jpg",
   "startDate": "2024-07-01",
   "endDate": "2025-02-28",
-  "lanyardFrontSrc": "jobs/NISZ_Card_Front.png",
-  "lanyardBackSrc": "jobs/NISZ_Card_Back.png",
-  "lanyardBandSrc": "jobs/NISZ_Card_Band.png",
+  "lanyardFrontSrc": "jobs/NISZ_Card_Front.webp",
+  "lanyardBackSrc": "jobs/NISZ_Card_Back.webp",
+  "lanyardBandSrc": "jobs/NISZ_Card_Band.webp",
   "translations": {
     "en": {
       "title": "Junior Developer",

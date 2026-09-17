@@ -38,7 +38,7 @@ function JobCard({ job }: JobCardProps) {
 
         <h3 className="job-card__title">{content.title}</h3>
 
-        {content.role && <p className="job-card__role">{content.role}</p>}
+        {content.employer && <p className="job-card__role">{content.employer}</p>}
 
         <p className="job-card__period">
           <img src={calendarLogoImg} alt="" className="personal-data-icon" />{' '}

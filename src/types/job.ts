@@ -17,7 +17,7 @@ export interface JobContentSection {
 
 export interface JobTranslation {
   title: string;
-  role?: string;
+  employer?: string;
   shortDescription: string;
   tags?: string[];
   content: JobContentSection[];
@@ -28,6 +28,7 @@ export interface Job {
   level: number;
   color?: string;
   headerSrc?: string;
+  employerSrc?: string;
   startDate: string;
   endDate?: string;
   lanyardFrontSrc: string;   // relative to public/, e.g. "jobs/mycompany/front.png"

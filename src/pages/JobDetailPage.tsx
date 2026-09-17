@@ -5,7 +5,7 @@ import NavBar from '../NavBar';
 import { jobs } from '../data/loadJobs';
 import { publicAsset } from '../utils/asset';
 import { shiftHexToward } from '../utils/color';
-import { formatProjectDuration } from '../utils/date';
+import { formatJobPeriod } from '../utils/date';
 import { getBlockColumnClasses } from '../utils/blockLayout';
 import LightTunnel from '../modules/LightTunnel';
 import DifficultyLevel from '../modules/DifficultyLevel';
@@ -17,8 +17,10 @@ import Lanyard from '../modules/Lanyard';
 //import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 import type { JobContentItem } from '../types/job';
 import './JobDetailPage.css';
+import './ProjectDetailPage.css';
 
 import calendarLogoImg from '../assets/calendarlogo.png';
+import cityLogoImg from '../assets/citylogo.png';
 
 function JobDetailPage() {
     const { id } = useParams<{ id: string }>();
@@ -38,6 +40,8 @@ function JobDetailPage() {
 
     const content = job.translations[lang];
     const accentColor = job.color ?? '#a67dff';
+    const darkAccentColor = shiftHexToward(accentColor, '#0000ff', 0.35);
+    const lightAccentColor = shiftHexToward(accentColor, '#ffffff', 0.35);
 
     const renderBlock = (block: JobContentItem, colClass: string, key: number) => {
         switch (block.type) {
@@ -96,7 +100,7 @@ function JobDetailPage() {
             <div className="studies-bg-fixed job-detail-bg-fixed">
                 <LightTunnel
                     cableColor={accentColor}
-                    pulseColor={shiftHexToward(accentColor, '#ffffff', 0.25)}
+                    pulseColor={lightAccentColor}
                     tunnelColor="#5227FF"
                     tunnelOpacity={0}
                     speed={0.1}
@@ -145,14 +149,31 @@ function JobDetailPage() {
 
                         <header className="project-detail__header">
                             <h1 className="project-detail__title">
-                                <GradientText colors={["#2b4539", accentColor, "#61b3dc"]} animationSpeed={8} showBorder={false} className="gradient-Title">
+                                <GradientText colors={[darkAccentColor, accentColor, lightAccentColor]} animationSpeed={8} showBorder={false} className="gradient-Title">
                                     {content.title}
                                 </GradientText>
                             </h1>
-                            {content.role && <p className="project-detail__role">{content.role}</p>}
+                            {content.employer && job.employerSrc ? (
+                                <a
+                                    href={job.employerSrc}
+                                    className="project-detail__role job-detail__employer"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img src={cityLogoImg} alt="" className="personal-data-icon" />
+                                    {content.employer}
+                                </a>
+                            ) : (
+                                content.employer && (
+                                    <p className="project-detail__role job-detail__employer">
+                                        <img src={cityLogoImg} alt="" className="personal-data-icon" />
+                                        {content.employer}
+                                    </p>
+                                )
+                            )}
                             <p className="project-detail__period">
                                 <img src={calendarLogoImg} alt="" className="personal-data-icon" />
-                                <span> {formatProjectDuration(job.startDate, job.endDate, lang)}</span>
+                                <span> {formatJobPeriod(job.startDate, job.endDate, lang)}</span>
                             </p>
                         </header>
 
@@ -197,17 +218,17 @@ function JobDetailPage() {
                             })}
                         </div>
                     </article>
-                </div>
 
-                <div className="job-detail__lanyard-rest">
-                    <Lanyard
-                        frontImage={publicAsset(job.lanyardFrontSrc)}
-                        backImage={publicAsset(job.lanyardBackSrc)}
-                        lanyardImage={publicAsset(job.lanyardBandSrc)}
-                        position={[0, 0, 15]}
-                        gravity={[0, -40, 0]}
-                        lanyardWidth={1.15}
-                    />
+                    <div className="job-detail__lanyard-rest">
+                        <Lanyard
+                            frontImage={publicAsset(job.lanyardFrontSrc)}
+                            backImage={publicAsset(job.lanyardBackSrc)}
+                            lanyardImage={publicAsset(job.lanyardBandSrc)}
+                            position={[0, 0, 15]}
+                            gravity={[0, -40, 0]}
+                            lanyardWidth={1.15}
+                        />
+                    </div>
                 </div>
 
                 <div className="specular-button-shell">

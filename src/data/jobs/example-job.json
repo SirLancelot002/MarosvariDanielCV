@@ -1,17 +1,17 @@
 {
-  "id": "nisz",
+  "id": "nisz_junior_data_engineer",
   "level": 3,
   "color": "#004B88",
-  "headerSrc": "jobs/nisz-header.jpg",
-  "startDate": "2024-07-01",
-  "endDate": "2025-02-28",
+  "headerSrc": "jobs/nisz-header.webp",
+  "employerSrc": "https://nisz.hu",
+  "startDate": "2026-09-01",
   "lanyardFrontSrc": "jobs/NISZ_Card_Front.webp",
   "lanyardBackSrc": "jobs/NISZ_Card_Back.webp",
   "lanyardBandSrc": "jobs/NISZ_Card_Band.webp",
   "translations": {
     "en": {
-      "title": "Junior Developer",
-      "role": "NISZ Zrt.",
+      "title": "Junior Data Engineer",
+      "employer": "NISZ Zrt.",
       "shortDescription": "Worked on internal enterprise systems as part of the cooperative final year of the BSc program.",
       "content": [
         {
@@ -33,9 +33,9 @@
       ]
     },
     "hu": {
-      "title": "Junior fejlesztő",
-      "role": "NISZ Zrt.",
-      "shortDescription": "Belső vállalati rendszereken dolgoztam a BSc kooperatív utolsó évének részeként.",
+      "title": "Junior adatmérnök",
+      "employer": "NISZ Zrt.",
+      "shortDescription": "A Gazdasági Igazgatóság alá tartozó Elemzés és Üzleti Intelligencia Osztályon dolgoztam a BSc kooperatív utolsó évének részeként. Mi fejlesztettük, és tartottuk karban a VIR (Vezetői Információs Rendszer) alkalmazást.",
       "content": [
         {
           "isCloseable": true,

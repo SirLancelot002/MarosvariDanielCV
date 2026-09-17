@@ -40,3 +40,18 @@ export function formatProjectDuration(
 
   return parts.join(' ');
 }
+
+export function formatJobPeriod(
+  startDate: string,
+  endDate: string | undefined,
+  lang: 'en' | 'hu'
+): string {
+  const locale = lang === 'hu' ? 'hu-HU' : 'en-US';
+  const formatMonth = (date: string) => new Date(date).toLocaleDateString(locale, {
+    month: 'short',
+    year: 'numeric',
+  });
+  const end = endDate ? formatMonth(endDate) : lang === 'hu' ? 'jelenleg' : 'Present';
+
+  return `${formatMonth(startDate)} - ${end} (${formatProjectDuration(startDate, endDate, lang)})`;
+}

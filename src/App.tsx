@@ -9,6 +9,8 @@ const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const TimeLinePage = lazy(() => import('./pages/TimeLinePage'));
 const StudyDetailPage = lazy(() => import('./pages/StudyDetailPage'));
 const ProjectDetailPage = lazy(() => import('./pages/ProjectDetailPage'));
+const JobsPage = lazy(() => import('./pages/JobsPage'));
+const JobDetailPage = lazy(() => import('./pages/JobDetailPage'));
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/timeline" element={<TimeLinePage />} />
           <Route path="/studies/:id" element={<StudyDetailPage />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
+          <Route path="/experience" element={<JobsPage />} />
+          <Route path="/experience/:id" element={<JobDetailPage />} />
         </Route>
       </Routes>
     </Suspense>

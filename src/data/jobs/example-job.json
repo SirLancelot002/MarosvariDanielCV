@@ -1,0 +1,59 @@
+{
+  "id": "nisz",
+  "level": 3,
+  "color": "#004B88",
+  "headerSrc": "jobs/nisz-header.jpg",
+  "startDate": "2024-07-01",
+  "endDate": "2025-02-28",
+  "lanyardFrontSrc": "jobs/NISZ_Card_Front.png",
+  "lanyardBackSrc": "jobs/NISZ_Card_Back.png",
+  "lanyardBandSrc": "jobs/NISZ_Card_Band.png",
+  "translations": {
+    "en": {
+      "title": "Junior Developer",
+      "role": "NISZ Zrt.",
+      "shortDescription": "Worked on internal enterprise systems as part of the cooperative final year of the BSc program.",
+      "content": [
+        {
+          "isCloseable": true,
+          "isClosedByDefault": false,
+          "items": [
+            { "type": "heading", "text": "Overview", "level": 2 },
+            { "type": "paragraph", "text": "Contributed to internal .NET applications used across the organization." }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            { "type": "heading", "text": "Technical details", "level": 2 },
+            { "type": "paragraph", "text": "Worked with C#, SQL Server, and internal enterprise frameworks under senior developer guidance." }
+          ]
+        }
+      ]
+    },
+    "hu": {
+      "title": "Junior fejlesztő",
+      "role": "NISZ Zrt.",
+      "shortDescription": "Belső vállalati rendszereken dolgoztam a BSc kooperatív utolsó évének részeként.",
+      "content": [
+        {
+          "isCloseable": true,
+          "isClosedByDefault": false,
+          "items": [
+            { "type": "heading", "text": "Áttekintés", "level": 2 },
+            { "type": "paragraph", "text": "Belső .NET alkalmazások fejlesztésében vettem részt a szervezeten belül." }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            { "type": "heading", "text": "Technikai részletek", "level": 2 },
+            { "type": "paragraph", "text": "C#, SQL Server és belső vállalati keretrendszerekkel dolgoztam senior fejlesztők irányítása alatt." }
+          ]
+        }
+      ]
+    }
+  }
+}

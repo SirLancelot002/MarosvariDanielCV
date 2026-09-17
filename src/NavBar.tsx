@@ -17,6 +17,7 @@ function NavBar() {
           { label: t("nav.main"), href: '/' },
           { label: t("nav.studies"), href: '/studies' },
           { label: t("nav.projects"), href: '/projects' },
+          { label: t("nav.experience"), href: '/experience' },
           { label: t("nav.time"), href: '/timeline' }
         ]}
         activeHref={location.pathname}

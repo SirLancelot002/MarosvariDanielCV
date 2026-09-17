@@ -61,5 +61,11 @@
   "timeline.title3": "Newest at the top, oldest at the bottom",
   "timeline.studies": "Studies",
   "timeline.projects": "Projects",
-  "timeline.ongoing": "Ongoing"
+  "timeline.ongoing": "Ongoing",
+
+  "nav.experience": "Experience",
+  "experience.title1": "My Experience",
+  "experience.title2": "Where I've worked",
+  "experience.title3": "Building real things",
+  "experience.backToList": "Back to experience"
 }

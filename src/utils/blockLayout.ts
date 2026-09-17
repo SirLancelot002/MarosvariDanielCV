@@ -1,16 +1,13 @@
-import type { ContentItem } from '../types/project';
+interface WeightedItem {
+  weight?: number;
+}
 
 /**
  * Given a section's items, returns one Bootstrap column class string per item,
  * simulating how they'd wrap across 12-column rows based on their `weight`.
- * - Missing weight defaults to 12 (full width).
- * - Weight is clamped to 1-12.
- * - Mobile (below md) always gets col-12, so everything stacks on small screens.
- * - If the trailing wrapped line ends up with exactly one item that doesn't
- *   fill the row, that item is stretched to fill the full row instead of
- *   sitting alone with leftover empty space.
+ * Works for any item shape that carries an optional `weight` (Project or Job blocks).
  */
-export function getBlockColumnClasses(items: ContentItem[]): string[] {
+export function getBlockColumnClasses(items: WeightedItem[]): string[] {
   const weights = items.map(item => {
     const w = item.weight ?? 12;
     return Math.min(12, Math.max(1, w));

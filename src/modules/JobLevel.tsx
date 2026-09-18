@@ -9,7 +9,7 @@ interface JobLevelProps {
 
 const EMOJI_BY_LEVEL: Record<JobSeniority, string> = {
   junior: '🐣',
-  medior: '🌱',
+  medior: '👨‍💻',
   senior: '🧠',
   manager: '👑'
 };

@@ -8,7 +8,7 @@ import { shiftHexToward } from '../utils/color';
 import { formatJobPeriod } from '../utils/date';
 import { getBlockColumnClasses } from '../utils/blockLayout';
 import LightTunnel from '../modules/LightTunnel';
-import DifficultyLevel from '../modules/DifficultyLevel';
+import JobLevel from '../modules/JobLevel';
 import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
@@ -142,7 +142,7 @@ function JobDetailPage() {
                             </div>
                             <div className="col-12 col-md-6">
                                 <div className="project-detail__level-wrap">
-                                    <DifficultyLevel level={job.level} />
+                                    <JobLevel level={job.seniority} text={content.seniorityLabel} />
                                 </div>
                             </div>
                         </div>

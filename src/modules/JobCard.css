@@ -1,6 +1,11 @@
 .job-card-shell {
   position: relative;
   height: 100%;
+  transition: transform 0.25s ease;
+}
+
+.job-card-shell:hover {
+  transform: translateY(-4px);
 }
 
 .job-card-backplate {
@@ -67,12 +72,15 @@
 }
 
 .job-card__employer {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.35rem;
+  width: 100%;
   margin: 0 0 0.25rem;
   font-size: 0.85rem;
   font-weight: 600;
+  text-align: left;
   text-decoration: none;
 }
 

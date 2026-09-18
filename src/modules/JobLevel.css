@@ -1,0 +1,23 @@
+.job-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--job-level-color, #a67dff) 18%, transparent);
+  border: 1px solid var(--job-level-color, #a67dff);
+  color: var(--job-level-color, #a67dff);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.job-level__emoji {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.job-level__text {
+  line-height: 1;
+}

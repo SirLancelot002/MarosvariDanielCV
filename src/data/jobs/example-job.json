@@ -1,6 +1,7 @@
 {
   "id": "nisz_junior_data_engineer",
   "level": 3,
+  "seniority": "junior",
   "color": "#004B88",
   "headerSrc": "jobs/nisz-header.webp",
   "employerSrc": "https://nisz.hu",
@@ -12,6 +13,8 @@
     "en": {
       "title": "Junior Data Engineer",
       "employer": "NISZ Zrt.",
+      "seniorityLabel": "Junior",
+      "tags": ["C#", ".NET", "SQL Server"],
       "shortDescription": "Worked on internal enterprise systems as part of the cooperative final year of the BSc program.",
       "content": [
         {
@@ -35,6 +38,8 @@
     "hu": {
       "title": "Junior adatmérnök",
       "employer": "NISZ Zrt.",
+      "seniorityLabel": "Pálya kezdő",
+      "tags": ["C#", ".NET", "SQL Server"],
       "shortDescription": "A Gazdasági Igazgatóság alá tartozó Elemzés és Üzleti Intelligencia Osztályon dolgoztam a BSc kooperatív utolsó évének részeként. Mi fejlesztettük, és tartottuk karban a VIR (Vezetői Információs Rendszer) alkalmazást.",
       "content": [
         {

@@ -1,3 +1,5 @@
+export type JobSeniority = 'junior' | 'medior' | 'senior' | 'manager';
+
 export interface JobContentItem {
   type: 'heading' | 'paragraph' | 'image' | 'link';
   text?: string;
@@ -11,13 +13,14 @@ export interface JobContentItem {
 
 export interface JobContentSection {
   items: JobContentItem[];
-  isCloseable?: boolean;       // if true, shows a ">" toggle on the section's first heading
-  isClosedByDefault?: boolean; // only relevant when isCloseable is true
+  isCloseable?: boolean;
+  isClosedByDefault?: boolean;
 }
 
 export interface JobTranslation {
   title: string;
   employer?: string;
+  seniorityLabel: string;   // short label shown next to the emoji, e.g. "Junior"
   shortDescription: string;
   tags?: string[];
   content: JobContentSection[];
@@ -26,12 +29,13 @@ export interface JobTranslation {
 export interface Job {
   id: string;
   level: number;
+  seniority: JobSeniority;
   color?: string;
   headerSrc?: string;
   employerSrc?: string;
   startDate: string;
   endDate?: string;
-  lanyardFrontSrc: string;   // relative to public/, e.g. "jobs/mycompany/front.png"
+  lanyardFrontSrc: string;
   lanyardBackSrc: string;
   lanyardBandSrc: string;
   translations: {

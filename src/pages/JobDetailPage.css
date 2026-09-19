@@ -29,6 +29,10 @@
   justify-content: center;
 }
 
+.job-detail__lanyard-rest .lanyard-wrapper {
+  width: 100%;
+}
+
 .job-detail__back-to-top {
   position: absolute;
   inset-inline: 0;

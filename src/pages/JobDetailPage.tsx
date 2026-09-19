@@ -14,7 +14,7 @@ import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
 import CollapsibleSection from '../modules/CollapsibleSection';
 import Lanyard from '../modules/Lanyard';
-//import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
+import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 import type { JobContentItem } from '../types/job';
 import './JobDetailPage.css';
 import './ProjectDetailPage.css';
@@ -26,7 +26,28 @@ function JobDetailPage() {
     const { id } = useParams<{ id: string }>();
     const { t, i18n } = useTranslation();
     const lang = i18n.language === 'hu' ? 'hu' : 'en';
-    //const quality = useAdaptiveQuality();
+    const quality = useAdaptiveQuality();
+
+    let cableCount = 20;
+    let speed = 0.1;
+
+    switch (quality) {
+        case 'low':
+            cableCount = 7;
+            speed = 0.03;
+            break;
+        case 'medium':
+            cableCount = 12;
+            speed = 0.05;
+            break;
+        case 'high':
+            cableCount = 20;
+            speed = 0.1;
+            break;
+        default:
+            cableCount = 20;
+            speed = 0.1;
+    }
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
@@ -103,13 +124,13 @@ function JobDetailPage() {
                     pulseColor={lightAccentColor}
                     tunnelColor="#5227FF"
                     tunnelOpacity={0}
-                    speed={0.1}
+                    speed={speed}
                     flowDirection="outward"
                     pulseSpeed={2}
                     pulseLength={0.28}
                     pulseBlend={1}
                     pulseWidth={1}
-                    cableCount={20}
+                    cableCount={cableCount}
                     thickness={0.35}
                     rimWidth={0.15}
                     waviness={0.3}
@@ -122,7 +143,7 @@ function JobDetailPage() {
                     fadeFar={2}
                     brightness={1}
                     colorVariance
-                    grain
+                    grain={false}
                     grainIntensity={0.05}
                     opacity={1}
                     mouseInteraction
@@ -228,7 +249,7 @@ function JobDetailPage() {
                     lanyardImage={publicAsset(job.lanyardBandSrc)}
                     position={[0, 0, 15]}
                     gravity={[0, -40, 0]}
-                    lanyardWidth={1.15}
+                    lanyardWidth={0.5}
                 />
                 <div className="specular-button-shell job-detail__back-to-top">
                     <SpecularButton

@@ -7,12 +7,40 @@ import RevealOnScroll from '../modules/RevealOnScroll';
 import { jobs } from '../data/loadJobs';
 import SpecularButton from '../modules/SpecularButton';
 import Magnet from '../modules/Magnet';
-//import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
+import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 import './JobsPage.css';
 
 function JobsPage() {
     const { t } = useTranslation();
-    //const quality = useAdaptiveQuality();
+    const quality = useAdaptiveQuality();
+
+    let density = 1;
+    let rotationSpeed = 0.03;
+    let starSpeed = 0.5;
+    let speed = 1;
+
+    switch (quality) {
+        case 'low':
+            density = 0.25;
+            rotationSpeed = 0;
+            starSpeed = 0.25;
+            speed = 0.5;
+            break;
+        case 'medium':
+            density = 0.5;
+            rotationSpeed = 0.015;
+            starSpeed = 0.35;
+            speed = 0.75;
+            break;
+        case 'high':
+            density = 1;
+            rotationSpeed = 0.03;
+            starSpeed = 0.5;
+            speed = 1;
+            break;
+        default:
+            break;
+    }
 
     return (
         <>
@@ -20,16 +48,16 @@ function JobsPage() {
                 <Galaxy
                     mouseRepulsion
                     mouseInteraction
-                    density={1}
+                    density={density}
                     glowIntensity={0.3}
                     saturation={0}
                     hueShift={140}
                     twinkleIntensity={0.3}
-                    rotationSpeed={0.03}
+                    rotationSpeed={rotationSpeed}
                     repulsionStrength={2}
                     autoCenterRepulsion={0}
-                    starSpeed={0.5}
-                    speed={1}
+                    starSpeed={starSpeed}
+                    speed={speed}
                 />
             </div>
             <div className="studies-content-layer">

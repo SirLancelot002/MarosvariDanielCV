@@ -169,11 +169,17 @@ function JobDetailPage() {
                         </div>
 
                         <header className="project-detail__header" id="job-detail__header">
-                            <h1 className="project-detail__title">
-                                <GradientText colors={[darkAccentColor, accentColor, lightAccentColor]} animationSpeed={8} showBorder={false} className="gradient-Title">
+                            {quality === 'low' ? (
+                                <h1 className="project-detail__title" style={{ color: accentColor }}>
                                     {content.title}
-                                </GradientText>
-                            </h1>
+                                </h1>
+                            ) : (
+                                <h1 className="project-detail__title">
+                                    <GradientText colors={[darkAccentColor, accentColor, lightAccentColor]} animationSpeed={8} showBorder={false} className="gradient-Title">
+                                        {content.title}
+                                    </GradientText>
+                                </h1>
+                            )}
                             {content.employer && job.employerSrc ? (
                                 <a
                                     href={job.employerSrc}

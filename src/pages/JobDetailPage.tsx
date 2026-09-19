@@ -147,7 +147,7 @@ function JobDetailPage() {
                             </div>
                         </div>
 
-                        <header className="project-detail__header">
+                        <header className="project-detail__header" id="job-detail__header">
                             <h1 className="project-detail__title">
                                 <GradientText colors={[darkAccentColor, accentColor, lightAccentColor]} animationSpeed={8} showBorder={false} className="gradient-Title">
                                     {content.title}
@@ -218,20 +218,19 @@ function JobDetailPage() {
                             })}
                         </div>
                     </article>
-
-                    <div className="job-detail__lanyard-rest">
-                        <Lanyard
-                            frontImage={publicAsset(job.lanyardFrontSrc)}
-                            backImage={publicAsset(job.lanyardBackSrc)}
-                            lanyardImage={publicAsset(job.lanyardBandSrc)}
-                            position={[0, 0, 15]}
-                            gravity={[0, -40, 0]}
-                            lanyardWidth={1.15}
-                        />
-                    </div>
                 </div>
+            </div>
 
-                <div className="specular-button-shell">
+            <div className="job-detail__lanyard-rest">
+                <Lanyard
+                    frontImage={publicAsset(job.lanyardFrontSrc)}
+                    backImage={publicAsset(job.lanyardBackSrc)}
+                    lanyardImage={publicAsset(job.lanyardBandSrc)}
+                    position={[0, 0, 15]}
+                    gravity={[0, -40, 0]}
+                    lanyardWidth={1.15}
+                />
+                <div className="specular-button-shell job-detail__back-to-top">
                     <SpecularButton
                         size="md" radius={18} tint="#ffffff" tintOpacity={0} blur={26}
                         textColor="#f5f5f5" lineColor={accentColor} baseColor="#313131" intensity={1}

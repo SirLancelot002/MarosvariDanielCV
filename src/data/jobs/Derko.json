@@ -1,0 +1,123 @@
+{
+    "id": "derko_student_helper",
+    "seniority": "junior",
+    "color": "#61A630",
+    "headerSrc": "jobs/derko-header.webp",
+    "employerSrc": "https://derkovits.hu",
+    "startDate": "2020-01-17",
+    "endDate": "2020-06-30",
+    "translations": {
+        "en": {
+            "title": "Teacher Assistant",
+            "employer": "Derkovits Gyula Elementary School",
+            "seniorityLabel": "Student Job",
+            "tags": [
+                "Teaching",
+                "Basics of Programming",
+                "Programming concepts",
+                "Working with kids"
+            ],
+            "shortDescription": "I had complete my mandatory community service in high school, so I chose an option much more exciting than hauling boxes: I tought 9 to 12-year-old students programming in my (former) elementary school. I had good relations with the IT teacher at the school, so he helped me a lot in bringing this extracurricular club to reality.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "How it Started",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "After the 1st half of 9th grade, I fell in love with programming. They started teaching us on Scratch to get the basics of programming, and I loved the concept of it as well. When I had to start my mandatory community service I had a great idea: I started this extracurricular programming club at my former elementary school. I collaborated closely with the IT teacher at the school, who provided invaluable support in bringing this initiative to life."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "How it went",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "The IT teacher at the time (János Várkonyi) was incredibly supportive and helped me organize the programming club sessions effectively. The some of the students were enthusiastic and eager to learn, which made the experience highly rewarding for both the students and me. We had about 10 students participating regularly, and we covered various programming concepts and projects throughout the sessions."
+                        },
+                        {
+                            "type": "heading",
+                            "text": "How it ended",
+                            "level": 3
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "The plan was to have a session every week and I even had plans to continue it next year, but due to a certein virus outbreak you may have heard of (COVID-19), we had to first move online and it eventually killed the momentum and the program itself. I had a great experience running the programming club and learned a lot from it, how to teach, keep attenttion, and manage a group of students effectively."
+                        }
+                    ]
+                }
+            ]
+        },
+        "hu": {
+            "title": "Tanársegéd",
+            "employer": "Derkovits Gyula Általános Iskola",
+            "seniorityLabel": "Diákmunka",
+            "tags": [
+                "Oktatás",
+                "Programozási alapok",
+                "Programozási koncepciók",
+                "Gyerekekkel való munka"
+            ],
+            "shortDescription": "Miután teljesítettem a középiskolai kötelező közösségi szolgálatot, egy sokkal izgalmasabb lehetőséget választottam a dobozok cipelésénél: programozást tanítottam 9–12 éves diákoknak a korábbi általános iskolámban. Jó kapcsolatot ápoltam az iskola informatika tanárával, így sokat segített abban, hogy megvalósulhasson ez a tanórán kívüli szakkör.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Hogyan kezdődött?",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "A 9. osztály első féléve után beleszerettem a programozásba. Scratchben kezdték el tanítani nekünk a programozás alapjait, és maga a koncepció is nagyon tetszett. Amikor el kellett kezdenem a kötelező közösségi szolgálatot, támadt egy nagyszerű ötletem: programozási szakkört indítottam a korábbi általános iskolámban. Szorosan együttműködtem az iskola informatika tanárával, aki felbecsülhetetlen segítséget nyújtott a kezdeményezés megvalósításában."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Hogyan zajlott?",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "Az akkori informatika tanár, Várkonyi János, hihetetlenül támogató volt, és sokat segített a programozási szakkör alkalmainak hatékony megszervezésében. A diákok közül többen lelkesek voltak és szívesen tanultak, ami mind számukra, mind számomra nagyon élvezetes és értékes tapasztalattá tette az egészet. Körülbelül 10 diák vett részt rendszeresen, és az alkalmak során különböző programozási koncepciókkal és projektekkel foglalkoztunk."
+                        },
+                        {
+                            "type": "heading",
+                            "text": "Hogyan ért véget?",
+                            "level": 3
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "A terv az volt, hogy minden héten tartunk egy alkalmat, és még azt is terveztem, hogy a következő évben folytatom, azonban egy bizonyos vírusjárvány miatt, amiről talán hallottál (COVID-19), először online kellett folytatnunk, ami végül megtörte a lendületet és magát a programot is. Nagyon jó tapasztalat volt számomra a programozási szakkör vezetése, és rengeteget tanultam belőle arról, hogyan kell tanítani, fenntartani a figyelmet, illetve hatékonyan kezelni egy diákcsoportot."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

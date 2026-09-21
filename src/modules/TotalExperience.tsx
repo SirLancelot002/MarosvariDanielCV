@@ -16,7 +16,6 @@ function TotalExperience() {
       <span className="total-experience__text">
         {years > 0 && (
           <span className="total-experience__segment">
-            {t("experience.years")}:{' '}
             <CountUp
               from={0}
               to={years}
@@ -25,12 +24,11 @@ function TotalExperience() {
               duration={1}
               className="count-up-text"
               delay={0.5}
-            />
+            />{' '}{t("experience.years")}
           </span>
         )}
         {months > 0 && (
           <span className="total-experience__segment">
-            {t("experience.months")}:{' '}
             <CountUp
               from={0}
               to={months}
@@ -39,7 +37,7 @@ function TotalExperience() {
               duration={1}
               className="count-up-text"
               delay={0.5}
-            />
+            />{' '}{t("experience.months")}
           </span>
         )}
       </span>

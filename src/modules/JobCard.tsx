@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import type { Job } from '../types/job';
 import { publicAsset } from '../utils/asset';
 import { formatJobPeriod } from '../utils/date';
-import { hexToRgbSpaceString } from '../utils/color';
+import { hexToRgbSpaceString, shiftHexToward } from '../utils/color';
 import BorderGlow from './BorderGlow';
 import JobLevel from './JobLevel';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
@@ -21,6 +21,8 @@ function JobCard({ job }: JobCardProps) {
   const content = job.translations[lang];
   const quality = useAdaptiveQuality();
   const accentColor = job.color ?? '#61dca3';
+  const darkAccentColor = shiftHexToward(accentColor, '#0000ff', 0.35);
+  const lightAccentColor = shiftHexToward(accentColor, '#ffffff', 0.35);
 
   const cardInner = (
     <Link to={`/experience/${job.id}`} className="job-card">
@@ -93,7 +95,7 @@ function JobCard({ job }: JobCardProps) {
             glowIntensity={1}
             coneSpread={25}
             animated
-            colors={[accentColor, accentColor, accentColor]}
+            colors={[darkAccentColor, accentColor, lightAccentColor]}
           >
             {cardInner}
           </BorderGlow>

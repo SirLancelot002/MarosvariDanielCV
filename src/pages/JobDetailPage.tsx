@@ -248,15 +248,17 @@ function JobDetailPage() {
                 </div>
             </div>
 
-            <div className="job-detail__lanyard-rest">
-                <Lanyard
-                    frontImage={publicAsset(job.lanyardFrontSrc)}
-                    backImage={publicAsset(job.lanyardBackSrc)}
-                    lanyardImage={publicAsset(job.lanyardBandSrc)}
-                    position={[0, 0, 15]}
-                    gravity={[0, -40, 0]}
-                    lanyardWidth={0.5}
-                />
+            <div className={`job-detail__lanyard-rest${job.lanyardFrontSrc ? '' : ' job-detail__lanyard-rest--no-lanyard'}`}>
+                {job.lanyardFrontSrc && (
+                    <Lanyard
+                        frontImage={publicAsset(job.lanyardFrontSrc)}
+                        backImage={publicAsset(job.lanyardBackSrc)}
+                        lanyardImage={publicAsset(job.lanyardBandSrc)}
+                        position={[0, 0, 15]}
+                        gravity={[0, -40, 0]}
+                        lanyardWidth={0.5}
+                    />
+                )}
                 <div className="specular-button-shell job-detail__back-to-top">
                     <SpecularButton
                         size="md" radius={18} tint="#ffffff" tintOpacity={0} blur={26}

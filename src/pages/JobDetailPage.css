@@ -33,6 +33,15 @@
   width: 100%;
 }
 
+.job-detail__lanyard-rest--no-lanyard {
+  height: auto;
+  padding: 1.5rem 0;
+}
+
+.job-detail__lanyard-rest--no-lanyard .job-detail__back-to-top {
+  position: static;
+}
+
 .job-detail__back-to-top {
   position: absolute;
   inset-inline: 0;

@@ -38,8 +38,10 @@
   text-decoration: none;
   color: inherit;
   border-radius: 20px;
-  background: rgba(18, 15, 23, 0.699);
+  background: #00000098;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .job-card__header-image {

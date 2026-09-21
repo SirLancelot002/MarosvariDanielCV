@@ -8,6 +8,7 @@ import { jobs } from '../data/loadJobs';
 import SpecularButton from '../modules/SpecularButton';
 import Magnet from '../modules/Magnet';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
+import TotalExperience from '../modules/TotalExperience';
 import './JobsPage.css';
 
 function JobsPage() {
@@ -77,6 +78,10 @@ function JobsPage() {
                 </main>
 
                 <NavBar />
+
+                <div className="total-experience-shell">
+                    <TotalExperience />
+                </div>
 
                 <div className="container mt-5 studies-list">
                     {jobs.map((job, index) => {

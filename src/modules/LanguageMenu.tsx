@@ -1,4 +1,4 @@
-import { forwardRef, type CSSProperties } from 'react';
+import { forwardRef, useEffect, useRef, type CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LANGUAGES } from '../data/languages';
 import './LanguageMenu.css';
@@ -14,10 +14,24 @@ const LanguageMenu = forwardRef<HTMLDivElement, LanguageMenuProps>(function Lang
   ref
 ) {
   const { t, i18n } = useTranslation();
+  const innerRef = useRef<HTMLDivElement | null>(null);
+
+  // Move focus out before hiding, so aria-hidden never applies to a focused descendant.
+  useEffect(() => {
+    if (isOpen) return;
+    const menuEl = innerRef.current;
+    if (menuEl && menuEl.contains(document.activeElement)) {
+      (document.activeElement as HTMLElement).blur();
+    }
+  }, [isOpen]);
 
   return (
     <div
-      ref={ref}
+      ref={node => {
+        innerRef.current = node;
+        if (typeof ref === 'function') ref(node);
+        else if (ref) ref.current = node;
+      }}
       className={`language-menu${isOpen ? ' is-open' : ''}${className ? ` ${className}` : ''}`}
       style={style}
       role="menu"

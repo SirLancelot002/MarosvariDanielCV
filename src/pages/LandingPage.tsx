@@ -77,7 +77,7 @@ function LandingPage() {
       <div className="page-upper">
         <div className="lightning-bg">
           <Lightning hue={260} xOffset={0} speed={1} intensity={1} size={1} />
-        </div>
+        </div>        
         <main className="hero-section">
           <TextType
             as="h1"
@@ -94,7 +94,6 @@ function LandingPage() {
         </main>
 
         <NavBar />
-
         <div className="profile-card-outer">
           <div className="profile-card-inner">
             <ProfileCard

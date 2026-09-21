@@ -1,0 +1,74 @@
+.job-detail-bg-fixed {
+  background:
+    radial-gradient(1200px 600px at 18% 12%, rgba(22, 46, 249, 0.16), transparent 72%),
+    radial-gradient(900px 540px at 82% 0%, rgba(116, 0, 255, 0.18), transparent 74%),
+    linear-gradient(180deg, rgba(11, 10, 19, 0.45), rgba(11, 10, 19, 0.55));
+}
+
+.job-detail-content-layer .project-detail-container {
+  padding-bottom: 0;
+}
+
+.job-detail .project-detail__header {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#job-detail__header {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.job-detail__lanyard-rest {
+  width: calc(100% + 2px);
+  height: clamp(420px, 58vw, 620px);
+  position: relative;
+  margin-left: -1px;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.job-detail__lanyard-rest .lanyard-wrapper {
+  width: 100%;
+}
+
+.job-detail__lanyard-rest--no-lanyard {
+  height: auto;
+  padding: 1.5rem 0;
+}
+
+.job-detail__lanyard-rest--no-lanyard .job-detail__back-to-top {
+  position: static;
+}
+
+.job-detail__back-to-top {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 1rem;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.job-detail__employer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.job-detail__employer + .project-detail__period {
+  text-align: left;
+}
+
+a.job-detail__employer:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .job-detail__lanyard-rest {
+    height: 470px;
+  }
+}

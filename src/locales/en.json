@@ -57,9 +57,18 @@
   "projects.backToList": "Back to projects",
 
   "timeline.title1": "My Journey So Far",
-  "timeline.title2": "Studies and Projects, Side by Side",
+  "timeline.title2": "Studies, Experience and Projects, Side by Side",
   "timeline.title3": "Newest at the top, oldest at the bottom",
-  "timeline.studies": "Studies",
+  "timeline.studies": "Studies & Experience",
   "timeline.projects": "Projects",
-  "timeline.ongoing": "Ongoing"
+  "timeline.ongoing": "Ongoing",
+
+  "nav.experience": "Experience",
+  "experience.title1": "My Experience",
+  "experience.title2": "Where I've worked",
+  "experience.title3": "Building real things",
+  "experience.backToList": "Back to experience",
+  "experience.years": "Year(s)",
+  "experience.months": "Month(s)",
+  "experience.total": "My total work Experience"
 }

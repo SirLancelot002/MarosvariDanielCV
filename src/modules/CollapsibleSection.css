@@ -1,0 +1,26 @@
+.collapsible-section__heading-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.collapsible-section__heading-row.is-toggleable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.collapsible-section__chevron {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--job-accent, #a67dff);
+  transition: transform 0.2s ease;
+  transform: rotate(0deg);
+}
+
+.collapsible-section__chevron.is-open {
+  transform: rotate(90deg);
+}
+
+.collapsible-section__body {
+  margin-top: 0.5rem;
+}

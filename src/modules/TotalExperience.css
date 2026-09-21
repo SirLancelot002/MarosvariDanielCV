@@ -1,0 +1,33 @@
+.total-experience {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+}
+
+.total-experience__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.total-experience__text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.total-experience__segment {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}

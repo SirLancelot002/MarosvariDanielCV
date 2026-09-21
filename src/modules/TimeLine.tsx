@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import StudyCard from './StudyCard';
 import ProjectCard from './ProjectCard';
-import { formatStudyPeriod } from '../utils/date';
+import JobCard from './JobCard';
+import { formatStudyPeriod, formatJobPeriod } from '../utils/date';
 import { timelineEvents } from '../data/loadTimeline';
 import { computeTimelineLayout } from '../utils/timelineLayout';
 import './TimeLine.css';
@@ -95,13 +96,21 @@ function TimeLine() {
 
         const translation = event.kind === 'study'
           ? event.study!.translations[lang]
-          : event.project!.translations[lang];
-        const period = formatStudyPeriod(
-          event.kind === 'study' ? event.study!.startDate : event.project!.startDate,
-          event.kind === 'study' ? event.study!.endDate : event.project!.endDate,
-          lang
-        );
-        const detailPath = event.kind === 'study' ? `/studies/${event.study!.id}` : `/projects/${event.project!.id}`;
+          : event.kind === 'project'
+          ? event.project!.translations[lang]
+          : event.job!.translations[lang];
+        const period = event.kind === 'job'
+          ? formatJobPeriod(event.job!.startDate, event.job!.endDate, lang)
+          : formatStudyPeriod(
+              event.kind === 'study' ? event.study!.startDate : event.project!.startDate,
+              event.kind === 'study' ? event.study!.endDate : event.project!.endDate,
+              lang
+            );
+        const detailPath = event.kind === 'study'
+          ? `/studies/${event.study!.id}`
+          : event.kind === 'project'
+          ? `/projects/${event.project!.id}`
+          : `/experience/${event.job!.id}`;
 
         return (
           <div
@@ -138,8 +147,10 @@ function TimeLine() {
             <div className="timeline-event__preview">
               {event.kind === 'study' ? (
                 <StudyCard study={event.study!} />
-              ) : (
+              ) : event.kind === 'project' ? (
                 <ProjectCard project={event.project!} electricBorderActive={hoveredId === event.id && borderActive} />
+              ) : (
+                <JobCard job={event.job!} />
               )}
             </div>
           </div>

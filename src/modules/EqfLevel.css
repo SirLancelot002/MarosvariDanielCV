@@ -50,6 +50,7 @@
 .eqf-link:visited {
   color: #b896ff !important;
   text-decoration: none !important;
+  cursor: pointer;
 }
 
 .eqf-link:hover,

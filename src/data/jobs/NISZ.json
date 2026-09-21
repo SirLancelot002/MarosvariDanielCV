@@ -1,0 +1,375 @@
+{
+  "id": "nisz_junior_data_engineer",
+  "seniority": "junior",
+  "color": "#004B88",
+  "headerSrc": "jobs/nisz-header.webp",
+  "employerSrc": "https://nisz.hu",
+  "startDate": "2026-09-01",
+  "lanyardFrontSrc": "jobs/NISZ_Card_Front.webp",
+  "lanyardBackSrc": "jobs/NISZ_Card_Back.webp",
+  "lanyardBandSrc": "jobs/NISZ_Card_Band.webp",
+  "translations": {
+    "en": {
+      "title": "Junior Data Engineer",
+      "employer": "NISZ Zrt.",
+      "seniorityLabel": "Intern",
+      "tags": [
+        "SAP",
+        "Large Data",
+        "Reporting",
+        "SAP Webi",
+        "BO DS",
+        "ERP"
+      ],
+      "shortDescription": "NISZ, the National Infocommunications Service Provider Plc., is a Hungarian state-owned ICT service provider. I worked in the Analysis and Business Intelligence Department under the Economic Directorate as part of the final year of my BSc cooperative program. Our team developed and maintained the VIR (Management Information System) application. Most of our work focused on SAP systems. We loaded data from a wide variety of sources into the Business Warehouse, and then used BEx queries to create reports in SAP Web Intelligence.",
+      "content": [
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            {
+              "type": "heading",
+              "text": "About the company",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "NISZ, the National Infocommunications Service Provider Plc., is a leading IT and telecommunications (ICT) service provider in the Hungarian public administration sector. The 100% state-owned company provides the critical IT infrastructure and technological background required for the operation of the digital state."
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "NISZ operates government secure networks and cloud systems, provides infrastructure and technical support for critical public administration systems, and supplies the technological infrastructure for state electronic authentication. It serves nearly 300 public administration organizations."
+            },
+            {
+              "type": "heading",
+              "text": "Key partners",
+              "level": 3
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "NISZ's main clients are ministries, government offices, and other central public administration and public service organizations. For these institutions, it provides network, data center, cloud, and IT operations, as well as telecommunications and authentication services."
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "The NISZ corporate group previously included, among others, IdomSoft Zrt., KOPINT-DATORG Kft., and Pro-M Zrt. IdomSoft separated from NISZ in 2024, while KOPINT-DATORG was merged into IdomSoft. The corporate group employed more than 1,100 specialists."
+            }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": false,
+          "items": [
+            {
+              "type": "heading",
+              "text": "My place in the company",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "I received the opportunity to work as an intern at the company as part of my studies at BME. I am proud to say that, out of the 10+ students who joined NISZ, I was the only one assigned to the Economic Directorate. Within the directorate, I worked in the Analysis and Business Intelligence Department of the Controlling Directorate."
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZ_Company_stucture.webp",
+              "caption": "Company structure",
+              "alt": "Company structure"
+            }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": false,
+          "items": [
+            {
+              "type": "heading",
+              "text": "What did I do?",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "In short, our responsibility was to create management reports for the Controlling Directorate. These reports helped management make decisions based on up-to-date information. The data came from a wide variety of sources, depending on how each department kept track of its work (Excel, SQL, SAP, etc.). As a first step, any data that was not already based on BW (Business Warehouse) was loaded into BW using InfoProviders, DSOs, or aDSOs (Advanced Data Store Objects). We then created queries for these using the BEx Query Designer, which were subsequently used in WebI. The actual reports viewed by management were then created in WebI."
+            }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            {
+              "type": "heading",
+              "text": "My official assignment description:",
+              "level": 2
+            },
+            {
+              "type": "heading",
+              "text": "PROJECT PRACTICE ASSIGNMENT",
+              "level": 3
+            },
+            {
+              "type": "heading",
+              "text": "For Dániel Marosvári",
+              "level": 3
+            },
+            {
+              "type": "heading",
+              "text": "BProf Business Informatics Student",
+              "level": 4
+            },
+            {
+              "type": "heading",
+              "text": "Data Warehouse Development and Reporting in the VIR Team (SAP BW, SAP BODS, SAP BO)",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "As a member of the company's Management Information System (VIR) team, the student will gain insight into the development and operation of a data warehouse-based corporate reporting system within a controlled enterprise environment and under professional supervision. The goal of the assignment is for the student to gain practical experience with the full chain of enterprise BI (Business Intelligence) processes on a real, large-scale enterprise architecture, from source systems to end-user reports."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "The student's responsibilities cover the following areas:"
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "1. Learning the fundamentals of SAP BW data modeling: understanding the structure of existing InfoProviders (InfoCube, DSO/ADSO) and performing smaller modeling and development tasks under supervision."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "2. Tracking existing ETL processes (Job, Workflow, Dataflow) in SAP BODS, understanding transformations and delta-loading logic, and independently carrying out smaller, low-risk modifications."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "3. Creating and maintaining queries prepared for reporting in BEx Query Designer, using filters and variables."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "4. Developing expert reports in the SAP BusinessObjects (Web Intelligence) environment, as well as tracing, modifying, or correcting the data sources of existing reports."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "5. Performing data quality checks and implementing an independent, smaller end-to-end BI use case by the end of the semester."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "6. In addition to enterprise BI tools, the student will become familiar with different types of data sources and their differences. This will include traditional Excel-based data sources, SQL databases, and supporting systems used by individual departments (CRM, SAP ERP, etc.)."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "During the assignment, the student will gain deep insight into the structure and operation of an enterprise data warehouse architecture, the design of ETL processes, and the practical implementation of management decision-support reporting and the handling of real business requirements and problems. This provides directly applicable professional knowledge gained in an enterprise environment for future BI and data engineering positions."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "Academic supervisor:\tDR. Balázs János Villányi"
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "External supervisor:\tÁdám Sólyom (NISZ National Infocommunications Service Provider Plc.)"
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "Budapest, September 20, 2026."
+            }
+          ]
+        }
+      ]
+    },
+    "hu": {
+      "title": "Junior adatmérnök",
+      "employer": "NISZ Zrt.",
+      "seniorityLabel": "Gyakornok",
+      "tags": [
+        "SAP",
+        "Nagy Adatmennyiség",
+        "Reporting",
+        "SAP Webi",
+        "BO DS (Üzleti objektum adat szolgáltatás)",
+        "ERP"
+      ],
+      "shortDescription": "NISZ Magyarországon a Nemzeti Infokommunikációs Szolgáltató Zrt. Itt a Gazdasági Ágazat alá tartozó Elemzés és Üzleti Intelligencia Osztályon dolgoztam a BSc kooperatív utolsó évének részeként. Mi fejlesztettük, és tartottuk karban a VIR (Vezetői Információs Rendszer) alkalmazást. Munkák nagyrészt az SAP rendszerek köré összpontosultak. Rengeteg különböző forrásból töltöttünk be adatokat a adatokat a Business Warehouse-ba, onnan meg Bex query-k segítségével készítettünk riportokat a SAP Web Intelligence-ben.",
+      "content": [
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            {
+              "type": "heading",
+              "text": "A cégről",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "A NISZ Nemzeti Infokommunikációs Szolgáltató Zrt. a magyar államigazgatási szektor vezető informatikai és telekommunikációs (ICT) szolgáltatója. A 100%-ban állami tulajdonú vállalat biztosítja a digitális állam működéséhez szükséges kritikus fontosságú informatikai hátteret és infrastruktúrát."
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "A NISZ biztosítja a kormányzati zárt hálózatok és felhőrendszerek üzemeltetését, a kiemelt közigazgatási rendszerek infrastruktúráját és háttértámogatását, valamint az állami elektronikus hitelesítés technológiai hátterét. Közel 300 államigazgatási szervet szolgál ki."
+            },
+            {
+              "type": "heading",
+              "text": "Fontosabb partnerek",
+              "level": 3
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "A NISZ fő ügyfelei a minisztériumok, kormányhivatalok és más központi államigazgatási, illetve közfeladatot ellátó intézmények. Számukra hálózat-, adatközponti, felhő- és informatikai üzemeltetést, valamint távközlési és hitelesítési szolgáltatásokat nyújt."
+            },
+            {
+              "type": "paragraph",
+              "weight": 6,
+              "text": "A NISZ cégcsoportjához korábban többek között az IdomSoft Zrt., a KOPINT-DATORG Kft. és a Pro-M Zrt. tartozott. Az IdomSoft 2024-ben levált a NISZ-ről, a KOPINT-DATORG pedig beolvadt az IdomSoftba. A cégcsoport több mint 1100 szakembert foglalkoztatott."
+            }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": false,
+          "items": [
+            {
+              "type": "heading",
+              "text": "Az én helyem a cégben",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "A BMEs képzésem keretei között kaptam gyakornoki lehetőséget a cégnél. Büszkén mesélem hogy a 10+ hallgatótól akik a NISZ-hez kerültek, én voltam az egyetlen aki a Gazdasági ágazat alá került. Azon belül pedig a Kontrolling igazgatóság, Elemzés és Üzleti Intelligencia osztályon dolgoztam."
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZ_Company_stucture.webp",
+              "caption": "Company structure",
+              "alt": "Company structure"
+            }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": false,
+          "items": [
+            {
+              "type": "heading",
+              "text": "Mi volt a dolgom?",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "Röviden a mi feladatunk volt a kontrolling igazgatóság számára elkészíteni a vezetői report-okat. Ezek segítették őket abban, hogy valós idejű információk alapján hozhassanak döntéseket. Az adatok rendkívül sok különböző forrásból származtak, éppen melyik osztály miben tartotta nyilván munkáit (Excel, SQL, SAP, stb.). Első lépés ként, ami nem BW (Business Warehouse) alapú volt, azt az InfoProvider-ekkel, DSO-kkal (vagy aDSO-kkal, Advanced Data Store Object) töltöttük be a BW-be. Ezekre a BEx Query designer-rel készítettünk lekérdezéseket, amiket a Webi-ben használtunk. A report-ok maguk, amiket a vezetők láttak pedig itt, a Webi-ben készültek el."
+            }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            {
+              "type": "heading",
+              "text": "Hivatalos Feladatkiíró levelem:",
+              "level": 2
+            },
+            {
+              "type": "heading",
+              "text": "PROJEKTGYAKORLAT FELADAT",
+              "level": 3
+            },
+            {
+              "type": "heading",
+              "text": "Marosvári Dániel",
+              "level": 3
+            },
+            {
+              "type": "heading",
+              "text": "Üzemmérnök-informatikus hallgató részére",
+              "level": 4
+            },
+            {
+              "type": "heading",
+              "text": "Adattárház-fejlesztés és riportozás a VIR csapatban (SAP BW, SAP BODS, SAP BO)",
+              "level": 2
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "A hallgató a vállalat Vezetői Információs Rendszer (VIR) csapatában, egy nagyvállalati környezet kontrollált körülményei és szakmai felügyelet mellett ismerheti meg az adattárház-alapú vállalati riportozási rendszer fejlesztési és üzemeltetési feladatait. A feladat célja, hogy a hallgató valós, nagyvállalati léptékű architektúrán szerezzen gyakorlati tapasztalatot a vállalati BI (Business Intelligence) folyamatok teljes láncában, a forrásrendszerektől a végfelhasználói riportokig."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "A hallgató feladatai az alábbi területeket ölelik fel:"
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "1. SAP BW adatmodellezési alapok elsajátítása: meglévő InfoProviderek (InfoCube, DSO/ADSO) felépítésének értelmezése, kisebb modellezési, fejlesztési feladatok elvégzése felügyelet mellett."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "2. SAP BODS-ban meglévő ETL folyamatok (Job, Workflow, Dataflow) nyomon követése, a transzformációk és a delta betöltési logika megértése, kisebb, alacsony kockázatú módosítások önálló végrehajtása."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "3. Riportozásra kész lekérdezések (Query) készítése és karbantartása a BEx Query Designerben, szűrők és változók alkalmazásával."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "4. Szakértői riportok fejlesztése SAP BusinessObjects (Web Intelligence) környezetben, valamint meglévő riportok adatforrásának visszakövetése, módosítása vagy javítása."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "5. Adatminőségi ellenőrzések végzése, valamint egy önálló, kisebb, végponttól végpontig tartó BI use case megvalósítása a fél év végére."
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "6. A hallgató megismeri a nagyvállalati BI eszközök mellett az adatforrások típusait és azok különbözőségét. Találkozni fog hagyományos excel alapú adatforássokkal, SQL adatbázisokkal vagy a szakterületek által használt támogató rendszerekkel (CRM, SAP ERP stb.)"
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "A feladat elvégzése során a hallgató mély rálátást szerez egy nagyvállalati adattárház-architektúra felépítésére és üzemeltetésére, az ETL-folyamatok tervezésére és a vezetői döntéstámogató riportozás gyakorlati megvalósítására és valódi üzleti igények, problémák kezelésére, ami közvetlenül hasznosítható, nagyvállalati környezetben szerzett szaktudást ad a jövőbeli BI/adatmérnöki poziciókhoz. "
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "Tanszéki konzulens:\tDR. Villányi Balázs János"
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "Külső konzulens:\tSólyom Ádám (NISZ Nemzeti Infokommunikációs Szolgáltató Zrt.)"
+            },
+            {
+              "type": "paragraph",
+              "weight": 12,
+              "text": "Budapest, 2026. szeptember 20."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

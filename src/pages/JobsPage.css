@@ -1,0 +1,9 @@
+.jobs-page-bg {
+  background: #000000;
+}
+
+.total-experience-shell {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}

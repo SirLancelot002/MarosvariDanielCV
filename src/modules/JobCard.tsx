@@ -40,16 +40,27 @@ function JobCard({ job }: JobCardProps) {
         <h2 className="job-card__title">{content.title}</h2>
 
         {content.employer && job.employerSrc ? (
-          <a
-            href={job.employerSrc}
-            className="job-card__employer"
+          <span
+            className="job-card__employer job-card__employer--link"
             style={{ color: accentColor }}
-            target="_blank"
-            rel="noopener noreferrer"
+            role="link"
+            tabIndex={0}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              window.open(job.employerSrc, '_blank', 'noopener,noreferrer');
+            }}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                event.stopPropagation();
+                window.open(job.employerSrc, '_blank', 'noopener,noreferrer');
+              }
+            }}
           >
             <img src={cityLogoImg} alt="" className="personal-data-icon" />
             {content.employer}
-          </a>
+          </span>
         ) : (
           content.employer && (
             <p className="job-card__employer" style={{ color: accentColor }}>

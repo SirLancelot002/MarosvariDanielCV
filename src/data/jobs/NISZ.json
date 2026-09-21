@@ -274,7 +274,7 @@
             {
               "type": "paragraph",
               "weight": 12,
-              "text": "Röviden a mi feladatunk volt a kontrolling igazgatóság számára elkészíteni a vezetői report-okat. Ezek segítették őket abban, hogy valós idejű információk alapján hozhassanak döntéseket. Az adatok rendkívül sok különböző forrásból származtak, éppen melyik osztály miben tartotta nyilván munkáit (Excel, SQL, SAP, stb.). Első lépés ként, ami nem BW (Business Warehouse) alapú volt, azt az InfoProvider-ekkel, DSO-kkal (vagy aDSO-kkal, Advanced Data Store Object) töltöttük be a BW-be. Ezekre a BEX Query designer-rel készítettünk lekérdezéseket, amiket a Webi-ben használtunk. A report-ok maguk, amiket a vezetők láttak pedig itt, a Webi-ben készültek el."
+              "text": "Röviden a mi feladatunk volt a kontrolling igazgatóság számára elkészíteni a vezetői report-okat. Ezek segítették őket abban, hogy valós idejű információk alapján hozhassanak döntéseket. Az adatok rendkívül sok különböző forrásból származtak, éppen melyik osztály miben tartotta nyilván munkáit (Excel, SQL, SAP, stb.). Első lépés ként, ami nem BW (Business Warehouse) alapú volt, azt az InfoProvider-ekkel, DSO-kkal (vagy aDSO-kkal, Advanced Data Store Object) töltöttük be a BW-be. Ezekre a BEx Query designer-rel készítettünk lekérdezéseket, amiket a Webi-ben használtunk. A report-ok maguk, amiket a vezetők láttak pedig itt, a Webi-ben készültek el."
             }
           ]
         },

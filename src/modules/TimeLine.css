@@ -210,7 +210,7 @@
   transform-origin: right center;
 }
 
-/* Left side (studies, future jobs): everything grows outward to the left of the line. */
+/* Left side (studies, jobs): everything grows outward to the left of the line. */
 .timeline-event--left .timeline-event__span {
   right: calc(var(--line-pos) + var(--span-offset));
 }
@@ -240,7 +240,8 @@
 
 /* Project cards render inside a fairly tight popup here, so their normal glow/vignette backplate (tuned for
    the wider grid layout on the Projects page) is dropped instead of dimming the preview. */
-.timeline-event__preview .project-card-shell {
+.timeline-event__preview .project-card-shell,
+.timeline-event__preview .job-card-shell {
   padding: 0;
 }
 
@@ -249,13 +250,16 @@
 }
 
 .timeline-event__preview .project-card-backplate,
-.timeline-event__preview .project-card-center-vignette {
+.timeline-event__preview .project-card-center-vignette,
+.timeline-event__preview .job-card-backplate,
+.timeline-event__preview .job-card-center-vignette {
   display: none;
 }
 
 /* The backplate/vignette provided the only darkening behind the card content, so restore it directly
    on the card itself (no glow bleeding past the rounded corners this time). */
-.timeline-event__preview .project-card {
+.timeline-event__preview .project-card,
+.timeline-event__preview .job-card {
   background: rgba(0, 0, 0, 0.55);
 }
 

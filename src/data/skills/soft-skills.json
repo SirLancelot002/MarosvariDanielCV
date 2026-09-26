@@ -1,0 +1,56 @@
+{
+  "id": "soft-skills",
+  "priority": 3,
+  "icon": "skills/tools-icon.png",
+  "translations": {
+    "en": { "title": "Soft Skills" },
+    "hu": { "title": "Emberi készségek" }
+  },
+  "skills": [
+    {
+      "icon": "skills/sap-icon.png",
+      "rating": 4,
+      "links": [],
+      "translations": {
+        "en": { "name": "Communication", "comment": "My only shortcoming is the lack of professional vocabulary due to my young age. (I'm trying to improve)" },
+        "hu": { "name": "Kommunikáció", "comment": "Az egyetlen hiányosságom a szakmai fogalmazás hiánya a fiatal korom miatt. (Próbálok javítani rajta)" }
+      }
+    },
+    {
+      "icon": "skills/sap-icon.png",
+      "rating": 5,
+      "links": [],
+      "translations": {
+        "en": { "name": "Teamwork", "comment": "I work well in teams and try to contribute effectively. I'm always trying to take the load off others." },
+        "hu": { "name": "Csapatmunka", "comment": "Jól dolgozom csapatban, és igyekszem hatékonyan hozzájárulni. Mindig próbálom levenni a terhet a többiek válláról." }
+      }
+    },
+    {
+      "icon": "skills/sap-icon.png",
+      "rating": 5,
+      "links": ["project:ws-med-appointment-system"],
+      "translations": {
+        "en": { "name": "Leadership", "comment": "I was a part of many voluntery team projects, I always ended up taking a lead role for efficency." },
+        "hu": { "name": "Vezetés", "comment": "Sok önkéntes csapatprojektben vettem részt, mindig vezető szerepet vállaltam a hatékonyság érdekében." }
+      }
+    },
+    {
+      "icon": "skills/sap-icon.png",
+      "rating": 4,
+      "links": [],
+      "translations": {
+        "en": { "name": "Hardworking", "comment": "I feel a terrible disconfort if my work is sub-expectation." },
+        "hu": { "name": "Szorgalmas", "comment": "Rossz érzésem van, ha a munkám nem éri el a várakozásokat." }
+      }
+    },
+    {
+      "icon": "skills/sap-icon.png",
+      "rating": 5,
+      "links": [],
+      "translations": {
+        "en": { "name": "Creativity", "comment": "I never had any problems with creativity when making a project, but I'm terrible at naming things." },
+        "hu": { "name": "Kreativitás", "comment": "Soha nem volt problémám a kreativitással egy projekt elkészítése során, de borzasztó vagyok a nevek kitalálásában." }
+      }
+    }
+  ]
+}

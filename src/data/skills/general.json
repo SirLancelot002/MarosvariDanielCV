@@ -15,6 +15,15 @@
         "en": { "name": "Programming languages", "comment": "I know a large number of programming languages." },
         "hu": { "name": "Programozási nyelvek", "comment": "Sok programozási nyelvet ismerek." }
       }
+    },
+    {
+      "icon": "skills/monitorlogo.webp",
+      "rating": 5,
+      "links": ["table:soft-skills"],
+      "translations": {
+        "en": { "name": "Soft Skills", "comment": "I'd say I had the best soft skills among my peers both in high school and univerities." },
+        "hu": { "name": "Emberi készségek", "comment": "Szerintem a legjobb emberi készségekkel rendelkeztem a kortársaim között mind a középiskolában, mind az egyetemeken." }
+      }
     }
   ]
 }

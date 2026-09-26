@@ -1,0 +1,20 @@
+{
+  "id": "tools-platforms",
+  "priority": 2,
+  "icon": "skills/tools-icon.png",
+  "translations": {
+    "en": { "title": "Tools & Platforms" },
+    "hu": { "title": "Eszközök és platformok" }
+  },
+  "skills": [
+    {
+      "icon": "skills/sap-icon.png",
+      "rating": 3,
+      "links": ["job:nisz_junior_data_engineer", "table:programming-languages"],
+      "translations": {
+        "en": { "name": "SAP BW / BODS", "comment": "Business Warehouse and ETL work at NISZ." },
+        "hu": { "name": "SAP BW / BODS", "comment": "Business Warehouse és ETL munka a NISZ-nél." }
+      }
+    }
+  ]
+}

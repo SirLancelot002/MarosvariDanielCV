@@ -11,6 +11,7 @@ const StudyDetailPage = lazy(() => import('./pages/StudyDetailPage'));
 const ProjectDetailPage = lazy(() => import('./pages/ProjectDetailPage'));
 const JobsPage = lazy(() => import('./pages/JobsPage'));
 const JobDetailPage = lazy(() => import('./pages/JobDetailPage'));
+const SkillsPage = lazy(() => import('./pages/SkillsPage'));
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
           <Route path="/experience" element={<JobsPage />} />
           <Route path="/experience/:id" element={<JobDetailPage />} />
+          <Route path="/skills" element={<SkillsPage />} />
         </Route>
       </Routes>
     </Suspense>

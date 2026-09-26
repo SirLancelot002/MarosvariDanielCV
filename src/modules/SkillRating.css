@@ -1,0 +1,16 @@
+.skill-rating {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.skill-rating__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.skill-rating__dot.is-filled {
+  background: #64d2ff;
+  box-shadow: 0 0 6px rgba(100, 210, 255, 0.7);
+}

@@ -1,0 +1,29 @@
+{
+  "id": "programming-languages",
+  "priority": 1,
+  "icon": "skills/code-icon.png",
+  "translations": {
+    "en": { "title": "Programming Languages" },
+    "hu": { "title": "Programozási nyelvek" }
+  },
+  "skills": [
+    {
+      "icon": "skills/csharp-icon.png",
+      "rating": 4,
+      "links": ["job:nisz_junior_data_engineer", "table:tools-platforms"],
+      "translations": {
+        "en": { "name": "C#", "comment": "Used at NISZ and in BestFPS." },
+        "hu": { "name": "C#", "comment": "A NISZ-nél és a BestFPS projektben használtam." }
+      }
+    },
+    {
+      "icon": "skills/typescript-icon.png",
+      "rating": 3,
+      "links": [],
+      "translations": {
+        "en": { "name": "TypeScript", "comment": "Used to build this website." },
+        "hu": { "name": "TypeScript", "comment": "Ezt a weboldalt is ezzel készítettem." }
+      }
+    }
+  ]
+}

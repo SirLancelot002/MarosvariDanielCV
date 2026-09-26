@@ -70,5 +70,14 @@
   "experience.backToList": "Back to experience",
   "experience.years": "Year(s)",
   "experience.months": "Month(s)",
-  "experience.total": "My total work Experience"
+  "experience.total": "My total work Experience",
+
+  "nav.skills": "Skills",
+  "skills.title1": "My Skills",
+  "skills.title2": "What I bring",
+  "skills.title3": "Tools of the trade",
+  "skills.columnSkill": "Skill",
+  "skills.columnRating": "Rating",
+  "skills.columnComment": "Comment",
+  "skills.columnLinks": "Links"
 }

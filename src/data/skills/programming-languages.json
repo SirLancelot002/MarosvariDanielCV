@@ -1,28 +1,100 @@
 {
   "id": "programming-languages",
   "priority": 2,
-  "icon": "skills/code-icon.png",
+  "icon": "skills/monitorlogo.webp",
   "translations": {
     "en": { "title": "Programming Languages" },
     "hu": { "title": "Programozási nyelvek" }
   },
   "skills": [
     {
-      "icon": "skills/csharp-icon.png",
-      "rating": 4,
-      "links": ["job:nisz_junior_data_engineer", "table:tools-platforms"],
+      "icon": "./src/assets/cslogo.webp",
+      "rating": 5,
+      "links": ["project:ws-med-appointment-system", "project:meteorology", "project:best-fps", "project:crypto-trade-bot", "study:bme-cs-bsc"],
       "translations": {
-        "en": { "name": "C#", "comment": "Used at NISZ and in BestFPS." },
-        "hu": { "name": "C#", "comment": "A NISZ-nél és a BestFPS projektben használtam." }
+        "en": { "name": "C#", "comment": "C# was the first programming language I learned. I have been using it ever since." },
+        "hu": { "name": "C#", "comment": "A C# volt az első programozási nyelv, amit megtanultam. Azóta is ezt használom legtöbbet." }
       }
     },
     {
-      "icon": "skills/typescript-icon.png",
+      "icon": "./src/assets/typescriptlogo.webp",
       "rating": 3,
-      "links": [],
+      "links": ["project:cv-website", "project:ws-med-appointment-system"],
       "translations": {
-        "en": { "name": "TypeScript", "comment": "Used to build this website." },
+        "en": { "name": "TypeScript", "comment": "Used to build this very website." },
         "hu": { "name": "TypeScript", "comment": "Ezt a weboldalt is ezzel készítettem." }
+      }
+    },
+    {
+      "icon": "./src/assets/pythonlogo.webp",
+      "rating": 4,
+      "links": ["project:farmer-was-replaced", "project:crypto-trade-bot"],
+      "translations": {
+        "en": { "name": "Python", "comment": "I've learned Python completely by myself and have used it in several projects." },
+        "hu": { "name": "Python", "comment": "A Pythont teljesen önállóan tanultam meg, és több projektben is használtam." }
+      }
+    },
+    {
+      "icon": "./src/assets/haskelllogo.webp",
+      "rating": 2,
+      "links": ["project:wizard-games", "study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "Haskell", "comment": "My Experience with Haskell is limited, but I have completed all tasks perfectly in the semester we used it." },
+        "hu": { "name": "Haskell", "comment": "A Haskellban szerzett tapasztalatom korlátozott, de a félév során, amikor használtuk, minden feladatot tökéletesen teljesítettem." }
+      }
+    },
+    {
+      "icon": "./src/assets/javalogo.webp",
+      "rating": 4,
+      "links": ["study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "Java", "comment": "I have very limited experience with Java, but since it is almost the same as C#, I can use it well." },
+        "hu": { "name": "Java", "comment": "Nagyon korlátozott tapasztalatom van a Javával, de mivel majdnem ugyanaz, mint a C#, jól tudom használni." }
+      }
+    },
+    {
+      "icon": "./src/assets/sqllogo.webp",
+      "rating": 4,
+      "links": ["project:ws-med-appointment-system", "study:bme-cs-bsc"],
+      "translations": {
+        "en": { "name": "SQL", "comment": "I have used SQL in several projects, mainly for database management." },
+        "hu": { "name": "SQL", "comment": "Több projektben is használtam az SQL-t, főként az adatbázis-kezeléshez." }
+      }
+    },
+    {
+      "icon": "/skills/javascriptlogo.webp",
+      "rating": 1,
+      "links": ["study:petrik-hs"],
+      "translations": {
+        "en": { "name": "JavaScript", "comment": "I know it from TypeScript, barely used it directly." },
+        "hu": { "name": "JavaScript", "comment": "A TypeScriptből ismerem, közvetlenül alig használtam." }
+      }
+    },
+    {
+      "icon": "/skills/Clogo.webp",
+      "rating": 2,
+      "links": ["study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "C", "comment": "I had one semester of experience with C during my studies, but I had no problem at all with pointers or the language." },
+        "hu": { "name": "C", "comment": "A C-vel egy félévnyi tapasztalatom van az egyetemi tanulmányaim során, de a pointerekkel vagy a nyelvvel egyáltalán nem volt problémám." }
+      }
+    },
+    {
+      "icon": "/skills/HTMLlogo.webp",
+      "rating": 4,
+      "links": ["project:ws-med-appointment-system", "project:cv-website", "project:my-first-real-site", "study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "HTML", "comment": "I was taught HTML both in High School and at university. I have used it extensively in various projects." },
+        "hu": { "name": "HTML", "comment": "A HTML-t mind a középiskolában, mind az egyetemen tanultam. Számos projektben széles körben használtam." }
+      }
+    },
+    {
+      "icon": "/skills/CSSlogo.webp",
+      "rating": 4,
+      "links": ["project:ws-med-appointment-system", "project:cv-website", "project:my-first-real-site", "study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "CSS", "comment": "I was taught CSS alongside HTML. Used it just as many times." },
+        "hu": { "name": "CSS", "comment": "A CSS-t a HTML mellett tanultam. Ugyan olyan sokszor használtam." }
       }
     }
   ]

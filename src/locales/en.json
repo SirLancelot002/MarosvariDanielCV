@@ -74,10 +74,10 @@
 
   "nav.skills": "Skills",
   "skills.title1": "My Skills",
-  "skills.title2": "What I bring",
+  "skills.title2": "What I bring to the table",
   "skills.title3": "Tools of the trade",
   "skills.columnSkill": "Skill",
-  "skills.columnRating": "Rating",
+  "skills.columnRating": "Level",
   "skills.columnComment": "Comment",
-  "skills.columnLinks": "Links"
+  "skills.columnLinks": "References"
 }

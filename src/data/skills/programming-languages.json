@@ -1,6 +1,6 @@
 {
   "id": "programming-languages",
-  "priority": 1,
+  "priority": 2,
   "icon": "skills/code-icon.png",
   "translations": {
     "en": { "title": "Programming Languages" },

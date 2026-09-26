@@ -69,5 +69,14 @@
   "experience.backToList": "Vissza a tapasztalatokhoz",
   "experience.years": "Év",
   "experience.months": "Hónap",
-  "experience.total": "Összes szakmai tapasztalatom"
+  "experience.total": "Összes szakmai tapasztalatom",
+
+  "nav.skills": "Képességek",
+  "skills.title1": "A képességeim",
+  "skills.title2": "Mit hozok az asztalhoz?",
+  "skills.title3": "Eszközök a munkához",
+  "skills.columnSkill": "Készség",
+  "skills.columnRating": "Szint",
+  "skills.columnComment": "Megjegyzés",
+  "skills.columnLinks": "Referenciák"
 }

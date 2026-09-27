@@ -17,11 +17,11 @@
       }
     },
     {
-      "icon": "skills/monitorlogo.webp",
+      "icon": "skills/soft-skillslogo.webp",
       "rating": 5,
       "links": ["table:soft-skills"],
       "translations": {
-        "en": { "name": "Soft Skills", "comment": "I'd say I had the best soft skills among my peers both in high school and univerities." },
+        "en": { "name": "Soft Skills", "comment": "I'd say I had the best soft skills among my peers both in high school and in universities." },
         "hu": { "name": "Emberi készségek", "comment": "Szerintem a legjobb emberi készségekkel rendelkeztem a kortársaim között mind a középiskolában, mind az egyetemeken." }
       }
     }

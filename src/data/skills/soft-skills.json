@@ -1,6 +1,6 @@
 {
   "id": "soft-skills",
-  "priority": 3,
+  "priority": 2,
   "icon": "skills/soft-skillslogo.webp",
   "translations": {
     "en": { "title": "Soft Skills" },

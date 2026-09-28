@@ -1,6 +1,6 @@
 {
   "id": "tools-platforms",
-  "priority": 4,
+  "priority": 99,
   "icon": "skills/tools-icon.png",
   "translations": {
     "en": { "title": "Tools & Platforms" },

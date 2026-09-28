@@ -24,6 +24,15 @@
         "en": { "name": "Soft Skills", "comment": "I'd say I had the best soft skills among my peers both in high school and in universities." },
         "hu": { "name": "Emberi készségek", "comment": "Szerintem a legjobb emberi készségekkel rendelkeztem a kortársaim között mind a középiskolában, mind az egyetemeken." }
       }
+    },
+    {
+      "icon": "skills/communicationlogo.webp",
+      "rating": 4,
+      "links": ["study:b2-language-cert", "table:languages"],
+      "translations": {
+        "en": { "name": "Foraign Languages", "comment": "" },
+        "hu": { "name": "Idegen nyelvek", "comment": "" }
+      }
     }
   ]
 }

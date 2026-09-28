@@ -1,0 +1,29 @@
+{
+  "id": "devtools-and-tech",
+  "priority": 5,
+  "icon": "./src/assets/coglogo.webp",
+  "translations": {
+    "en": { "title": "Development Tools & Technologies" },
+    "hu": { "title": "Fejlesztői eszközök és technológiák" }
+  },
+  "skills": [
+    {
+      "icon": "skills/monitorlogo.webp",
+      "rating": 4,
+      "links": [],
+      "translations": {
+        "en": { "name": "Programming languages", "comment": "" },
+        "hu": { "name": "Programozási nyelvek", "comment": "" }
+      }
+    },
+    {
+      "icon": "skills/soft-skillslogo.webp",
+      "rating": 5,
+      "links": ["table:soft-skills", "job:derko_student_helper"],
+      "translations": {
+        "en": { "name": "Soft Skills", "comment": "I'd say I had the best soft skills among my peers both in high school and in universities." },
+        "hu": { "name": "Emberi készségek", "comment": "Szerintem a legjobb emberi készségekkel rendelkeztem a kortársaim között mind a középiskolában, mind az egyetemeken." }
+      }
+    }
+  ]
+}

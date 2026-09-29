@@ -35,7 +35,7 @@
       }
     },
     {
-      "icon": "skills/monitorlogo.webp",
+      "icon": "skills/windowslogo.webp",
       "rating": 5,
       "links": ["study:bme-cs-bsc", "study:elte-cs-bsc", "study:petrik-hs", "study:office-it-specialist"],
       "translations": {
@@ -44,7 +44,7 @@
       }
     },
     {
-      "icon": "skills/monitorlogo.webp",
+      "icon": "skills/CICDlogo.webp",
       "rating": 2,
       "links": ["project:cv-website", "project:ws-med-appointment-system"],
       "translations": {
@@ -53,7 +53,7 @@
       }
     },
     {
-      "icon": "skills/monitorlogo.webp",
+      "icon": "skills/VisualStudiologo.webp",
       "rating": 5,
       "links": ["project:meteorology", "study:petrik-hs", "project:ws-med-appointment-system", "project:best-fps", "study:bme-cs-bsc", "study:elte-cs-bsc"],
       "translations": {
@@ -62,7 +62,7 @@
       }
     },
     {
-      "icon": "skills/monitorlogo.webp",
+      "icon": "./src/assets/visualstudiocodelogo.webp",
       "rating": 5,
       "links": ["project:cv-website", "study:petrik-hs", "project:ws-med-appointment-system", "project:my-first-real-site", "study:bme-cs-bsc", "study:elte-cs-bsc"],
       "translations": {
@@ -71,7 +71,7 @@
       }
     },
     {
-      "icon": "skills/monitorlogo.webp",
+      "icon": "skills/Postmanlogo.webp",
       "rating": 3,
       "links": ["study:bme-cs-bsc"],
       "translations": {
@@ -80,12 +80,21 @@
       }
     },
     {
-      "icon": "skills/monitorlogo.webp",
+      "icon": "skills/jiralogo.webp",
       "rating": 1,
       "links": ["project:ws-med-appointment-system"],
       "translations": {
         "en": { "name": "Jira", "comment": "Our project manager recommended it for WS-med. So I used it, but I don't yet have a deep knowladge of it." },
         "hu": { "name": "Jira", "comment": "A projektmenedzserünk a WS-medhez ajánlotta. Így használtam, de még nincs mély tudásom róla." }
+      }
+    },
+    {
+      "icon": "skills/MSOfficelogo.webp",
+      "rating": 5,
+      "links": ["study:bme-cs-bsc", "study:petrik-hs", "study:office-it-specialist"],
+      "translations": {
+        "en": { "name": "MS Office", "comment": "The Office specialist course literally requires this level of proficiency. But I've even used macros in Excel." },
+        "hu": { "name": "MS Office", "comment": "Az Irodai informatikus tanfolyam szó szerint megköveteli ezt a szintű jártasságot. De még a makrókat is használtam az Excelben." }
       }
     }
   ]

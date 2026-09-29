@@ -30,8 +30,17 @@
       "rating": 4,
       "links": ["study:b2-language-cert", "table:languages"],
       "translations": {
-        "en": { "name": "Foraign Languages", "comment": "" },
+        "en": { "name": "Foreign Languages", "comment": "" },
         "hu": { "name": "Idegen nyelvek", "comment": "" }
+      }
+    },
+    {
+      "icon": "./src/assets/gitlogo.webp",
+      "rating": 4,
+      "links": ["study:bme-cs-bsc", "table:devtools-and-tech", "table:frameworks-libraries"],
+      "translations": {
+        "en": { "name": "Dev Technologies", "comment": "" },
+        "hu": { "name": "Fejlesztési technológiák", "comment": "" }
       }
     }
   ]

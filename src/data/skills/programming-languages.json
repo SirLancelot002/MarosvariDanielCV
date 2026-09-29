@@ -53,15 +53,6 @@
       }
     },
     {
-      "icon": "./src/assets/sqllogo.webp",
-      "rating": 4,
-      "links": ["project:ws-med-appointment-system", "study:bme-cs-bsc"],
-      "translations": {
-        "en": { "name": "SQL", "comment": "I have used SQL in several projects, mainly for database management." },
-        "hu": { "name": "SQL", "comment": "Több projektben is használtam az SQL-t, főként az adatbázis-kezeléshez." }
-      }
-    },
-    {
       "icon": "/skills/javascriptlogo.webp",
       "rating": 1,
       "links": ["study:petrik-hs"],

@@ -17,7 +17,7 @@
       }
     },
     {
-      "icon": "skills/GitHublogo.webp",
+      "icon": "./src/assets/gitlogo.webp",
       "rating": 5,
       "links": ["project:cv-website", "study:bme-cs-bsc", "study:elte-cs-bsc"],
       "translations": {

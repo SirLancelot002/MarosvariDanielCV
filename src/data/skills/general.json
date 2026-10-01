@@ -42,6 +42,15 @@
         "en": { "name": "Dev Technologies", "comment": "" },
         "hu": { "name": "Fejlesztési technológiák", "comment": "" }
       }
+    },
+    {
+      "icon": "skills/DataTransformationLogo.webp",
+      "rating": 2,
+      "links": ["job:nisz_junior_data_engineer", "table:data-sap"],
+      "translations": {
+        "en": { "name": "SAP Data Technologies", "comment": "To be clear, as I'm writing this, I have only worked with SAP for a month as an intern. I'll update this section as soon as it's relevant to do so." },
+        "hu": { "name": "SAP Adattechnológiák", "comment": "Tisztázásképpen, amikor ezt írom, csak egy hónapja dolgozom SAP-val gyakornokként. Frissíteni fogom ezt a részt, amint releváns lesz." }
+      }
     }
   ]
 }

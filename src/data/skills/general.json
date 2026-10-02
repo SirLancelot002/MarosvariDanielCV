@@ -51,6 +51,24 @@
         "en": { "name": "SAP Data Technologies", "comment": "To be clear, as I'm writing this, I have only worked with SAP for a month as an intern. I'll update this section as soon as it's relevant to do so." },
         "hu": { "name": "SAP Adattechnológiák", "comment": "Tisztázásképpen, amikor ezt írom, csak egy hónapja dolgozom SAP-val gyakornokként. Frissíteni fogom ezt a részt, amint releváns lesz." }
       }
+    },
+    {
+      "icon": "skills/SoftwareDesignLogo.webp",
+      "rating": 5,
+      "links": ["project:ws-med-appointment-system", "project:meteorology", "study:bme-cs-bsc"],
+      "translations": {
+        "en": { "name": "Software Design", "comment": "My program planning style is very clean and structured. I was able to figure out the backend of multiple production software after a bit of observation. I always strive to write maintainable and scalable code." },
+        "hu": { "name": "Szoftvertervezés", "comment": "A programtervezési stílusom nagyon tiszta és strukturált. Egy kis megfigyelés után képes voltam több éles szoftver backendjét is kitalálni. Mindig arra törekszem, hogy karbantartható és skálázható kódot írjak." }
+      }
+    },
+    {
+      "icon": "skills/TechnicalDocumentationLogo.webp",
+      "rating": 3,
+      "links": ["project:meteorology", "project:farmer-was-replaced"],
+      "translations": {
+        "en": { "name": "Technical Documentation", "comment": "This depends on the expectation. I'm really good at creating interactive (newer kinds of) documentations, but I don't have too much experience with making documentation in MS Word or similar traditional tools. I prefer Obsidian for example. But of course I can work with any tool if needed." },
+        "hu": { "name": "Műszaki dokumentáció", "comment": "Ez az elvárástól függ. Nagyon jó vagyok interaktív (újabb típusú) dokumentációk készítésében, de nincs túl sok tapasztalatom MS Word vagy hasonló hagyományos eszközökben történő dokumentáció készítésében. Például az Obsidian-t részesítem előnyben. De természetesen bármilyen eszközzel tudok dolgozni, ha szükséges." }
+      }
     }
   ]
 }

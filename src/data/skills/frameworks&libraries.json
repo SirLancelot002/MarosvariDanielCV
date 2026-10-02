@@ -1,0 +1,92 @@
+{
+  "id": "frameworks-libraries",
+  "priority": 4,
+  "icon": "skills/librarylogo.webp",
+  "translations": {
+    "en": { "title": "Frameworks & Libraries" },
+    "hu": { "title": "Keretrendszerek és könyvtárak" }
+  },
+  "skills": [
+    {
+      "icon": "skills/Netlogo.webp",
+      "rating": 5,
+      "links": ["project:ws-med-appointment-system", "project:meteorology", "project:crypto-trade-bot", "study:bme-cs-bsc"],
+      "translations": {
+        "en": { "name": ".NET / ASP.NET", "comment": "I almost always used .NET when I coded in C#." },
+        "hu": { "name": ".NET / ASP.NET", "comment": "Szinte mindig a .NET-et használtam, amikor C#-ban programoztam." }
+      }
+    },
+    {
+      "icon": "./src/assets/reactlogo.webp",
+      "rating": 4,
+      "links": ["project:cv-website", "project:ws-med-appointment-system"],
+      "translations": {
+        "en": { "name": "React", "comment": "I have used React in several projects and am quite comfortable with it." },
+        "hu": { "name": "React", "comment": "Több projektben is használtam a Reactet, és meglehetősen jártas vagyok benne." }
+      }
+    },
+    {
+      "icon": "./src/assets/reactbitslogo.png",
+      "rating": 5,
+      "links": ["project:cv-website"],
+      "translations": {
+        "en": { "name": "ReactBits", "comment": "This was the library that gave me the inspiration for this site, and I regularly check it for updates." },
+        "hu": { "name": "ReactBits", "comment": "Ez a könyvtár adta az inspirációt ehhez az oldalhoz, és rendszeresen felnézek rá az újdonságokért." }
+      }
+    },
+    {
+      "icon": "skills/Numpylogo.webp",
+      "rating": 1,
+      "links": ["study:bme-cs-bsc"],
+      "translations": {
+        "en": { "name": "NumPy", "comment": "We have used NumPy in our coursework a few times." },
+        "hu": { "name": "NumPy", "comment": "A kurzusaink során néhányszor használtuk a NumPy-t." }
+      }
+    },
+    {
+      "icon": "skills/EFlogo.webp",
+      "rating": 3,
+      "links": ["study:bme-cs-bsc", "project:ws-med-appointment-system"],
+      "translations": {
+        "en": { "name": "Entity Framework", "comment": "I've only used EF in a few projects, but it had the main role in all of them." },
+        "hu": { "name": "Entity Framework", "comment": "" }
+      }
+    },
+    {
+      "icon": "skills/LinQlogo.webp",
+      "rating": 4,
+      "links": ["study:bme-cs-bsc", "project:meteorology", "project:crypto-trade-bot"],
+      "translations": {
+        "en": { "name": "LINQ", "comment": "I learned about LinQ on university courses, and since then I'm trying to use it every time I can." },
+        "hu": { "name": "LINQ", "comment": "A LINQ-ról az egyetemen tanultam, és azóta próbálom használni, amikor csak tudom." }
+      }
+    },
+    {
+      "icon": "skills/NetWebAPIlogo.webp",
+      "rating": 2,
+      "links": ["project:crypto-trade-bot", "project:ws-med-appointment-system"],
+      "translations": {
+        "en": { "name": "ASP.NET Web API", "comment": "" },
+        "hu": { "name": "ASP.NET Web API", "comment": "" }
+      }
+    },
+    {
+      "icon": "skills/reactroutelogo.webp",
+      "rating": 4,
+      "links": ["project:cv-website", "study:bme-cs-bsc", "project:ws-med-appointment-system"],
+      "translations": {
+        "en": { "name": "React Router", "comment": "In all my react projects (including this one), I used React Router for handling navigation." },
+        "hu": { "name": "React Router", "comment": "Minden react projektemben (beleértve ezt is) a React Router-t használtam a navigáció kezelésére." }
+      }
+    },
+    {
+      "icon": "skills/bootstraplogo.webp",
+      "rating": 5,
+      "links": ["project:cv-website", "study:petrik-hs", "project:ws-med-appointment-system", "project:my-first-real-site"],
+      "translations": {
+        "en": { "name": "Bootstrap", "comment": "Ever since I've learned Web development, I've been using Bootstrap for building responsive websites. I know it has other features, but for me the columns and grid system were the big selling points." },
+        "hu": { "name": "Bootstrap", "comment": "Amióta megtanultam a webfejlesztést, a reszponzív weboldalak készítéséhez a Bootstrap-et használom. Tudom, hogy más funkciói is vannak, de számomra a rács- és oszloprendszer volt a legnagyobb vonzerő." }
+      }
+    }
+  ]
+}

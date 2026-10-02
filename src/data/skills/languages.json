@@ -1,0 +1,29 @@
+{
+  "id": "languages",
+  "priority": 3,
+  "icon": "skills/communicationlogo.webp",
+  "translations": {
+    "en": { "title": "Languages" },
+    "hu": { "title": "Nyelvek" }
+  },
+  "skills": [
+    {
+      "icon": "./src/assets/EngFlag.png",
+      "rating": 4,
+      "links": ["study:b2-language-cert"],
+      "translations": {
+        "en": { "name": "English", "comment": "I was on a university course for English speaking and listening C1 level, and I was the best in the class." },
+        "hu": { "name": "Angol", "comment": "Egyetemi angol beszéd és hallás C1 kurzuson vettem részt, és én voltam a legjobb az osztályban." }
+      }
+    },
+    {
+      "icon": "./src/assets/HunFlag.png",
+      "rating": 5,
+      "links": ["study:petrik-hs"],
+      "translations": {
+        "en": { "name": "Hungarian", "comment": "I was born in Hungary and it is my native language." },
+        "hu": { "name": "Magyar", "comment": "Magyarországon születtem, és ez az anyanyelvem." }
+      }
+    }
+  ]
+}

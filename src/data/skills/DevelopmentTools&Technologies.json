@@ -1,0 +1,101 @@
+{
+  "id": "devtools-and-tech",
+  "priority": 5,
+  "icon": "skills/toolslogo.webp",
+  "translations": {
+    "en": { "title": "Development Tools & Technologies" },
+    "hu": { "title": "Fejlesztői eszközök és technológiák" }
+  },
+  "skills": [
+    {
+      "icon": "skills/git-extensionslogo.webp",
+      "rating": 4,
+      "links": ["project:cv-website", "study:bme-cs-bsc"],
+      "translations": {
+        "en": { "name": "Git Extensions", "comment": "My preferred tool for committing, and managing Git branches." },
+        "hu": { "name": "Git Extensions", "comment": "A kedvenc eszközöm a Git commitokhoz és ágak kezeléséhez." }
+      }
+    },
+    {
+      "icon": "./src/assets/gitlogo.webp",
+      "rating": 5,
+      "links": ["project:cv-website", "study:bme-cs-bsc", "study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "Git Hub", "comment": "Even this website is hosted from Git Hub. Commit, pull, merge, and other Git operations are part of my workflow." },
+        "hu": { "name": "Git Hub", "comment": "Ez a weboldal is a Git Hub-ról van hosztolva. A commit, pull, merge és egyéb Git műveletek a munkafolyamatom részei." }
+      }
+    },
+    {
+      "icon": "skills/linuxlogo.webp",
+      "rating": 2,
+      "links": ["study:bme-cs-bsc", "study:elte-cs-bsc", "study:petrik-hs", "study:office-it-specialist"],
+      "translations": {
+        "en": { "name": "Linux", "comment": "I've been using it in school and university for many years, but I'm not fond of it." },
+        "hu": { "name": "Linux", "comment": "Évek óta használom az iskolában és az egyetemen, de nem vagyok oda érte." }
+      }
+    },
+    {
+      "icon": "skills/windowslogo.webp",
+      "rating": 5,
+      "links": ["study:bme-cs-bsc", "study:elte-cs-bsc", "study:petrik-hs", "study:office-it-specialist"],
+      "translations": {
+        "en": { "name": "Windows", "comment": "I use it every day. Powershell scripts are my go-to for automation." },
+        "hu": { "name": "Windows", "comment": "Minden nap használom. Az automatizáláshoz a Powershell szkripteket részesítem előnyben." }
+      }
+    },
+    {
+      "icon": "skills/CICDlogo.webp",
+      "rating": 2,
+      "links": ["project:cv-website", "project:ws-med-appointment-system"],
+      "translations": {
+        "en": { "name": "CI/CD", "comment": "" },
+        "hu": { "name": "CI/CD", "comment": "" }
+      }
+    },
+    {
+      "icon": "skills/VisualStudiologo.webp",
+      "rating": 5,
+      "links": ["project:meteorology", "study:petrik-hs", "project:ws-med-appointment-system", "project:best-fps", "study:bme-cs-bsc", "study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "Visual Studio", "comment": "" },
+        "hu": { "name": "Visual Studio", "comment": "" }
+      }
+    },
+    {
+      "icon": "./src/assets/visualstudiocodelogo.webp",
+      "rating": 5,
+      "links": ["project:cv-website", "study:petrik-hs", "project:ws-med-appointment-system", "project:my-first-real-site", "study:bme-cs-bsc", "study:elte-cs-bsc"],
+      "translations": {
+        "en": { "name": "VS Code", "comment": "I've been using it extensively for various projects, since the start of High school." },
+        "hu": { "name": "VS Code", "comment": "Már a középiskola eleje óta különböző projektekhez használom." }
+      }
+    },
+    {
+      "icon": "skills/Postmanlogo.webp",
+      "rating": 3,
+      "links": ["study:bme-cs-bsc"],
+      "translations": {
+        "en": { "name": "Postman", "comment": "" },
+        "hu": { "name": "Postman", "comment": "" }
+      }
+    },
+    {
+      "icon": "skills/jiralogo.webp",
+      "rating": 1,
+      "links": ["project:ws-med-appointment-system"],
+      "translations": {
+        "en": { "name": "Jira", "comment": "Our project manager recommended it for WS-med. So I used it, but I don't yet have a deep knowladge of it." },
+        "hu": { "name": "Jira", "comment": "A projektmenedzserünk a WS-medhez ajánlotta. Így használtam, de még nincs mély tudásom róla." }
+      }
+    },
+    {
+      "icon": "skills/MSOfficelogo.webp",
+      "rating": 5,
+      "links": ["study:bme-cs-bsc", "study:petrik-hs", "study:office-it-specialist"],
+      "translations": {
+        "en": { "name": "MS Office", "comment": "The Office specialist course literally requires this level of proficiency. But I've even used macros in Excel." },
+        "hu": { "name": "MS Office", "comment": "Az Irodai informatikus tanfolyam szó szerint megköveteli ezt a szintű jártasságot. De még a makrókat is használtam az Excelben." }
+      }
+    }
+  ]
+}

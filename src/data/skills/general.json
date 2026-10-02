@@ -1,0 +1,74 @@
+{
+  "id": "general",
+  "priority": 1,
+  "icon": "./src/assets/coglogo.webp",
+  "translations": {
+    "en": { "title": "General Skills" },
+    "hu": { "title": "Általános készségek" }
+  },
+  "skills": [
+    {
+      "icon": "skills/monitorlogo.webp",
+      "rating": 4,
+      "links": ["study:bme-cs-bsc", "study:elte-cs-bsc", "study:petrik-hs", "table:programming-languages"],
+      "translations": {
+        "en": { "name": "Programming languages", "comment": "I know a large number of programming languages." },
+        "hu": { "name": "Programozási nyelvek", "comment": "Sok programozási nyelvet ismerek." }
+      }
+    },
+    {
+      "icon": "skills/soft-skillslogo.webp",
+      "rating": 5,
+      "links": ["table:soft-skills", "job:derko_student_helper"],
+      "translations": {
+        "en": { "name": "Soft Skills", "comment": "I'd say I had the best soft skills among my peers both in high school and in universities." },
+        "hu": { "name": "Emberi készségek", "comment": "Szerintem a legjobb emberi készségekkel rendelkeztem a kortársaim között mind a középiskolában, mind az egyetemeken." }
+      }
+    },
+    {
+      "icon": "skills/communicationlogo.webp",
+      "rating": 4,
+      "links": ["study:b2-language-cert", "table:languages"],
+      "translations": {
+        "en": { "name": "Foreign Languages", "comment": "" },
+        "hu": { "name": "Idegen nyelvek", "comment": "" }
+      }
+    },
+    {
+      "icon": "./src/assets/gitlogo.webp",
+      "rating": 4,
+      "links": ["study:bme-cs-bsc", "table:devtools-and-tech", "table:frameworks-libraries"],
+      "translations": {
+        "en": { "name": "Dev Technologies", "comment": "" },
+        "hu": { "name": "Fejlesztési technológiák", "comment": "" }
+      }
+    },
+    {
+      "icon": "skills/DataTransformationLogo.webp",
+      "rating": 2,
+      "links": ["job:nisz_junior_data_engineer", "table:data-sap"],
+      "translations": {
+        "en": { "name": "SAP Data Technologies", "comment": "To be clear, as I'm writing this, I have only worked with SAP for a month as an intern. I'll update this section as soon as it's relevant to do so." },
+        "hu": { "name": "SAP Adattechnológiák", "comment": "Tisztázásképpen, amikor ezt írom, csak egy hónapja dolgozom SAP-val gyakornokként. Frissíteni fogom ezt a részt, amint releváns lesz." }
+      }
+    },
+    {
+      "icon": "skills/SoftwareDesignLogo.webp",
+      "rating": 5,
+      "links": ["project:ws-med-appointment-system", "project:meteorology", "study:bme-cs-bsc"],
+      "translations": {
+        "en": { "name": "Software Design", "comment": "My program planning style is very clean and structured. I was able to figure out the backend of multiple production software after a bit of observation. I always strive to write maintainable and scalable code." },
+        "hu": { "name": "Szoftvertervezés", "comment": "A programtervezési stílusom nagyon tiszta és strukturált. Egy kis megfigyelés után képes voltam több éles szoftver backendjét is kitalálni. Mindig arra törekszem, hogy karbantartható és skálázható kódot írjak." }
+      }
+    },
+    {
+      "icon": "skills/TechnicalDocumentationLogo.webp",
+      "rating": 3,
+      "links": ["project:meteorology", "project:farmer-was-replaced"],
+      "translations": {
+        "en": { "name": "Technical Documentation", "comment": "This depends on the expectation. I'm really good at creating interactive (newer kinds of) documentations, but I don't have too much experience with making documentation in MS Word or similar traditional tools. I prefer Obsidian for example. But of course I can work with any tool if needed." },
+        "hu": { "name": "Műszaki dokumentáció", "comment": "Ez az elvárástól függ. Nagyon jó vagyok interaktív (újabb típusú) dokumentációk készítésében, de nincs túl sok tapasztalatom MS Word vagy hasonló hagyományos eszközökben történő dokumentáció készítésében. Például az Obsidian-t részesítem előnyben. De természetesen bármilyen eszközzel tudok dolgozni, ha szükséges." }
+      }
+    }
+  ]
+}

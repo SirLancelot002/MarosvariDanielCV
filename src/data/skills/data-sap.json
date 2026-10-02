@@ -1,0 +1,153 @@
+{
+    "id": "data-sap",
+    "priority": 6,
+    "icon": "skills/datalogo.webp",
+    "translations": {
+        "en": {
+            "title": "Data & SAP"
+        },
+        "hu": {
+            "title": "Adatkezelés és SAP"
+        }
+    },
+    "skills": [
+        {
+            "icon": "./src/assets/sqllogo.webp",
+            "rating": 4,
+            "links": [
+                "project:ws-med-appointment-system",
+                "study:bme-cs-bsc"
+            ],
+            "translations": {
+                "en": {
+                    "name": "SQL",
+                    "comment": "I have used SQL all throughout my studies and in several projects."
+                },
+                "hu": {
+                    "name": "SQL",
+                    "comment": "Tanulmányaim során és több projektben is használtam az SQL-t."
+                }
+            }
+        },
+        {
+            "icon": "skills/SAPlogo.webp",
+            "rating": 1,
+            "links": ["job:nisz_junior_data_engineer"],
+            "translations": {
+                "en": {
+                    "name": "SAP",
+                    "comment": "As I've just begun my internship, my experience with SAP is very limited, but I'm a quick learner. Check back for updates!"
+                },
+                "hu": {
+                    "name": "SAP",
+                    "comment": "Mivel éppen most kezdtem a gyakornoki pozíciómat, a SAP-ban szerzett tapasztalatom nagyon korlátozott, de gyorsan tanulok. Kérlek, nézz vissza a frissítésekért!"
+                }
+            }
+        },
+        {
+            "icon": "skills/BI logo.webp",
+            "rating": 2,
+            "links": [],
+            "translations": {
+                "en": {
+                    "name": "Business Intelligence",
+                    "comment": ""
+                },
+                "hu": {
+                    "name": "Business Intelligence",
+                    "comment": ""
+                }
+            }
+        },
+        {
+            "icon": "skills/DataAnalasisLogo.webp",
+            "rating": 3,
+            "links": [],
+            "translations": {
+                "en": {
+                    "name": "Data Analysis",
+                    "comment": "My experience with Data Analysis is mainly academic so far."
+                },
+                "hu": {
+                    "name": "Adatelemzés",
+                    "comment": "Adatelemzéssel kapcsolatos tapasztalatom eddig főként akadémiai jellegű."
+                }
+            }
+        },
+        {
+            "icon": "skills/DataTransformationLogo.webp",
+            "rating": 1,
+            "links": [],
+            "translations": {
+                "en": {
+                    "name": "Data Transformation",
+                    "comment": ""
+                },
+                "hu": {
+                    "name": "Adattranszformáció",
+                    "comment": ""
+                }
+            }
+        },
+        {
+            "icon": "skills/DataReportingLogo.webp",
+            "rating": 2,
+            "links": [],
+            "translations": {
+                "en": {
+                    "name": "Data Reporting",
+                    "comment": ""
+                },
+                "hu": {
+                    "name": "Adatriporting",
+                    "comment": ""
+                }
+            }
+        },
+        {
+            "icon": "skills/DataModellingLogo.webp",
+            "rating": 2,
+            "links": [],
+            "translations": {
+                "en": {
+                    "name": "Data Modeling",
+                    "comment": ""
+                },
+                "hu": {
+                    "name": "Adatmodellezés",
+                    "comment": ""
+                }
+            }
+        },
+        {
+            "icon": "skills/DataProcessingLogo.webp",
+            "rating": 1,
+            "links": [],
+            "translations": {
+                "en": {
+                    "name": "ETL / Data Processing",
+                    "comment": ""
+                },
+                "hu": {
+                    "name": "ETL / Adatfeldolgozás",
+                    "comment": ""
+                }
+            }
+        },
+        {
+            "icon": "skills/DataVisualizationLogo.webp",
+            "rating": 2,
+            "links": [],
+            "translations": {
+                "en": {
+                    "name": "Data Visualization",
+                    "comment": ""
+                },
+                "hu": {
+                    "name": "Adatvizualizáció",
+                    "comment": ""
+                }
+            }
+        }
+    ]
+}

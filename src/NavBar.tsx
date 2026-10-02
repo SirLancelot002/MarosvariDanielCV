@@ -15,6 +15,7 @@ function NavBar() {
         logoAlt="Company Logo"
         items={[
           { label: t("nav.main"), href: '/' },
+          { label: t("nav.skills"), href: '/skills' },
           { label: t("nav.studies"), href: '/studies' },
           { label: t("nav.projects"), href: '/projects' },
           { label: t("nav.experience"), href: '/experience' },

@@ -54,11 +54,11 @@
     },
     {
       "icon": "/skills/javascriptlogo.webp",
-      "rating": 1,
+      "rating": 2,
       "links": ["study:petrik-hs"],
       "translations": {
-        "en": { "name": "JavaScript", "comment": "I know it from TypeScript, barely used it directly." },
-        "hu": { "name": "JavaScript", "comment": "A TypeScriptből ismerem, közvetlenül alig használtam." }
+        "en": { "name": "JavaScript", "comment": "I know it from TypeScript. But I used it a few times directly." },
+        "hu": { "name": "JavaScript", "comment": "A TypeScriptből ismerem. De közvetlenül is használtam néhányszor." }
       }
     },
     {

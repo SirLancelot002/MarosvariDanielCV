@@ -1,3 +1,4 @@
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { SkillTable } from '../types/skill';
@@ -10,10 +11,51 @@ interface SkillTableViewProps {
   table: SkillTable;
 }
 
+type SortKey = 'name' | 'rating' | 'links';
+
 function SkillTableView({ table }: SkillTableViewProps) {
   const { t, i18n } = useTranslation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const content = table.translations[lang];
+  const [sort, setSort] = useState<{ key: SortKey; dir: 'asc' | 'desc' } | null>(null);
+
+  const rows = useMemo(() => {
+    if (!sort) return table.skills;
+    const factor = sort.dir === 'asc' ? 1 : -1;
+    return [...table.skills].sort((a, b) => {
+      switch (sort.key) {
+        case 'name':
+          return factor * a.translations[lang].name.localeCompare(b.translations[lang].name, lang);
+        case 'rating':
+          return factor * (a.rating - b.rating);
+        default:
+          return factor * ((a.links?.length ?? 0) - (b.links?.length ?? 0));
+      }
+    });
+  }, [table.skills, sort, lang]);
+
+  const toggleSort = (key: SortKey) => {
+    const firstDir = key === 'name' ? 'asc' : 'desc';
+    setSort((prev) =>
+      prev?.key === key
+        ? { key, dir: prev.dir === 'asc' ? 'desc' : 'asc' }
+        : { key, dir: firstDir }
+    );
+  };
+
+  const sortableHeader = (key: SortKey, label: string) => {
+    const active = sort?.key === key;
+    return (
+      <th aria-sort={active ? (sort.dir === 'asc' ? 'ascending' : 'descending') : undefined}>
+        <button type="button" className="skills-table__sort" onClick={() => toggleSort(key)}>
+          {label}
+          <span className="skills-table__sort-icon" aria-hidden="true">
+            {active ? (sort.dir === 'asc' ? '▲' : '▼') : '-'}
+          </span>
+        </button>
+      </th>
+    );
+  };
 
   return (
     <div className="skills-table-card" id={`skill-table-${table.id}`}>
@@ -29,18 +71,18 @@ function SkillTableView({ table }: SkillTableViewProps) {
           <thead>
             <tr>
               <th className="skills-table__col-icon" />
-              <th>{t("skills.columnSkill")}</th>
-              <th>{t("skills.columnRating")}</th>
+              {sortableHeader('name', t("skills.columnSkill"))}
+              {sortableHeader('rating', t("skills.columnRating"))}
               <th>{t("skills.columnComment")}</th>
-              <th>{t("skills.columnLinks")}</th>
+              {sortableHeader('links', t("skills.columnLinks"))}
             </tr>
           </thead>
           <tbody>
-            {table.skills.map((skill, i) => {
+            {rows.map((skill) => {
               const rowContent = skill.translations[lang];
 
               return (
-                <tr key={i}>
+                <tr key={skill.translations.en.name}>
                   <td className="skills-table__col-icon">
                     {skill.icon && (
                       <img src={publicAsset(skill.icon)} alt="" className="skills-table__icon" />

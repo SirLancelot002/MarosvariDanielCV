@@ -59,7 +59,7 @@ function JobsPage() {
                     autoCenterRepulsion={0}
                     starSpeed={starSpeed}
                     speed={speed}
-                    ignoreSelector=".job-card-shell, .job-card"
+                    ignoreSelector=".job-card-shell, .total-experience-shell, .magnet-button-container, .specular-button-shell"
                 />
             </div>
             <div className="studies-content-layer">

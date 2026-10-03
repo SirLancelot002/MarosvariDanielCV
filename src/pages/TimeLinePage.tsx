@@ -55,7 +55,7 @@ function TimeLinePage() {
                     grainIntensity={0.05}
                     mouseInteraction={true}
                     mouseStrength={0.6}
-                    ignoreSelector=".timeline-event, .timeline-event__preview"
+                    ignoreSelector=".timeline-event, .timeline__line"
                 />
             </div>
             <div className="studies-content-layer">

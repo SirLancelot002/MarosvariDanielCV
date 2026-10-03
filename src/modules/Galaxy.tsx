@@ -1,6 +1,7 @@
 import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
 import { useEffect, useRef } from 'react';
 import './Galaxy.css';
+import { isOverContent } from './backgroundHover';
 
 const vertexShader = `
 attribute vec2 uv;
@@ -319,8 +320,7 @@ export default function Galaxy({
     ctn.appendChild(gl.canvas);
 
     function handleMouseMove(e: MouseEvent) {
-      const sel = ignoreSelectorRef.current;
-      if (sel && e.target instanceof Element && e.target.closest(sel)) {
+      if (isOverContent(e.target, ignoreSelectorRef.current)) {
         targetMouseActive.current = 0.0;
         return;
       }

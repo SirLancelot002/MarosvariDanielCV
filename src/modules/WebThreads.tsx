@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
 import './WebThreads.css';
+import { isOverContent } from './backgroundHover';
 
 export type FanMode = 'center' | 'left' | 'right';
 
@@ -282,8 +283,7 @@ const WebThreads: React.FC<WebThreadsProps> = ({
     let targetActive = 0;
 
     const onMouseMove = (e: MouseEvent) => {
-      const sel = ignoreSelectorRef.current;
-      if (sel && e.target instanceof Element && e.target.closest(sel)) {
+      if (isOverContent(e.target, ignoreSelectorRef.current)) {
         targetActive = 0;
         return;
       }

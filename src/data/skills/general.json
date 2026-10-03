@@ -1,7 +1,7 @@
 {
   "id": "general",
   "priority": 1,
-  "icon": "./src/assets/coglogo.webp",
+  "icon": "skills/coglogo.webp",
   "translations": {
     "en": { "title": "General Skills" },
     "hu": { "title": "Általános készségek" }
@@ -35,7 +35,7 @@
       }
     },
     {
-      "icon": "./src/assets/gitlogo.webp",
+      "icon": "skills/gitlogo.webp",
       "rating": 4,
       "links": ["study:bme-cs-bsc", "table:devtools-and-tech", "table:frameworks-libraries"],
       "translations": {

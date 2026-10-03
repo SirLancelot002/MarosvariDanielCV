@@ -17,7 +17,7 @@
       }
     },
     {
-      "icon": "./src/assets/gitlogo.webp",
+      "icon": "skills/gitlogo.webp",
       "rating": 5,
       "links": ["project:cv-website", "study:bme-cs-bsc", "study:elte-cs-bsc"],
       "translations": {
@@ -62,7 +62,7 @@
       }
     },
     {
-      "icon": "./src/assets/visualstudiocodelogo.webp",
+      "icon": "skills/visualstudiocodelogo.webp",
       "rating": 5,
       "links": ["project:cv-website", "study:petrik-hs", "project:ws-med-appointment-system", "project:my-first-real-site", "study:bme-cs-bsc", "study:elte-cs-bsc"],
       "translations": {

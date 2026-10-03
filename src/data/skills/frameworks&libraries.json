@@ -17,7 +17,7 @@
       }
     },
     {
-      "icon": "./src/assets/reactlogo.webp",
+      "icon": "skills/reactlogo.webp",
       "rating": 4,
       "links": ["project:cv-website", "project:ws-med-appointment-system"],
       "translations": {
@@ -26,7 +26,7 @@
       }
     },
     {
-      "icon": "./src/assets/reactbitslogo.png",
+      "icon": "skills/reactbitslogo.png",
       "rating": 5,
       "links": ["project:cv-website"],
       "translations": {

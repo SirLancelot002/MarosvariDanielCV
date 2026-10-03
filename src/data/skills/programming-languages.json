@@ -8,7 +8,7 @@
   },
   "skills": [
     {
-      "icon": "./src/assets/cslogo.webp",
+      "icon": "skills/cslogo.webp",
       "rating": 5,
       "links": ["project:ws-med-appointment-system", "project:meteorology", "project:best-fps", "project:crypto-trade-bot", "study:bme-cs-bsc"],
       "translations": {
@@ -17,7 +17,7 @@
       }
     },
     {
-      "icon": "./src/assets/typescriptlogo.webp",
+      "icon": "skills/typescriptlogo.webp",
       "rating": 3,
       "links": ["project:cv-website", "project:ws-med-appointment-system"],
       "translations": {
@@ -26,7 +26,7 @@
       }
     },
     {
-      "icon": "./src/assets/pythonlogo.webp",
+      "icon": "skills/pythonlogo.webp",
       "rating": 4,
       "links": ["project:farmer-was-replaced", "project:crypto-trade-bot"],
       "translations": {
@@ -35,7 +35,7 @@
       }
     },
     {
-      "icon": "./src/assets/haskelllogo.webp",
+      "icon": "skills/haskelllogo.webp",
       "rating": 2,
       "links": ["project:wizard-games", "study:elte-cs-bsc"],
       "translations": {
@@ -44,7 +44,7 @@
       }
     },
     {
-      "icon": "./src/assets/javalogo.webp",
+      "icon": "skills/javalogo.webp",
       "rating": 4,
       "links": ["study:elte-cs-bsc"],
       "translations": {

@@ -29,6 +29,8 @@ export interface WebThreadsProps {
   backgroundColor?: string;
   lightMode?: boolean;
   className?: string;
+  /** Hovering elements matching this selector makes the background behave as if the mouse left. */
+  ignoreSelector?: string;
 }
 
 const hexToRgb = (hex: string): [number, number, number] => {
@@ -193,9 +195,12 @@ const WebThreads: React.FC<WebThreadsProps> = ({
   mouseStrength = 0.3,
   backgroundColor = '#FFFFFF',
   lightMode = false,
-  className = ''
+  className = '',
+  ignoreSelector
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const ignoreSelectorRef = useRef(ignoreSelector);
+  ignoreSelectorRef.current = ignoreSelector;
   const mouseRef = useRef<{ enabled: boolean; strength: number }>({ enabled: true, strength: 0.3 });
 
   useEffect(() => {
@@ -277,6 +282,11 @@ const WebThreads: React.FC<WebThreadsProps> = ({
     let targetActive = 0;
 
     const onMouseMove = (e: MouseEvent) => {
+      const sel = ignoreSelectorRef.current;
+      if (sel && e.target instanceof Element && e.target.closest(sel)) {
+        targetActive = 0;
+        return;
+      }
       const rect = canvas.getBoundingClientRect();
       targetMouse[0] = (e.clientX - rect.left) / rect.width;
       targetMouse[1] = 1.0 - (e.clientY - rect.top) / rect.height;
@@ -288,9 +298,9 @@ const WebThreads: React.FC<WebThreadsProps> = ({
     const onMouseLeave = () => {
       targetActive = 0;
     };
-    canvas.addEventListener('mousemove', onMouseMove);
-    canvas.addEventListener('mouseenter', onMouseEnter);
-    canvas.addEventListener('mouseleave', onMouseLeave);
+    window.addEventListener('mousemove', onMouseMove);
+    document.documentElement.addEventListener('mouseenter', onMouseEnter);
+    document.documentElement.addEventListener('mouseleave', onMouseLeave);
 
     let raf = 0;
     let isVisible = true;
@@ -344,9 +354,9 @@ const WebThreads: React.FC<WebThreadsProps> = ({
       ro.disconnect();
       io.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
-      canvas.removeEventListener('mousemove', onMouseMove);
-      canvas.removeEventListener('mouseenter', onMouseEnter);
-      canvas.removeEventListener('mouseleave', onMouseLeave);
+      window.removeEventListener('mousemove', onMouseMove);
+      document.documentElement.removeEventListener('mouseenter', onMouseEnter);
+      document.documentElement.removeEventListener('mouseleave', onMouseLeave);
       ctxMap.delete(container);
       try {
         container.removeChild(canvas);

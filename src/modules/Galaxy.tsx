@@ -194,6 +194,8 @@ interface GalaxyProps {
   autoCenterRepulsion?: number;
   transparent?: boolean;
   lightMode?: boolean;
+  /** Hovering elements matching this selector makes the background behave as if the mouse left. */
+  ignoreSelector?: string;
 }
 
 export default function Galaxy({
@@ -214,9 +216,12 @@ export default function Galaxy({
   autoCenterRepulsion = 0,
   transparent = true,
   lightMode = false,
+  ignoreSelector,
   ...rest
 }: GalaxyProps) {
   const ctnDom = useRef<HTMLDivElement>(null);
+  const ignoreSelectorRef = useRef(ignoreSelector);
+  ignoreSelectorRef.current = ignoreSelector;
   const targetMousePos = useRef({ x: 0.5, y: 0.5 });
   const smoothMousePos = useRef({ x: 0.5, y: 0.5 });
   const targetMouseActive = useRef(0.0);
@@ -314,6 +319,11 @@ export default function Galaxy({
     ctn.appendChild(gl.canvas);
 
     function handleMouseMove(e: MouseEvent) {
+      const sel = ignoreSelectorRef.current;
+      if (sel && e.target instanceof Element && e.target.closest(sel)) {
+        targetMouseActive.current = 0.0;
+        return;
+      }
       const rect = ctn.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width;
       const y = 1.0 - (e.clientY - rect.top) / rect.height;
@@ -326,16 +336,16 @@ export default function Galaxy({
     }
 
     if (mouseInteraction) {
-      ctn.addEventListener('mousemove', handleMouseMove);
-      ctn.addEventListener('mouseleave', handleMouseLeave);
+      window.addEventListener('mousemove', handleMouseMove);
+      document.documentElement.addEventListener('mouseleave', handleMouseLeave);
     }
 
     return () => {
       cancelAnimationFrame(animateId);
       window.removeEventListener('resize', resize);
       if (mouseInteraction) {
-        ctn.removeEventListener('mousemove', handleMouseMove);
-        ctn.removeEventListener('mouseleave', handleMouseLeave);
+        window.removeEventListener('mousemove', handleMouseMove);
+        document.documentElement.removeEventListener('mouseleave', handleMouseLeave);
       }
       ctn.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();

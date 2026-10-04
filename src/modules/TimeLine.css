@@ -56,7 +56,7 @@
   /* Lane 0 hugs the line; each lane further out reserves a full label's width so titles from
      overlapping events never collide, on any screen size. */
   --ribbon-extra: calc(var(--lane, 0) * 40px);
-  --label-offset: calc(var(--lane, 0) * (var(--label-width) + var(--label-gap)));
+  --label-offset: calc(var(--label-lane, 0) * (var(--label-width) + var(--label-gap)));
   --span-offset: calc(var(--lane, 0) * 7px);
 }
 

@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import StudyCard from './StudyCard';
 import ProjectCard from './ProjectCard';
 import JobCard from './JobCard';
@@ -12,6 +12,7 @@ import './TimeLine.css';
 function TimeLine() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [previewTopById, setPreviewTopById] = useState<Map<string, number>>(new Map());
@@ -48,12 +49,32 @@ function TimeLine() {
     return () => cancelAnimationFrame(rafId);
   }, [hoveredId]);
 
+  const [labelHeights, setLabelHeights] = useState<Map<string, number>>(new Map());
+  const labelRefs = useRef(new Map<string, HTMLButtonElement>());
+
+  // Labels wrap to a different number of rows depending on text, language and screen width, so measure them.
+  useLayoutEffect(() => {
+    const measure = () => {
+      const next = new Map<string, number>();
+      labelRefs.current.forEach((element, id) => next.set(id, element.offsetHeight));
+      setLabelHeights((current) => {
+        const same = current.size === next.size && [...next].every(([id, h]) => current.get(id) === h);
+        return same ? current : next;
+      });
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    labelRefs.current.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [lang]);
+
   const layout = useMemo(
     () =>
       computeTimelineLayout(
-        timelineEvents.map((event) => ({ id: event.id, side: event.side, start: event.start, end: event.end }))
+        timelineEvents.map((event) => ({ id: event.id, side: event.side, start: event.start, end: event.end })),
+        labelHeights
       ),
-    []
+    [labelHeights]
   );
 
   const positionById = useMemo(
@@ -121,6 +142,7 @@ function TimeLine() {
               height: position.height,
               '--event-color': event.color,
               '--lane': position.lane,
+              '--label-lane': position.labelLane,
               '--spine-top': `${position.spineTop}px`,
               '--spine-height': `${position.spineHeight}px`,
               '--preview-top': previewTopById.has(event.id) ? `${previewTopById.get(event.id)}px` : '50%',
@@ -133,12 +155,16 @@ function TimeLine() {
             <button
               type="button"
               className="timeline-event__label"
+              ref={(element) => {
+                if (element) labelRefs.current.set(event.id, element);
+                else labelRefs.current.delete(event.id);
+              }}
               onMouseEnter={(mouseEvent) => {
                 positionPreview(event.id, mouseEvent.currentTarget);
                 setHoveredId(event.id);
               }}
               onMouseLeave={() => setHoveredId(null)}
-              onClick={() => navigate(detailPath)}
+              onClick={() => navigate(detailPath, { state: { from: location.pathname } })}
             >
               <span className="timeline-event__title">{translation.title}</span>
               <span className="timeline-event__period">{period}{event.ongoing ? ` \u2022 ${t('timeline.ongoing')}` : ''}</span>

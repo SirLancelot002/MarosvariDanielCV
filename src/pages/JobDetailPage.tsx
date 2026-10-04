@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLayoutEffect } from 'react';
 import NavBar from '../NavBar';
+import { useBackTarget } from '../hooks/useBackTarget';
 import { jobs } from '../data/loadJobs';
 import { publicAsset } from '../utils/asset';
 import { shiftHexToward } from '../utils/color';
@@ -27,6 +28,7 @@ function JobDetailPage() {
     const { t, i18n } = useTranslation();
     const lang = i18n.language === 'hu' ? 'hu' : 'en';
     const quality = useAdaptiveQuality();
+    const back = useBackTarget('/experience', 'experience.backToList');
 
     let cableCount = 20;
     let speed = 0.1;
@@ -157,8 +159,8 @@ function JobDetailPage() {
                     <article className="project-detail" style={{ '--job-accent': accentColor, '--project-accent': accentColor } as React.CSSProperties}>
                         <div className="row project-detail__top-row align-items-center">
                             <div className="col-12 col-md-6">
-                                <Link to="/experience" className="project-detail__back">
-                                    &larr; {t("experience.backToList")}
+                                <Link to={back.to} className="project-detail__back">
+                                    &larr; {back.label}
                                 </Link>
                             </div>
                             <div className="col-12 col-md-6">

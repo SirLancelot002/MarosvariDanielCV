@@ -122,6 +122,7 @@ function TimeLine() {
               height: position.height,
               '--event-color': event.color,
               '--lane': position.lane,
+              '--label-lane': position.labelLane,
               '--spine-top': `${position.spineTop}px`,
               '--spine-height': `${position.spineHeight}px`,
               '--preview-top': previewTopById.has(event.id) ? `${previewTopById.get(event.id)}px` : '50%',

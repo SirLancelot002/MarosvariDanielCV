@@ -14,6 +14,9 @@ export interface TimelineLayoutItem {
   height: number;
   /** 0 = hugs the line, 1+ = pushed further out because it overlaps a longer event's lane. */
   lane: number;
+  /** Horizontal label slot: 0 = next to the line; labels that would collide vertically go further out,
+   *  with the longest event outermost. */
+  labelLane: number;
   /** Offset/height (relative to `top`/`height` above) of the true, un-stretched start/end - used to draw
    *  the on-spine ribbon at the event's real duration even when the box itself was padded up to
    *  MIN_EVENT_HEIGHT for label spacing. */
@@ -31,6 +34,8 @@ const PX_PER_DAY = 0.55;
 const MIN_EVENT_HEIGHT = 120;
 // Two boxes closer than this (in px) are treated as overlapping for lane purposes, giving a little breathing room.
 const LANE_OVERLAP_BUFFER = 10;
+// Minimum vertical distance between two label centres before they are considered colliding.
+const LABEL_COLLISION_HEIGHT = 76;
 const PADDING_TOP = 60;
 const PADDING_BOTTOM = 120;
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -98,12 +103,32 @@ export function computeTimelineLayout(events: TimelineLayoutInput[]): TimelineLa
     }
   });
 
+  // Labels get their own lanes, independent of the spine marks above. Labels sit at the vertical centre
+  // of their box; when two collide, the longer event is pushed further out (shortest-first greedy).
+  const labelLaneById = new Map<string, number>();
+  (['left', 'right'] as const).forEach((side) => {
+    const sideBoxes = boxes.filter((box) => box.side === side).sort((a, b) => a.duration - b.duration);
+    const lanes: number[][] = [];
+
+    for (const box of sideBoxes) {
+      const center = (box.top + box.bottom) / 2;
+      let laneIndex = lanes.findIndex((lane) => !lane.some((other) => Math.abs(other - center) < LABEL_COLLISION_HEIGHT));
+      if (laneIndex === -1) {
+        laneIndex = lanes.length;
+        lanes.push([]);
+      }
+      lanes[laneIndex].push(center);
+      labelLaneById.set(box.id, laneIndex);
+    }
+  });
+
   const items = boxes.map((box) => ({
     id: box.id,
     side: box.side,
     top: box.top,
     height: box.bottom - box.top,
     lane: laneById.get(box.id) ?? 0,
+    labelLane: labelLaneById.get(box.id) ?? 0,
     spineTop: box.spineTop,
     spineHeight: box.spineHeight,
   }));

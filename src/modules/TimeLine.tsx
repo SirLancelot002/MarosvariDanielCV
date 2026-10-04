@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import StudyCard from './StudyCard';
@@ -49,12 +49,32 @@ function TimeLine() {
     return () => cancelAnimationFrame(rafId);
   }, [hoveredId]);
 
+  const [labelHeights, setLabelHeights] = useState<Map<string, number>>(new Map());
+  const labelRefs = useRef(new Map<string, HTMLButtonElement>());
+
+  // Labels wrap to a different number of rows depending on text, language and screen width, so measure them.
+  useLayoutEffect(() => {
+    const measure = () => {
+      const next = new Map<string, number>();
+      labelRefs.current.forEach((element, id) => next.set(id, element.offsetHeight));
+      setLabelHeights((current) => {
+        const same = current.size === next.size && [...next].every(([id, h]) => current.get(id) === h);
+        return same ? current : next;
+      });
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    labelRefs.current.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, [lang]);
+
   const layout = useMemo(
     () =>
       computeTimelineLayout(
-        timelineEvents.map((event) => ({ id: event.id, side: event.side, start: event.start, end: event.end }))
+        timelineEvents.map((event) => ({ id: event.id, side: event.side, start: event.start, end: event.end })),
+        labelHeights
       ),
-    []
+    [labelHeights]
   );
 
   const positionById = useMemo(
@@ -135,6 +155,10 @@ function TimeLine() {
             <button
               type="button"
               className="timeline-event__label"
+              ref={(element) => {
+                if (element) labelRefs.current.set(event.id, element);
+                else labelRefs.current.delete(event.id);
+              }}
               onMouseEnter={(mouseEvent) => {
                 positionPreview(event.id, mouseEvent.currentTarget);
                 setHoveredId(event.id);

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import type { SkillTable } from '../types/skill';
 import { publicAsset } from '../utils/asset';
@@ -15,6 +15,7 @@ type SortKey = 'name' | 'rating' | 'links';
 
 function SkillTableView({ table }: SkillTableViewProps) {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const content = table.translations[lang];
   const [sort, setSort] = useState<{ key: SortKey; dir: 'asc' | 'desc' } | null>(null);
@@ -127,7 +128,7 @@ function SkillTableView({ table }: SkillTableViewProps) {
                           }
 
                           return (
-                            <Link key={idx} to={resolved.href} className="skills-table__link">
+                            <Link key={idx} to={resolved.href} state={{ from: location.pathname }} className="skills-table__link">
                               {resolved.label}
                             </Link>
                           );

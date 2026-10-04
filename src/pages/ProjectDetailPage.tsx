@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLayoutEffect } from 'react';
 import NavBar from '../NavBar';
+import { useBackTarget } from '../hooks/useBackTarget';
 import { projects } from '../data/loadProjects';
 import { publicAsset } from '../utils/asset';
 import { formatProjectDuration } from '../utils/date';
@@ -21,6 +22,7 @@ function ProjectDetailPage() {
     const { t, i18n } = useTranslation();
     const lang = i18n.language === 'hu' ? 'hu' : 'en';
     const quality = useAdaptiveQuality();
+    const back = useBackTarget('/projects', 'projects.backToList');
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
@@ -85,8 +87,8 @@ function ProjectDetailPage() {
                     <article className="project-detail" style={{ '--project-accent': accentColor } as React.CSSProperties}>
                         <div className="row project-detail__top-row align-items-center">
                             <div className="col-12 col-md-6">
-                                <Link to="/projects" className="project-detail__back">
-                                    &larr; {t("projects.backToList")}
+                                <Link to={back.to} className="project-detail__back">
+                                    &larr; {back.label}
                                 </Link>
                             </div>
                             <div className="col-12 col-md-6">

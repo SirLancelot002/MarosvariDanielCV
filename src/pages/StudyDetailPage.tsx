@@ -2,6 +2,7 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLayoutEffect } from 'react';
 import NavBar from '../NavBar';
+import { useBackTarget } from '../hooks/useBackTarget';
 import studiesData from '../data/studies.json';
 import type { Study } from '../types/study';
 import { publicAsset } from '../utils/asset';
@@ -21,6 +22,7 @@ function StudyDetailPage() {
   const { id } = useParams<{ id: string }>();
   const { t, i18n } = useTranslation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
+  const back = useBackTarget('/studies', 'studies.backToList');
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -66,8 +68,8 @@ function StudyDetailPage() {
           <article className="study-detail">
             <div className="row study-detail__top-row align-items-center">
               <div className="col-12 col-md-6">
-                <Link to="/studies" className="study-detail__back">
-                  &larr; {t("studies.backToList")}
+                <Link to={back.to} className="study-detail__back">
+                  &larr; {back.label}
                 </Link>
               </div>
               <div className="col-12 col-md-6">

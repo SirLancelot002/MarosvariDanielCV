@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import StudyCard from './StudyCard';
 import ProjectCard from './ProjectCard';
 import JobCard from './JobCard';
@@ -12,6 +12,7 @@ import './TimeLine.css';
 function TimeLine() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const lang = i18n.language === 'hu' ? 'hu' : 'en';
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [previewTopById, setPreviewTopById] = useState<Map<string, number>>(new Map());
@@ -138,7 +139,7 @@ function TimeLine() {
                 setHoveredId(event.id);
               }}
               onMouseLeave={() => setHoveredId(null)}
-              onClick={() => navigate(detailPath)}
+              onClick={() => navigate(detailPath, { state: { from: location.pathname } })}
             >
               <span className="timeline-event__title">{translation.title}</span>
               <span className="timeline-event__period">{period}{event.ongoing ? ` \u2022 ${t('timeline.ongoing')}` : ''}</span>

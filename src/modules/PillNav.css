@@ -1,4 +1,4 @@
-.pill-nav-container {
+﻿.pill-nav-container {
   position: absolute;
   top: 1em;
   z-index: 99;
@@ -263,4 +263,29 @@
   margin-left: 6px;
   vertical-align: middle;
   display: inline-block;
+}
+/* Two-row layout used when the pills no longer fit on a single line. */
+.pill-nav.two-rows {
+  border-radius: 32px;
+}
+
+.pill-nav-items.two-rows {
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.pill-nav-items.two-rows .pill-list {
+  height: auto;
+  padding: 3px;
+}
+
+.pill-nav-items.two-rows .pill-list > li {
+  height: calc(var(--nav-h) - 6px);
+}
+
+@media (min-width: 769px) {
+  .pill-nav-items.two-rows {
+    display: flex;
+  }
 }

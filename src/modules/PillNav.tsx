@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useTranslation } from 'react-i18next';
@@ -49,6 +49,8 @@ const PillNav: React.FC<PillNavProps> = ({
   const [qualityMenuPos, setQualityMenuPos] = useState({ top: 0, left: 0 });
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [languageMenuPos, setLanguageMenuPos] = useState({ top: 0, left: 0 });
+  // 0 = single row; otherwise the number of pills placed in the top row.
+  const [rowSplit, setRowSplit] = useState(0);
   const circleRefs = useRef<Array<HTMLSpanElement | null>>([]);
   const tlRefs = useRef<Array<gsap.core.Timeline | null>>([]);
   const activeTweenRefs = useRef<Array<gsap.core.Tween | null>>([]);
@@ -163,8 +165,66 @@ const PillNav: React.FC<PillNavProps> = ({
     }
 
     return () => window.removeEventListener('resize', onResize);
-  }, [items, ease, initialLoadAnimation]);
+  }, [items, ease, initialLoadAnimation, rowSplit]);
 
+  // When all pills no longer fit on one line, split them into two rows. The split keeps the
+  // original order (left pills on top, right pills below) and the top row is never shorter.
+  useLayoutEffect(() => {
+    const container = containerRef.current;
+    const parent = container?.parentElement;
+    if (!container || !parent) return;
+
+    const update = () => {
+      const widths = Array.from(
+        container.querySelectorAll<HTMLElement>('.pill-list > li')
+      ).map(li => li.offsetWidth);
+      const logoWidth = logoRef.current?.getBoundingClientRect().width ?? 0;
+      if (widths.length < 2 || widths.some(w => w === 0) || logoWidth === 0) {
+        setRowSplit(0);
+        return;
+      }
+
+      const list = container.querySelector<HTMLElement>('.pill-list');
+      const nav = container.querySelector<HTMLElement>('.pill-nav');
+      const gap = parseFloat(getComputedStyle(list!).columnGap) || 12;
+      const navStyle = getComputedStyle(nav!);
+      const navPadX = parseFloat(navStyle.paddingLeft) + parseFloat(navStyle.paddingRight);
+      const listPadX = 6;
+      const parentStyle = getComputedStyle(parent);
+      const available =
+        parent.clientWidth - parseFloat(parentStyle.paddingLeft) - parseFloat(parentStyle.paddingRight);
+
+      const total = widths.reduce((sum, w) => sum + w, 0);
+      const singleRowWidth = total + gap * (widths.length - 1) + listPadX + logoWidth + navPadX;
+      if (singleRowWidth <= available) {
+        setRowSplit(0);
+        return;
+      }
+
+      // Smallest top row that is at least as wide as the bottom row.
+      let top = 0;
+      let split = widths.length - 1;
+      for (let k = 1; k < widths.length; k++) {
+        top += widths[k - 1] + gap;
+        const bottom = total - widths.slice(0, k).reduce((s, w) => s + w, 0) + gap * (widths.length - k);
+        if (top >= bottom) {
+          split = k;
+          break;
+        }
+      }
+      setRowSplit(split);
+    };
+
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(parent);
+    window.addEventListener('resize', update);
+    document.fonts?.ready.then(update).catch(() => { });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', update);
+    };
+  }, [items, langLabel]);
   const handleEnter = (i: number) => {
     const tl = tlRefs.current[i];
     if (!tl) return;
@@ -390,10 +450,103 @@ const PillNav: React.FC<PillNavProps> = ({
     ['--pill-text']: resolvedPillTextColor
   } as React.CSSProperties;
 
+  const renderItemPill = (item: PillNavItem, i: number) => (
+          <li key={item.href} role="none">
+            {isRouterLink(item.href) ? (
+              <Link
+                role="menuitem"
+                to={item.href}
+                className={`pill${activeHref === item.href ? ' is-active' : ''}`}
+                aria-label={item.ariaLabel || item.label}
+                onMouseEnter={() => handleEnter(i)}
+                onMouseLeave={() => handleLeave(i)}
+              >
+                <span
+                  className="hover-circle"
+                  aria-hidden="true"
+                  ref={el => {
+                    circleRefs.current[i] = el;
+                  }}
+                />
+                <span className="label-stack">
+                  <span className="pill-label">{item.label}</span>
+                  <span className="pill-label-hover" aria-hidden="true">
+                    {item.label}
+                  </span>
+                </span>
+              </Link>
+            ) : (
+              <a
+                role="menuitem"
+                href={item.href}
+                className={`pill${activeHref === item.href ? ' is-active' : ''}`}
+                aria-label={item.ariaLabel || item.label}
+                onMouseEnter={() => handleEnter(i)}
+                onMouseLeave={() => handleLeave(i)}
+              >
+                <span
+                  className="hover-circle"
+                  aria-hidden="true"
+                  ref={el => {
+                    circleRefs.current[i] = el;
+                  }}
+                />
+                <span className="label-stack">
+                  <span className="pill-label">{item.label}</span>
+                  <span className="pill-label-hover" aria-hidden="true">
+                    {item.label}
+                  </span>
+                </span>
+              </a>
+            )}
+          </li>
+  );
+
+  const renderLangPill = () => (
+        <li role="none" key="lang-toggle">
+          <button
+            type="button"
+            role="menuitem"
+            onClick={toggleLanguageMenu}
+            className="pill"
+            aria-label={t('language.toggleLabel')}
+            aria-haspopup="true"
+            aria-expanded={isLanguageMenuOpen}
+            onMouseEnter={() => handleEnter(langToggleIndex)}
+            onMouseLeave={() => handleLeave(langToggleIndex)}
+            ref={langButtonRef}
+          >
+            <span
+              className="hover-circle"
+              aria-hidden="true"
+              ref={el => {
+                circleRefs.current[langToggleIndex] = el;
+              }}
+            />
+            <span className="label-stack">
+              <span className="pill-label">
+                {langLabel}
+                <img src={langFlag} alt="" className="lang-flag" />
+              </span>
+              <span className="pill-label-hover" aria-hidden="true">
+                {langLabel}
+                <img src={langFlag} alt="" className="lang-flag" />
+              </span>
+            </span>
+          </button>
+        </li>
+  );
+
+  const renderPill = (index: number) =>
+    index === langToggleIndex ? renderLangPill() : renderItemPill(items[index], index);
+
+  const pillIndices = Array.from({ length: items.length + 1 }, (_, i) => i);
+  const pillRows = rowSplit > 0 ? [pillIndices.slice(0, rowSplit), pillIndices.slice(rowSplit)] : [pillIndices];
+
   return (
     <>
       <div className="pill-nav-container" ref={containerRef}>
-        <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
+        <nav className={`pill-nav${rowSplit > 0 ? ' two-rows' : ''} ${className}`} aria-label="Primary" style={cssVars}>
           <button
             type="button"
             className="pill-logo"
@@ -409,94 +562,12 @@ const PillNav: React.FC<PillNavProps> = ({
             <img src={logo} alt={logoAlt} ref={logoImgRef} />
           </button>
 
-          <div className="pill-nav-items desktop-only" ref={navItemsRef}>
-            <ul className="pill-list" role="menubar">
-              {items.map((item, i) => (
-                <li key={item.href} role="none">
-                  {isRouterLink(item.href) ? (
-                    <Link
-                      role="menuitem"
-                      to={item.href}
-                      className={`pill${activeHref === item.href ? ' is-active' : ''}`}
-                      aria-label={item.ariaLabel || item.label}
-                      onMouseEnter={() => handleEnter(i)}
-                      onMouseLeave={() => handleLeave(i)}
-                    >
-                      <span
-                        className="hover-circle"
-                        aria-hidden="true"
-                        ref={el => {
-                          circleRefs.current[i] = el;
-                        }}
-                      />
-                      <span className="label-stack">
-                        <span className="pill-label">{item.label}</span>
-                        <span className="pill-label-hover" aria-hidden="true">
-                          {item.label}
-                        </span>
-                      </span>
-                    </Link>
-                  ) : (
-                    <a
-                      role="menuitem"
-                      href={item.href}
-                      className={`pill${activeHref === item.href ? ' is-active' : ''}`}
-                      aria-label={item.ariaLabel || item.label}
-                      onMouseEnter={() => handleEnter(i)}
-                      onMouseLeave={() => handleLeave(i)}
-                    >
-                      <span
-                        className="hover-circle"
-                        aria-hidden="true"
-                        ref={el => {
-                          circleRefs.current[i] = el;
-                        }}
-                      />
-                      <span className="label-stack">
-                        <span className="pill-label">{item.label}</span>
-                        <span className="pill-label-hover" aria-hidden="true">
-                          {item.label}
-                        </span>
-                      </span>
-                    </a>
-                  )}
-                </li>
-              ))}
-
-              {/* Constant language toggle pill*/}
-              <li role="none">
-                <button
-                  type="button"
-                  role="menuitem"
-                  onClick={toggleLanguageMenu}
-                  className="pill"
-                  aria-label={t('language.toggleLabel')}
-                  aria-haspopup="true"
-                  aria-expanded={isLanguageMenuOpen}
-                  onMouseEnter={() => handleEnter(langToggleIndex)}
-                  onMouseLeave={() => handleLeave(langToggleIndex)}
-                  ref={langButtonRef}
-                >
-                  <span
-                    className="hover-circle"
-                    aria-hidden="true"
-                    ref={el => {
-                      circleRefs.current[langToggleIndex] = el;
-                    }}
-                  />
-                  <span className="label-stack">
-                    <span className="pill-label">
-                      {langLabel}
-                      <img src={langFlag} alt="" className="lang-flag" />
-                    </span>
-                    <span className="pill-label-hover" aria-hidden="true">
-                      {langLabel}
-                      <img src={langFlag} alt="" className="lang-flag" />
-                    </span>
-                  </span>
-                </button>
-              </li>
-            </ul>
+          <div className={`pill-nav-items desktop-only${rowSplit > 0 ? ' two-rows' : ''}`} ref={navItemsRef}>
+            {pillRows.map((row, rowIndex) => (
+              <ul className="pill-list" role="menubar" key={rowIndex}>
+                {row.map(renderPill)}
+              </ul>
+            ))}
           </div>
 
           <button

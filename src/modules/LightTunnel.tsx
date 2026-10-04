@@ -300,8 +300,8 @@ const LightTunnel: React.FC<LightTunnelProps> = ({
     const handleMouseLeave = () => {
       targetMouse = [0.5, 0.5];
     };
-    canvas.addEventListener('mousemove', handleMouseMove);
-    canvas.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('mousemove', handleMouseMove);
+    document.documentElement.addEventListener('mouseleave', handleMouseLeave);
 
     let raf = 0;
     let isVisible = true;
@@ -358,8 +358,8 @@ const LightTunnel: React.FC<LightTunnelProps> = ({
       ro.disconnect();
       io.disconnect();
       document.removeEventListener('visibilitychange', onVisibility);
-      canvas.removeEventListener('mousemove', handleMouseMove);
-      canvas.removeEventListener('mouseleave', handleMouseLeave);
+      window.removeEventListener('mousemove', handleMouseMove);
+      document.documentElement.removeEventListener('mouseleave', handleMouseLeave);
       ctxMap.delete(container);
       try {
         container.removeChild(canvas);

@@ -211,6 +211,24 @@
           {
             "type": "paragraph",
             "text": "While I still enjoyed studying computer science, I realized that the learning environment no longer matched the way I wanted to develop as a software engineer. Rather than continuing in a program where much of my effort was spent preparing for theoretical exams, I decided to transfer to BME, whose practice-oriented BProf program aligned much better with my interests and career goals."
+          },
+          {
+            "type": "image",
+            "src": "studies/ELTEPaper_1.webp",
+            "alt": "My Grades",
+            "caption": "My Grades"
+          },
+          {
+            "type": "image",
+            "src": "studies/ELTEPaper_2.webp",
+            "alt": "My Grades",
+            "caption": "My Grades"
+          },
+          {
+            "type": "image",
+            "src": "studies/ELTEPaper_3.webp",
+            "alt": "My Grades",
+            "caption": "My Grades"
           }
         ]
       },
@@ -246,6 +264,24 @@
           {
             "type": "paragraph",
             "text": "Bár továbbra is élveztem az informatika tanulását, rájöttem, hogy a képzés szemlélete már nem illeszkedik ahhoz, ahogyan szoftverfejlesztőként fejlődni szeretnék. Ahelyett, hogy egy olyan programban folytattam volna a tanulmányaimat, ahol az időm jelentős részét elméleti vizsgákra való felkészülés töltötte ki, úgy döntöttem, hogy átiratkozom a BME gyakorlatközpontú BProf képzésére, amely sokkal jobban megfelelt az érdeklődésemnek és a hosszú távú szakmai céljaimnak."
+          },
+          {
+            "type": "image",
+            "src": "studies/ELTEPaper_1.webp",
+            "alt": "A jegyeim",
+            "caption": "A jegyeim"
+          },
+          {
+            "type": "image",
+            "src": "studies/ELTEPaper_2.webp",
+            "alt": "A jegyeim",
+            "caption": "A jegyeim"
+          },
+          {
+            "type": "image",
+            "src": "studies/ELTEPaper_3.webp",
+            "alt": "A jegyeim",
+            "caption": "A jegyeim"
           }
         ]
       }

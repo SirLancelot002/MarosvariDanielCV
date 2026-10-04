@@ -187,6 +187,38 @@
               "text": "Budapest, September 20, 2026."
             }
           ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            {
+              "type": "heading",
+              "text": "My Contract",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZContract_1.webp",
+              "caption": "My Contract, 1st page",
+              "alt": "My Contract, 1st page",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZContract_2.webp",
+              "caption": "My Contract, 2nd page",
+              "alt": "My Contract, 2nd page",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZContract_3.webp",
+              "caption": "My Contract, 3rd page",
+              "alt": "My Contract, 3rd page",
+              "weight": 6
+            }
+          ]
         }
       ]
     },
@@ -366,6 +398,38 @@
               "type": "paragraph",
               "weight": 12,
               "text": "Budapest, 2026. szeptember 20."
+            }
+          ]
+        },
+        {
+          "isCloseable": true,
+          "isClosedByDefault": true,
+          "items": [
+            {
+              "type": "heading",
+              "text": "A szerződésem",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZContract_1.webp",
+              "caption": "A szerződésem, 1. oldal",
+              "alt": "A szerződésem, 1. oldal",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZContract_2.webp",
+              "caption": "A szerződésem, 2. oldal",
+              "alt": "A szerződésem, 2. oldal",
+              "weight": 6
+            },
+            {
+              "type": "image",
+              "src": "jobs/NISZContract_3.webp",
+              "caption": "A szerződésem, 3. oldal",
+              "alt": "A szerződésem, 3. oldal",
+              "weight": 6
             }
           ]
         }

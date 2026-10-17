@@ -53,6 +53,10 @@
   "projects.title2": "Nézz körül!",
   "projects.title3": "Gondosan elkészítve",
   "projects.difficulty": "Nehézség",
+  "projects.filter.toggle": "Címkeszűrő megnyitása",
+  "projects.filter.placeholder": "Szűrés címkék szerint...",
+  "projects.filter.clear": "Törlés",
+  "projects.filter.noMatch": "Nincs egyező címke",
   "projects.backToList": "Vissza a projektekhez",
   "impressed" : "Nagyon lenyűgözött, szeretnélek felvenni, Dani!",
 

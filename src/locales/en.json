@@ -55,6 +55,10 @@
   "projects.title2": "Take a look!",
   "projects.title3": "Built with care",
   "projects.difficulty": "Difficulty",
+  "projects.filter.toggle": "Toggle tag filter",
+  "projects.filter.placeholder": "Filter by tags...",
+  "projects.filter.clear": "Clear",
+  "projects.filter.noMatch": "No matching tags",
   "projects.backToList": "Back to projects",
 
   "timeline.title1": "My Journey So Far",

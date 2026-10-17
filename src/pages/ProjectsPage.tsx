@@ -99,7 +99,7 @@ function ProjectsPage() {
                   {isOdd ? (
                     <>
                       <div className="col-12 col-xl-5">
-                        <ProjectCard project={project} />
+                        <ProjectCard project={project} selectedTags={activeTags} />
                       </div>
                       <div className="col-xl-7 d-none d-xl-block" />
                     </>
@@ -107,7 +107,7 @@ function ProjectsPage() {
                     <>
                       <div className="col-xl-7 d-none d-xl-block" />
                       <div className="col-12 col-xl-5">
-                        <ProjectCard project={project} />
+                        <ProjectCard project={project} selectedTags={activeTags} />
                       </div>
                     </>
                   )}

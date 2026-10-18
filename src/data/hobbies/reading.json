@@ -1,0 +1,38 @@
+{
+    "id": "reading",
+    "order": 1,
+    "color": "#0A0CB8",
+    "bannerSrc": "hobbies/Atlas.webp",
+    "translations": {
+        "en": {
+            "title": "Dungeons & Dragons (D&D)",
+            "tags": ["Fantasy", "Role-playing", "Creative", "Story writing", "Social organising", "Strategy", "Art"],
+            "shortDescription": "I was intreduced to Dungeons and Dragons at my second semester in ELTE. One of my classmate had prior experience and he offered to DM (Dungeon Master, plan the campagign) for us. I joined as a player and quickly fell in love with the game. After the 3rd session I was sad we only had one session per week, so I asked around If I could join another group. No one else was available, so I decided to launch my own campaign, and I became a DM as well. The first campaign I joined never had a 4th session, but mine is going strong ever since. We started around 2024 may, and we are still having a session once a week (now as I'm writing this, it's 2026 October).",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        { "type": "heading", "text": "Why I love it", "level": 2 },
+                        { "type": "paragraph", "weight": 12, "text": "Placeholder text. Replace with your own." }
+                    ]
+                }
+            ]
+        },
+        "hu": {
+            "title": "Olvasás",
+            "tags": ["Fantasy", "Sci-Fi"],
+            "shortDescription": "Helyőrző: szeretek elmerülni egy jó könyvben.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        { "type": "heading", "text": "Miért szeretem?", "level": 2 },
+                        { "type": "paragraph", "weight": 12, "text": "Helyőrző szöveg. Cseréld le a sajátodra." }
+                    ]
+                }
+            ]
+        }
+    }
+}

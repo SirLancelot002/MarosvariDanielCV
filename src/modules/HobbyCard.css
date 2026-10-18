@@ -1,0 +1,80 @@
+.hobby-card-shell {
+  position: relative;
+  height: 100%;
+  transition: transform 0.25s ease;
+}
+
+.hobby-card-shell:hover {
+  transform: translateY(-4px);
+}
+
+.hobby-card-border-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hobby-card {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 20px;
+  background: #000;
+  overflow: hidden;
+}
+
+.hobby-card__banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hobby-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+}
+
+.hobby-card__content {
+  position: relative;
+  padding: 1.5rem 1.75rem;
+}
+
+.hobby-card__title {
+  margin: 0 0 10rem;
+  font-size: 1.65rem;
+  color: var(--text-h, #fff);
+  padding-bottom: 0.5rem;
+}
+
+.hobby-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0 0 0.9rem;
+  padding: 0;
+}
+
+.hobby-card__tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--text, #d1d5db);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hobby-card__description {
+  margin: 0;
+  text-align: justify;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

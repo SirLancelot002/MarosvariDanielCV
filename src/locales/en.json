@@ -77,6 +77,12 @@
   "experience.months": "Month(s)",
   "experience.total": "My total work Experience",
 
+  "nav.hobbies": "Hobbies",
+  "hobbies.title1": "My Hobbies",
+  "hobbies.title2": "What I do for fun",
+  "hobbies.title3": "Life beyond code",
+  "hobbies.backToList": "Back to hobbies",
+
   "nav.skills": "Skills",
   "skills.title1": "My Skills",
   "skills.title2": "What I bring to the table",

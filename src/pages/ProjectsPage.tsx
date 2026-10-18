@@ -27,9 +27,14 @@ function ProjectsPage() {
   const activeTags = selectedTags.filter((tag) => allTags.includes(tag));
 
   // OR relation: a project is shown if it has at least one selected tag.
+  // Projects matching more selected tags come first; ties keep the original order (stable sort).
   const filteredProjects = activeTags.length === 0
     ? projects
-    : projects.filter((p) => (p.translations[lang].tags ?? []).some((tag) => activeTags.includes(tag)));
+    : projects
+        .map((p) => ({ p, matches: (p.translations[lang].tags ?? []).filter((tag) => activeTags.includes(tag)).length }))
+        .filter(({ matches }) => matches > 0)
+        .sort((a, b) => b.matches - a.matches)
+        .map(({ p }) => p);
 
   // Larger letters mean fewer of them on screen, which is cheaper to render.
   let letterSizeRem = 1;

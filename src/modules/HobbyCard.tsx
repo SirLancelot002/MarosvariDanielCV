@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import type { Hobby } from '../types/hobby';
 import { publicAsset } from '../utils/asset';
-import { hexToRgbSpaceString, shiftHexToward } from '../utils/color';
+import { hexToHslSpaceString, shiftHexToward } from '../utils/color';
 import BorderGlow from './BorderGlow';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 import './HobbyCard.css';
@@ -17,7 +17,7 @@ function HobbyCard({ hobby }: HobbyCardProps) {
   const content = hobby.translations[lang];
   const quality = useAdaptiveQuality();
   const accentColor = hobby.color ?? '#61dca3';
-  const darkAccentColor = shiftHexToward(accentColor, '#0000ff', 0.35);
+  const darkAccentColor = shiftHexToward(accentColor, '#00f0ff', 0.35);
   const lightAccentColor = shiftHexToward(accentColor, '#ffffff', 0.35);
 
   const cardInner = (
@@ -48,7 +48,7 @@ function HobbyCard({ hobby }: HobbyCardProps) {
         <div className="hobby-card-border-wrap">
           <BorderGlow
             edgeSensitivity={45}
-            glowColor={hexToRgbSpaceString(accentColor)}
+            glowColor={hexToHslSpaceString(accentColor)}
             backgroundColor="#000000"
             borderRadius={20}
             glowRadius={40}

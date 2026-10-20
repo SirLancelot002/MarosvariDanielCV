@@ -1,7 +1,7 @@
 {
     "id": "reading",
     "order": 1,
-    "color": "#0A0CB8",
+    "color": "#0000ff",
     "bannerSrc": "hobbies/Atlas.webp",
     "translations": {
         "en": {
@@ -13,8 +13,8 @@
                     "isCloseable": true,
                     "isClosedByDefault": false,
                     "items": [
-                        { "type": "heading", "text": "Why I love it", "level": 2 },
-                        { "type": "paragraph", "weight": 12, "text": "Placeholder text. Replace with your own." }
+                        { "type": "heading", "text": "What is D&D?", "level": 2 },
+                        { "type": "paragraph", "weight": 12, "text": "Dungeons and Dragons is a fantasy tabletop role-playing game where players create characters and embark on adventures guided by a Dungeon Master (DM). The players can create their own characters with unique abilities, backgrounds, and personalities, and they work together to overcome challenges and tell a collaborative story. The players can choose from a variety of races, classes, and subclasses, all having effects on how each character is played, similar to a board game. Wizards cast spells, fighters swing swords multiple times per round, elves meditate instead of sleep, and some races can fly. The Dungeon Master (DM) controls the game world, narrates the story, and adjudicates the rules, creating a dynamic and immersive experience for all players. Basically, the DM writes the story scenarios and the players act them out and make decisions that shape the outcome of the game." }
                     ]
                 }
             ]

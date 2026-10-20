@@ -41,7 +41,7 @@ function HobbyDetailPage() {
 
     const content = job.translations[lang];
     const accentColor = job.color ?? '#a67dff';
-    const darkAccentColor = shiftHexToward(accentColor, '#0000ff', 0.35);
+    const darkAccentColor = shiftHexToward(accentColor, '#00f0ff', 0.35);
     const lightAccentColor = shiftHexToward(accentColor, '#ffffff', 0.35);
 
     const renderBlock = (block: JobContentItem, colClass: string, key: number) => {

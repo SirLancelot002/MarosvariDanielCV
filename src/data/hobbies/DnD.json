@@ -1,5 +1,5 @@
 {
-    "id": "reading",
+    "id": "DnD",
     "order": 1,
     "color": "#0000ff",
     "bannerSrc": "hobbies/Atlas.webp",
@@ -53,52 +53,52 @@
             ]
         },
         "hu": {
-    "title": "Dungeons & Dragons (D&D)",
-    "tags": ["Fantasy", "Szerepjáték", "Kreativitás", "Történetírás", "Közösségszervezés", "Stratégia", "Művészet"],
-    "shortDescription": "A Dungeons & Dragons játékkal az ELTE-n töltött második félévemben ismerkedtem meg. Az egyik csoporttársamnak már volt korábbi tapasztalata, és felajánlotta, hogy ő lesz a DM (Dungeon Master, vagyis a kalandmester, aki megtervezi a kampányt). Játékosként csatlakoztam, és hamar beleszerettem a játékba. A harmadik alkalom után már sajnáltam, hogy csak heti egy játékalkalmunk van, ezért körbekérdeztem, hogy csatlakozhatnék-e egy másik csapathoz. Mivel senki másnál nem volt erre lehetőség, úgy döntöttem, elindítom a saját kampányomat, és én is DM lettem. Az első kampányban, amelyhez csatlakoztam, sosem került sor a negyedik alkalomra, az enyém viszont azóta is töretlenül folytatódik. Körülbelül 2024 májusában kezdtük, és még most, 2026 októberében is heti egy alkalommal játszunk.",
-    "content": [
-        {
-            "isCloseable": true,
-            "isClosedByDefault": false,
-            "items": [
-                { "type": "heading", "text": "Mi az a D&D?", "level": 2 },
-                { "type": "paragraph", "weight": 12, "text": "A Dungeons & Dragons egy fantasy táblás szerepjáték, amelyben a játékosok karaktereket alkotnak, majd egy kalandmester (Dungeon Master, röviden DM) által vezetett kalandokba vágnak bele. A játékosok egyedi képességekkel, háttértörténettel és személyiséggel rendelkező karaktereket hozhatnak létre, és együttműködve küzdhetnek le különböző kihívásokat, miközben közösen alakítanak ki egy történetet. Számos faj, kaszt és alkaszt közül választhatnak, amelyek mind befolyásolják a karakterek játékstílusát, hasonlóan egy társasjátékhoz. A varázslók varázslatokat idéznek, a harcosok körönként többször is lesújthatnak a kardjukkal, a tündék alvás helyett meditálnak, bizonyos fajok képviselői pedig repülni is képesek. A kalandmester (DM) irányítja a játék világát, meséli a történetet és értelmezi a szabályokat, így minden játékos számára dinamikus és magával ragadó élményt teremt. Röviden: a DM megírja a történet alapjául szolgáló kalandokat, a játékosok pedig eljátsszák azokat, és olyan döntéseket hoznak, amelyek meghatározzák a játék kimenetelét." }
-            ]
-        },
-        {
-            "isCloseable": true,
-            "isClosedByDefault": false,
-            "items": [
-                { "type": "heading", "text": "Az első csapatom", "level": 3 },
-                { "type": "paragraph", "weight": 12, "text": "Az ELTE-n az egyik csoporttársam ismertetett meg a Dungeons & Dragons játékkal, akinek már volt benne tapasztalata, és felajánlotta, hogy ő lesz a DM. Játékosként csatlakoztam, és hamar beleszerettem a játékba. Eleinte semmi különleges nem volt benne, csupán egy előre elkészített kampányt játszottunk. Egy Yuan Ti Light Cleric karaktert alakítottam, és már ez is bőven elég volt ahhoz, hogy magával ragadjon a játék. Az első alkalommal megvívtuk az első harcunkat néhány goblinnal, és belekóstoltunk a szerepjátékos (RP) részébe is. A második és harmadik alkalommal pedig az első kazamatabejárásunkra is sor került. Nagyon tetszett, ahogyan a játékmechanikák működtek: tökéletes egyensúlyt teremtettek az összetettség és az egyszerűség között." },
-                { "type": "paragraph", "weight": 12, "text": "Ekkorra már teljesen elmerültem a játékban, és izgatottan vártam minden egyes alkalmat. Sajnálattal töltött el, hogy hetente csak egyszer játszhattunk, de sajnos nem tudtunk még egy alkalmat beiktatni, hiszen hét játékosunk volt a DM mellett. Hetente mindössze egy 3–4 órás alkalmat tartottunk, amitől minden játék különlegesnek és izgalmasnak érződött. Én azonban még többet szerettem volna játszani. Megkérdeztem más baráti társaságokat is, hogy csatlakozhatnék-e hozzájuk, de mindegyikük vagy csak havonta egyszer játszott online, vagy már a kampánya utolsó szakaszában járt. Mások is több D&D-re vágytak, ezért egy korábbi DM-tapasztalattal rendelkező barátom azt javasolta, hogy indítsam el a saját kampányomat." }
-            ]
-        },
-        {
-            "isCloseable": true,
-            "isClosedByDefault": false,
-            "items": [
-                { "type": "heading", "text": "Az első kampányom", "level": 2 },
-                { "type": "paragraph", "weight": 6, "text": "Szerencsére már volt egy ötletem arról, miről szóljon a kampányom. Valami epikus és emlékezetes kalandot szerettem volna nyújtani a barátaimnak, de egy kis humorral és olyan kezdéssel, amely segít nekik beleélni magukat a történetbe. A kampány alaphelyzete szerint a játékosok Zed országának polgárai. Magyarországon kétévente tartanak egy országos felmérést, amelyből képet lehet kapni az oktatási rendszer állapotáról, és a felmérés számos kérdésében szerepel Zed országa. Ez adta az ötletet ehhez a poénhoz. A játékosok belevágtak a kampányba, és néhány könnyed küldetést teljesítettek, amelyek a hagyományos D&D-kalandokhoz hasonlítottak, bár egyes nevek valódi személyek neveinek átalakított változatai voltak (például a királyé: Boe Jiden). Eközben a háttérben a főgonosz a világukat örökre megváltoztató terve megvalósításán dolgozott. Mielőtt azonban mindez elkezdődött volna, tartottam egy „pilot epizódot”, amelyen a leendő játékosok magasabb szintű karaktereket hoztak, és a fő kampánykaraktereik helyett velük játszották el a kezdeti konfliktust. Hatalmas siker volt, akárcsak maga a kampány, amely a mai napig tart."},
-                { "type": "image", "src": "hobbies/Atlas.webp", "alt": "Atlas, a főgonosz", "caption": "Atlas, a főgonosz", "weight": 6 }
-            ]
-        },
-        {
-            "isCloseable": true,
-            "isClosedByDefault": true,
-            "items": [
-                { "type": "heading", "text": "A kalandmester eszköztára", "level": 3 },
-                { "type": "paragraph", "weight": 6, "text": "Az eddigi két és fél év során, amióta DM-ként vezetem a játékot, rengeteg különböző eszközt használtam, hogy még élvezetesebbé tegyem a kalandokat. Kezdetben egy A2-es, hatszögrácsos papírt használtunk az asztalomon, majd ahogy egyre fontosabbá váltak a távolságok, áttértünk az Owlbear Rodeóra. Az első világtérképet Microsoft Paintben készítettem: minden egyes, kézzel megrajzolt tereptárgyat gondosan lemásoltam, hogy erdőket alakítsak ki. Ma már erre professzionális szoftvereket használok, például az Inkarnate-et vagy a DungeonDraftot. A mesterséges intelligencia fejlődése szintén hatalmas segítséget jelentett, nem a történet megírásában (arra ugyanis még mindig túlságosan ügyetlen ahhoz, hogy igazán érdekes történetet alkosson), hanem a játékasztalhoz szükséges képek és tokenek elkészítésében. Amikor elkezdtem, még nem tudtam olyan Atlas-képet generáltatni az MI-vel, amellyel elégedett lettem volna. Mostanra viszont már az okozza a legnagyobb fejtörést, hogy melyik változatot válasszam a sok jó közül." },
-                { "type": "image", "src": "hobbies/Owlbear Rodeo.webp", "alt": "Owlbear Rodeo", "caption": "Owlbear Rodeo", "weight": 6 },
-                { "type": "image", "src": "hobbies/KazzyToken.webp", "alt": "Kazzy karaktertokenje", "caption": "Kazzy karaktertokenje", "weight": 6 },
-                { "type": "image", "src": "hobbies/VespaToken.webp", "alt": "VESPA karaktertokenje", "caption": "VESPA karaktertokenje", "weight": 6 },
-                { "type": "image", "src": "hobbies/AkumaToken.webp", "alt": "Akuma karaktertokenje", "caption": "Akuma karaktertokenje", "weight": 6 },
-                { "type": "image", "src": "hobbies/ZebulonToken.webp", "alt": "Zebulon karaktertokenje", "caption": "Zebulon karaktertokenje", "weight": 6 },
-                { "type": "image", "src": "hobbies/Elio.webp", "alt": "Elio, a testvérem karaktere, akit ő maga rajzolt meg", "caption": "Elio, a testvérem karaktere, akit ő maga rajzolt meg", "weight": 6 },
-                { "type": "image", "src": "hobbies/Sarah.webp", "alt": "Sarah", "caption": "Sarah, a fő csapatot segítő fontos NPC", "weight": 6 }
+            "title": "Dungeons & Dragons (D&D)",
+            "tags": ["Fantasy", "Szerepjáték", "Kreativitás", "Történetírás", "Közösségszervezés", "Stratégia", "Művészet"],
+            "shortDescription": "A Dungeons & Dragons játékkal az ELTE-n töltött második félévemben ismerkedtem meg. Az egyik csoporttársamnak már volt korábbi tapasztalata, és felajánlotta, hogy ő lesz a DM (Dungeon Master, vagyis a kalandmester, aki megtervezi a kampányt). Játékosként csatlakoztam, és hamar beleszerettem a játékba. A harmadik alkalom után már sajnáltam, hogy csak heti egy játékalkalmunk van, ezért körbekérdeztem, hogy csatlakozhatnék-e egy másik csapathoz. Mivel senki másnál nem volt erre lehetőség, úgy döntöttem, elindítom a saját kampányomat, és én is DM lettem. Az első kampányban, amelyhez csatlakoztam, sosem került sor a negyedik alkalomra, az enyém viszont azóta is töretlenül folytatódik. Körülbelül 2024 májusában kezdtük, és még most, 2026 októberében is heti egy alkalommal játszunk.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        { "type": "heading", "text": "Mi az a D&D?", "level": 2 },
+                        { "type": "paragraph", "weight": 12, "text": "A Dungeons & Dragons egy fantasy táblás szerepjáték, amelyben a játékosok karaktereket alkotnak, majd egy kalandmester (Dungeon Master, röviden DM) által vezetett kalandokba vágnak bele. A játékosok egyedi képességekkel, háttértörténettel és személyiséggel rendelkező karaktereket hozhatnak létre, és együttműködve küzdhetnek le különböző kihívásokat, miközben közösen alakítanak ki egy történetet. Számos faj, kaszt és alkaszt közül választhatnak, amelyek mind befolyásolják a karakterek játékstílusát, hasonlóan egy társasjátékhoz. A varázslók varázslatokat idéznek, a harcosok körönként többször is lesújthatnak a kardjukkal, a tündék alvás helyett meditálnak, bizonyos fajok képviselői pedig repülni is képesek. A kalandmester (DM) irányítja a játék világát, meséli a történetet és értelmezi a szabályokat, így minden játékos számára dinamikus és magával ragadó élményt teremt. Röviden: a DM megírja a történet alapjául szolgáló kalandokat, a játékosok pedig eljátsszák azokat, és olyan döntéseket hoznak, amelyek meghatározzák a játék kimenetelét." }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        { "type": "heading", "text": "Az első csapatom", "level": 3 },
+                        { "type": "paragraph", "weight": 12, "text": "Az ELTE-n az egyik csoporttársam ismertetett meg a Dungeons & Dragons játékkal, akinek már volt benne tapasztalata, és felajánlotta, hogy ő lesz a DM. Játékosként csatlakoztam, és hamar beleszerettem a játékba. Eleinte semmi különleges nem volt benne, csupán egy előre elkészített kampányt játszottunk. Egy Yuan Ti Light Cleric karaktert alakítottam, és már ez is bőven elég volt ahhoz, hogy magával ragadjon a játék. Az első alkalommal megvívtuk az első harcunkat néhány goblinnal, és belekóstoltunk a szerepjátékos (RP) részébe is. A második és harmadik alkalommal pedig az első kazamatabejárásunkra is sor került. Nagyon tetszett, ahogyan a játékmechanikák működtek: tökéletes egyensúlyt teremtettek az összetettség és az egyszerűség között." },
+                        { "type": "paragraph", "weight": 12, "text": "Ekkorra már teljesen elmerültem a játékban, és izgatottan vártam minden egyes alkalmat. Sajnálattal töltött el, hogy hetente csak egyszer játszhattunk, de sajnos nem tudtunk még egy alkalmat beiktatni, hiszen hét játékosunk volt a DM mellett. Hetente mindössze egy 3–4 órás alkalmat tartottunk, amitől minden játék különlegesnek és izgalmasnak érződött. Én azonban még többet szerettem volna játszani. Megkérdeztem más baráti társaságokat is, hogy csatlakozhatnék-e hozzájuk, de mindegyikük vagy csak havonta egyszer játszott online, vagy már a kampánya utolsó szakaszában járt. Mások is több D&D-re vágytak, ezért egy korábbi DM-tapasztalattal rendelkező barátom azt javasolta, hogy indítsam el a saját kampányomat." }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        { "type": "heading", "text": "Az első kampányom", "level": 2 },
+                        { "type": "paragraph", "weight": 6, "text": "Szerencsére már volt egy ötletem arról, miről szóljon a kampányom. Valami epikus és emlékezetes kalandot szerettem volna nyújtani a barátaimnak, de egy kis humorral és olyan kezdéssel, amely segít nekik beleélni magukat a történetbe. A kampány alaphelyzete szerint a játékosok Zed országának polgárai. Magyarországon kétévente tartanak egy országos felmérést, amelyből képet lehet kapni az oktatási rendszer állapotáról, és a felmérés számos kérdésében szerepel Zed országa. Ez adta az ötletet ehhez a poénhoz. A játékosok belevágtak a kampányba, és néhány könnyed küldetést teljesítettek, amelyek a hagyományos D&D-kalandokhoz hasonlítottak, bár egyes nevek valódi személyek neveinek átalakított változatai voltak (például a királyé: Boe Jiden). Eközben a háttérben a főgonosz a világukat örökre megváltoztató terve megvalósításán dolgozott. Mielőtt azonban mindez elkezdődött volna, tartottam egy „pilot epizódot”, amelyen a leendő játékosok magasabb szintű karaktereket hoztak, és a fő kampánykaraktereik helyett velük játszották el a kezdeti konfliktust. Hatalmas siker volt, akárcsak maga a kampány, amely a mai napig tart."},
+                        { "type": "image", "src": "hobbies/Atlas.webp", "alt": "Atlas, a főgonosz", "caption": "Atlas, a főgonosz", "weight": 6 }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        { "type": "heading", "text": "A kalandmester eszköztára", "level": 3 },
+                        { "type": "paragraph", "weight": 6, "text": "Az eddigi két és fél év során, amióta DM-ként vezetem a játékot, rengeteg különböző eszközt használtam, hogy még élvezetesebbé tegyem a kalandokat. Kezdetben egy A2-es, hatszögrácsos papírt használtunk az asztalomon, majd ahogy egyre fontosabbá váltak a távolságok, áttértünk az Owlbear Rodeóra. Az első világtérképet Microsoft Paintben készítettem: minden egyes, kézzel megrajzolt tereptárgyat gondosan lemásoltam, hogy erdőket alakítsak ki. Ma már erre professzionális szoftvereket használok, például az Inkarnate-et vagy a DungeonDraftot. A mesterséges intelligencia fejlődése szintén hatalmas segítséget jelentett, nem a történet megírásában (arra ugyanis még mindig túlságosan ügyetlen ahhoz, hogy igazán érdekes történetet alkosson), hanem a játékasztalhoz szükséges képek és tokenek elkészítésében. Amikor elkezdtem, még nem tudtam olyan Atlas-képet generáltatni az MI-vel, amellyel elégedett lettem volna. Mostanra viszont már az okozza a legnagyobb fejtörést, hogy melyik változatot válasszam a sok jó közül." },
+                        { "type": "image", "src": "hobbies/Owlbear Rodeo.webp", "alt": "Owlbear Rodeo", "caption": "Owlbear Rodeo", "weight": 6 },
+                        { "type": "image", "src": "hobbies/KazzyToken.webp", "alt": "Kazzy karaktertokenje", "caption": "Kazzy karaktertokenje", "weight": 6 },
+                        { "type": "image", "src": "hobbies/VespaToken.webp", "alt": "VESPA karaktertokenje", "caption": "VESPA karaktertokenje", "weight": 6 },
+                        { "type": "image", "src": "hobbies/AkumaToken.webp", "alt": "Akuma karaktertokenje", "caption": "Akuma karaktertokenje", "weight": 6 },
+                        { "type": "image", "src": "hobbies/ZebulonToken.webp", "alt": "Zebulon karaktertokenje", "caption": "Zebulon karaktertokenje", "weight": 6 },
+                        { "type": "image", "src": "hobbies/Elio.webp", "alt": "Elio, a testvérem karaktere, akit ő maga rajzolt meg", "caption": "Elio, a testvérem karaktere, akit ő maga rajzolt meg", "weight": 6 },
+                        { "type": "image", "src": "hobbies/Sarah.webp", "alt": "Sarah", "caption": "Sarah, a fő csapatot segítő fontos NPC", "weight": 6 }
+                    ]
+                }
             ]
         }
-    ]
-}
     }
 }

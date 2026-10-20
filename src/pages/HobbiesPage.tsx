@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import NavBar from '../NavBar';
 import TextType from '../modules/TextType';
-import Galaxy from '../modules/Galaxy';
+import GhostFibers from '../modules/GhostFibers';
 import HobbyCard from '../modules/HobbyCard';
 import RevealOnScroll from '../modules/RevealOnScroll';
 import { hobbies } from '../data/loadHobbies';
@@ -14,51 +14,47 @@ function HobbiesPage() {
     const { t } = useTranslation();
     const quality = useAdaptiveQuality();
 
-    let density = 1;
-    let rotationSpeed = 0.03;
-    let starSpeed = 0.5;
-    let speed = 1;
-
-    switch (quality) {
-        case 'low':
-            density = 0.25;
-            rotationSpeed = 0;
-            starSpeed = 0.25;
-            speed = 0.5;
-            break;
-        case 'medium':
-            density = 0.5;
-            rotationSpeed = 0.015;
-            starSpeed = 0.35;
-            speed = 0.75;
-            break;
-        case 'high':
-            density = 1;
-            rotationSpeed = 0.03;
-            starSpeed = 0.5;
-            speed = 1;
-            break;
-        default:
-            break;
-    }
+    const threads = quality === 'low' ? 12 : quality === 'medium' ? 60 : 120;
 
     return (
         <>
             <div className="studies-bg-fixed jobs-page-bg">
-                <Galaxy
-                    mouseRepulsion
+                <GhostFibers
+                    glowColor="#34d399"
+                    layers={2}
+                    twist={0.7}
+                    threads={threads}
+                    fiberStyle="lines"
+                    depthOfField={0.45}
+                    hoverEffect="focus"
+                    intro
                     mouseInteraction
-                    density={density}
-                    glowIntensity={0.3}
-                    saturation={0}
-                    hueShift={140}
-                    twinkleIntensity={0.3}
-                    rotationSpeed={rotationSpeed}
-                    repulsionStrength={2}
-                    autoCenterRepulsion={0}
-                    starSpeed={starSpeed}
-                    speed={speed}
-                    ignoreSelector=".hobby-card-shell, .magnet-button-container, .specular-button-shell"
+                    lineColor="#ecfdf5"
+                    secondaryColor="#0ea5e9"
+                    gradient="depth"
+                    waves={1.5}
+                    volume={1.1}
+                    spread={1}
+                    scale={1}
+                    rotation={18}
+                    perspective={0.65}
+                    density={1}
+                    thickness={1}
+                    tips={0}
+                    foldGlow={2}
+                    speed={0.5}
+                    flow={0.4}
+                    rollSpeed={0.15}
+                    focusDepth={0}
+                    particles={1}
+                    sparkle={0.2}
+                    glow={0.8}
+                    brightness={1}
+                    vignette={0.3}
+                    grain={0.06}
+                    mouseStrength={1}
+                    pulseOnClick
+                    lightMode={false}
                 />
             </div>
             <div className="studies-content-layer">

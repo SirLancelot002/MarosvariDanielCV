@@ -7,7 +7,7 @@ import { hobbies } from '../data/loadHobbies';
 import { publicAsset } from '../utils/asset';
 import { shiftHexToward } from '../utils/color';
 import { getBlockColumnClasses } from '../utils/blockLayout';
-import LightTunnel from '../modules/LightTunnel';
+import AeroShards from '../modules/AeroShards';
 import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
@@ -27,26 +27,7 @@ function HobbyDetailPage() {
     const quality = useAdaptiveQuality();
     const back = useBackTarget('/hobbies', 'hobbies.backToList');
 
-    let cableCount = 20;
-    let speed = 0.1;
-
-    switch (quality) {
-        case 'low':
-            cableCount = 7;
-            speed = 0.03;
-            break;
-        case 'medium':
-            cableCount = 12;
-            speed = 0.05;
-            break;
-        case 'high':
-            cableCount = 20;
-            speed = 0.1;
-            break;
-        default:
-            cableCount = 20;
-            speed = 0.1;
-    }
+    const shardCount = quality === 'low' ? 400 : quality === 'medium' ? 800 : 1600;
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0);
@@ -118,35 +99,31 @@ function HobbyDetailPage() {
     return (
         <>
             <div className="studies-bg-fixed job-detail-bg-fixed">
-                <LightTunnel
-                    cableColor={accentColor}
-                    pulseColor={lightAccentColor}
-                    tunnelColor="#5227FF"
-                    tunnelOpacity={0}
-                    speed={speed}
-                    flowDirection="outward"
-                    pulseSpeed={2}
-                    pulseLength={0.28}
-                    pulseBlend={1}
-                    pulseWidth={1}
-                    cableCount={cableCount}
-                    thickness={0.35}
-                    rimWidth={0.15}
-                    waviness={0.3}
-                    sway={0.5}
-                    size={1}
-                    centerX={0}
-                    centerY={0}
-                    glow={1}
-                    fadeNear={0.5}
-                    fadeFar={2}
-                    brightness={1}
-                    colorVariance
-                    grain={false}
-                    grainIntensity={0.05}
-                    opacity={1}
+                <AeroShards
+                    shardColor={accentColor}
+                    accentColor={lightAccentColor}
+                    placement="full"
+                    material="glass"
+                    markers="plus"
+                    count={shardCount}
+                    depthOfField={0.75}
+                    vignette={0.3}
                     mouseInteraction
-                    mouseStrength={0.1}
+                    pulseOnClick
+                    holdToGather
+                    lightMode={false}
+                    shardSize={1}
+                    spread={1}
+                    twist={1}
+                    billow={1}
+                    speed={1}
+                    scale={1}
+                    glow={0.35}
+                    grain={0}
+                    intro
+                    mouseStrength={0.5}
+                    parallax={0.5}
+                    paused={false}
                 />
             </div>
             <div className="studies-content-layer job-detail-content-layer">

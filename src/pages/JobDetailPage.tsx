@@ -222,6 +222,7 @@ function JobDetailPage() {
                                     return (
                                         <div key={sectionIndex}>
                                             <CollapsibleSection
+                                                animated
                                                 isCloseable
                                                 isClosedByDefault={!!section.isClosedByDefault}
                                                 headingContent={<HeadingTag className="project-detail__heading">{firstItem.text}</HeadingTag>}

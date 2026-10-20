@@ -44,9 +44,18 @@
   min-height: 0;
 }
 
+/* Clip only while opening/closing; once fully open, let tilted content overflow. */
+.collapsible-section__animated.is-settled > .collapsible-section__animated-inner {
+  overflow: visible;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .collapsible-section__animated,
   .collapsible-section__animated.is-open {
     transition: none;
+  }
+
+  .collapsible-section__animated.is-open > .collapsible-section__animated-inner {
+    overflow: visible;
   }
 }

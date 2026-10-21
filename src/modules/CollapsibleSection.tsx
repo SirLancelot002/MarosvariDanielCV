@@ -6,12 +6,18 @@ interface CollapsibleSectionProps {
   isClosedByDefault: boolean;
   headingContent: ReactNode; // always visible, sits next to the toggle chevron
   children: ReactNode;        // collapses/expands
+  animated?: boolean;         // animate open/close instead of toggling instantly
 }
 
-function CollapsibleSection({ isCloseable, isClosedByDefault, headingContent, children }: CollapsibleSectionProps) {
+function CollapsibleSection({ isCloseable, isClosedByDefault, headingContent, children, animated = false }: CollapsibleSectionProps) {
   const [isOpen, setIsOpen] = useState(!(isCloseable && isClosedByDefault));
 
-  const toggle = () => setIsOpen(prev => !prev);
+  const [isSettled, setIsSettled] = useState(true);
+
+  const toggle = () => {
+    setIsSettled(false);
+    setIsOpen(prev => !prev);
+  };
 
   return (
     <div className="collapsible-section">
@@ -40,7 +46,19 @@ function CollapsibleSection({ isCloseable, isClosedByDefault, headingContent, ch
         {headingContent}
       </div>
 
-      {(!isCloseable || isOpen) && <div className="collapsible-section__body">{children}</div>}
+      {animated ? (
+        <div className={`collapsible-section__animated ${!isCloseable || isOpen ? 'is-open' : ''} ${isSettled && isOpen ? 'is-settled' : ''}`} inert={isCloseable && !isOpen}
+          onTransitionEnd={(e) => {
+            if (e.target === e.currentTarget && e.propertyName === 'grid-template-rows') setIsSettled(true);
+          }}
+        >
+          <div className="collapsible-section__animated-inner">
+            <div className="collapsible-section__body">{children}</div>
+          </div>
+        </div>
+      ) : (
+        (!isCloseable || isOpen) && <div className="collapsible-section__body">{children}</div>
+      )}
     </div>
   );
 }

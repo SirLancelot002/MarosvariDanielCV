@@ -140,3 +140,29 @@
     justify-content: flex-end;
   }
 }
+.project-card__tags-wrap {
+  position: relative;
+  margin: 0 0 0.75rem;
+}
+
+.project-card__tags-wrap .project-card__tags {
+  margin: 0;
+}
+
+/* Invisible copy of all tags used only to measure how many fit in the allowed rows. */
+.project-card__tags--ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.project-card__tag--active {
+  background: #61dca3;
+  border-color: #61dca3;
+  color: #000;
+}

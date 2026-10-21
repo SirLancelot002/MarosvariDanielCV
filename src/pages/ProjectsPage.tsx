@@ -1,5 +1,7 @@
+import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import NavBar from '../NavBar';
+import TagFilter from '../modules/TagFilter';
 import TextType from '../modules/TextType';
 import LetterGlitch from '../modules/LetterGlitch';
 import ProjectCard from '../modules/ProjectCard';
@@ -11,8 +13,28 @@ import './ProjectsPage.css';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
 function ProjectsPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const quality = useAdaptiveQuality();
+  const lang = i18n.language === 'hu' ? 'hu' : 'en';
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+  const allTags = useMemo(
+    () => Array.from(new Set(projects.flatMap((p) => p.translations[lang].tags ?? []))).sort((a, b) => a.localeCompare(b)),
+    [lang]
+  );
+
+  // Tags are per-language, so drop selections that don't exist in the current language.
+  const activeTags = selectedTags.filter((tag) => allTags.includes(tag));
+
+  // OR relation: a project is shown if it has at least one selected tag.
+  // Projects matching more selected tags come first; ties keep the original order (stable sort).
+  const filteredProjects = activeTags.length === 0
+    ? projects
+    : projects
+        .map((p) => ({ p, matches: (p.translations[lang].tags ?? []).filter((tag) => activeTags.includes(tag)).length }))
+        .filter(({ matches }) => matches > 0)
+        .sort((a, b) => b.matches - a.matches)
+        .map(({ p }) => p);
 
   // Larger letters mean fewer of them on screen, which is cheaper to render.
   let letterSizeRem = 1;
@@ -71,8 +93,10 @@ function ProjectsPage() {
 
         <NavBar />
 
+        <TagFilter tags={allTags} selected={activeTags} onChange={setSelectedTags} />
+
         <div className="container mt-5 studies-list">
-          {projects.map((project, index) => {
+          {filteredProjects.map((project, index) => {
             const isOdd = index % 2 === 0;
             return (
               <RevealOnScroll key={project.id} className="studies-list__row-wrapper">
@@ -80,7 +104,7 @@ function ProjectsPage() {
                   {isOdd ? (
                     <>
                       <div className="col-12 col-xl-5">
-                        <ProjectCard project={project} />
+                        <ProjectCard project={project} selectedTags={activeTags} />
                       </div>
                       <div className="col-xl-7 d-none d-xl-block" />
                     </>
@@ -88,7 +112,7 @@ function ProjectsPage() {
                     <>
                       <div className="col-xl-7 d-none d-xl-block" />
                       <div className="col-12 col-xl-5">
-                        <ProjectCard project={project} />
+                        <ProjectCard project={project} selectedTags={activeTags} />
                       </div>
                     </>
                   )}

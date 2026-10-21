@@ -31,6 +31,7 @@ import pythonlogo from '../assets/pythonlogo.webp';
 import sqllogo from '../assets/sqllogo.webp';
 import javalogo from '../assets/javalogo.webp';
 import haskelllogo from '../assets/haskelllogo.webp';
+import linkedinlogo from '../assets/linkedlogo.webp';
 
 const BIRTH_YEAR = 2003;
 const imageLoopLogos = [
@@ -45,7 +46,8 @@ const imageLoopLogos = [
   { src: pythonlogo, alt: "Python", href: "https://www.python.org" },
   { src: sqllogo, alt: "SQL", href: "https://www.mysql.com" },
   { src: javalogo, alt: "Java", href: "https://www.java.com" },
-  { src: haskelllogo, alt: "Haskell", href: "https://www.haskell.org" }
+  { src: haskelllogo, alt: "Haskell", href: "https://www.haskell.org" },
+  { src: linkedinlogo, alt: "LinkedIn", href: "https://www.linkedin.com/in/dániel-marosvári" }
 ];
 
 function getAge(): string {

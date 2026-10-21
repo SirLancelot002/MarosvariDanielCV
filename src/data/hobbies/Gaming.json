@@ -1,0 +1,124 @@
+{
+    "id": "gaming",
+    "order": 10,
+    "color": "#aa00bb",
+    "bannerSrc": "hobbies/Achievements.webp",
+    "translations": {
+        "en": {
+            "title": "Gaming",
+            "tags": [
+                "PC",
+                "Video Games",
+                "Strategy",
+                "Multiplayer"
+            ],
+            "shortDescription": "As almost everyone from a Computer Science course at university, I like gaming. I sterted around 6 years old. My father always played simulators at home, so we always had a strong PC. I played almost every chategory of game, and I have hundreds of game titles in my collection. Overall I probably have over 10 000 hours in games, but I cannot confirm it since, in this one and a half decade I played on many platforms, consols and even switched main Steam account after I become old enough. I think games played a pivital role in leading me to IT. 2 out of my 3 favorite games were engineering games where you could build vehicles. In the 2nd one you could even program them in lua.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "My journey with gaming",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "I started early. First I was watching my dad play story games. I was really into them as they were like interactive movies. The first big game I've played with was Rise and Fall: Civilizations at War. This was a strategy game with a story based campaign. Then I played Driver: San Francisco, which was an open-world driving game. Then GTA 6, Battlefield 1942, and so on. I played every genre. I also went through multiple platforms and consoles. I started with PC games without a platfrom, then we got an Xbox, and I played Kintect (it's a sensor that can see you, and you have to move to control your character) games on them for a few years. Then I started playing on Origin (EA's game platfrom), then I switched to Steam, and stayed there ever since. I tried out Epic games for their Unreal Engine 5, which I learned about for a few months when it came out. I also played many VR games. For about 3 years those were my main focus."
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "As of late, I primarily played strategy and engineering games. After VR, fast-paced action games don't really excite me as much as they used to. Plus I really enjoy finding solutions to problems I find while engineering."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Some Images",
+                            "level": 3
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Steam.webp",
+                            "alt": "My Steam library",
+                            "caption": "My Steam library",
+                            "weight": 12
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Achievements.webp",
+                            "alt": "My Steam Achievements in 2022",
+                            "caption": "My Steam Achievements in 2022",
+                            "weight": 12
+                        }
+                    ]
+                }
+            ]
+        },
+        "hu": {
+            "title": "Videójátékok",
+            "tags": [
+                "PC",
+                "Videójátékok",
+                "Stratégia",
+                "Többjátékos"
+            ],
+            "shortDescription": "Ahogy az egyetemi informatikus hallgatók többsége, én is szeretek videójátékokkal játszani. Körülbelül 6 éves koromban kezdtem. Édesapám mindig szimulátorokkal játszott otthon, így mindig volt egy erős PC-nk. Szinte minden játékkategóriát kipróbáltam, és több száz játékból áll a gyűjteményem. Összességében valószínűleg több mint 10 000 órát töltöttem játékokkal, de ezt nem tudom pontosan megerősíteni, hiszen az elmúlt másfél évtizedben számos platformon és konzolon játszottam, sőt, miután elég idős lettem hozzá, a fő Steam-fiókomat is lecseréltem. Úgy gondolom, a játékok meghatározó szerepet játszottak abban, hogy végül az informatika felé fordultam. A három kedvenc játékom közül kettő mérnöki játék volt, amelyekben járműveket lehetett építeni. A másodikban még Lua nyelven programozni is lehetett őket.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "A játékokkal töltött éveim",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "Korán kezdtem. Eleinte édesapámat néztem, ahogy történetközpontú játékokkal játszik. Nagyon magukkal ragadtak ezek a játékok, hiszen olyanok voltak, mint az interaktív filmek. Az első igazán meghatározó játék, amellyel játszottam, a Rise and Fall: Civilizations at War volt. Ez egy történetalapú kampánnyal rendelkező stratégiai játék volt. Ezt követte a Driver: San Francisco, egy nyílt világú autóvezetős játék. Később jött a GTA 6, a Battlefield 1942 és még sok más. Szinte minden műfajt kipróbáltam, és több különböző platformot, illetve konzolt is használtam. Először olyan PC-s játékokkal játszottam, amelyek nem kötődtek külön platformhoz, majd lett egy Xboxunk is, amelyen néhány évig Kinect-játékokkal játszottam. A Kinect egy olyan érzékelő, amely képes érzékelni a mozgásodat, így a karaktered irányításához neked is mozognod kell. Később az Originre, az EA játékplatformjára váltottam, majd áttértem a Steamre, ahol azóta is maradtam. Az Epic Gamest is kipróbáltam az Unreal Engine 5 miatt, amellyel a megjelenésekor néhány hónapig ismerkedtem. Emellett rengeteg VR-játékkal is játszottam. Körülbelül három éven át ezek álltak az érdeklődésem középpontjában."
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "Az utóbbi időben elsősorban stratégiai és mérnöki játékokkal játszottam. A VR-játékok után a gyors tempójú akciójátékok már nem tudnak annyira lekötni, mint régen. Emellett kifejezetten élvezem, amikor a mérnöki játékokban felmerülő problémákra kell megoldást találnom."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Néhány kép",
+                            "level": 3
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Steam.webp",
+                            "alt": "A Steam-könyvtáram",
+                            "caption": "A Steam-könyvtáram",
+                            "weight": 12
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Achievements.webp",
+                            "alt": "Steam-eredményeim 2022-ben",
+                            "caption": "Steam-eredményeim 2022-ben",
+                            "weight": 12
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

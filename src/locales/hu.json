@@ -53,6 +53,10 @@
   "projects.title2": "Nézz körül!",
   "projects.title3": "Gondosan elkészítve",
   "projects.difficulty": "Nehézség",
+  "projects.filter.toggle": "Címkeszűrő megnyitása",
+  "projects.filter.placeholder": "Szűrés címkék szerint...",
+  "projects.filter.clear": "Törlés",
+  "projects.filter.noMatch": "Nincs egyező címke",
   "projects.backToList": "Vissza a projektekhez",
   "impressed" : "Nagyon lenyűgözött, szeretnélek felvenni, Dani!",
 
@@ -71,6 +75,12 @@
   "experience.years": "Év",
   "experience.months": "Hónap",
   "experience.total": "Összes szakmai tapasztalatom",
+
+  "nav.hobbies": "Hobbik",
+  "hobbies.title1": "Hobbijaim",
+  "hobbies.title2": "Amit szabadidőmben csinálok",
+  "hobbies.title3": "Az élet a kódon túl",
+  "hobbies.backToList": "Vissza a hobbikhoz",
 
   "nav.skills": "Képességek",
   "skills.title1": "A képességeim",

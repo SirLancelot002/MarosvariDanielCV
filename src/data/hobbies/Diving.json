@@ -1,0 +1,186 @@
+{
+    "id": "diving",
+    "order": 2,
+    "color": "#00bbff",
+    "bannerSrc": "studies/me-wreck-diving.jpg",
+    "translations": {
+        "en": {
+            "title": "Scuba Diving",
+            "tags": [
+                "Sport",
+                "Sea",
+                "Outdoors",
+                "Summer",
+                "Extreme Sport"
+            ],
+            "shortDescription": "I regularly scuba dive in the summer on a recreational level. I have around 20 dives, 3 of which were around 40 meter at their deepest point. Since my father was a diver for about two decades, and we have many friends who are also divers, I was destined to take the exam myself as well.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "My first ever Dive",
+                            "level": 3
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "I was around 11 or 13 years old. My father was still a diver at the capital's firefighters and they had an exercise at Duna Arena in the Diving pool. After they finished their work, we got to try out the gear with the left over air tanks. It was a great experience. I loved diving even before this, but now I could stay under water as long as I wanted*. Plus we had ~12 professional rescue divers around us in a pool, so it was as safe as diving can get :D."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Ever since that",
+                            "level": 3
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 6,
+                            "text": "I took the Open Water Scuba Diver exam as soon as I (and my sister) could. We went on a week long vacation on a ship that was registered as a diving base. We completed ~13 dives that week. There were two other families with us, and the 3 dads were all certified divers."
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 6,
+                            "text": "A few years later, (In 2025 Aug) I completed the Advanced Open Water Scuba Diver exam. This allows me to dive up to 40 meters deep. That week we had 3 dives at that depth, and I dare say those were the best dives so far. We swam next to coral reefs, where the bottom went down under 60 meters, saw lion fish, and explored a small underwater \"cave\"."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Some Images",
+                            "level": 3
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/scuba-dive-me-2.jpg",
+                            "alt": "Me, Scuba Diving",
+                            "caption": "Me, Scuba Diving",
+                            "weight": 6
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/scuba-dive-me.jpg",
+                            "alt": "Me, Scuba Diving",
+                            "caption": "Me, Scuba Diving",
+                            "weight": 6
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/me-wreck-diving.jpg",
+                            "alt": "Me, Wreck Diving",
+                            "caption": "Me, Wreck Diving",
+                            "weight": 6
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/snorcel-dive-me.jpg",
+                            "alt": "Me, Snorkel Diving",
+                            "caption": "Me, Snorkel Diving",
+                            "weight": 6
+                        }
+                    ]
+                }
+            ]
+        },
+        "hu": {
+            "title": "Búvárkodás",
+            "tags": [
+                "Sport",
+                "Tenger",
+                "Szabadtéri tevékenység",
+                "Nyár",
+                "Extrém sport"
+            ],
+            "shortDescription": "Nyáron rendszeresen búvárkodom szabadidős tevékenységként. Körülbelül 20 merülésen vagyok túl, amelyek közül háromnál a legnagyobb mélység megközelítette a 40 métert. Mivel édesapám közel két évtizeden át búvárkodott, és sok barátunk is búvár, szinte elkerülhetetlen volt, hogy én is megszerezzem a képesítést.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Az első merülésem",
+                            "level": 3
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "Körülbelül 11–13 éves lehettem. Édesapám akkor még a fővárosi tűzoltóság búvárjaként dolgozott, és éppen a Duna Aréna búvármedencéjében tartottak gyakorlatot. Miután befejezték a munkát, a megmaradt levegős palackokkal mi is kipróbálhattuk a felszerelést. Fantasztikus élmény volt. Már előtte is nagyon szerettem a búvárkodást, de most végre annyi időt tölthettem a víz alatt, amennyit csak akartam*. Ráadásul körülbelül 12 hivatásos mentőbúvár vett körül minket a medencében, így ennél biztonságosabb körülmények között aligha merülhettünk volna :D."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Azóta",
+                            "level": 3
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 6,
+                            "text": "Amint lehetőségem nyílt rá, a testvéremmel együtt megszereztem az Open Water Scuba Diver képesítést. Egy hetes hajós nyaralásra mentünk, egy olyan hajón, amely hivatalosan búvárbázisként működött. Azon a héten körülbelül 13 merülést teljesítettünk. Rajtunk kívül még két család tartott velünk, és mindhárom édesapa rendelkezett búvárképesítéssel."
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 6,
+                            "text": "Néhány évvel később, 2025 augusztusában megszereztem az Advanced Open Water Scuba Diver képesítést is. Ez lehetővé teszi, hogy akár 40 méteres mélységig merüljek. Azon a héten három merülést is végeztünk ilyen mélységben, és bátran mondhatom, hogy ezek voltak eddigi legjobb merüléseim. Korallzátonyok mellett úsztunk, ahol a tengerfenék több mint 60 méter mélyre süllyedt, oroszlánhalakat láttunk, és felfedeztünk egy kisebb víz alatti „barlangot” is."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Néhány kép",
+                            "level": 3
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/scuba-dive-me-2.jpg",
+                            "alt": "Én búvárkodás közben",
+                            "caption": "Én búvárkodás közben",
+                            "weight": 6
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/scuba-dive-me.jpg",
+                            "alt": "Én búvárkodás közben",
+                            "caption": "Én búvárkodás közben",
+                            "weight": 6
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/me-wreck-diving.jpg",
+                            "alt": "Én roncsmerülés közben",
+                            "caption": "Én roncsmerülés közben",
+                            "weight": 6
+                        },
+                        {
+                            "type": "image",
+                            "src": "studies/snorcel-dive-me.jpg",
+                            "alt": "Én sznorkelezés közben",
+                            "caption": "Én sznorkelezés közben",
+                            "weight": 6
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

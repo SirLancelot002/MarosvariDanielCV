@@ -1,0 +1,62 @@
+{
+    "id": "dice-making",
+    "order": 3,
+    "color": "#ff0000",
+    "bannerSrc": "hobbies/DiceMaking2.webp",
+    "translations": {
+        "en": {
+            "title": "Dice Making",
+            "tags": ["Creative", "Crafting", "Art", "Hobby", "Board Games"],
+            "shortDescription": "After I got my first studentship money, I got a LOT of ads of crazy good looking D&D Dices. This was the same time as Temu blew up in Hungary, so I bought just one good set of dice. This lead me to be invited into a D&D group, after which I wanted even more dice. After some digging around, I found that it wasn't actually that difficult to make my own, so I ordered everything I needed for the whole deal. I love how they are made, the rules how you put everything together. It captured my imagination and creativity more then drawing ever did.",
+            "content": [
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": false,
+                    "items": [
+                        { "type": "heading", "text": "How do people make dice by hand?", "level": 2 },
+                        { "type": "paragraph", "weight": 12, "text": "Usually the dice is made of plastic. It relativly cheap, easy to handel and mold into different shapes. The process typically goes as: preapering the works station. The liquid resin is REALLY sticky and it's toxic to the touch. So we usually place a disposable magazin or more as cover, then preaper the mold. Next step is mixing the resin (artificial resin is just a kind of plastic). The resin has two components, A and B and after they are mixed the curing starts (but it takes a day). After A and B were mixed, we add the coloring or glitter we want. If we want the dice to have multiple layers, let the first cool and cure a bit, and only add the 2nd layer later. After the molds are filled up, pack everything up. The dice can be opened up after a day or two. These usually need to be sanded, polished and then painted. Polishing is a true pain and time killer, which is the reason why I haven't made a dice in about a year." },
+                        { "type": "paragraph", "weight": 12, "text": "I made around 10 batches of dice. There were some failures, where air bubbles got trapped inside the resin, but most were a scuccess. I really enjoy the process and the final result, as it allows me to combine creativity with craftsmanship." }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        { "type": "heading", "text": "Some Images", "level": 3 },
+                        { "type": "image", "src": "hobbies/DiceMaking2.webp", "alt": "Dice Making", "caption": "Dice Making", "weight": 6 },
+                        { "type": "image", "src": "hobbies/DiceMaking3.webp", "alt": "Dice Making", "caption": "Dice Making", "weight": 6 },
+                        { "type": "image", "src": "hobbies/DiceMaking.webp", "alt": "Dice Making", "caption": "Dice Making", "weight": 6 },
+                        { "type": "image", "src": "hobbies/dice.webp", "alt": "The 1st set I made", "caption": "The 1st set I made", "weight": 6 }
+                    ]
+                }
+            ]
+        },
+        "hu": {
+    "title": "Dobókockakészítés",
+    "tags": ["Kreativitás", "Kézművesség", "Művészet", "Hobbi", "Társasjátékok"],
+    "shortDescription": "Miután megkaptam az első ösztöndíjamat, rengeteg hirdetést kezdtem látni elképesztően jól kinéző D&D dobókockákról. Ez éppen egybeesett azzal az időszakkal, amikor a Temu berobbant Magyarországon, így rendeltem magamnak egyetlen szép dobókockakészletet. Ennek köszönhetően meghívtak egy D&D-csapatba, ami után még több dobókockát szerettem volna. Kicsit utánajártam a dolognak, és kiderült, hogy egyáltalán nem olyan nehéz saját kockákat készíteni, ezért megrendeltem mindent, amire a folyamathoz szükségem volt. Nagyon tetszik, ahogyan készülnek, és azok a szabályok, amelyek meghatározzák, hogyan kell összeállítani őket. Sokkal jobban megragadta a képzeletemet és a kreativitásomat, mint valaha a rajzolás.",
+    "content": [
+        {
+            "isCloseable": true,
+            "isClosedByDefault": false,
+            "items": [
+                { "type": "heading", "text": "Hogyan készülnek a kézzel készített dobókockák?", "level": 2 },
+                { "type": "paragraph", "weight": 12, "text": "A dobókockák általában műanyagból készülnek. Ez viszonylag olcsó, könnyen kezelhető, és különböző formákba önthető. A folyamat általában a munkaterület előkészítésével kezdődik. A folyékony műgyanta RENDKÍVÜL ragacsos, és a bőrrel érintkezve mérgező lehet. Ezért általában egy vagy több eldobható újságpapírral vagy magazinnal letakarjuk a felületet, majd előkészítjük a formát. A következő lépés a műgyanta bekeverése (a műgyanta tulajdonképpen egyfajta műanyag). Két összetevőből, az A és a B komponensből áll, és összekeverésük után megindul a kikeményedés folyamata, amely azonban akár egy napig is eltarthat. Miután összekevertük az A és B komponenst, hozzáadjuk a kívánt színezéket vagy csillámport. Ha több rétegből álló dobókockát szeretnénk készíteni, hagyjuk az első réteget kissé lehűlni és megszilárdulni, majd csak később adjuk hozzá a másodikat. Miután megtöltöttük a formákat, elpakoljuk a felszerelést. A kockákat egy-két nap elteltével lehet kivenni a formából. Ezután általában csiszolni, polírozni és végül festeni kell őket. A polírozás igazi rémálom és rengeteg időt emészt fel, ezért nem készítettem új dobókockát már körülbelül egy éve." },
+                { "type": "paragraph", "weight": 12, "text": "Eddig körülbelül 10 adag dobókockát készítettem. Néhány próbálkozás nem sikerült, mert légbuborékok rekedtek a műgyantában, de a legtöbb kifejezetten jól sikerült. Nagyon élvezem magát a készítési folyamatot és a végeredményt is, hiszen így ötvözhetem a kreativitást a kézműves munkával." }
+            ]
+        },
+        {
+            "isCloseable": true,
+            "isClosedByDefault": true,
+            "items": [
+                { "type": "heading", "text": "Néhány kép", "level": 3 },
+                { "type": "image", "src": "hobbies/DiceMaking2.webp", "alt": "Dobókockakészítés", "caption": "Dobókockakészítés", "weight": 6 },
+                { "type": "image", "src": "hobbies/DiceMaking3.webp", "alt": "Dobókockakészítés", "caption": "Dobókockakészítés", "weight": 6 },
+                { "type": "image", "src": "hobbies/DiceMaking.webp", "alt": "Dobókockakészítés", "caption": "Dobókockakészítés", "weight": 6 },
+                { "type": "image", "src": "hobbies/dice.webp", "alt": "Az első általam készített készlet", "caption": "Az első általam készített készlet", "weight": 6 }
+            ]
+        }
+    ]
+}
+    }
+}

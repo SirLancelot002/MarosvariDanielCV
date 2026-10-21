@@ -24,3 +24,38 @@
 .collapsible-section__body {
   margin-top: 0.5rem;
 }
+.collapsible-section__animated {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition: grid-template-rows 0.4s ease, opacity 0.3s ease, visibility 0s linear 0.4s;
+}
+
+.collapsible-section__animated.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transition: grid-template-rows 0.4s ease, opacity 0.3s ease 0.05s, visibility 0s;
+}
+
+.collapsible-section__animated-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Clip only while opening/closing; once fully open, let tilted content overflow. */
+.collapsible-section__animated.is-settled > .collapsible-section__animated-inner {
+  overflow: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsible-section__animated,
+  .collapsible-section__animated.is-open {
+    transition: none;
+  }
+
+  .collapsible-section__animated.is-open > .collapsible-section__animated-inner {
+    overflow: visible;
+  }
+}

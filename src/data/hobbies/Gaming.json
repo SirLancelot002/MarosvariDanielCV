@@ -6,30 +6,116 @@
     "translations": {
         "en": {
             "title": "Gaming",
-            "tags": ["PC", "Video Games", "Strategy", "Multiplayer"],
+            "tags": [
+                "PC",
+                "Video Games",
+                "Strategy",
+                "Multiplayer"
+            ],
             "shortDescription": "As almost everyone from a Computer Science course at university, I like gaming. I sterted around 6 years old. My father always played simulators at home, so we always had a strong PC. I played almost every chategory of game, and I have hundreds of game titles in my collection. Overall I probably have over 10 000 hours in games, but I cannot confirm it since, in this one and a half decade I played on many platforms, consols and even switched main Steam account after I become old enough. I think games played a pivital role in leading me to IT. 2 out of my 3 favorite games were engineering games where you could build vehicles. In the 2nd one you could even program them in lua.",
             "content": [
                 {
                     "isCloseable": true,
                     "isClosedByDefault": false,
                     "items": [
-                        { "type": "heading", "text": "What is D&D?", "level": 2 },
-                        { "type": "paragraph", "weight": 12, "text": "Dungeons and Dragons is a fantasy tabletop role-playing game where players create characters and embark on adventures guided by a Dungeon Master (DM). The players can create their own characters with unique abilities, backgrounds, and personalities, and they work together to overcome challenges and tell a collaborative story. The players can choose from a variety of races, classes, and subclasses, all having effects on how each character is played, similar to a board game. Wizards cast spells, fighters swing swords multiple times per round, elves meditate instead of sleep, and some races can fly. The Dungeon Master (DM) controls the game world, narrates the story, and adjudicates the rules, creating a dynamic and immersive experience for all players. Basically, the DM writes the story scenarios and the players act them out and make decisions that shape the outcome of the game." }
+                        {
+                            "type": "heading",
+                            "text": "My journey with gaming",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "I started early. First I was watching my dad play story games. I was really into them as they were like interactive movies. The first big game I've played with was Rise and Fall: Civilizations at War. This was a strategy game with a story based campaign. Then I played Driver: San Francisco, which was an open-world driving game. Then GTA 6, Battlefield 1942, and so on. I played every genre. I also went through multiple platforms and consoles. I started with PC games without a platfrom, then we got an Xbox, and I played Kintect (it's a sensor that can see you, and you have to move to control your character) games on them for a few years. Then I started playing on Origin (EA's game platfrom), then I switched to Steam, and stayed there ever since. I tried out Epic games for their Unreal Engine 5, which I learned about for a few months when it came out. I also played many VR games. For about 3 years those were my main focus."
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "As of late, I primarily played strategy and engineering games. After VR, fast-paced action games don't really excite me as much as they used to. Plus I really enjoy finding solutions to problems I find while engineering."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Some Images",
+                            "level": 3
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Steam.webp",
+                            "alt": "My Steam library",
+                            "caption": "My Steam library",
+                            "weight": 12
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Achievements.webp",
+                            "alt": "My Steam Achievements in 2022",
+                            "caption": "My Steam Achievements in 2022",
+                            "weight": 12
+                        }
                     ]
                 }
             ]
         },
         "hu": {
-            "title": "Dungeons & Dragons (D&D)",
-            "tags": ["Fantasy", "Szerepjáték", "Kreativitás", "Történetírás", "Közösségszervezés", "Stratégia", "Művészet"],
-            "shortDescription": "A Dungeons & Dragons játékkal az ELTE-n töltött második félévemben ismerkedtem meg. Az egyik csoporttársamnak már volt korábbi tapasztalata, és felajánlotta, hogy ő lesz a DM (Dungeon Master, vagyis a kalandmester, aki megtervezi a kampányt). Játékosként csatlakoztam, és hamar beleszerettem a játékba. A harmadik alkalom után már sajnáltam, hogy csak heti egy játékalkalmunk van, ezért körbekérdeztem, hogy csatlakozhatnék-e egy másik csapathoz. Mivel senki másnál nem volt erre lehetőség, úgy döntöttem, elindítom a saját kampányomat, és én is DM lettem. Az első kampányban, amelyhez csatlakoztam, sosem került sor a negyedik alkalomra, az enyém viszont azóta is töretlenül folytatódik. Körülbelül 2024 májusában kezdtük, és még most, 2026 októberében is heti egy alkalommal játszunk.",
+            "title": "Videójátékok",
+            "tags": [
+                "PC",
+                "Videójátékok",
+                "Stratégia",
+                "Többjátékos"
+            ],
+            "shortDescription": "Ahogy az egyetemi informatikus hallgatók többsége, én is szeretek videójátékokkal játszani. Körülbelül 6 éves koromban kezdtem. Édesapám mindig szimulátorokkal játszott otthon, így mindig volt egy erős PC-nk. Szinte minden játékkategóriát kipróbáltam, és több száz játékból áll a gyűjteményem. Összességében valószínűleg több mint 10 000 órát töltöttem játékokkal, de ezt nem tudom pontosan megerősíteni, hiszen az elmúlt másfél évtizedben számos platformon és konzolon játszottam, sőt, miután elég idős lettem hozzá, a fő Steam-fiókomat is lecseréltem. Úgy gondolom, a játékok meghatározó szerepet játszottak abban, hogy végül az informatika felé fordultam. A három kedvenc játékom közül kettő mérnöki játék volt, amelyekben járműveket lehetett építeni. A másodikban még Lua nyelven programozni is lehetett őket.",
             "content": [
                 {
                     "isCloseable": true,
                     "isClosedByDefault": false,
                     "items": [
-                        { "type": "heading", "text": "Mi az a D&D?", "level": 2 },
-                        { "type": "paragraph", "weight": 12, "text": "A Dungeons & Dragons egy fantasy táblás szerepjáték, amelyben a játékosok karaktereket alkotnak, majd egy kalandmester (Dungeon Master, röviden DM) által vezetett kalandokba vágnak bele. A játékosok egyedi képességekkel, háttértörténettel és személyiséggel rendelkező karaktereket hozhatnak létre, és együttműködve küzdhetnek le különböző kihívásokat, miközben közösen alakítanak ki egy történetet. Számos faj, kaszt és alkaszt közül választhatnak, amelyek mind befolyásolják a karakterek játékstílusát, hasonlóan egy társasjátékhoz. A varázslók varázslatokat idéznek, a harcosok körönként többször is lesújthatnak a kardjukkal, a tündék alvás helyett meditálnak, bizonyos fajok képviselői pedig repülni is képesek. A kalandmester (DM) irányítja a játék világát, meséli a történetet és értelmezi a szabályokat, így minden játékos számára dinamikus és magával ragadó élményt teremt. Röviden: a DM megírja a történet alapjául szolgáló kalandokat, a játékosok pedig eljátsszák azokat, és olyan döntéseket hoznak, amelyek meghatározzák a játék kimenetelét." }
+                        {
+                            "type": "heading",
+                            "text": "A játékokkal töltött éveim",
+                            "level": 2
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "Korán kezdtem. Eleinte édesapámat néztem, ahogy történetközpontú játékokkal játszik. Nagyon magukkal ragadtak ezek a játékok, hiszen olyanok voltak, mint az interaktív filmek. Az első igazán meghatározó játék, amellyel játszottam, a Rise and Fall: Civilizations at War volt. Ez egy történetalapú kampánnyal rendelkező stratégiai játék volt. Ezt követte a Driver: San Francisco, egy nyílt világú autóvezetős játék. Később jött a GTA 6, a Battlefield 1942 és még sok más. Szinte minden műfajt kipróbáltam, és több különböző platformot, illetve konzolt is használtam. Először olyan PC-s játékokkal játszottam, amelyek nem kötődtek külön platformhoz, majd lett egy Xboxunk is, amelyen néhány évig Kinect-játékokkal játszottam. A Kinect egy olyan érzékelő, amely képes érzékelni a mozgásodat, így a karaktered irányításához neked is mozognod kell. Később az Originre, az EA játékplatformjára váltottam, majd áttértem a Steamre, ahol azóta is maradtam. Az Epic Gamest is kipróbáltam az Unreal Engine 5 miatt, amellyel a megjelenésekor néhány hónapig ismerkedtem. Emellett rengeteg VR-játékkal is játszottam. Körülbelül három éven át ezek álltak az érdeklődésem középpontjában."
+                        },
+                        {
+                            "type": "paragraph",
+                            "weight": 12,
+                            "text": "Az utóbbi időben elsősorban stratégiai és mérnöki játékokkal játszottam. A VR-játékok után a gyors tempójú akciójátékok már nem tudnak annyira lekötni, mint régen. Emellett kifejezetten élvezem, amikor a mérnöki játékokban felmerülő problémákra kell megoldást találnom."
+                        }
+                    ]
+                },
+                {
+                    "isCloseable": true,
+                    "isClosedByDefault": true,
+                    "items": [
+                        {
+                            "type": "heading",
+                            "text": "Néhány kép",
+                            "level": 3
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Steam.webp",
+                            "alt": "A Steam-könyvtáram",
+                            "caption": "A Steam-könyvtáram",
+                            "weight": 12
+                        },
+                        {
+                            "type": "image",
+                            "src": "hobbies/Achievements.webp",
+                            "alt": "Steam-eredményeim 2022-ben",
+                            "caption": "Steam-eredményeim 2022-ben",
+                            "weight": 12
+                        }
                     ]
                 }
             ]

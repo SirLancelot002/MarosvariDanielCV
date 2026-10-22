@@ -12,7 +12,7 @@ import ShinyText from '../modules/ShinyText';
 import NavBar from '../NavBar';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
-import avatarImg from '../assets/avatar.png';
+import avatarImg from '../assets/Avatar.webp';
 import iconPatternImg from '../assets/iconpattern.png';
 import cityLogoImg from '../assets/citylogo.png';
 import calendarLogoImg from '../assets/calendarlogo.png';

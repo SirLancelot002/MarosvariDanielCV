@@ -14,7 +14,7 @@ import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
 import CollapsibleSection from '../modules/CollapsibleSection';
-import Lanyard from '../modules/Lanyard';
+import Lanyard from '../modules/LanyardV2';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 import type { JobContentItem } from '../types/job';
 import './JobDetailPage.css';
@@ -256,10 +256,14 @@ function JobDetailPage() {
                     <Lanyard
                         frontImage={publicAsset(job.lanyardFrontSrc)}
                         backImage={publicAsset(job.lanyardBackSrc)}
-                        lanyardImage={publicAsset(job.lanyardBandSrc)}
-                        position={[0, 0, 15]}
-                        gravity={[0, -40, 0]}
-                        lanyardWidth={0.5}
+                        strapImage={publicAsset(job.lanyardBandSrc)}
+                        strapColor={accentColor}
+                        finish="metallic"
+                        cornerRadius={0.2}
+                        size={0.5}
+                        damping={0.6}
+                        elasticity={1}
+                        breeze={1}
                     />
                 )}
                 <div className="specular-button-shell job-detail__back-to-top">

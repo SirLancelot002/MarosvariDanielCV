@@ -143,6 +143,27 @@
         {
           "items": [
             {
+              "type": "heading",
+              "text": "Techniques I tried",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "projects/lanyard.webp",
+              "caption": "Interactive Lanyard with 3D model",
+              "alt": "Lanyard with 3D model",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "Besides the regular web development, I wanted to try new things I haven't done before. So I tried \"Vibe Coding\" and made the entireity of the \"Time Line\" page with AI, only propmpting it. Time wise it was effective, but in my opinion it wasted way too much tokens so after that I kept AI back at support level. The whole page took about 1200 Tokens from Github Co-Pilot (which is about 2-3 times what I used up to every page before that). After that I tried out using 3d models on the web, so I made the Lanyard on the detailed experiance page. It was an emotional roller coaster to get the 3d model to render, but thankfully I succeeded after ~3-4 hours. I'm really happy how the site turned out, it was worth every second I spent on it.",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
               "type": "paragraph",
               "text": "The site is continuously deployed straight from the repository, so every change I push is automatically built and published. All of the source code is available on GitHub."
             },
@@ -286,6 +307,27 @@
               "src": "projects/cv-website-studycard.webp",
               "caption": "Interaktív tanulmánykártya fényhatásokkal",
               "alt": "Hover animációval ellátott tanulmánykártya",
+              "weight": 6
+            }
+          ]
+        },
+        {
+          "items": [
+            {
+              "type": "heading",
+              "text": "Kipróbált technikák",
+              "level": 2
+            },
+            {
+              "type": "image",
+              "src": "projects/lanyard.webp",
+              "caption": "Interaktív nyakpánt 3D modellel",
+              "alt": "Nyakpánt 3D modellel",
+              "weight": 6
+            },
+            {
+              "type": "paragraph",
+              "text": "A hagyományos webfejlesztés mellett szerettem volna olyan új dolgokat is kipróbálni, amelyeket korábban még nem csináltam. Ezért kísérleteztem a „Vibe Coding” módszerével, és az „Idővonal” oldal teljes egészét mesterséges intelligenciával készítettem el, kizárólag promptok megadásával. Idő szempontjából hatékony volt, de véleményem szerint túlságosan sok tokent használt fel, ezért ezután az MI-t ismét csak támogató eszközként alkalmaztam. Az egész oldal elkészítése körülbelül 1200 tokent használt el a GitHub Copilotból, ami nagyjából két-háromszorosa annak, amennyit korábban egy-egy oldalra fordítottam. Ezután kipróbáltam a 3D modellek weboldalakon történő megjelenítését is, így került 3D modell a részletes projektbemutató oldalán található nyakpántra. Érzelmi hullámvasút volt elérni, hogy a 3D modell megfelelően megjelenjen, de szerencsére körülbelül 3–4 óra után sikerrel jártam. Nagyon elégedett vagyok a weboldal végeredményével, minden ráfordított másodperc megérte.",
               "weight": 6
             }
           ]

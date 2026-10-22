@@ -17,8 +17,8 @@
   border-radius: 24px;
   color: #f5f5f5;
   cursor: text;
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   transition: border-radius 0.35s ease;
 }
 
@@ -65,8 +65,8 @@
   border: 1px solid transparent;
   border-top: 0;
   border-radius: 0 0 24px 24px;
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   transition: grid-template-rows 0.35s ease, border-color 0.35s ease;
 }
 

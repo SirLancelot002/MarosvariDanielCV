@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 import TextType from '../modules/TextType';
-import Lightning from '../modules/Lightning';
+import Lightning from '../modules/LightningV2';
 import ProfileCard from '../modules/ProfileCard';
 import ElectricBorder from '../modules/ElectricBorder';
 import GradientText from '../modules/GradientText';
@@ -60,13 +60,21 @@ function LandingPage() {
   const { t } = useTranslation();
   const quality = useAdaptiveQuality();
   let ballCount = 50;
+  let lightningDpr: number | undefined;
+  let lightningBranches = 1;
+  let lightningMouse = true;
 
   switch (quality) {
     case 'low':
       ballCount = 10;
+      lightningDpr = 0.6;
+      lightningBranches = 0.3;
+      lightningMouse = false;
       break;
     case 'medium':
       ballCount = 35;
+      lightningDpr = 1;
+      lightningBranches = 0.7;
       break;
     case 'high':
       ballCount = 75;
@@ -78,7 +86,28 @@ function LandingPage() {
     <>
       <div className="page-upper">
         <div className="lightning-bg">
-          <Lightning hue={260} xOffset={0} speed={1} intensity={1} size={1} />
+          <Lightning
+            color="#9f4dff"
+            bolts={1}
+            spread={0.6}
+            branches={lightningBranches}
+            dpr={lightningDpr}
+            xOffset={0}
+            angle={0}
+            size={0.8}
+            thickness={1}
+            glow={1.2}
+            intensity={1.2}
+            speed={1}
+            flicker={0.6}
+            mouseInteraction={lightningMouse}
+            mouseStrength={1}
+            clickStrike={lightningMouse}
+            intro
+            fade={0}
+            opacity={1}
+            lightMode={false}
+          />
         </div>        
         <main className="hero-section">
           <TextType

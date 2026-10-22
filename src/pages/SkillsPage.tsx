@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import NavBar from '../NavBar';
 import TextType from '../modules/TextType';
-import { GridScan } from '../modules/GridScan';
+import { GridScan } from '../modules/GridScanV2';
 import SkillTableView from '../modules/SkillTableView';
 import RevealOnScroll from '../modules/RevealOnScroll';
 import { skillTables } from '../data/loadSkills';
@@ -12,33 +12,40 @@ function SkillsPage() {
   const { t } = useTranslation();
   const quality = useAdaptiveQuality();
 
-  const postEnabled = quality !== 'low';
-  const bloomIntensity = quality === 'high' ? 0.6 : quality === 'medium' ? 0.35 : 0;
-  const chromaticAberration = quality === 'high' ? 0.002 : quality === 'medium' ? 0.001 : 0;
-  const noiseIntensity = quality === 'high' ? 0.01 : quality === 'medium' ? 0.005 : 0;
-  const lineJitter = quality === 'high' ? 0.1 : quality === 'medium' ? 0.05 : 0;
-  const scanGlow = quality === 'high' ? 0.5 : quality === 'medium' ? 0.3 : 0.15;
-  const scanSoftness = quality === 'high' ? 2 : quality === 'medium' ? 1.5 : 1;
+  const gridDpr = quality === 'high' ? undefined : quality === 'medium' ? 1 : 0.6;
+  const gridGlow = quality === 'high' ? 0.6 : quality === 'medium' ? 0.4 : 0.2;
+  const gridReflection = quality === 'high' ? 0.35 : quality === 'medium' ? 0.2 : 0;
+  const gridPoints = quality !== 'low';
 
   return (
     <>
       <div className="studies-bg-fixed skills-page-bg">
-          <GridScan
-          sensitivity={0.55}
+        <GridScan
+          linesColor="#4d4757"
+          scanColor="#5eead4"
+          cells={6}
+          depth={3}
+          scanDuration={3.2}
+          scanDelay={0.8}
+          clickEffect="ping"
           lineThickness={1}
-          linesColor="#2F293A"
-          gridScale={0.1}
-          scanColor="#9d94f0"
-          scanOpacity={0.4}
-          enablePost={postEnabled}
-          bloomIntensity={bloomIntensity}
-          chromaticAberration={chromaticAberration}
-          noiseIntensity={noiseIntensity}
-          lineJitter={lineJitter}
-          scanGlow={scanGlow}
-          scanSoftness={scanSoftness}
+          lineStyle="solid"
+          depthFade={0.6}
+          shading={0.7}
+          reflection={gridReflection}
+          points={gridPoints}
+          scanDirection="forward"
+          scanWidth={1}
+          trail={0.9}
+          glow={gridGlow}
+          parallax={1}
+          autoScan
+          interactive
           enableWebcam={false}
-          showPreview={false}
+          showPreview
+          intro
+          lightMode={false}
+          dpr={gridDpr}
         />
       </div>
       <div className="studies-content-layer">

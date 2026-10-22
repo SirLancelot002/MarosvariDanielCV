@@ -8,13 +8,13 @@ import { publicAsset } from '../utils/asset';
 import { shiftHexToward } from '../utils/color';
 import { formatJobPeriod } from '../utils/date';
 import { getBlockColumnClasses } from '../utils/blockLayout';
-import LightTunnel from '../modules/LightTunnel';
+import LightTunnel from '../modules/LightTunnelV2';
 import JobLevel from '../modules/JobLevel';
 import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
 import SpecularButton from '../modules/SpecularButton';
 import CollapsibleSection from '../modules/CollapsibleSection';
-import Lanyard from '../modules/Lanyard';
+import Lanyard from '../modules/LanyardV2';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 import type { JobContentItem } from '../types/job';
 import './JobDetailPage.css';
@@ -32,22 +32,28 @@ function JobDetailPage() {
 
     let cableCount = 20;
     let speed = 0.1;
+    let pulseDensity = 0.5;
+    let tunnelDpr: number | undefined;
 
     switch (quality) {
         case 'low':
-            cableCount = 7;
+            cableCount = 12;
             speed = 0.03;
+            pulseDensity = 0.25;
+            tunnelDpr = 0.6;
             break;
         case 'medium':
-            cableCount = 12;
+            cableCount = 17;
             speed = 0.05;
+            pulseDensity = 0.4;
+            tunnelDpr = 1;
             break;
         case 'high':
-            cableCount = 20;
+            cableCount = 30;
             speed = 0.1;
             break;
         default:
-            cableCount = 20;
+            cableCount = 30;
             speed = 0.1;
     }
 
@@ -150,6 +156,11 @@ function JobDetailPage() {
                     opacity={1}
                     mouseInteraction
                     mouseStrength={0.1}
+                    clickSurge
+                    intro
+                    pulseDensity={pulseDensity}
+                    bend={0.4}
+                    dpr={tunnelDpr}
                 />
             </div>
             <div className="studies-content-layer job-detail-content-layer">
@@ -256,10 +267,14 @@ function JobDetailPage() {
                     <Lanyard
                         frontImage={publicAsset(job.lanyardFrontSrc)}
                         backImage={publicAsset(job.lanyardBackSrc)}
-                        lanyardImage={publicAsset(job.lanyardBandSrc)}
-                        position={[0, 0, 15]}
-                        gravity={[0, -40, 0]}
-                        lanyardWidth={0.5}
+                        strapImage={publicAsset(job.lanyardBandSrc)}
+                        strapColor={accentColor}
+                        finish="metallic"
+                        cornerRadius={0.2}
+                        size={0.5}
+                        damping={0.6}
+                        elasticity={1}
+                        breeze={1}
                     />
                 )}
                 <div className="specular-button-shell job-detail__back-to-top">

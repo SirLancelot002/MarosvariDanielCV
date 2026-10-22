@@ -256,6 +256,7 @@
   position: relative;
   overflow: hidden;
   min-height: 400px;
+  height: 600px;
   max-height: 700px;
   margin: 0;
   padding: 0;

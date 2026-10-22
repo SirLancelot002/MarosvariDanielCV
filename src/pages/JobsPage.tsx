@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import NavBar from '../NavBar';
 import TextType from '../modules/TextType';
-import Galaxy from '../modules/Galaxy';
+import Galaxy from '../modules/GalaxyV2';
 import JobCard from '../modules/JobCard';
 import RevealOnScroll from '../modules/RevealOnScroll';
 import { jobs } from '../data/loadJobs';
@@ -19,6 +19,8 @@ function JobsPage() {
     let rotationSpeed = 0.03;
     let starSpeed = 0.5;
     let speed = 1;
+    let layers = 4;
+    let dpr: number | undefined;
 
     switch (quality) {
         case 'low':
@@ -26,12 +28,16 @@ function JobsPage() {
             rotationSpeed = 0;
             starSpeed = 0.25;
             speed = 0.5;
+            layers = 2;
+            dpr = 0.6;
             break;
         case 'medium':
             density = 0.5;
             rotationSpeed = 0.015;
             starSpeed = 0.35;
             speed = 0.75;
+            layers = 3;
+            dpr = 1;
             break;
         case 'high':
             density = 1;
@@ -59,7 +65,11 @@ function JobsPage() {
                     autoCenterRepulsion={0}
                     starSpeed={starSpeed}
                     speed={speed}
-                    ignoreSelector=".job-card-shell, .total-experience-shell, .magnet-button-container, .specular-button-shell"
+                    layers={layers}
+                    dpr={dpr}
+                    flareIntensity={1}
+                    clickWarp
+                    intro
                 />
             </div>
             <div className="studies-content-layer">

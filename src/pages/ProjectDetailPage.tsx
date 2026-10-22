@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router-dom';
+﻿import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLayoutEffect } from 'react';
 import NavBar from '../NavBar';
@@ -7,7 +7,7 @@ import { projects } from '../data/loadProjects';
 import { publicAsset } from '../utils/asset';
 import { formatProjectDuration } from '../utils/date';
 import './ProjectDetailPage.css';
-import FaultyTerminal from '../modules/FaultyTerminal';
+import FaultyTerminal from '../modules/FaultyTerminalV2';
 import DifficultyLevel from '../modules/DifficultyLevel';
 import TiltedCard from '../modules/TiltedCard';
 import GradientText from '../modules/GradientText';
@@ -28,22 +28,24 @@ function ProjectDetailPage() {
         window.scrollTo(0, 0);
     }, [id]);
 
-    // Bigger squares (in rem, so they stay square and consistent across screens) and a lower render resolution are cheaper to shade.
-    let squareSizeRem = 1.75;
+    // Fewer, larger glyphs and a lower render resolution are cheaper to shade.
+    let terminalScale = 1.5;
     let terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
+    let terminalGlow = 0.5;
+    let terminalPersistence = 0.5;
 
     switch (quality) {
         case 'low':
-            squareSizeRem = 6;
+            terminalScale = 0.7;
             terminalDpr = 1;
+            terminalGlow = 0.2;
+            terminalPersistence = 0;
             break;
         case 'medium':
-            squareSizeRem = 4;
+            terminalScale = 1.1;
             terminalDpr = Math.min(window.devicePixelRatio || 1, 1.5);
-            break;
-        case 'high':
-            squareSizeRem = 2.25;
-            terminalDpr = Math.min(window.devicePixelRatio || 1, 2);
+            terminalGlow = 0.35;
+            terminalPersistence = 0.3;
             break;
     }
 
@@ -60,24 +62,25 @@ function ProjectDetailPage() {
         <>
             <div className="studies-bg-fixed project-detail-bg-fixed">
                 <FaultyTerminal
-                    scale={1.5}
-                    squareSizeRem={squareSizeRem}
+                    tint="#A7EF9E"
+                    glyphs="blocks"
+                    scale={terminalScale}
                     digitSize={1.2}
                     dpr={terminalDpr}
                     timeScale={0.5}
-                    pause={false}
+                    brightness={0.6}
+                    glow={terminalGlow}
+                    persistence={terminalPersistence}
                     scanlineIntensity={0.5}
                     glitchAmount={1}
                     flickerAmount={1}
                     noiseAmp={1}
                     chromaticAberration={0}
-                    dither={0}
                     curvature={0.1}
-                    tint="#A7EF9E"
-                    mouseReact={true}
+                    mouseReact={quality !== 'low'}
                     mouseStrength={0.5}
+                    clickEffect={quality === 'low' ? 'none' : 'glitch'}
                     pageLoadAnimation
-                    brightness={0.6}
                 />
             </div>
             <div className="studies-content-layer project-detail-content-layer">

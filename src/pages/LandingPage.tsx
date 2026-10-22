@@ -1,18 +1,18 @@
 import { useTranslation } from 'react-i18next';
 
 import TextType from '../modules/TextType';
-import Lightning from '../modules/Lightning';
+import Lightning from '../modules/LightningV2';
 import ProfileCard from '../modules/ProfileCard';
 import ElectricBorder from '../modules/ElectricBorder';
 import GradientText from '../modules/GradientText';
-import Ballpit from '../modules/Ballpit';
+import Ballpit from '../modules/BallpitV2';
 import SpecularButton from '../modules/SpecularButton';
 import LogoLoop from '../modules/LogoLoop';
 import ShinyText from '../modules/ShinyText';
 import NavBar from '../NavBar';
 import useAdaptiveQuality from '../hooks/useAdaptiveQuality';
 
-import avatarImg from '../assets/avatar.png';
+import avatarImg from '../assets/Avatar.webp';
 import iconPatternImg from '../assets/iconpattern.png';
 import cityLogoImg from '../assets/citylogo.png';
 import calendarLogoImg from '../assets/calendarlogo.png';
@@ -60,16 +60,32 @@ function LandingPage() {
   const { t } = useTranslation();
   const quality = useAdaptiveQuality();
   let ballCount = 50;
+  let lightningDpr: number | undefined;
+  let lightningBranches = 1;
+  let lightningMouse = true;
+  let ballMinSize = 1;
+  let ballMaxSize = 1;
 
   switch (quality) {
     case 'low':
       ballCount = 10;
+      lightningDpr = 0.6;
+      lightningBranches = 0.3;
+      lightningMouse = false;
+      ballMinSize = 1;
+      ballMaxSize = 2;
       break;
     case 'medium':
-      ballCount = 35;
+      ballCount = 55;
+      lightningDpr = 1;
+      lightningBranches = 0.7;
+      ballMinSize = 1;
+      ballMaxSize = 1.5;
       break;
     case 'high':
-      ballCount = 75;
+      ballCount = 125;
+      ballMinSize = 0.75;
+      ballMaxSize = 1.4;
       break;
   }
 
@@ -78,7 +94,28 @@ function LandingPage() {
     <>
       <div className="page-upper">
         <div className="lightning-bg">
-          <Lightning hue={260} xOffset={0} speed={1} intensity={1} size={1} />
+          <Lightning
+            color="#9f4dff"
+            bolts={1}
+            spread={0.6}
+            branches={lightningBranches}
+            dpr={lightningDpr}
+            xOffset={0}
+            angle={0}
+            size={0.8}
+            thickness={1}
+            glow={1.2}
+            intensity={1.2}
+            speed={1}
+            flicker={0.6}
+            mouseInteraction={lightningMouse}
+            mouseStrength={1}
+            clickStrike={lightningMouse}
+            intro
+            fade={0}
+            opacity={1}
+            lightMode={false}
+          />
         </div>        
         <main className="hero-section">
           <TextType
@@ -140,7 +177,28 @@ function LandingPage() {
       </div>
 
       <div id="ballpit-section">
-        <Ballpit count={ballCount} gravity={0.3} friction={0.9975} wallBounce={0.95} followCursor />
+        <Ballpit
+          count={ballCount}
+          colors={["#ff77fb", "#3300ff", "#377be3", "#a67dff", "#9f4dff", "#18d7bd"]}
+          material="satin"
+          gravity={0.4}
+          drift={0}
+          followCursor
+          grab
+          clickEffect="burst"
+          minSize={ballMinSize}
+          maxSize={ballMaxSize}
+          friction={0.9975}
+          wallBounce={0.95}
+          bounce={0.85}
+          depth={2}
+          cursorSize={1}
+          lightColor="#ffffff"
+          lightIntensity={1}
+          exposure={1}
+          shadows={0.6}
+          intro
+        />
       </div>
 
       <div id="website-description-section" className="container">
